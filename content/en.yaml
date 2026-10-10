@@ -1,0 +1,1628 @@
+name: English
+locale: en_US
+
+nav:
+  redact: Redact PDF
+  remove: Remove text
+  metadata: Remove metadata
+  flatten: Flatten PDF
+  pages: Edit pages
+  delete_pages: Delete pages
+  extract_pages: Extract pages
+  rotate: Rotate PDF
+  reorder: Rearrange pages
+  grayscale: Black & white
+  anonymize: Anonymize PDF
+  merge: Merge PDF
+  add_text: Add text
+  sign: Sign PDF
+  watermark: Watermark
+  page_numbers: Page numbers
+  compress: Compress PDF
+  pdf_to_jpg: PDF to JPG
+  jpg_to_pdf: JPG to PDF
+  protect: Protect PDF
+  unlock: Unlock PDF
+  batch: Batch anonymize
+  pricing: Pro
+
+ui:
+  skip: Skip to content
+  menu: Menu
+  tools: Tools
+  learn: Learn
+  language: Language
+  faq: Questions people ask
+  related: Other tools
+  foot_tagline: Free PDF tools that run entirely in your browser. Your files never leave your device.
+  foot_legal: Open source (AGPL). No account, no tracking, no upload.
+  trust:
+    - Files never leave your device
+    - Text is truly deleted, not hidden
+    - Free, no account, no watermark
+  choose: Choose a PDF
+  dropTitle: Drop your PDF here
+  dropOr: or
+  dropNote: Processed on your computer. Nothing is uploaded.
+  newFile: New file
+  selMode: Selection mode
+  modeText: Text
+  modeTextTip: "Drag to select text. Click = one word, double-click = the whole line (T)"
+  modeZone: Area
+  modeZoneTip: "Draw a rectangle: everything inside is removed (R)"
+  searchPh: Find text to remove…
+  markAll: Mark all
+  zoomIn: Zoom in
+  zoomOut: Zoom out
+  undo: Undo
+  undoTip: Undo (Ctrl/Cmd+Z)
+  apply: Apply
+  applyTip: Delete the marked text now (Del)
+  download: Download
+  downloadTip: Download the cleaned PDF (Ctrl/Cmd+S)
+  toRemove: To remove
+  options: Options
+  optBlack: Leave a black box where text was removed
+  optMeta: Also remove hidden metadata (author, title, software, dates)
+  inAreas: "Inside areas, also remove:"
+  optImages: images
+  optLines: lines and colored backgrounds
+  keyboard: Keyboard
+  kDel: delete marked text
+  kUndo: undo
+  kEsc: clear selection
+  kFind: find (then Enter)
+  kSave: download
+  kMode: text / area mode
+  optInfo: Document properties (author, title, software, dates) and XMP
+  optComments: Comments, notes and highlights
+  optAttachments: Attached files
+  optJs: Embedded JavaScript
+  editTitle: Edit the properties instead
+  editHint: "Change the title, author or other fields and download a copy with your values. Leave a field empty to remove it."
+  saveEdits: Save changes and download
+  addPdf: Add PDF
+  selAll: Select all
+  rotL: Left
+  rotR: Right
+  rotLTip: Rotate the selected pages (or all) 90° left
+  rotRTip: Rotate the selected pages (or all) 90° right
+  delSel: Delete selected
+  extractSel: Extract selected
+  grayNote: "Text stays real, selectable text. Only colors change: page content, images, comments and form appearances are converted to shades of gray."
+  allTools: All tools
+  g_privacy: Privacy
+  g_pages: Pages
+  g_edit: Edit
+  g_convert: Optimize & convert
+  g_security: Security
+  dropTitleImg: Drop your images here
+  addImages: Add images
+  pageSize: Page size
+  sizeFit: Same as image
+  margin: Margin
+  marginNone: None
+  marginSmall: Small
+  marginLarge: Large
+  level: Compression level
+  lvlLight: Light
+  lvlLightHint: best quality, smaller gain
+  lvlRec: Recommended
+  lvlRecHint: good quality for screen and office printing
+  lvlStrong: Strong
+  lvlStrongHint: smallest file, visible loss on photos
+  pw: Password
+  pw2: Confirm password
+  showPw: Show password
+  perms: Allow without password
+  allowPrint: Printing
+  allowCopy: Copying text and images
+  allowEdit: Editing, comments and form filling
+  pwNote: "Encrypted with AES-256. Keep the password safe: nobody, including us, can recover it."
+  pwCurrent: Current password
+  unlockNote: "Only for PDFs you have the right to open. Files that open without a password but block printing or copying are unlocked directly."
+  wmText: Watermark text
+  wmDefault: CONFIDENTIAL
+  wmOpacity: Opacity
+  color: Color
+  cGray: Gray
+  cRed: Red
+  cBlue: Blue
+  cBlack: Black
+  wmAngle: Direction
+  diagonal: Diagonal
+  horizontal: Horizontal
+  position: Position
+  posBC: Bottom center
+  posBR: Bottom right
+  posBL: Bottom left
+  posTC: Top center
+  posTR: Top right
+  posTL: Top left
+  format: Format
+  fmtPage: "Page {n}"
+  fmtPageOf: "Page {n} of {total}"
+  startAt: Start at
+  fontSize: Size
+  skipFirst: Skip the first page (cover)
+  quality: Quality
+  dpiScreen: Screen (96 dpi)
+  dpiStd: Standard (150 dpi)
+  dpiPrint: Print (300 dpi)
+  zipNote: Several pages are downloaded as a ZIP file, one image per page.
+  previewCap: Preview of the first page
+  addTextBtn: Text
+  signBtn: Signature
+  drawSig: Draw your signature
+  clear: Clear
+  cancel: Cancel
+  useSig: Use this signature
+  piiTitle: Personal data
+  piiScan: Detect personal data
+  rightsOk: "I own this document or I am authorised to modify it (see the <a href=\"{terms}\">terms of use</a>)."
+  termsTitle: My term lists
+  termsPh: "One name or term per line, e.g. client names, case numbers…"
+  termsMark: Mark all terms
+  optReport: Download a redaction report
+  dropTitleMany: Drop your PDFs here
+  breadcrumb: "Breadcrumb"
+  nextTitle: "What to do next"
+  guideHint: "Not sure everything is gone? Read"
+  optForms: Form fields (values become plain content)
+  optAnnots: Comments, stamps and drawings
+
+js:
+  pw.prompt: "This PDF is password-protected. Password:"
+  pw.wrong: wrong password
+  err.notpdf: this file is not a PDF
+  err.dropPdf: Please drop a PDF file.
+  err.open: "Could not open the file: {msg}"
+  err.process: "Something went wrong: {msg}"
+  status.opening: Opening…
+  status.ready: "{n} page(s). Select the text to remove, or search for it."
+  status.noText: "No selectable text found: this looks like a scan. Use Area mode and tick “images”."
+  status.forms: "Form fields were merged into the page so their content can be redacted too."
+  status.found: "{n} match(es) for “{q}” marked. Press Del to remove them."
+  status.notFound: "“{q}” not found (or already marked)."
+  status.applied: "Text deleted ({n} area(s)). Ctrl/Cmd+Z to undo."
+  status.nothing: "Nothing marked yet: select some text first."
+  status.unmarked: Last selection removed.
+  status.undone: Deletion undone.
+  status.downloaded: "Downloaded: {name}"
+  status.cleared: Selection cleared.
+  confirm.close: Close this PDF? Changes you have not downloaded will be lost.
+  page: "Page {n}"
+  pageShort: "p. {n}"
+  marks.empty: Nothing marked yet.
+  mark.text: (text)
+  mark.zone: Area (no text)
+  mark.zoneWith: "Area: {text}"
+  mark.remove: Keep this text
+  rep.found: "{n} found"
+  rep.none: none
+  rep.empty: empty
+  rep.present: present
+  rep.xmp: XMP metadata block
+  rep.comments: Comments and notes
+  rep.attachments: Attached files
+  rep.javascript: JavaScript
+  rep.private: Private application data
+  rep.widgets: Form fields
+  rep.annots: Comments, stamps, drawings
+  rep.pages: Pages
+  meta.Title: Title
+  meta.Author: Author
+  meta.Subject: Subject
+  meta.Keywords: Keywords
+  meta.Creator: Created with
+  meta.Producer: PDF producer
+  meta.CreationDate: Created on
+  meta.ModDate: Modified on
+  metadata.foundSome: "{n} item(s) of hidden information found. Review them, then clean the file."
+  metadata.foundNone: This PDF carries no hidden metadata. You can still clean it to reset its ID.
+  metadata.done: "Clean copy downloaded: {name}. The table above shows what is left in it."
+  metadata.edited: "Copy with your new properties downloaded: {name}."
+  pages.ready: "{n} page(s). Click pages to select them, drag to reorder."
+  pages.added: "{n} page(s) added from {name}."
+  pages.files: "{n} files"
+  pages.fileShort: "file {n}"
+  pages.rotL: Rotate left
+  pages.rotR: Rotate right
+  pages.del: Delete this page
+  pages.selected: "{n} of {total} pages selected"
+  pages.total: "{total} pages"
+  pages.undone: Last change undone.
+  pages.rotated: "{n} page(s) rotated."
+  pages.cantAll: A PDF needs at least one page. Keep one, or start a new file.
+  pages.deleted: "{n} page(s) deleted. Ctrl/Cmd+Z to undo."
+  pages.moved: Page moved.
+  pages.extractSuffix: extract
+  pages.extracted: "{n} page(s) extracted to {name}."
+  gray.images: Images converted
+  gray.left: Left in color
+  gray.leftSome: "{n} item(s): gradients or spot colors, check the preview"
+  grayscale.foundSome: "{n} page(s) ready. Click the button to convert the whole PDF to black and white."
+  grayscale.foundNone: This PDF is empty.
+  grayscale.done: "Black and white copy downloaded: {name}. Preview of the first page below."
+  status.working: Working…
+  status.progress: "Page {i} of {n}…"
+  compress.ready: "{n} page(s). Choose a level and compress."
+  compress.noGain: This PDF is already well optimized; compressing it would not make it smaller. Your file was not changed.
+  compress.done: "{before} → {after} (−{pct} %)."
+  protect.ready: "{n} page(s). Choose a password."
+  protect.empty: Enter a password.
+  protect.mismatch: The two passwords do not match.
+  protect.comma: Commas are not supported in passwords. Please choose another one.
+  protect.done: PDF protected.
+  unlock.needPw: This PDF is password-protected. Enter its password, then unlock.
+  unlock.noPw: This PDF opens without a password. Unlocking removes its printing and copying restrictions.
+  unlock.done: PDF unlocked.
+  unlock.wrong: Wrong password. Please try again.
+  watermark.ready: "{n} page(s). Adjust the watermark: the preview updates as you type."
+  watermark.empty: Enter the watermark text.
+  watermark.done: Watermark added.
+  page_numbers.ready: "{n} page(s). Choose where the numbers go: the preview updates live."
+  page_numbers.done: Page numbers added.
+  pdf_to_jpg.ready: "{n} page(s) will be converted to images."
+  pdf_to_jpg.done: "{n} image(s) downloaded."
+  images.ready: "{n} image(s). Drag to reorder, then create the PDF."
+  images.bad: "“{name}” could not be read as an image."
+  images.remove: Remove this image
+  images.count: "{n} image(s)"
+  images.done: "PDF with {n} page(s) downloaded: {name}"
+  annot.readyText: Click anywhere on a page to add text.
+  annot.readySign: Draw your signature, then click on the page where it goes.
+  annot.placed: Signature placed. Drag to move it, use the corner to resize it.
+  annot.remove: Remove
+  annot.hintText: "Click on a page to type. Drag a text to move it, click it to edit it, Del to delete it."
+  annot.hintSign: "Click on a page to place your signature. Drag to move, corner to resize."
+  annot.sigReady: Signature ready. Click on the page where it should go.
+  annot.done: "{n} element(s) added. Downloaded: {name}"
+  pii.none: No personal data detected. Names without a title (Mr, Mrs…) are not detected automatically; use the search box.
+  pii.found: "{n} item(s) of personal data detected. Untick what should stay, then mark."
+  pii.mark: Mark selected
+  pii.marked: "{n} occurrence(s) marked. Check them, then press Del or Apply."
+  pii.nothingMarked: Nothing selected to mark.
+  pii.email: Email addresses
+  pii.phone: Phone numbers
+  pii.iban: IBAN (verified)
+  pii.card: Card numbers (verified)
+  pii.nir: French social security numbers
+  pii.ip: IP addresses
+  pii.date: Dates
+  pii.name: Names after a title
+  pii.warn: "Automatic detection is not exhaustive: names without a title, addresses and scanned text are not found. Read the document before sharing it."
+  unlock.rights: Please confirm that you have the right to modify this document.
+  pii.fullname: Names without a title
+  pii.address: Postal addresses
+  pii.birth: Dates of birth
+  pii.plate: Licence plates
+  pii.vat: VAT numbers
+  cat.email: Email addresses
+  cat.phone: Phone numbers
+  cat.iban: IBAN
+  cat.card: Card numbers
+  cat.nir: Social security numbers
+  cat.ip: IP addresses
+  cat.date: Dates
+  cat.name: Names after a title
+  cat.fullname: Names
+  cat.address: Postal addresses
+  cat.birth: Dates of birth
+  cat.plate: Licence plates
+  cat.vat: VAT numbers
+  cat.manual: Manual selection
+  cat.search: Search
+  cat.area: Area
+  cat.list: Term list
+  report.title: Redaction report
+  report.file: File
+  report.date: Date
+  report.pages: Pages in the document
+  report.total: Items redacted
+  report.byCat: By category
+  report.byPage: By page
+  report.note: "Redacted values are not reproduced in this report. The SHA-256 fingerprint identifies the delivered file."
+  report.by: Generated locally by pdfanonym.com
+  report.suffix: report
+  pro.locked: Found. Redact these with Pro.
+  pro.unlock: Unlock with Pro
+  pro.reportLocked: The redaction report is a Pro feature.
+  pro.needConsent: Please tick the box below the plans first.
+  pro.redirecting: Redirecting to secure payment…
+  pro.checkoutError: The payment page could not be opened. Please try again in a moment.
+  batch.ready: "{n} PDF file(s). Choose what to redact, then run."
+  batch.progress: "File {i} of {n}…"
+  batch.doneOne: "done ({n})"
+  batch.errOne: could not be processed
+  batch.done: "{n} of {total} file(s) anonymized. The ZIP contains the files and a CSV report."
+  plan.pass: 24-hour pass
+  plan.pro: Pro
+  plan.team: Team
+  acc.none: No Pro licence on this device
+  acc.noneHint: Buy a plan, or paste a licence key below.
+  acc.seePlans: See the plans
+  acc.active: "{plan} active"
+  acc.expired: "{plan} expired"
+  acc.expiredHint: Renew your plan to use the Pro features again.
+  acc.renews: "Renews on {date}."
+  acc.until: "Valid until {date}."
+  acc.seats: "{n} users."
+  acc.fetching: Confirming your payment…
+  acc.thanks: "Thank you! Your licence is active on this device. A receipt has been sent to {email}."
+  acc.fetchError: "We could not confirm the payment yet. Reload this page in a minute, or contact contact@pdfanonym.com."
+  acc.copied: Licence key copied.
+  acc.badKey: This licence key is not valid.
+  acc.activated: Licence activated on this device.
+  acc.removed: Licence removed from this device.
+  acc.confirmRemove: Remove the licence from this device? You can paste the key again later.
+  flatten.foundSome: "{n} interactive element(s) found. Flatten to turn them into fixed content."
+  flatten.foundNone: Nothing interactive in this PDF. Flattening will not change it.
+  flatten.done: "Flattened copy downloaded: {name}."
+
+pages:
+  home:
+    slug: ""
+    title: "pdfanonym: redact and clean PDFs privately, in your browser"
+    description: "Free PDF redaction that really deletes text. Remove names, numbers and hidden metadata from PDFs without uploading them. No account, no watermark."
+    h1: 'Clean your PDFs <span class="hl">before</span> you share them'
+    lede: "Redact names, delete text, strip hidden metadata. Everything happens on your own computer: your document is never sent to a server, not even ours."
+    cta: Redact a PDF now
+    toolsTitle: Pick a tool
+    faq:
+      - q: Is pdfanonym really free?
+        a: "Yes. All 20 tools are free, with no account, no daily limit and no watermark. An optional <a href=\"/pricing/\">Pro plan</a> adds batch anonymization, extended detection and reports for professionals."
+      - q: How can I check that my file is not uploaded?
+        a: "Open your browser's developer tools, go to the Network tab and process a file: you will see no request carrying it. The page also ships a security policy that forbids it from sending data to any other site. And the full source code is available to read."
+      - q: Does it work offline?
+        a: "Yes. Once a tool page has finished loading, you can disconnect from the internet and keep working on your PDFs."
+    body: |
+      ## Why another PDF tool?
+
+      Because most of them get one thing wrong. When you "black out" a name in a typical online editor, it draws a rectangle on top of the text. The page looks clean, yet anyone can still select, copy or search the words underneath. Lawyers have been caught out by this in court filings, and so have government agencies.
+
+      pdfanonym removes the characters from the file itself. What you delete is gone: it cannot be copied, searched or recovered. To find personal data without hunting for it, [anonymize the PDF](/anonymize-pdf/) and let emails, phone numbers and IBANs be detected for you.
+
+      ## Private by design, not by promise
+
+      Upload-based services ask you to trust them with your contract, your payslip or your medical letter. We don't ask for that trust because we never receive the file. The PDF engine runs inside your browser (it is [MuPDF](https://mupdf.com), compiled to WebAssembly), so the document goes from your disk to your screen and back to your disk. The same goes for everyday jobs: you can [merge PDF files](/merge-pdf/) or [compress a PDF](/compress-pdf/) without the documents ever reaching a server.
+
+      That matters if you handle client files, HR documents or anything covered by GDPR: there is no third party to declare and nothing to delete afterwards.
+
+  redact:
+    slug: redact-pdf
+    nav: Redact PDF
+    card: Black out names, numbers and sensitive passages. The text under the box is deleted.
+    title: "Redact PDF online, free and private (text really deleted)"
+    description: "Black out text in a PDF and delete it for good. Real redaction in your browser: no upload, no account, no watermark. Search and redact every occurrence at once."
+    h1: 'Redact a PDF: <span class="redacted">black out</span> text for good'
+    h1_plain: Redact PDF
+    lede: "Select a name, an account number or a whole paragraph, and pdfanonym removes it from the file and leaves a black box in its place. Nothing is uploaded."
+    black: true
+    suffix: redacted
+    stepsTitle: How to redact a PDF in three steps
+    steps:
+      - h: Open your PDF
+        p: "Drop it on the page or pick it from your computer. It opens instantly, because it never leaves your device."
+      - h: Mark what must disappear
+        p: "Drag across text, click a word, double-click a line, or type a name in the search box and press <b>Mark all</b>. For scans, switch to <b>Area</b> and draw a rectangle."
+      - h: Apply and download
+        p: "Press <kbd>Del</kbd> or <b>Apply</b> to delete the text, check the result, then <b>Download</b>. Hidden metadata is removed too by default."
+    compare:
+      title: A black box is not redaction
+      intro: "Most PDF editors let you draw a black rectangle and call it redaction. The difference only shows up when someone copies the text."
+      bad_h: Drawing a box on top
+      bad_p: "The page looks redacted, but the words are still in the file. Select the area, copy, paste into an email: the hidden name appears. Search finds it too, and so does any text extraction tool."
+      good_h: Real redaction
+      good_p: "The characters under the box are removed from the page content. There is nothing left to copy, search or extract. The black box is just a visual marker, and you can even choose to leave white space instead."
+    body: |
+      ## What can you redact?
+
+      Anything that is text in the PDF: names, addresses, email addresses, phone numbers, bank details (IBAN), social security or tax numbers, salaries, case references, signatures typed as text. The search box finds every occurrence across all pages, ignoring capitals and accents, so a client's surname is caught everywhere in a 200-page file with one click. If you would rather have emails, phone numbers and IBANs found for you, [anonymize the PDF](/anonymize-pdf/) to detect personal data automatically.
+
+      If your PDF is a **scan**, the "text" is really a picture. Switch to **Area** mode, draw a rectangle over the passage and tick **images** in the options: the pixels inside the rectangle are erased from the image itself.
+
+      ## Who uses PDF redaction?
+
+      - **Lawyers and paralegals** preparing exhibits and court filings.
+      - **HR teams** sharing payslips, contracts or investigation reports.
+      - **Anyone answering a GDPR or freedom-of-information request**, where third-party data must be removed before disclosure.
+      - **Landlords, tenants and freelancers** sending bank statements or ID documents that only need part of the information.
+
+      ## Check your redaction before sending
+
+      After downloading, open the file, select the redacted area and try to copy it, then search for one of the words you removed. Nothing should come back. Our guide on [how to redact a PDF properly](/how-to-redact-a-pdf/) lists all the checks. Keep in mind that redacting the page does not touch the author or title hidden in the file properties unless the metadata option stays ticked; to review every field, [remove PDF metadata](/remove-pdf-metadata/) with the dedicated tool.
+    faq:
+      - q: Is the text really deleted, or just covered?
+        a: "Deleted. pdfanonym applies the redaction to the page content, so the characters no longer exist in the file. Copy, search and text extraction return nothing."
+      - q: Can I redact a scanned PDF?
+        a: "Yes, with Area mode. Draw a rectangle and tick “images” in the options: the part of the scanned image under the rectangle is blanked out. Text search does not work on scans because there is no text layer."
+      - q: Can I remove the text without leaving a black box?
+        a: "Yes. Untick “Leave a black box” in the options, or use our <a href=\"/remove-text-from-pdf/\">remove text from PDF</a> tool, which leaves blank space instead."
+      - q: Is there a page or file size limit?
+        a: "No fixed limit. Very large files (several hundred pages) depend on your computer's memory, but everyday documents open in a second."
+      - q: Can I undo a redaction?
+        a: "Yes, as long as you have not closed the page: press Ctrl/Cmd+Z. Once the file is downloaded, the redaction is permanent, which is the point."
+      - q: Are my files stored anywhere?
+        a: "No. They are never uploaded, so there is nothing on our side to store or delete."
+
+  remove:
+    slug: remove-text-from-pdf
+    nav: Remove text
+    card: Erase words or paragraphs from a PDF and leave clean white space.
+    title: "Remove or white out text in a PDF, for real (free, offline)"
+    description: "Delete, erase or white out text in a PDF without leaving the words underneath. Free PDF eraser that runs in your browser: no upload, no account."
+    h1: 'Remove text from a PDF, <span class="hl">for real</span>'
+    h1_plain: Remove text from PDF
+    lede: "Erase a word, a line or a whole block from your PDF. The text is deleted from the file, not hidden under a white rectangle, and the rest of the page stays exactly where it was."
+    black: false
+    suffix: edited
+    stepsTitle: How to remove text from a PDF
+    steps:
+      - h: Open the PDF
+        p: "Drop it here. It is read by your browser, not sent anywhere."
+      - h: Select the text
+        p: "Drag across it, click a word, or search for it and press <b>Mark all</b>. Use <b>Area</b> mode to sweep a whole block."
+      - h: Delete and download
+        p: "Press <kbd>Del</kbd>. The words disappear and leave white space. Undo with <kbd>Ctrl/Cmd</kbd>+<kbd>Z</kbd>, then download."
+    compare:
+      title: Why "white-out" tools leave your text behind
+      intro: "Many tools offer a white-out brush. It paints a white shape over the words, which works on paper and fails in a PDF."
+      bad_h: White-out on top
+      bad_p: "The words are still under the white shape. Copy the page, or open it in another editor, and they come back. Screen readers read them aloud too."
+      good_h: Deleted from the page
+      good_p: "pdfanonym removes the characters themselves. The surrounding text keeps its exact position, so the layout does not move, and there is nothing underneath to find."
+    body: |
+      ## How to white out a PDF without leaving the text behind
+
+      "Whiteout" in a PDF usually means painting a white rectangle over words, the digital version of correction fluid. It hides the text from the eye only. pdfanonym does what people actually expect from a whiteout: the words are erased from the file and white space is left in their place. Select the text, press <kbd>Del</kbd>, and the result looks exactly like a whiteout, except that nothing is left to recover.
+
+      ## Good to know
+
+      PDFs are not word-processing files: each word sits at a fixed position on the page. When you remove a word in the middle of a line, the following words do **not** slide left to fill the gap; a blank space remains. That is exactly what you want for confidentiality, and it keeps the layout intact. Removing text does not clean the file properties, so also [remove the PDF metadata](/remove-pdf-metadata/) if the author or title fields name someone.
+
+      If you need to **replace** text with something else, remove it here first, then [add the new text to the PDF](/add-text-to-pdf/) in the blank space.
+
+      ## Common uses
+
+      - Removing a price, a name or a date from a quote before reusing it as a template.
+      - Deleting draft notes or "CONFIDENTIAL" mentions left in a document.
+      - Clearing personal details from a form before sharing a sample.
+
+      Need a visible black bar instead? Use [Redact PDF](/redact-pdf/).
+    faq:
+      - q: Will the remaining text move?
+        a: "No. Every other character keeps its exact position. A blank space is left where the removed text was."
+      - q: Can I remove text from a scanned PDF?
+        a: "Scans contain an image of the text, not text. Use Area mode and tick “images” to blank out that part of the image."
+      - q: Does removing text reduce quality?
+        a: "No. Only the selected characters are touched; the rest of the page, fonts and images are kept as they are."
+      - q: Is it free?
+        a: "Yes, with no account, no limit and no watermark."
+
+  metadata:
+    slug: remove-pdf-metadata
+    nav: Edit or remove metadata
+    card: See, edit or strip the author, software, dates, comments and attachments hidden in a PDF.
+    title: "PDF metadata editor: view, edit or remove it, free"
+    description: "Free PDF metadata editor: see the author, title, software and dates hidden in a PDF, change them or remove them all. Runs in your browser, no upload."
+    h1: 'View, edit or remove PDF <span class="hl">metadata</span>'
+    h1_plain: PDF metadata editor
+    lede: "Your PDF may carry your name, your company, the software you used and the date you wrote it, plus comments you forgot about. See exactly what is inside, then remove it or replace it with your own values."
+    suffix: clean
+    reportCaption: What this PDF carries besides its visible content
+    runLabel: Remove metadata and download
+    stepsTitle: How to remove metadata from a PDF
+    steps:
+      - h: Open the PDF
+        p: "Drop it on the page. It is analysed on your computer."
+      - h: Read the report
+        p: "Every field that is filled is shown in red: author, title, software, dates, XMP block, comments, attachments, scripts."
+      - h: Clean and download
+        p: "Click the button. We save a new file without them, re-check it, and show you what is left."
+    body: |
+      ## What is PDF metadata?
+
+      Besides the pages you see, a PDF stores information about itself. The **document properties** hold a title, an author, a subject, keywords, the application that created the file (for example "Microsoft Word") and the one that turned it into a PDF, plus creation and modification dates. Many files also contain an **XMP block**, a second copy of the same details in XML that some tools forget to clean.
+
+      Other things travel with the file without being "metadata" in the strict sense: **comments and sticky notes**, **highlights**, **attached files**, and sometimes **JavaScript**. If you would rather keep comments and form answers but make them uneditable, [flatten the PDF](/flatten-pdf/) instead of deleting them.
+
+      ## Why remove it?
+
+      - The author field often contains the full name of the person who wrote the original Word file, or the name of the company's licence.
+      - Dates reveal when a document was really drafted, which can matter in a negotiation or a dispute.
+      - Comments left during review ("check this figure with the client") are easy to forget and easy to read.
+      - Attached files can contain a whole other document.
+
+      ## Edit PDF metadata instead of removing it
+
+      Sometimes you want clean, correct properties rather than none: a proper title that shows in browser tabs and search results, your company as author, meaningful keywords. Open **Edit the properties instead** under the report, change the title, author, subject, keywords, creator or producer, and download. Empty fields are removed. The old XMP block is dropped at the same time, because some readers would otherwise keep showing the previous values.
+
+      ## What this tool does not change
+
+      It does not touch the visible content of your pages. If a name is printed on the page, use [Redact PDF](/redact-pdf/) to delete it. Combine both for a document that is safe to publish.
+    faq:
+      - q: Which metadata is removed?
+        a: "The document information dictionary (title, author, subject, keywords, creator, producer, dates), the XMP metadata stream, private application data, and, if ticked, comments, attachments and JavaScript. The file also gets a new internal ID."
+      - q: Can I change the title or author instead of deleting them?
+        a: "Yes. Open “Edit the properties instead” below the report, type the new values and download. Leave a field empty to remove it."
+      - q: How do I check the result?
+        a: "After cleaning, the tool reopens the new file and shows its report again. You can also check in your PDF reader under File, then Properties."
+      - q: Is the visible content changed?
+        a: "No. Text, images and layout stay exactly the same."
+      - q: Why does my PDF reader still show a producer?
+        a: "Some readers display a default value when the field is empty, or the file you opened is the original. Open the downloaded copy, whose name ends in “-clean”."
+
+  flatten:
+    slug: flatten-pdf
+    nav: Flatten PDF
+    card: Turn form fields, comments and stamps into fixed content nobody can edit.
+    title: "Flatten PDF online for free: lock forms and annotations"
+    description: "Flatten a PDF to turn filled form fields, comments and signatures into fixed page content. Free, in your browser, no upload, no account."
+    h1: 'Flatten a PDF: <span class="hl">lock</span> forms and annotations'
+    h1_plain: Flatten PDF
+    lede: "Filled a form? Flattening merges the field values, comments and stamps into the page itself, so they print reliably and can no longer be changed."
+    suffix: flat
+    reportCaption: Interactive elements found in this PDF
+    runLabel: Flatten and download
+    stepsTitle: How to flatten a PDF
+    steps:
+      - h: Open the PDF
+        p: "Drop your filled form or annotated document here."
+      - h: Choose what to flatten
+        p: "Form fields, comments and stamps, or both. You can remove hidden metadata at the same time."
+      - h: Download
+        p: "You get a regular PDF where everything is part of the page."
+    body: |
+      ## What does flattening a PDF mean?
+
+      An interactive PDF has layers on top of the page: form fields you can type into, checkboxes, comments, stamps, drawings. They are displayed by the reader, but they are separate objects that can be edited, moved or deleted.
+
+      **Flattening** draws those elements into the page content and removes the interactive objects. The document looks the same, but it now behaves like a printed sheet. Flattening stops edits, not reading: to keep the content private, also [password protect the PDF](/password-protect-pdf/).
+
+      ## When should you flatten?
+
+      - **Before sending a completed form**, so the recipient cannot alter your answers and every viewer displays them the same way. For a form with no fillable fields, [add text to the PDF](/add-text-to-pdf/) first, then flatten it.
+      - **Before printing**, because some printers and older readers skip form fields.
+      - **Before archiving** contracts or reports.
+      - **Before redacting**: text typed in a form field is not part of the page. Our [redaction tool](/redact-pdf/) merges fields automatically, but many other tools do not.
+      - **Before uploading to a portal** that rejects interactive forms or shows them empty.
+
+      ## Why do my form answers disappear when I send a PDF?
+
+      Because they were never part of the page. Form values live in separate field objects, and each reader decides how to draw them. Some mobile apps, email previews, printers and older readers skip them entirely, or show them only when you click a field. Flattening solves this by writing the values into the page content, where every viewer has to display them.
+
+      ## Flatten vs. "Print to PDF"
+
+      A common trick is to print the document to a PDF printer. It often works, but it rebuilds the whole file: links, bookmarks and accessibility tags can be lost, and some drivers turn pages into images or change the page size. Flattening only touches the interactive parts and keeps everything else as it was.
+
+      ## What gets flattened
+
+      | Element | After flattening |
+      |---|---|
+      | Text fields, checkboxes, radio buttons, drop-downs | Their current value is drawn on the page |
+      | Comments, highlights, stamps, drawings | Drawn on the page as they appear |
+      | Signature drawn or stamped | Kept as part of the page |
+      | Links and bookmarks | Kept |
+      | Text | Stays real, selectable text |
+    faq:
+      - q: Can I unflatten a PDF?
+        a: "No. Once flattened, the field values are ordinary page content. Keep your original file if you may need to edit the form again."
+      - q: Will my signature stay?
+        a: "A signature drawn or stamped as an annotation is kept and becomes part of the page. A certified digital signature, however, is invalidated by any change to the file, flattening included."
+      - q: Does flattening reduce quality?
+        a: "No. Text stays as sharp, selectable text; nothing is turned into an image."
+      - q: Does flattening make the file smaller?
+        a: "Usually a little, because the field objects are removed, but the difference is small. Flattening is about locking the content, not compressing it."
+      - q: Can I flatten only the form and keep the comments?
+        a: "Yes. Untick “Comments, stamps and drawings” before flattening: only the form fields are merged into the page."
+      - q: Does it flatten layers?
+        a: "No. Optional content layers (OCG), used in some technical drawings and maps, are kept as they are. This tool flattens form fields and annotations."
+
+  delete_pages:
+    slug: delete-pages-from-pdf
+    nav: Delete pages
+    card: Remove blank, duplicate or unwanted pages from a PDF in a few clicks.
+    title: "Delete pages from PDF online, free and private"
+    description: "Remove pages from a PDF in your browser: click the pages you do not want, delete, download. Free, no upload, no account, no watermark."
+    h1: 'Delete pages from a PDF, <span class="hl">without uploading it</span>'
+    h1_plain: Delete pages from PDF
+    lede: "See every page as a thumbnail, click the ones you do not need and delete them. Your PDF is processed on your computer and never sent anywhere."
+    suffix: edited
+    hint: "Click pages to select them (Shift+click for a range), then press Del or “Delete selected”."
+    stepsTitle: How to delete pages from a PDF
+    steps:
+      - h: Open your PDF
+        p: "Drop it on the page. Thumbnails of every page appear in a second."
+      - h: Select the pages to remove
+        p: "Click a page to select it, Shift+click to select a range, or use the ✕ on a thumbnail to delete a single page."
+      - h: Delete and download
+        p: "Press <kbd>Del</kbd> or <b>Delete selected</b>. Changed your mind? <kbd>Ctrl/Cmd</kbd>+<kbd>Z</kbd>. Then <b>Download</b>."
+    body: |
+      ## Remove pages without losing quality
+
+      Deleting a page does not re-encode the rest of the document: the remaining pages are copied exactly as they were, with their text, fonts, images, comments and web links. Nothing is compressed or rasterised, so the result looks identical to the original, minus the pages you removed. If you only need a few pages out of many, it is quicker to [extract pages from the PDF](/extract-pages-from-pdf/) into a new file.
+
+      ## Typical reasons to delete PDF pages
+
+      - Blank pages left by a duplex scanner.
+      - A cover sheet, a fax header or terms and conditions you do not need to send.
+      - Pages containing personal information you should not share. For a single line, [redact](/redact-pdf/) it instead of deleting the whole page.
+      - Duplicates after you [merge PDF files](/merge-pdf/) from several documents.
+
+      ## Private by design
+
+      Online page removers usually upload your whole document to delete one page. Here the PDF stays on your device: the page engine runs in your browser, which also means it works offline once loaded.
+    faq:
+      - q: Can I delete several pages at once?
+        a: "Yes. Click each page you want to remove, or click one and Shift+click another to select everything in between, then press Del."
+      - q: Can I undo a deletion?
+        a: "Yes, as long as you have not closed the page: press Ctrl/Cmd+Z or the Undo button, as many times as needed."
+      - q: Does deleting pages reduce the file size?
+        a: "Usually, yes, because content used only by the removed pages is dropped when the file is saved."
+      - q: Is there a page limit?
+        a: "No fixed limit. Large documents (several hundred pages) depend on your computer's memory."
+
+  extract_pages:
+    slug: extract-pages-from-pdf
+    nav: Extract pages
+    card: Save selected pages of a PDF as a new, separate file.
+    title: "Extract pages from PDF online: save pages as a new file, free"
+    description: "Select pages and save them as a new PDF. Free page extractor that runs in your browser: no upload, no account, no watermark, original quality."
+    h1: 'Extract pages from a PDF into a <span class="hl">new file</span>'
+    h1_plain: Extract pages from PDF
+    lede: "Pick the pages you need, in the order you want, and save them as a separate PDF. The original file is left untouched."
+    suffix: edited
+    hint: "Select the pages to keep (Shift+click for a range), then “Extract selected”. You can reorder them first."
+    stepsTitle: How to extract pages from a PDF
+    steps:
+      - h: Open your PDF
+        p: "Drop it here. Every page appears as a thumbnail."
+      - h: Select the pages
+        p: "Click the pages you want to extract. Shift+click selects a range. Drag thumbnails to change their order."
+      - h: Extract
+        p: "Click <b>Extract selected</b>: a new PDF with only those pages is downloaded."
+    body: |
+      ## Extract or split?
+
+      Extracting means copying some pages into a new document while the original stays complete. It is the quickest way to send only the relevant part of a long file: one chapter of a report, the signature page of a contract, the invoices of a single month from a yearly export.
+
+      You can extract several times from the same file: select a first group, extract, then select another group and extract again. Each extraction downloads a separate PDF. If what you want is the opposite, keeping the file and dropping a few pages, [delete pages from the PDF](/delete-pages-from-pdf/) instead.
+
+      ## Combine pages from several PDFs
+
+      Click **Add PDF** to load more files. Their pages join the grid, you can mix and reorder them, then extract the selection or download everything as one document. To simply join whole files end to end, [merge PDF files](/merge-pdf/) with the dedicated tool.
+
+      ## Same quality as the original
+
+      Pages are copied as they are, with real text, fonts, images, comments and web links. Nothing is converted to images, so extracted pages stay sharp and searchable. Need a page as a picture instead? [Convert the PDF to JPG](/pdf-to-jpg/) after extracting it.
+    faq:
+      - q: Is the original PDF modified?
+        a: "No. The extraction creates a new file; your original stays exactly as it was on your computer."
+      - q: Can I extract pages in a different order?
+        a: "Yes. Drag the thumbnails into the order you want before extracting: the new PDF follows the order of the selected pages in the grid."
+      - q: Can I extract pages from a password-protected PDF?
+        a: "If you know the password, yes: you are asked for it when opening the file. The extracted PDF is saved without password."
+      - q: Does it work on a phone?
+        a: "Yes. Tap pages to select them, and press and hold a thumbnail to move it."
+
+  rotate:
+    slug: rotate-pdf
+    nav: Rotate PDF
+    card: Turn one page or the whole document 90° and save it the right way up.
+    title: "Rotate PDF pages online and save, free and private"
+    description: "Rotate one page or a whole PDF 90° left or right and save it permanently. Free, in your browser, no upload, no account, no watermark."
+    h1: 'Rotate PDF pages and <span class="hl">save them</span> that way'
+    h1_plain: Rotate PDF
+    lede: "Fix a scan that came out sideways or upside down. Rotate single pages or the whole document, then download a PDF that opens the right way everywhere."
+    suffix: rotated
+    hint: "Rotate one page with the arrows on its thumbnail, or select pages (none = all) and use Left / Right."
+    stepsTitle: How to rotate a PDF
+    steps:
+      - h: Open your PDF
+        p: "Drop it on the page and see all pages as thumbnails."
+      - h: Rotate
+        p: "Use ↺ or ↻ on a single page, or select several pages (or none, for the whole file) and click <b>Left</b> or <b>Right</b>."
+      - h: Download
+        p: "The rotation is saved in the file: it will open correctly in any reader, on any device."
+    body: |
+      ## Rotate permanently, not just on screen
+
+      The rotate button of most PDF readers only turns the view. Close the file, send it, and it is sideways again. pdfanonym writes the rotation into the PDF itself, so every reader displays the pages the right way. Photographed a document with your phone? [Convert the JPG to PDF](/jpg-to-pdf/) first, then rotate any page that came out sideways.
+
+      ## Rotate only some pages
+
+      Mixed portrait and landscape documents are common: a report with one wide table, a scan where a single sheet went in the wrong way. Rotate those pages individually with the arrows on their thumbnails and leave the others alone. If pages are also in the wrong sequence, [rearrange the PDF pages](/rearrange-pdf-pages/) by drag and drop.
+
+      ## No quality loss
+
+      Rotation is a page setting, not an image transformation. Text stays text, nothing is recompressed, and the file size barely changes.
+    faq:
+      - q: How do I rotate all pages at once?
+        a: "Make sure no page is selected, then click Left or Right: the rotation applies to the whole document."
+      - q: Is the rotation saved?
+        a: "Yes. It is written into the downloaded PDF, so it opens the right way in every reader."
+      - q: Can I rotate by 180°?
+        a: "Click the same arrow twice."
+      - q: Does rotating reduce quality?
+        a: "No. Only the page orientation setting changes; text and images are not re-encoded."
+
+  reorder:
+    slug: rearrange-pdf-pages
+    nav: Rearrange pages
+    card: Drag and drop thumbnails to put the pages of a PDF in the right order.
+    title: "Rearrange PDF pages online: drag and drop, free and private"
+    description: "Reorder the pages of a PDF by drag and drop, combine several files and download the result. Free, in your browser, no upload, no account."
+    h1: 'Rearrange PDF pages with <span class="hl">drag and drop</span>'
+    h1_plain: Rearrange PDF pages
+    lede: "Move pages around until the document reads in the right order, add pages from other PDFs, and download a clean file. Nothing leaves your computer."
+    suffix: reordered
+    hint: "Drag a thumbnail to move it. On a phone, press and hold, then drag."
+    stepsTitle: How to reorder PDF pages
+    steps:
+      - h: Open your PDF
+        p: "Drop it here. Add more files with <b>Add PDF</b> to combine them."
+      - h: Drag pages into place
+        p: "Drag a thumbnail and drop it where it belongs. Delete or rotate pages on the way if needed."
+      - h: Download
+        p: "Click <b>Download</b> to save the PDF in its new order."
+    body: |
+      ## Put pages in order in seconds
+
+      Scanned a document out of order? Need the summary before the appendices, or the signed page at the end? Drag the thumbnails into place: the page numbers update as you go, and Ctrl/Cmd+Z undoes any move. To drop pages rather than move them, [delete pages from the PDF](/delete-pages-from-pdf/) with the dedicated tool.
+
+      ## Combine and reorder several PDFs
+
+      Use **Add PDF** to bring in other files. All pages appear in one grid, so you can interleave them, remove the ones you do not need and download a single, well-ordered document. When you only need to join files one after the other, [merge PDF files](/merge-pdf/) is the quicker route.
+
+      ## What is kept
+
+      Each page is copied as it is: text, fonts, images, comments and web links. The document is not rebuilt as images, so it stays light and searchable. Once the order is final, [add page numbers to the PDF](/add-page-numbers-to-pdf/) so readers can follow it.
+    faq:
+      - q: Can I move several pages at once?
+        a: "Move them one by one by dragging; each move takes a second, and Ctrl/Cmd+Z reverts the last one."
+      - q: Can I merge PDFs here?
+        a: "Yes. Click “Add PDF” (or drop several files at once) to combine them, reorder the pages and download one file."
+      - q: Do bookmarks follow the new order?
+        a: "No. The new file is built page by page and does not keep the original bookmarks (outline), nor links that jump to another page of the document. Web links on the pages are kept."
+      - q: Does it work on mobile?
+        a: "Yes. Press and hold a thumbnail, then drag it to its new place."
+
+  grayscale:
+    slug: convert-pdf-to-black-and-white
+    nav: Black & white
+    card: Convert a color PDF to grayscale and keep the text sharp and selectable.
+    title: "Convert PDF to black and white (grayscale), free and private"
+    description: "Turn a color PDF into black and white in your browser. Text stays selectable, images become grayscale, nothing is uploaded. Free, no account."
+    h1: 'Convert a PDF to <span class="hl">black and white</span>'
+    h1_plain: Convert PDF to black and white
+    lede: "Save ink, meet a print shop's requirements or prepare a document for black and white printing. Every color becomes a shade of gray, while the text stays real, selectable text."
+    suffix: bw
+    reportCaption: This PDF
+    runLabel: Convert to black and white and download
+    stepsTitle: How to convert a PDF to black and white
+    steps:
+      - h: Open your PDF
+        p: "Drop it on the page. It is processed on your computer."
+      - h: Convert
+        p: "Click the button. Text, shapes, images, comments and form appearances are converted to grayscale."
+      - h: Check and download
+        p: "The new file downloads straight away, and a preview of its first page appears so you can check the result."
+    body: |
+      ## Grayscale without turning your pages into pictures
+
+      Many converters "print" each page to an image, then put the images back into a PDF. It works, but the text is no longer text: you cannot select it, search it or copy it, and the file is often much heavier. pdfanonym rewrites the colors inside the document instead. Text stays sharp at any zoom, links keep working, and the file is usually lighter than the original because color photos become single-channel grayscale. To shrink the file further, [compress the PDF](/compress-pdf/) after converting.
+
+      ## What is converted
+
+      | Element | Result |
+      |---|---|
+      | Colored text and shapes (RGB and CMYK) | Shades of gray of matching brightness |
+      | Photos and illustrations | Grayscale images |
+      | Comments, stamps, form field appearances | Grayscale |
+      | Text | Still real, selectable text |
+
+      Brightness is preserved with the standard luminance formula, so light colors stay light and dark colors stay dark: a red title does not turn into a black block.
+
+      ## Limits
+
+      A few rare elements are left as they are and reported after conversion: smooth gradients (shadings), spot colors used in professional print files, and tiny images embedded directly in the page code. The preview shows the result so you can check it before printing.
+
+      ## Black and white or grayscale?
+
+      What most people call "black and white" is grayscale: 256 shades between black and white, which keeps photos readable. That is what this tool produces. Printers then render grays with black ink only. To convert only part of a document, [extract the pages from the PDF](/extract-pages-from-pdf/) first.
+    faq:
+      - q: Will the text still be selectable?
+        a: "Yes. The text is not converted to an image: you can select, search and copy it exactly as before."
+      - q: Does it reduce the file size?
+        a: "Often, yes, because color images are stored with one channel instead of three. Files that contain only text barely change."
+      - q: Can I convert only some pages?
+        a: "Not in this tool. Use <a href=\"/extract-pages-from-pdf/\">Extract pages</a> first to keep the pages you need, then convert that file."
+      - q: Why is something still in color?
+        a: "Smooth gradients and professional spot colors are not converted. They are rare in office documents; the report after conversion tells you if your file contains any."
+
+  anonymize:
+    slug: anonymize-pdf
+    nav: Anonymize PDF
+    card: Detect emails, phone numbers, IBANs and names automatically, then redact them in one click.
+    title: "Anonymize PDF: detect and redact personal data automatically"
+    description: "Find emails, phone numbers, IBANs, card numbers and names in a PDF automatically and redact them for good. GDPR-friendly: the file never leaves your browser."
+    h1: 'Anonymize a PDF: personal data <span class="redacted">found</span> for you'
+    h1_plain: Anonymize PDF
+    lede: "Open your document: pdfanonym scans every page for emails, phone numbers, bank details, card numbers and names, and lets you redact them all at once. Nothing is uploaded."
+    black: true
+    suffix: anonymized
+    stepsTitle: How to anonymize a PDF
+    steps:
+      - h: Open your PDF
+        p: "Drop it on the page. The scan starts automatically, on your computer."
+      - h: Review what was found
+        p: "Personal data is grouped by type with examples. Untick what should stay, then click <b>Mark selected</b>. Add anything else by hand or with the search box."
+      - h: Redact and download
+        p: "Press <kbd>Del</kbd> or <b>Apply</b>: the text is deleted from the file. Hidden metadata is removed too."
+    body: |
+      ## What the scan detects
+
+      | Data | How it is checked |
+      |---|---|
+      | Email addresses | Standard address format |
+      | Phone numbers | International (+33, +49…) and national formats |
+      | IBANs | Official checksum (mod 97): invalid numbers are ignored |
+      | Bank card numbers | Luhn checksum; company numbers such as SIRET are excluded |
+      | French social security numbers | Control key verified |
+      | IP addresses | Valid ranges only |
+      | Names after a title | Mr, Mrs, Dr, Monsieur, Madame, Herr, Frau, Sr., Sra., Sig.… |
+      | Dates | Detected but left unticked, because documents are full of dates that are not personal |
+
+      Checksums matter: they keep false positives low, so you can trust the list instead of reviewing hundreds of random numbers.
+
+      ## What it cannot guess
+
+      A name written without a title ("Jean Dupont signed…") looks like any other words, so it is not detected automatically. Type it in the search box and press **Mark all**: every occurrence is caught, in capitals or not, with or without accents. Postal addresses and handwritten information are not detected either. For anything the scan misses, [redact the PDF by hand](/redact-pdf/) by dragging across the text. Always read the document once before sharing it, using the checks in our guide on [how to redact a PDF properly](/how-to-redact-a-pdf/).
+
+      ## Why local anonymization matters
+
+      Sending a file full of personal data to an online service to remove that personal data is a contradiction: under the GDPR it means involving another processor. pdfanonym runs entirely in your browser, so the data never leaves your device. If you handle dozens of files, you can [batch anonymize PDF files](/batch-anonymize-pdf/) in one pass with the Pro plan.
+    faq:
+      - q: Is the detected data really removed?
+        a: "Yes, once you apply the redaction. The characters are deleted from the file, not hidden under a box, and the document metadata (author, title…) is cleaned as well."
+      - q: Does it work on scanned PDFs?
+        a: "No: a scan contains images, not text, so there is nothing to analyse. Use Area mode to black out passages by hand."
+      - q: Which languages and countries are covered?
+        a: "Emails, international phone numbers, IBANs, cards and IP addresses work for any country. Titles are recognised in English, French, German, Spanish, Italian and Portuguese. Social security numbers are checked for the French format."
+      - q: Can I keep some of the detected items?
+        a: "Yes. Untick a category before marking, or remove single marks from the list on the right."
+
+  merge:
+    slug: merge-pdf
+    nav: Merge PDF
+    card: Combine several PDFs into one file, in the order you choose.
+    title: "Merge PDF files online, free and private (no upload)"
+    description: "Combine PDF files into one document in your browser. Drop several files, reorder pages by drag and drop, download. Free, no upload, no account."
+    h1: 'Merge PDF files <span class="hl">without uploading them</span>'
+    h1_plain: Merge PDF
+    lede: "Drop several PDFs at once, arrange the pages in the right order and download a single document. Your files are combined on your own computer."
+    suffix: merged
+    hint: "Drop several files at once or use “Add PDF”. Drag thumbnails to change the order."
+    stepsTitle: How to merge PDF files
+    steps:
+      - h: Drop your PDFs
+        p: "Select several files at once, or add them one by one with <b>Add PDF</b>."
+      - h: Arrange the pages
+        p: "Every page appears as a thumbnail. Drag to reorder, rotate or delete pages if needed."
+      - h: Download
+        p: "Click <b>Download</b> to get a single PDF."
+    body: |
+      ## Merge and tidy up in one go
+
+      Merging is rarely just gluing files end to end. Here every page of every file appears in one grid, so you can put the signed page where it belongs, drop a blank page, or turn a sideways scan before you download. For a long bundle, you can also [rearrange the PDF pages](/rearrange-pdf-pages/) afterwards, then [add page numbers to the PDF](/add-page-numbers-to-pdf/) so the numbering runs across the merged document.
+
+      ## Quality and links
+
+      Pages are copied as they are: text stays text, images keep their resolution, comments and web links are kept. Resources shared by several pages of the same file are stored only once, so the result stays light. If the merged file is still too heavy to email, [compress the PDF](/compress-pdf/) afterwards.
+
+      ## Private by design
+
+      Merging contracts, payslips or medical records on an upload-based site means sending all of them to a server. Here they never leave your device.
+    faq:
+      - q: How many files can I merge?
+        a: "There is no fixed limit. Very large sets depend on your computer's memory."
+      - q: Can I merge password-protected PDFs?
+        a: "Yes, if you know their passwords: you are asked for each one when it is added. The merged file has no password; add one with the Protect tool if needed."
+      - q: Are bookmarks kept?
+        a: "No. The merged file does not keep the original bookmarks (outline) or links that jump to another page. Web links are kept."
+
+  add_text:
+    slug: add-text-to-pdf
+    nav: Add text
+    card: Type anywhere on a PDF page, like a form that has no fields.
+    title: "Add text to PDF online: type anywhere, free and private"
+    description: "Write on a PDF in your browser: click where you want, type, choose size and color, download. Real text, no upload, no account, no watermark."
+    h1: 'Add text to a PDF, <span class="hl">anywhere on the page</span>'
+    h1_plain: Add text to PDF
+    lede: "Fill in a form that has no fields, add a date or a note, complete a document before printing. Click, type, download."
+    suffix: edited
+    hint: "Click on a page to type. Drag a text to move it, click it to edit it, Del to delete it."
+    stepsTitle: How to add text to a PDF
+    steps:
+      - h: Open your PDF
+        p: "Drop it on the page. It opens on your computer."
+      - h: Click and type
+        p: "Click where the text should go and type. Choose the size and color in the toolbar; drag a text to move it."
+      - h: Download
+        p: "The text is written into the PDF as real, selectable text."
+    body: |
+      ## Real text, not an image
+
+      What you type is added to the page as actual text in a standard font (Helvetica). It stays sharp at any zoom, can be selected and searched, and prints exactly as it appears on screen. If the document also has filled form fields or comments, [flatten the PDF](/flatten-pdf/) before sending so everything is locked in place.
+
+      ## Typical uses
+
+      - Filling in a "flat" form, one that has boxes on the page but no fillable fields.
+      - Adding a date, a reference or "Read and approved" before signing.
+      - Writing a note on a plan or a document before sending it back.
+
+      To replace existing words, first [remove text from the PDF](/remove-text-from-pdf/), then type the new text in the blank space. To add a handwritten signature as well, switch to **Signature** in the toolbar or use [Sign PDF](/sign-pdf/).
+
+      ## Characters
+
+      Text is written in Helvetica, which covers the Latin alphabet including Western European accents (é, ü, ñ, ç, ß…). Characters outside that set, such as Cyrillic or Chinese, are replaced by a question mark.
+    faq:
+      - q: Can I edit text that was already in the PDF?
+        a: "Not with this tool: it adds new text. To remove existing text first, use Remove text from PDF, then add your new text here."
+      - q: Can I write several lines?
+        a: "Yes. Press Enter while typing to start a new line."
+      - q: Is the added text editable later?
+        a: "Not in pdfanonym once downloaded: it becomes part of the page. Keep your original if you may need changes."
+
+  sign:
+    slug: sign-pdf
+    nav: Sign PDF
+    card: Draw your signature and place it on the document, without printing or scanning.
+    title: "Sign PDF online: draw your signature, free and private"
+    description: "Draw your signature with the mouse or your finger and place it on a PDF. Free, in your browser, no upload, no account, no watermark."
+    h1: 'Sign a PDF with your <span class="hl">own signature</span>'
+    h1_plain: Sign PDF
+    lede: "No more printing, signing and scanning. Draw your signature once, place it where it belongs, and download the signed PDF."
+    suffix: signed
+    hint: "Click on a page to place your signature. Drag to move, corner to resize."
+    stepsTitle: How to sign a PDF
+    steps:
+      - h: Open your PDF
+        p: "Drop the document to sign. It stays on your computer."
+      - h: Draw your signature
+        p: "Draw it with the mouse, a trackpad or your finger, then click <b>Use this signature</b>."
+      - h: Place it and download
+        p: "Click where it goes, adjust its size, add the date with the <b>Text</b> tool if needed, then download."
+    body: |
+      ## A clean, transparent signature
+
+      Your drawing is cropped automatically and placed with a transparent background, so it sits on signature lines and tables without a white box around it. You can place it on several pages and resize each copy. To write the date or your name next to it, [add text to the PDF](/add-text-to-pdf/) with the Text tool.
+
+      ## What kind of signature is it?
+
+      A drawn signature is what the European eIDAS regulation calls a simple electronic signature. It is widely used for everyday documents: quotes, delivery notes, internal forms, leases between individuals. Some documents require an advanced or qualified electronic signature, based on a certificate and identity verification; for those, use a dedicated signature service.
+
+      ## Your signature stays with you
+
+      The signature image is created in your browser and written into your PDF on your computer. It is never uploaded or stored by us. Before sending, you can [flatten the PDF](/flatten-pdf/) so filled fields and comments are locked, and [password protect the PDF](/password-protect-pdf/) if it contains personal data.
+    faq:
+      - q: Can I sign on a phone?
+        a: "Yes. Open the page on your phone, draw with your finger, then tap where the signature should go."
+      - q: Can I add the date and my name?
+        a: "Yes. Switch to the Text tool in the toolbar, click next to the signature and type."
+      - q: Is my signature saved for next time?
+        a: "No. Nothing is stored: you draw it again for each document, which also means nobody else can reuse it from this site."
+
+  watermark:
+    slug: add-watermark-to-pdf
+    nav: Watermark
+    card: Stamp CONFIDENTIAL, DRAFT or your name across every page.
+    title: "Add a watermark to PDF online: free and private"
+    description: "Add a text watermark (CONFIDENTIAL, DRAFT, COPY…) to every page of a PDF. Choose opacity, color and direction, with a live preview. No upload."
+    h1: 'Add a <span class="hl">watermark</span> to a PDF'
+    h1_plain: Add watermark to PDF
+    lede: "Mark a document as confidential, a draft or a copy for a specific recipient. Type the text, adjust it with a live preview, and download."
+    suffix: watermarked
+    runLabel: Add watermark and download
+    stepsTitle: How to watermark a PDF
+    steps:
+      - h: Open your PDF
+        p: "Drop it on the page."
+      - h: Set the watermark
+        p: "Type the text, choose opacity, color and direction. The preview of the first page updates as you go."
+      - h: Download
+        p: "The watermark is added to every page."
+    body: |
+      ## Watermark ideas
+
+      - **CONFIDENTIAL** or **INTERNAL** on documents that should not circulate.
+      - **DRAFT** on versions that are not final.
+      - **Copy for [recipient]** on an ID document or a payslip you send to a landlord or an agency: if it leaks, it is clear where it came from and what it was meant for.
+
+      ## What a watermark does and does not do
+
+      A watermark discourages misuse and makes the origin of a copy obvious. It does not stop a determined person with editing software from removing it. For stronger protection, also [flatten](/flatten-pdf/) the file and [protect it with a password](/password-protect-pdf/).
+
+      ## Characters
+
+      The watermark uses Helvetica Bold, which covers the Latin alphabet including Western European accents. Other scripts are not supported.
+    faq:
+      - q: Is the text behind the watermark still readable?
+        a: "Yes. The watermark is semi-transparent; set the opacity between 5 % and 60 %."
+      - q: Can I watermark only some pages?
+        a: "This tool marks every page. To mark a selection, extract those pages first, watermark them, then merge."
+      - q: Can I use an image as a watermark?
+        a: "Not yet: only text watermarks are supported for now."
+
+  page_numbers:
+    slug: add-page-numbers-to-pdf
+    nav: Page numbers
+    card: Number the pages of a PDF, with the position and format you choose.
+    title: "Add page numbers to PDF online: free and private"
+    description: "Number the pages of a PDF: position, format (1, Page 1, Page 1 of 10), starting number, skip the cover. Live preview, in your browser, no upload."
+    h1: 'Add <span class="hl">page numbers</span> to a PDF'
+    h1_plain: Add page numbers to PDF
+    lede: "Number a report, an appendix or a bundle of documents in seconds. Choose where the numbers go and how they look; the preview updates live."
+    suffix: numbered
+    runLabel: Add page numbers and download
+    stepsTitle: How to number PDF pages
+    steps:
+      - h: Open your PDF
+        p: "Drop it on the page."
+      - h: Choose position and format
+        p: "Bottom or top, left, center or right; 1, Page 1 or Page 1 of 12; starting number; skip the cover if needed."
+      - h: Download
+        p: "Numbers are added to every page as real text."
+    body: |
+      ## Formats for every use
+
+      Simple numbers suit most documents. "Page 1 of 12" is common for contracts and official files, so a missing page is obvious. When a document continues another one, set the starting number (for example 25), and tick **Skip the first page** to leave a cover unnumbered. To mark every page as a draft or a copy as well, [add a watermark to the PDF](/add-watermark-to-pdf/).
+
+      ## Correct on every page
+
+      Numbers are placed relative to what you see on screen, even on pages that are rotated or cropped, so they never end up sideways or outside the page.
+
+      ## Combine with other tools
+
+      Building a bundle of documents? [Merge](/merge-pdf/) the files first, then number the result so the numbering runs across the whole set.
+    faq:
+      - q: Can I start numbering at a number other than 1?
+        a: "Yes. Set “Start at” to any number."
+      - q: Can I leave the cover page without a number?
+        a: "Yes. Tick “Skip the first page”: numbering starts on the second page."
+      - q: Are the numbers searchable text?
+        a: "Yes. They are added as real text in Helvetica."
+
+  compress:
+    slug: compress-pdf
+    nav: Compress PDF
+    card: Make a PDF smaller for email and uploads by shrinking oversized images.
+    title: "Compress PDF online: reduce file size, free and private"
+    description: "Reduce the size of a PDF in your browser: oversized images are resized and recompressed, fonts are trimmed. Three levels, no upload, no account."
+    h1: 'Compress a PDF <span class="hl">without uploading it</span>'
+    h1_plain: Compress PDF
+    lede: "Too heavy to email or to upload to a portal? Shrink oversized images and unused data, keep the text sharp, and see the size before and after."
+    suffix: compressed
+    runLabel: Compress and download
+    stepsTitle: How to compress a PDF
+    steps:
+      - h: Open your PDF
+        p: "Drop it on the page. Its current size is shown."
+      - h: Choose a level
+        p: "Light, Recommended or Strong. Recommended suits screens and office printing."
+      - h: Download
+        p: "You see the new size and the percentage saved. If no saving is possible, your file is left unchanged."
+    body: |
+      ## What makes a PDF heavy
+
+      Almost always: images. A photo straight from a phone or a scan at 600 dpi contains far more pixels than a page needs. pdfanonym reduces each image to the resolution the page can actually display (about 220, 150 or 100 dpi depending on the level) and recompresses it. Fonts are trimmed to the characters actually used, and unused objects are removed. For documents that will be printed in black and white anyway, [converting the PDF to black and white](/convert-pdf-to-black-and-white/) often saves even more, since color images shrink to a single channel.
+
+      ## What to expect
+
+      | Document | Typical result |
+      |---|---|
+      | Photos, scans in color, presentations | Large reduction, often 50 % to 90 % |
+      | Mixed reports | Moderate reduction |
+      | Text-only documents, files already optimized | Little or no change |
+
+      Text and vector drawings are never converted to images, so they stay perfectly sharp at any level. When you [convert JPG to PDF](/jpg-to-pdf/) from phone photos, compressing the result afterwards is usually worth it. And if the goal is a lightweight picture of a page rather than a smaller PDF, [convert the PDF to JPG](/pdf-to-jpg/) instead.
+
+      ## Large files
+
+      Everything runs on your computer, so a 100-page scanned file can take a few seconds. There is no upload time and no size limit set by a server.
+    faq:
+      - q: Will compression reduce quality?
+        a: "Light keeps images close to the original. Recommended is hard to tell apart on screen and in office printing. Strong shows visible loss on photos when you zoom in. Text is never affected."
+      - q: Why did my file barely shrink?
+        a: "It contains little image data, or its images were already compressed. In that case the tool tells you and keeps your file as it is."
+      - q: Is there a size limit?
+        a: "No limit is set by us; very large files depend on your computer's memory."
+
+  pdf_to_jpg:
+    slug: pdf-to-jpg
+    nav: PDF to JPG
+    card: Turn every page of a PDF into a JPG or PNG image.
+    title: "PDF to JPG online: convert pages to images, free and private"
+    description: "Convert each page of a PDF into a JPG or PNG image, at screen or print quality. Several pages are downloaded as a ZIP. No upload, no account."
+    h1: 'Convert a PDF to <span class="hl">JPG images</span>'
+    h1_plain: PDF to JPG
+    lede: "Share a page on social media, insert it in a presentation or send it where PDFs are not accepted. Each page becomes an image."
+    suffix: images
+    runLabel: Convert and download
+    stepsTitle: How to convert PDF to JPG
+    steps:
+      - h: Open your PDF
+        p: "Drop it on the page."
+      - h: Choose format and quality
+        p: "JPG for photos and small files, PNG for sharp text and drawings. 150 dpi suits screens, 300 dpi suits printing."
+      - h: Download
+        p: "One page gives one image; several pages are packed into a ZIP file."
+    body: |
+      ## JPG or PNG?
+
+      **JPG** gives small files and is accepted everywhere; it is the right choice for pages with photos. **PNG** is lossless: text and lines stay perfectly crisp, at the cost of larger files. If you only need a lighter file rather than pictures, [compress the PDF](/compress-pdf/) instead.
+
+      ## Which quality?
+
+      | Setting | Use |
+      |---|---|
+      | 96 dpi | Screens, messages, previews |
+      | 150 dpi | General use, presentations |
+      | 300 dpi | Printing, archiving |
+
+      To convert a single page, [extract the page from the PDF](/extract-pages-from-pdf/) first, so you get one image instead of a ZIP.
+
+      ## Converted on your computer
+
+      Pages are rendered by the same engine used by many PDF readers, directly in your browser. Your document is not sent anywhere. To turn images back into a document later, [convert JPG to PDF](/jpg-to-pdf/) the same way.
+    faq:
+      - q: How do I convert just one page?
+        a: "Use Extract pages to keep the page you need, then convert that file. A single page downloads as a single image."
+      - q: Can I convert images back to PDF?
+        a: "Yes, with JPG to PDF."
+      - q: Is the text in the images selectable?
+        a: "No. An image is a picture of the page; keep the PDF if you need selectable text."
+
+  jpg_to_pdf:
+    slug: jpg-to-pdf
+    nav: JPG to PDF
+    card: Combine photos and scans into one PDF, in the order you choose.
+    title: "JPG to PDF online: convert images to PDF, free and private"
+    description: "Turn JPG, PNG and other images into a single PDF. Reorder by drag and drop, choose page size and margins. Free, in your browser, no upload."
+    h1: 'Convert images to <span class="hl">one PDF</span>'
+    h1_plain: JPG to PDF
+    lede: "Photos of receipts, scanned pages, screenshots: drop them, put them in order and get a single PDF ready to send."
+    suffix: images
+    hint: "Drag thumbnails to change the order. ✕ removes an image."
+    runLabel: Create PDF
+    stepsTitle: How to convert JPG to PDF
+    steps:
+      - h: Drop your images
+        p: "JPG, PNG and other common formats. Add more with <b>Add images</b>."
+      - h: Order and set up
+        p: "Drag to reorder. Choose the page size (same as image, A4 or Letter) and the margin."
+      - h: Create the PDF
+        p: "One image per page, in your order, downloaded as one file."
+    body: |
+      ## Page size: which one to choose?
+
+      **Same as image** creates pages that match each picture exactly, which is ideal for screenshots and photos. **A4** or **Letter** puts each image on a standard page, centered and scaled to fit, which is better for documents you will print or send to an administration. Landscape images automatically get landscape pages. If a scan still ends up sideways, [rotate the PDF](/rotate-pdf/) pages and save them the right way up.
+
+      ## Supported formats
+
+      JPG and PNG are added as they are, without recompression. Other formats your browser can open (GIF, BMP, WebP, and on some devices HEIC) are converted first. Phone photos can be heavy, so [compress the PDF](/compress-pdf/) afterwards if it is too big to email.
+
+      ## Private by design
+
+      Receipts, ID documents and bank statements are typical things people turn into PDFs. Here the images stay on your device. To add the result to an existing document, [merge PDF files](/merge-pdf/) together, also locally.
+    faq:
+      - q: Is image quality reduced?
+        a: "JPG and PNG images are embedded as they are, without recompression. Use Compress PDF afterwards if the file is too heavy."
+      - q: How many images can I add?
+        a: "There is no fixed limit; very large photos use more memory."
+      - q: Can I mix photos and an existing PDF?
+        a: "Create a PDF from the photos here, then use Merge PDF to combine it with your other document."
+
+  protect:
+    slug: password-protect-pdf
+    nav: Protect PDF
+    card: Lock a PDF with a password using AES-256 encryption.
+    title: "Password protect PDF online: AES-256, free and private"
+    description: "Add a password to a PDF with AES-256 encryption and choose what is allowed (printing, copying, editing). In your browser: the file and password stay with you."
+    h1: 'Protect a PDF with a <span class="hl">password</span>'
+    h1_plain: Password protect PDF
+    lede: "Encrypt a document before emailing it or storing it in the cloud. Only people who have the password can open it."
+    suffix: protected
+    runLabel: Protect and download
+    stepsTitle: How to password protect a PDF
+    steps:
+      - h: Open your PDF
+        p: "Drop it on the page."
+      - h: Choose a password
+        p: "Type it twice. Choose whether printing, copying or editing are allowed once the file is open."
+      - h: Download
+        p: "The PDF is encrypted with AES-256, the strongest standard PDF encryption."
+    body: |
+      ## Strong encryption, done locally
+
+      The PDF is encrypted with AES-256. Without the password, its content cannot be read. Because encryption happens in your browser, neither the document nor the password is ever sent to a server. If you later need the file without a password, you can [unlock the PDF](/unlock-pdf/) with it. Before encrypting a file you will share, check what it carries: [remove PDF metadata](/remove-pdf-metadata/) such as the author name or review comments, which anyone with the password will see.
+
+      ## Choose a good password
+
+      Use at least 12 characters, ideally a few unrelated words. Send the password through a different channel from the file: if you email the PDF, give the password by phone or text message.
+
+      ## Permissions
+
+      You can also restrict printing, copying and editing for people who open the file. These restrictions are respected by mainstream readers but are not a strong protection on their own; the password is what keeps the content private. To make form answers and comments uneditable in every reader, [flatten the PDF](/flatten-pdf/) before encrypting it.
+    faq:
+      - q: What if I forget the password?
+        a: "It cannot be recovered, by us or anyone else: we never see it. Keep a copy of the unprotected file somewhere safe."
+      - q: Which readers can open the protected file?
+        a: "All current PDF readers (Adobe Acrobat Reader, browsers, Apple Preview, mobile apps) support AES-256."
+      - q: Can I remove the password later?
+        a: "Yes, with Unlock PDF, as long as you know the password."
+
+  unlock:
+    slug: unlock-pdf
+    nav: Unlock PDF
+    card: Remove the password or the print and copy restrictions from your own PDF.
+    title: "Unlock PDF online: remove password and restrictions"
+    description: "Remove the password from a PDF you can open, or lift its printing and copying restrictions. In your browser, no upload. For your own documents only."
+    h1: 'Unlock a PDF <span class="hl">you own</span>'
+    h1_plain: Unlock PDF
+    lede: "Tired of typing the password of your own bank statement every time? Remove it once. Restrictions that block printing or copying can be lifted too."
+    suffix: unlocked
+    runLabel: Unlock and download
+    stepsTitle: How to unlock a PDF
+    steps:
+      - h: Open your PDF
+        p: "Drop it on the page. If it needs a password to open, a field appears."
+      - h: Enter the password
+        p: "Type the password you normally use to open it. Files that open without a password need nothing."
+      - h: Download
+        p: "You get the same document, without password or restrictions."
+    body: |
+      ## Two kinds of PDF protection
+
+      Some PDFs ask for a password to **open** them; bank statements, payslips and tax documents often do. Others open freely but **restrict** what you can do: printing, copying text, filling in forms. This tool handles both, provided you can open the file normally. Once unlocked, the file is easier to use with other tools, for example to [compress the PDF](/compress-pdf/) before uploading it to a portal.
+
+      ## Only for your own documents
+
+      Unlocking requires the password of the file: this is not a password cracker. Use it for documents you own or are allowed to modify, such as your own statements, or files whose author gave you the password.
+
+      ## Stays on your computer
+
+      Your PDF and its password are processed in your browser and never sent anywhere. Want a new password instead? [Password protect the PDF](/password-protect-pdf/) again after unlocking it.
+    faq:
+      - q: Can you unlock a PDF if I forgot the password?
+        a: "No. The password is needed to decrypt the file; we do not try to guess or break it."
+      - q: Is the content changed?
+        a: "No. Pages, text, images and links stay the same; only the encryption and restrictions are removed."
+      - q: Can I protect it again with another password?
+        a: "Yes, with Protect PDF."
+
+  batch:
+    slug: batch-anonymize-pdf
+    nav: Batch anonymize
+    card: "Pro: anonymize dozens of PDFs in one go, with a CSV report."
+    title: "Batch anonymize PDF files: redact many documents at once"
+    description: "Anonymize several PDFs in one go: emails, phones, IBANs, names, addresses and your own term lists, redacted in every file. ZIP and CSV report. Local, Pro."
+    h1: 'Anonymize <span class="hl">many PDFs</span> at once'
+    h1_plain: Batch anonymize PDF
+    lede: "Drop a folder of documents, choose what must disappear, and get every file redacted in one ZIP, with a CSV report for your records. Still 100 % local."
+    suffix: anonymized
+    runLabel: Anonymize all
+    stepsTitle: How batch anonymization works
+    steps:
+      - h: Drop your PDFs
+        p: "Select as many files as you need. They are processed one after the other on your computer."
+      - h: Choose what to redact
+        p: "Tick the categories (emails, phones, IBANs, names, addresses…) and add your own terms: client names, case numbers, internal codes."
+      - h: Download the ZIP
+        p: "Every file is redacted and cleaned of metadata. A CSV report lists, for each file and page, how many items were removed in each category."
+    body: |
+      ## Built for recurring work
+
+      Answering GDPR access requests, preparing case files, publishing decisions, sharing HR documents with an auditor: when the same kinds of data must disappear from many documents, batch mode does in one pass what would otherwise take an afternoon.
+
+      ## What is detected
+
+      Everything the [free anonymizer](/anonymize-pdf/) finds (emails, phones, IBANs, cards, social security numbers, IPs, names after a title), plus the Pro detection: names written without a title, postal addresses, dates of birth, licence plates and VAT numbers. Your term lists are applied to every file, ignoring capitals and accents.
+
+      ## Check before you share
+
+      Automatic detection is not exhaustive. The CSV report helps you spot files where nothing or very little was found, which deserve a closer look. Text in scanned pages is not analysed. Every output file is also cleaned of its metadata; to inspect a single document field by field, [remove PDF metadata](/remove-pdf-metadata/) with the free tool.
+    faq:
+      - q: Is batch mode included in the Pro plan?
+        a: "Yes, in the 24-hour pass, Pro and Team plans."
+      - q: How many files can I process at once?
+        a: "There is no fixed limit. Files are processed one by one, so the limit is your computer's memory and patience: hundreds of ordinary documents are fine."
+      - q: Are my files uploaded for batch processing?
+        a: "No. Like every pdfanonym tool, batch mode runs entirely in your browser."
+
+  pricing:
+    slug: pricing
+    nav: Pricing
+    title: "pdfanonym Pro: pricing for batch anonymization and reports"
+    description: "Free tools stay free. Pro adds batch anonymization, extended detection (names, addresses), saved term lists and redaction reports. From 3 € for 24 hours."
+    h1: 'Go further with <span class="hl">pdfanonym Pro</span>'
+    lede: "Every tool on the site stays free for everyone. Pro is for professionals who anonymize documents as part of their work: lawyers, DPOs, HR teams, firms and public bodies."
+    billing: Billing period
+    monthly: Monthly
+    yearly: Yearly
+    save: −32 %
+    popular: Most popular
+    per_month: / month excl. VAT
+    per_year: / year excl. VAT
+    per_user_month: / user / month excl. VAT
+    free_h: Free
+    free_p: For occasional needs.
+    free_f:
+      - All 20 tools, no limit
+      - Real redaction, metadata cleaning
+      - Detection of emails, phones, IBANs, cards
+      - Files never leave your device
+    free_cta: Use the free tools
+    pass_h: 24-hour pass
+    pass_unit: once, excl. VAT
+    pass_p: For a one-off file or request.
+    pass_f:
+      - Every Pro feature for 24 hours
+      - No subscription, nothing to cancel
+      - Invoice with your VAT number
+    pass_cta: Buy a 24-hour pass
+    pro_h: Pro
+    pro_p: For independent professionals.
+    pro_f:
+      - Batch anonymization of many PDFs
+      - "Extended detection: names, addresses, dates of birth, plates, VAT numbers"
+      - Saved term lists
+      - Redaction reports (PDF and CSV)
+      - Cancel anytime
+    pro_cta: Get Pro
+    team_h: Team
+    team_p: For firms and departments.
+    team_f:
+      - Everything in Pro, per user
+      - One invoice for the whole team
+      - Add or remove users anytime
+    seats: Users
+    team_cta: Get Team
+    consent: "I am buying for my professional activity (company, self-employed, public body). I accept the <a href=\"{terms}\">terms of use and sale</a> and ask for immediate access to the Pro features."
+    vat_note: "Prices exclude VAT. Pro plans are reserved for professionals. VAT is added according to your country; EU businesses with a valid VAT number are invoiced without VAT (reverse charge). Secure payment by Stripe; we never see your card details."
+    body: |
+      ## How the licence works
+
+      After payment, a licence key is stored in your browser. It is checked on your device, without contacting our servers, so Pro features work offline and your documents still never leave your computer. To use Pro on another device or share a Team licence with a colleague, copy the key from your [account page](/account/).
+
+      ## Why paid features at all?
+
+      The free tools cost us very little to run, which is why they stay free. Pro funds the development of the features professionals ask for and keeps the site free of advertising.
+    faq:
+      - q: Can individuals buy Pro?
+        a: "No. Paid plans are reserved for professionals buying for their work. All the free tools remain available to everyone, without an account."
+      - q: Can I cancel my subscription?
+        a: "Yes, anytime from your account page. You keep Pro until the end of the period already paid; there is no automatic refund for that period."
+      - q: Do I get an invoice?
+        a: "Yes. Stripe sends a receipt and an invoice by email. Enter your company name and VAT number at checkout to have them on the invoice."
+      - q: What happens when the 24-hour pass ends?
+        a: "Pro features are locked again. Files you already processed stay as they are. Nothing renews automatically."
+      - q: Is my payment information safe?
+        a: "Payment is handled by Stripe on its own secure page. We never receive your card details."
+
+  account:
+    slug: account
+    nav: My account
+    noindex: true
+    title: "My Pro account · pdfanonym"
+    description: "Manage your pdfanonym Pro licence: status, subscription, licence key."
+    h1: My Pro account
+    lede: "Your licence is stored in this browser only. No account, no password."
+    loading: Checking your licence…
+    manage: Manage subscription and invoices
+    key_h: Licence key
+    key_p: "Copy this key to use Pro on another device or browser (or give it to a colleague in a Team plan). Paste a key here to activate it."
+    key_ph: Paste a licence key
+    copy: Copy the key
+    activate: Activate this key
+    remove: Remove from this device
+    body: |
+      Questions about a payment or an invoice? Write to contact@pdfanonym.com with the email address used at checkout.
+
+  guide:
+    slug: how-to-redact-a-pdf
+    nav: How to redact a PDF
+    title: "How to redact a PDF properly (and check that it worked)"
+    description: "A practical guide to redacting PDFs: why black boxes fail, how to redact for free, how to handle scans and metadata, and five checks before you send."
+    h1: How to redact a PDF properly
+    lede: "Redacting a PDF takes a minute. Redacting it badly takes the same minute, and the mistake only shows when someone else finds the text. Here is how to do it right."
+    cta_tool: redact
+    cta: Open the free redaction tool
+    body: |
+      ## The short answer
+
+      Use a tool that **removes** the text, not one that covers it. Open your PDF in [pdfanonym's redaction tool](/redact-pdf/), select what must go (or search for it), press **Apply**, download, then check the result by trying to copy and search the redacted words. If nothing comes back, the redaction worked.
+
+      The rest of this guide explains why that check matters and how to deal with the cases that trip people up.
+
+      ## Why black rectangles fail
+
+      A PDF page is built from instructions: "write these characters here", "draw this shape there". When you draw a black rectangle over a name, you add one more instruction on top. The instruction that writes the name is still in the file.
+
+      The result looks perfect on screen and on paper. But select the area and copy it, and the name lands in your clipboard. Search the document, and the reader jumps straight to it. Text extraction tools, search engines and AI assistants read the hidden words as easily as the visible ones.
+
+      This is not a theoretical risk. In 2019, a court filing by Paul Manafort's lawyers in the United States contained "redacted" passages that journalists recovered simply by copying and pasting them. Similar slips have exposed security manuals, contracts and personal data in many countries.
+
+      ## Step by step: redacting a text PDF
+
+      1. **Keep the original.** Redaction is permanent by design. Work on a copy.
+      2. **Open the file** in a real redaction tool. With pdfanonym, drop it on [the redaction page](/redact-pdf/); it opens locally. pdfanonym merges form fields automatically; with other tools, [flatten the PDF](/flatten-pdf/) first so typed answers become part of the page.
+      3. **Find every occurrence.** Type a name, a reference or a number in the search box and press *Mark all*. Searches ignore capitals and accents, so "Müller" also finds "MULLER". Repeat for each piece of information. To have emails, phone numbers and IBANs found for you, [anonymize the PDF](/anonymize-pdf/) instead.
+      4. **Mark the rest by hand.** Drag across passages, click single words, double-click a line to take all of it.
+      5. **Apply.** The text under each mark is deleted and replaced by a black box (or white space if you prefer).
+      6. **Remove the metadata too.** Leave the option ticked: the author, title and software fields often contain exactly the names you just redacted. You can also [remove PDF metadata](/remove-pdf-metadata/) on its own and see every field.
+      7. **Download and check** (see below).
+
+      ## Redacting a scanned PDF
+
+      A scan is a photo of a page. There is no text to delete, only pixels. Two consequences:
+
+      - Searching for a name finds nothing, so you have to locate each occurrence by eye.
+      - The redaction must change the image itself. In pdfanonym, switch to **Area** mode, tick **images** in the options and draw a rectangle over each passage: the pixels inside are blanked out of the image.
+
+      Some scans also carry an invisible OCR text layer, added by the scanner so the document can be searched. In that case the hidden text layer must go too. Area mode removes both the text and the image under the rectangle.
+
+      ## Five checks before you send
+
+      1. **Copy test.** Select the redacted area, copy, paste into a plain text editor. Nothing should appear.
+      2. **Search test.** Search the PDF for each redacted word. Zero results.
+      3. **Properties test.** In your reader, open File, then Properties. The author, title and subject should not reveal anything.
+      4. **Comments test.** Open the comments panel: review notes can quote the very passage you removed.
+      5. **Attachments test.** Look for a paperclip icon or an attachments panel. An embedded file can hold the unredacted original.
+
+      ## Redaction and GDPR
+
+      Under the GDPR, when you disclose a document in response to an access request, data about other people generally has to be removed or the disclosure has to be justified. Redaction is the usual way to do it. Doing it with an upload-based service means sending those people's data to yet another processor, which you would then have to account for. A tool that works locally avoids the question entirely. When many documents are involved, you can [batch anonymize PDF files](/batch-anonymize-pdf/) in one pass.
+    faq:
+      - q: Can a redacted PDF be un-redacted?
+        a: "If the text was truly removed, no: there is nothing left to recover. If it was only covered by a shape, yes, often with a simple copy and paste. That is why the copy test matters."
+      - q: Does Adobe Acrobat Reader redact for free?
+        a: "The free Reader does not include true redaction; it is reserved for the paid versions of Acrobat. Drawing a rectangle with the comment tools does not redact anything."
+      - q: What about redacting on a phone?
+        a: "pdfanonym works in mobile browsers: open the redaction page, pick the PDF from your files and mark text with your finger. A computer is more comfortable for long documents."
+
+  privacy:
+    slug: privacy
+    nav: Privacy
+    title: "Privacy: your files never leave your device · pdfanonym"
+    description: "pdfanonym processes PDFs in your browser. We do not receive, store or see your files, and we do not use cookies or trackers."
+    h1: Privacy
+    lede: "Short version: we never see your files, and we do not track you."
+    body: |
+      ## Your documents
+
+      PDFs you open on pdfanonym are processed **inside your browser**, on your own device, by a PDF engine that is downloaded with the page. They are not uploaded to our servers or to anyone else's. We have no copy of them, no way to read them and nothing to delete.
+
+      You can verify this: open your browser's developer tools, select the Network tab and process a file. No request carries your document. The site also sends a Content-Security-Policy header that prevents the page from connecting to any other domain.
+
+      ## Cookies and tracking
+
+      pdfanonym sets **no cookies**, uses **no analytics or advertising scripts**, and loads **no third-party resources** (fonts and scripts are served from our own domain). Your browser may store small preferences locally; they never leave your device.
+
+      ## Purchases
+
+      If you buy a Pro plan, payment is handled by Stripe, which processes your card, email and billing details under its own privacy policy; we never see your card number. Our licence service only receives the identifier of your Stripe checkout session and returns a signed licence key, which is stored in your browser. Billing records (name, email, address, VAT number, invoices) are kept by Stripe and METIS for as long as accounting law requires. Your PDF files are never involved.
+
+      ## Server logs
+
+      Like any website, our host (Cloudflare) processes technical data needed to deliver the pages, such as your IP address and browser type, and may keep short-lived logs for security. These logs never include your documents.
+
+      ## Contact
+
+      Questions about privacy: contact@pdfanonym.com.
+
+  terms:
+    slug: terms
+    nav: Terms of use
+    title: "Terms of use · pdfanonym"
+    description: "Terms of use of pdfanonym.com: free tools provided as is, local processing, your responsibilities, lawful use and limitation of liability."
+    h1: Terms of use
+    lede: "Last updated: 9 October 2026. By using pdfanonym.com, you accept these terms."
+    body: |
+      ## 1. The service
+
+      pdfanonym.com, published by METIS (see the [legal notice](/legal/)), offers free online tools to process PDF files: redaction, anonymization, text removal, metadata cleaning, page editing, conversion, compression, signing and password protection. No account is required.
+
+      ## 2. Processing on your device
+
+      Files are processed in your web browser, on your own device. They are not sent to our servers, and we have no access to them. You remain the only holder of your documents and of their content. The [privacy page](/privacy/) explains this in detail.
+
+      ## 3. Provided as is
+
+      The tools are provided free of charge and as is, without any guarantee of results, availability or fitness for a particular purpose. They may change, be interrupted or be removed at any time.
+
+      ## 4. Check the result before you share it
+
+      You are responsible for checking every document before using or sharing it. In particular:
+
+      - **Automatic detection of personal data is not exhaustive.** Names written without a title, postal addresses, handwritten text, scanned pages and uncommon formats may not be detected. Read the document and complete the redaction yourself.
+      - **Redaction only applies to what you mark.** Information can also appear in images, attachments, comments or other copies of the file. Our [guide](/how-to-redact-a-pdf/) lists the checks to perform.
+      - **Keep your original files.** Changes made by the tools, such as redaction, flattening or encryption, are permanent by design.
+
+      ## 5. Lawful use
+
+      You agree to use the tools only for documents you own or are authorised to modify, and in compliance with the law. In particular, you must not use the unlock tool to remove protections from documents you have no right to modify, nor use any tool to infringe the rights of others, including copyright and privacy.
+
+      ## 6. Electronic signature
+
+      A signature drawn with the signing tool is a simple electronic signature within the meaning of the European eIDAS regulation. It does not replace an advanced or qualified electronic signature where one is required.
+
+      ## 7. Liability
+
+      To the extent permitted by law, METIS shall not be liable for any damage resulting from the use of the tools or the inability to use them, including the disclosure of information that was not redacted, the loss or alteration of files, or a decision taken on the basis of a processed document. Nothing in these terms limits liability that cannot be limited under applicable law, nor the rights consumers enjoy under the mandatory law of their country of residence.
+
+      ## 8. Open source software
+
+      The source code of the site is published under the GNU Affero General Public License v3 (see [Source code](/source-code/)). That license governs your rights over the code. The pdfanonym name and logo are not covered by it.
+
+      ## 9. Paid plans (professionals only)
+
+      Paid plans (24-hour pass, Pro, Team) are sold by METIS **exclusively to professional customers**: companies, self-employed people and public bodies buying for the purposes of their trade, business or profession. They are not offered to consumers. By ordering, you confirm that you act in a professional capacity.
+
+      - **Prices** are shown on the [pricing page](/pricing/) excluding VAT. VAT is added according to the rules applicable to your country; EU businesses with a valid VAT number are invoiced under the reverse-charge mechanism. Payment is processed by Stripe.
+      - **Access** starts immediately after payment.
+      - **Subscriptions** (Pro, Team) renew automatically for the same period until cancelled. You can cancel at any time from your account page; cancellation takes effect at the end of the period already paid, which is not refunded.
+      - **The 24-hour pass** gives access to Pro features for 24 hours from payment and does not renew.
+      - **Licences** are personal for Pro and per user for Team. The licence key is stored in your browser; keep a copy to use it on another device.
+      - **Questions and claims**: contact@pdfanonym.com.
+
+      ## 10. Changes and applicable law
+
+      These terms may be updated; the date at the top of the page shows the latest version. They are governed by French law. Contact: contact@pdfanonym.com.
+
+  source:
+    slug: source-code
+    nav: Source code
+    title: "Source code and license (AGPL) · pdfanonym"
+    description: "pdfanonym is open source under the GNU AGPL v3. Download the complete source code of the site and its PDF engine."
+    h1: Source code
+    lede: "pdfanonym is open source. You can read exactly what it does with your files, and run your own copy."
+    body: |
+      ## License
+
+      The site is distributed under the **GNU Affero General Public License, version 3** (AGPL-3.0). It relies on [MuPDF](https://mupdf.com) by Artifex Software, used under the same license, compiled to WebAssembly.
+
+      ## Download
+
+      - [Complete source code of this site (zip)](/source/pdfanonym-source.zip): templates, texts, scripts, styles and build script.
+      - The PDF engine is the official [mupdf.js](https://www.npmjs.com/package/mupdf) package, included unmodified in the archive (folder `src/assets/mupdf`). Its own source is published by Artifex at [github.com/ArtifexSoftware/mupdf.js](https://github.com/ArtifexSoftware/mupdf.js).
+
+      ## Run it yourself
+
+      Unzip the archive and serve the `src` folder with any static web server, or run `python3 build.py` to regenerate the pages. No database, no backend.
+
+  legal:
+    slug: legal
+    nav: Legal notice
+    title: "Legal notice · pdfanonym"
+    description: "Publisher and hosting information for pdfanonym.com."
+    h1: Legal notice
+    body: |
+      ## Publisher
+
+      pdfanonym.com is published by **METIS**, a simplified joint-stock company with a sole shareholder (SASU) with a share capital of €100, registered with the Marseille Trade and Companies Register under number 991 555 574.
+
+      - Registered office: 120 Chemin de Ceinture, 13400 Aubagne, France
+      - SIRET: 991 555 574 00011
+      - VAT: FR35991555574
+      - Publication director: Julien Sikoutris
+      - Contact: contact@pdfanonym.com
+
+      ## Hosting
+
+      Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, United States.
+
+      ## Liability
+
+      pdfanonym is provided free of charge and as is. Always check a redacted document before sharing it; the [guide](/how-to-redact-a-pdf/) explains how. You remain responsible for the documents you process and share.

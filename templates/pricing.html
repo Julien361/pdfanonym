@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block main %}
+<section class="hero"><div class="wrap"><h1>{{ P.h1 | safe }}</h1><p class="lede">{{ P.lede | safe }}</p></div></section>
+<section class="section pricing" data-lang="{{ L.lang }}" data-account="{{ L.urls.account }}" style="padding-top:0">
+  <div class="wrap">
+    <div class="period" role="group" aria-label="{{ P.billing }}">
+      <button class="btn active" type="button" data-period="month">{{ P.monthly }}</button>
+      <button class="btn" type="button" data-period="year">{{ P.yearly }} <b class="save">{{ P.save }}</b></button>
+    </div>
+    <div class="plans">
+      <div class="plan">
+        <h2>{{ P.free_h }}</h2><p class="price">0 €</p><p class="muted">{{ P.free_p }}</p>
+        <ul>{% for f in P.free_f %}<li>{{ f }}</li>{% endfor %}</ul>
+        <a class="btn big" href="{{ L.urls.redact }}">{{ P.free_cta }}</a>
+      </div>
+      <div class="plan">
+        <h2>{{ P.pass_h }}</h2><p class="price">3 €<small> {{ P.pass_unit }}</small></p><p class="muted">{{ P.pass_p }}</p>
+        <ul>{% for f in P.pass_f %}<li>{{ f }}</li>{% endfor %}</ul>
+        <button class="btn big dark" type="button" data-buy="pass">{{ P.pass_cta }}</button>
+      </div>
+      <div class="plan hot">
+        <span class="tag">{{ P.popular }}</span>
+        <h2>{{ P.pro_h }}</h2>
+        <p class="price"><span data-show="month">6 €<small> {{ P.per_month }}</small></span><span data-show="year" hidden>49 €<small> {{ P.per_year }}</small></span></p>
+        <p class="muted">{{ P.pro_p }}</p>
+        <ul>{% for f in P.pro_f %}<li>{{ f }}</li>{% endfor %}</ul>
+        <button class="btn big primary" type="button" data-buy="pro">{{ P.pro_cta }}</button>
+      </div>
+      <div class="plan">
+        <h2>{{ P.team_h }}</h2><p class="price">15 €<small> {{ P.per_user_month }}</small></p><p class="muted">{{ P.team_p }}</p>
+        <ul>{% for f in P.team_f %}<li>{{ f }}</li>{% endfor %}</ul>
+        <label class="field inline seats"><span>{{ P.seats }}</span><input type="number" data-el="seats" value="3" min="2" max="100"></label>
+        <button class="btn big dark" type="button" data-buy="team">{{ P.team_cta }}</button>
+      </div>
+    </div>
+    <label class="opt consent"><input type="checkbox" data-el="consent"> <span>{{ P.consent | replace("{terms}", L.urls.terms) | safe }}</span></label>
+    <p class="status" role="status" aria-live="polite" data-el="status"></p>
+    <p class="muted small">{{ P.vat_note }}</p>
+  </div>
+</section>
+<section class="section"><div class="wrap prose">{{ P.body_html | safe }}</div></section>
+{% if P.faq %}<section class="section faq"><div class="wrap prose"><h2>{{ L.ui.faq }}</h2>
+{% for f in P.faq %}<details><summary>{{ f.q }}</summary><p>{{ f.a | safe }}</p></details>
+{% endfor %}</div></section>{% endif %}
+<script type="module" src="/assets/js/pro.js?v={{ v }}"></script>
+{% endblock %}

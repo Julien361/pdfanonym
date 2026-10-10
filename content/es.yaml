@@ -1,0 +1,1626 @@
+name: Español
+locale: es_ES
+
+nav:
+  redact: Censurar PDF
+  remove: Borrar texto
+  metadata: Eliminar metadatos
+  flatten: Aplanar PDF
+  pages: Editar páginas
+  delete_pages: Eliminar páginas
+  extract_pages: Extraer páginas
+  rotate: Rotar PDF
+  reorder: Ordenar páginas
+  grayscale: Blanco y negro
+  anonymize: Anonimizar PDF
+  merge: Unir PDF
+  add_text: Añadir texto
+  sign: Firmar PDF
+  watermark: Marca de agua
+  page_numbers: Numerar páginas
+  compress: Comprimir PDF
+  pdf_to_jpg: PDF a JPG
+  jpg_to_pdf: JPG a PDF
+  protect: Proteger PDF
+  unlock: Desbloquear PDF
+  batch: Anonimizar por lotes
+  pricing: Pro
+
+ui:
+  skip: Ir al contenido
+  menu: Menú
+  tools: Herramientas
+  learn: Guías
+  language: Idioma
+  faq: Preguntas frecuentes
+  related: Otras herramientas
+  foot_tagline: Herramientas PDF gratuitas que funcionan por completo en tu navegador. Tus archivos nunca salen de tu dispositivo.
+  foot_legal: Código abierto (AGPL). Sin cuenta, sin rastreo, sin subir nada.
+  trust:
+    - Tus archivos nunca salen de tu dispositivo
+    - El texto se borra de verdad, no se oculta
+    - Gratis, sin cuenta, sin marca de agua
+  choose: Elegir un PDF
+  dropTitle: Suelta tu PDF aquí
+  dropOr: o
+  dropNote: Se procesa en tu equipo. No se sube nada.
+  newFile: Nuevo archivo
+  selMode: Modo de selección
+  modeText: Texto
+  modeTextTip: "Arrastra para seleccionar texto. Clic = una palabra, doble clic = la línea entera (T)"
+  modeZone: Zona
+  modeZoneTip: "Dibuja un rectángulo: todo lo que quede dentro se elimina (R)"
+  searchPh: Buscar texto para eliminar…
+  markAll: Marcar todo
+  zoomIn: Acercar
+  zoomOut: Alejar
+  undo: Deshacer
+  undoTip: Deshacer (Ctrl/Cmd+Z)
+  apply: Aplicar
+  applyTip: Borrar ahora el texto marcado (Supr)
+  download: Descargar
+  downloadTip: Descargar el PDF limpio (Ctrl/Cmd+S)
+  toRemove: Por eliminar
+  options: Opciones
+  optBlack: Dejar un recuadro negro donde estaba el texto
+  optMeta: Eliminar también los metadatos ocultos (autor, título, software, fechas)
+  inAreas: "Dentro de las zonas, eliminar también:"
+  optImages: imágenes
+  optLines: líneas y fondos de color
+  keyboard: Teclado
+  kDel: borrar el texto marcado
+  kUndo: deshacer
+  kEsc: quitar la selección
+  kFind: buscar (luego Enter)
+  kSave: descargar
+  kMode: modo texto / zona
+  optInfo: Propiedades del documento (autor, título, software, fechas) y XMP
+  optComments: Comentarios, notas y resaltados
+  optAttachments: Archivos adjuntos
+  optJs: JavaScript incrustado
+  editTitle: Editar las propiedades en su lugar
+  editHint: "Cambia el título, el autor u otros campos y descarga una copia con tus valores. Deja un campo vacío para eliminarlo."
+  saveEdits: Guardar cambios y descargar
+  addPdf: Añadir PDF
+  selAll: Seleccionar todo
+  rotL: Izquierda
+  rotR: Derecha
+  rotLTip: Rotar 90° a la izquierda las páginas seleccionadas (o todas)
+  rotRTip: Rotar 90° a la derecha las páginas seleccionadas (o todas)
+  delSel: Eliminar seleccionadas
+  extractSel: Extraer seleccionadas
+  grayNote: "El texto sigue siendo texto real y seleccionable. Solo cambian los colores: el contenido de las páginas, las imágenes, los comentarios y la apariencia de los campos de formulario pasan a escala de grises."
+  allTools: Todas las herramientas
+  g_privacy: Privacidad
+  g_pages: Páginas
+  g_edit: Editar
+  g_convert: Optimizar y convertir
+  g_security: Seguridad
+  dropTitleImg: Suelta tus imágenes aquí
+  addImages: Añadir imágenes
+  pageSize: Tamaño de página
+  sizeFit: Igual que la imagen
+  margin: Margen
+  marginNone: Ninguno
+  marginSmall: Pequeño
+  marginLarge: Grande
+  level: Nivel de compresión
+  lvlLight: Ligero
+  lvlLightHint: máxima calidad, menor reducción
+  lvlRec: Recomendado
+  lvlRecHint: buena calidad para pantalla e impresión de oficina
+  lvlStrong: Fuerte
+  lvlStrongHint: archivo más pequeño, pérdida visible en las fotos
+  pw: Contraseña
+  pw2: Confirmar contraseña
+  showPw: Mostrar contraseña
+  perms: Permitir sin contraseña
+  allowPrint: Imprimir
+  allowCopy: Copiar texto e imágenes
+  allowEdit: Editar, comentar y rellenar formularios
+  pwNote: "Cifrado con AES-256. Guarda bien la contraseña: nadie, ni siquiera nosotros, puede recuperarla."
+  pwCurrent: Contraseña actual
+  unlockNote: "Solo para PDF que tienes derecho a abrir. Los archivos que se abren sin contraseña pero bloquean la impresión o la copia se desbloquean directamente."
+  wmText: Texto de la marca de agua
+  wmDefault: CONFIDENCIAL
+  wmOpacity: Opacidad
+  color: Color
+  cGray: Gris
+  cRed: Rojo
+  cBlue: Azul
+  cBlack: Negro
+  wmAngle: Dirección
+  diagonal: Diagonal
+  horizontal: Horizontal
+  position: Posición
+  posBC: Abajo en el centro
+  posBR: Abajo a la derecha
+  posBL: Abajo a la izquierda
+  posTC: Arriba en el centro
+  posTR: Arriba a la derecha
+  posTL: Arriba a la izquierda
+  format: Formato
+  fmtPage: "Página {n}"
+  fmtPageOf: "Página {n} de {total}"
+  startAt: Empezar en
+  fontSize: Tamaño
+  skipFirst: Omitir la primera página (portada)
+  quality: Calidad
+  dpiScreen: Pantalla (96 dpi)
+  dpiStd: Estándar (150 dpi)
+  dpiPrint: Impresión (300 dpi)
+  zipNote: Si hay varias páginas, se descargan en un archivo ZIP, con una imagen por página.
+  previewCap: Vista previa de la primera página
+  addTextBtn: Texto
+  signBtn: Firma
+  drawSig: Dibuja tu firma
+  clear: Borrar
+  cancel: Cancelar
+  useSig: Usar esta firma
+  piiTitle: Datos personales
+  piiScan: Detectar datos personales
+  rightsOk: "Soy el titular de este documento o estoy autorizado a modificarlo (consulta las <a href=\"{terms}\">condiciones de uso</a>)."
+  termsTitle: Mis listas de términos
+  termsPh: "Un nombre o término por línea, p. ej. nombres de clientes, números de expediente…"
+  termsMark: Marcar todos los términos
+  optReport: Descargar un informe de censura
+  dropTitleMany: Suelta aquí tus PDF
+  breadcrumb: "Ruta de navegación"
+  nextTitle: "¿Y después?"
+  guideHint: "¿Dudas sobre lo que queda en el archivo? Lee"
+  optForms: Campos de formulario (los valores pasan a ser contenido fijo)
+  optAnnots: Comentarios, sellos y dibujos
+
+js:
+  pw.prompt: "Este PDF está protegido con contraseña. Contraseña:"
+  pw.wrong: contraseña incorrecta
+  err.notpdf: este archivo no es un PDF
+  err.dropPdf: Suelta un archivo PDF.
+  err.open: "No se pudo abrir el archivo: {msg}"
+  err.process: "Algo salió mal: {msg}"
+  status.opening: Abriendo…
+  status.ready: "{n} página(s). Selecciona el texto que quieres eliminar o búscalo."
+  status.noText: "No hay texto seleccionable: parece un escaneo. Usa el modo Zona y marca “imágenes”."
+  status.forms: "Los campos de formulario se integraron en la página para que su contenido también se pueda censurar."
+  status.found: "{n} coincidencia(s) de “{q}” marcada(s). Pulsa Supr para eliminarlas."
+  status.notFound: "No se encontró “{q}” (o ya está marcado)."
+  status.applied: "Texto borrado ({n} zona(s)). Ctrl/Cmd+Z para deshacer."
+  status.nothing: "Aún no hay nada marcado: primero selecciona texto."
+  status.unmarked: Última selección quitada.
+  status.undone: Borrado deshecho.
+  status.downloaded: "Descargado: {name}"
+  status.cleared: Selección anulada.
+  confirm.close: "¿Cerrar este PDF? Se perderán los cambios que no hayas descargado."
+  page: "Página {n}"
+  pageShort: "pág. {n}"
+  marks.empty: Aún no hay nada marcado.
+  mark.text: "(texto)"
+  mark.zone: Zona (sin texto)
+  mark.zoneWith: "Zona: {text}"
+  mark.remove: Conservar este texto
+  rep.found: "{n} encontrado(s)"
+  rep.none: ninguno
+  rep.empty: vacío
+  rep.present: presente
+  rep.xmp: Bloque de metadatos XMP
+  rep.comments: Comentarios y notas
+  rep.attachments: Archivos adjuntos
+  rep.javascript: JavaScript
+  rep.private: Datos privados de aplicaciones
+  rep.widgets: Campos de formulario
+  rep.annots: Comentarios, sellos, dibujos
+  rep.pages: Páginas
+  meta.Title: Título
+  meta.Author: Autor
+  meta.Subject: Asunto
+  meta.Keywords: Palabras clave
+  meta.Creator: Creado con
+  meta.Producer: Productor PDF
+  meta.CreationDate: Creado el
+  meta.ModDate: Modificado el
+  metadata.foundSome: "Se encontraron {n} dato(s) oculto(s). Revísalos y luego limpia el archivo."
+  metadata.foundNone: Este PDF no contiene metadatos ocultos. Aun así puedes limpiarlo para restablecer su identificador.
+  metadata.done: "Copia limpia descargada: {name}. La tabla de arriba muestra lo que queda en ella."
+  metadata.edited: "Copia con tus nuevas propiedades descargada: {name}."
+  pages.ready: "{n} página(s). Haz clic en las páginas para seleccionarlas y arrástralas para cambiar el orden."
+  pages.added: "{n} página(s) añadida(s) de {name}."
+  pages.files: "{n} archivos"
+  pages.fileShort: "archivo {n}"
+  pages.rotL: Rotar a la izquierda
+  pages.rotR: Rotar a la derecha
+  pages.del: Eliminar esta página
+  pages.selected: "{n} de {total} páginas seleccionadas"
+  pages.total: "{total} páginas"
+  pages.undone: Último cambio deshecho.
+  pages.rotated: "{n} página(s) rotada(s)."
+  pages.cantAll: Un PDF necesita al menos una página. Conserva una o empieza con otro archivo.
+  pages.deleted: "{n} página(s) eliminada(s). Ctrl/Cmd+Z para deshacer."
+  pages.moved: Página movida.
+  pages.extractSuffix: extracto
+  pages.extracted: "{n} página(s) extraída(s) en {name}."
+  gray.images: Imágenes convertidas
+  gray.left: Se mantiene en color
+  gray.leftSome: "{n} elemento(s): degradados o colores directos, revisa la vista previa"
+  grayscale.foundSome: "{n} página(s) lista(s). Haz clic en el botón para convertir todo el PDF a blanco y negro."
+  grayscale.foundNone: Este PDF está vacío.
+  grayscale.done: "Copia en blanco y negro descargada: {name}. Vista previa de la primera página abajo."
+  status.working: Procesando…
+  status.progress: "Página {i} de {n}…"
+  compress.ready: "{n} página(s). Elige un nivel y comprime."
+  compress.noGain: Este PDF ya está bien optimizado; comprimirlo no lo haría más pequeño. Tu archivo no se ha modificado.
+  compress.done: "{before} → {after} (−{pct} %)."
+  protect.ready: "{n} página(s). Elige una contraseña."
+  protect.empty: Escribe una contraseña.
+  protect.mismatch: Las dos contraseñas no coinciden.
+  protect.comma: Las contraseñas no admiten comas. Elige otra.
+  protect.done: PDF protegido.
+  unlock.needPw: Este PDF está protegido con contraseña. Escríbela y luego desbloquéalo.
+  unlock.noPw: Este PDF se abre sin contraseña. Al desbloquearlo se quitan sus restricciones de impresión y copia.
+  unlock.done: PDF desbloqueado.
+  unlock.wrong: Contraseña incorrecta. Inténtalo de nuevo.
+  watermark.ready: "{n} página(s). Ajusta la marca de agua: la vista previa se actualiza mientras escribes."
+  watermark.empty: Escribe el texto de la marca de agua.
+  watermark.done: Marca de agua añadida.
+  page_numbers.ready: "{n} página(s). Elige dónde van los números: la vista previa se actualiza en directo."
+  page_numbers.done: Números de página añadidos.
+  pdf_to_jpg.ready: "{n} página(s) se convertirán en imágenes."
+  pdf_to_jpg.done: "{n} imagen(es) descargada(s)."
+  images.ready: "{n} imagen(es). Arrastra para reordenar y luego crea el PDF."
+  images.bad: "No se pudo leer “{name}” como imagen."
+  images.remove: Quitar esta imagen
+  images.count: "{n} imagen(es)"
+  images.done: "PDF de {n} página(s) descargado: {name}"
+  annot.readyText: Haz clic en cualquier punto de una página para añadir texto.
+  annot.readySign: Dibuja tu firma y luego haz clic en la página donde va.
+  annot.placed: Firma colocada. Arrástrala para moverla y usa la esquina para cambiar su tamaño.
+  annot.remove: Quitar
+  annot.hintText: "Haz clic en una página para escribir. Arrastra un texto para moverlo, haz clic en él para editarlo, Supr para borrarlo."
+  annot.hintSign: "Haz clic en una página para colocar tu firma. Arrastra para moverla, usa la esquina para cambiar su tamaño."
+  annot.sigReady: Firma lista. Haz clic en la página donde debe ir.
+  annot.done: "{n} elemento(s) añadido(s). Descargado: {name}"
+  pii.none: "No se detectaron datos personales. Los nombres sin tratamiento (Sr., Sra.…) no se detectan automáticamente; usa el buscador."
+  pii.found: "Se detectaron {n} dato(s) personal(es). Desmarca lo que deba quedarse y luego marca."
+  pii.mark: Marcar seleccionados
+  pii.marked: "{n} aparición(es) marcada(s). Revísalas y luego pulsa Supr o Aplicar."
+  pii.nothingMarked: No hay nada seleccionado para marcar.
+  pii.email: Direcciones de correo electrónico
+  pii.phone: Números de teléfono
+  pii.iban: IBAN (verificados)
+  pii.card: Números de tarjeta (verificados)
+  pii.nir: Números de seguridad social franceses
+  pii.ip: Direcciones IP
+  pii.date: Fechas
+  pii.name: Nombres tras un tratamiento
+  pii.warn: "La detección automática no es exhaustiva: no encuentra nombres sin tratamiento, direcciones ni texto escaneado. Lee el documento antes de compartirlo."
+  unlock.rights: Confirma que tienes derecho a modificar este documento.
+  pii.fullname: Nombres sin tratamiento
+  pii.address: Direcciones postales
+  pii.birth: Fechas de nacimiento
+  pii.plate: Matrículas
+  pii.vat: Números de IVA
+  cat.email: Direcciones de correo electrónico
+  cat.phone: Números de teléfono
+  cat.iban: IBAN
+  cat.card: Números de tarjeta
+  cat.nir: Números de seguridad social
+  cat.ip: Direcciones IP
+  cat.date: Fechas
+  cat.name: Nombres tras un tratamiento
+  cat.fullname: Nombres
+  cat.address: Direcciones postales
+  cat.birth: Fechas de nacimiento
+  cat.plate: Matrículas
+  cat.vat: Números de IVA
+  cat.manual: Selección manual
+  cat.search: Búsqueda
+  cat.area: Zona
+  cat.list: Lista de términos
+  report.title: Informe de censura
+  report.file: Archivo
+  report.date: Fecha
+  report.pages: Páginas del documento
+  report.total: Elementos censurados
+  report.byCat: Por categoría
+  report.byPage: Por página
+  report.note: "Los valores censurados no se reproducen en este informe. La huella SHA-256 identifica el archivo entregado."
+  report.by: Generado en local por pdfanonym.com
+  report.suffix: informe
+  pro.locked: Encontrado. Censúralos con Pro.
+  pro.unlock: Desbloquear con Pro
+  pro.reportLocked: El informe de censura es una función Pro.
+  pro.needConsent: Primero marca la casilla que hay debajo de los planes.
+  pro.redirecting: Redirigiendo al pago seguro…
+  pro.checkoutError: No se pudo abrir la página de pago. Inténtalo de nuevo dentro de un momento.
+  batch.ready: "{n} archivo(s) PDF. Elige qué censurar y luego ejecuta."
+  batch.progress: "Archivo {i} de {n}…"
+  batch.doneOne: "hecho ({n})"
+  batch.errOne: no se pudo procesar
+  batch.done: "{n} de {total} archivo(s) anonimizado(s). El ZIP contiene los archivos y un informe CSV."
+  plan.pass: Pase de 24 horas
+  plan.pro: Pro
+  plan.team: Equipo
+  acc.none: No hay ninguna licencia Pro en este dispositivo
+  acc.noneHint: Compra un plan o pega una clave de licencia abajo.
+  acc.seePlans: Ver los planes
+  acc.active: "{plan} activo"
+  acc.expired: "{plan} caducado"
+  acc.expiredHint: Renueva tu plan para volver a usar las funciones Pro.
+  acc.renews: "Se renueva el {date}."
+  acc.until: "Válido hasta el {date}."
+  acc.seats: "{n} usuarios."
+  acc.fetching: Confirmando tu pago…
+  acc.thanks: "¡Gracias! Tu licencia está activa en este dispositivo. Se ha enviado un recibo a {email}."
+  acc.fetchError: "Todavía no hemos podido confirmar el pago. Vuelve a cargar esta página dentro de un minuto o escribe a contact@pdfanonym.com."
+  acc.copied: Clave de licencia copiada.
+  acc.badKey: Esta clave de licencia no es válida.
+  acc.activated: Licencia activada en este dispositivo.
+  acc.removed: Licencia eliminada de este dispositivo.
+  acc.confirmRemove: "¿Eliminar la licencia de este dispositivo? Podrás volver a pegar la clave más adelante."
+  flatten.foundSome: "Se encontraron {n} elemento(s) interactivo(s). Aplana el PDF para convertirlos en contenido fijo."
+  flatten.foundNone: Este PDF no tiene nada interactivo. Aplanarlo no lo cambiará.
+  flatten.done: "Copia aplanada descargada: {name}."
+
+pages:
+  home:
+    slug: ""
+    title: "pdfanonym: censurar y anonimizar PDF en tu navegador, gratis"
+    description: "Censura y anonimiza PDF gratis: borra nombres, cifras y metadatos ocultos sin subir el archivo. Texto eliminado de verdad, sin cuenta ni marca de agua."
+    h1: 'Limpia tus PDF <span class="hl">antes</span> de compartirlos'
+    lede: "Censura nombres, borra texto, elimina los metadatos ocultos. Todo ocurre en tu propio equipo: tu documento nunca se envía a un servidor, ni siquiera al nuestro."
+    cta: Censurar un PDF ahora
+    toolsTitle: Elige una herramienta
+    faq:
+      - q: "¿pdfanonym es gratis de verdad?"
+        a: "Sí. Las 20 herramientas son gratuitas, sin cuenta, sin límite diario y sin marca de agua. Un <a href=\"/es/precios/\">plan Pro</a> opcional añade la anonimización por lotes, la detección ampliada y los informes para profesionales."
+      - q: "¿Cómo puedo comprobar que mi archivo no se sube?"
+        a: "Abre las herramientas para desarrolladores de tu navegador, ve a la pestaña Red y procesa un archivo: no verás ninguna solicitud que lo transporte. La página incluye además una política de seguridad que le prohíbe enviar datos a cualquier otro sitio. Y el código fuente completo está disponible para que lo leas."
+      - q: "¿Funciona sin conexión?"
+        a: "Sí. Cuando una página de herramienta termina de cargarse, puedes desconectarte de internet y seguir trabajando con tus PDF."
+    body: |
+      ## ¿Por qué otra herramienta PDF?
+
+      Porque la mayoría falla en algo esencial. Cuando «tachas» un nombre en un editor online típico, lo que hace es dibujar un rectángulo encima del texto. La página parece limpia, pero cualquiera puede seleccionar, copiar o buscar las palabras que hay debajo. Hay abogados que han caído en esta trampa en escritos judiciales, y también organismos públicos.
+
+      Para [anonimizar un PDF](/es/anonimizar-pdf/) de verdad, pdfanonym elimina los caracteres del propio archivo. Lo que borras desaparece: no se puede copiar, buscar ni recuperar.
+
+      ## Privado por diseño, no por promesa
+
+      Los servicios que obligan a subir el archivo te piden que les confíes tu contrato, tu nómina o tu informe médico. Nosotros no te pedimos esa confianza porque nunca recibimos el archivo. El motor PDF se ejecuta dentro de tu navegador (es [MuPDF](https://mupdf.com), compilado a WebAssembly), así que el documento va de tu disco a tu pantalla y vuelve a tu disco.
+
+      Eso importa si manejas expedientes de clientes, documentos de recursos humanos o cualquier cosa sujeta al RGPD: no hay ningún tercero que declarar ni nada que borrar después. Lo mismo vale cuando necesitas [unir PDF](/es/unir-pdf/) o [comprimir un PDF](/es/comprimir-pdf/): el archivo no sale de tu equipo.
+
+  redact:
+    slug: censurar-pdf
+    nav: Censurar PDF
+    card: Tacha nombres, cifras y pasajes sensibles. El texto bajo el recuadro se borra.
+    title: "Censurar PDF online gratis y privado (texto borrado de verdad)"
+    description: "Censura tu PDF y borra el texto para siempre, en tu navegador: sin subir nada, sin cuenta, sin marca de agua. Busca y tacha cada aparición de una vez."
+    h1: 'Censurar un PDF: <span class="redacted">tachar</span> texto para siempre'
+    h1_plain: Censurar PDF
+    lede: "Selecciona un nombre, un número de cuenta o un párrafo entero: pdfanonym lo elimina del archivo y deja un recuadro negro en su lugar. No se sube nada."
+    black: true
+    suffix: censurado
+    stepsTitle: Cómo censurar un PDF en tres pasos
+    steps:
+      - h: Abre tu PDF
+        p: "Suéltalo en la página o elígelo desde tu equipo. Se abre al instante, porque nunca sale de tu dispositivo."
+      - h: Marca lo que debe desaparecer
+        p: "Arrastra sobre el texto, haz clic en una palabra, doble clic en una línea, o escribe un nombre en el buscador y pulsa <b>Marcar todo</b>. Para escaneos, cambia a <b>Zona</b> y dibuja un rectángulo."
+      - h: Aplica y descarga
+        p: "Pulsa <kbd>Supr</kbd> o <b>Aplicar</b> para borrar el texto, revisa el resultado y luego <b>Descargar</b>. Los metadatos ocultos también se eliminan por defecto."
+    compare:
+      title: Un recuadro negro no es censurar
+      intro: "La mayoría de los editores PDF te dejan dibujar un rectángulo negro y lo llaman censura. La diferencia solo se nota cuando alguien copia el texto."
+      bad_h: Dibujar un recuadro encima
+      bad_p: "La página parece censurada, pero las palabras siguen en el archivo. Selecciona la zona, copia, pega en un correo: aparece el nombre oculto. La búsqueda también lo encuentra, igual que cualquier herramienta de extracción de texto."
+      good_h: Censura real
+      good_p: "Los caracteres bajo el recuadro se eliminan del contenido de la página. No queda nada que copiar, buscar ni extraer. El recuadro negro es solo una marca visual, e incluso puedes elegir dejar un espacio en blanco."
+    body: |
+      ## ¿Qué puedes censurar?
+
+      Todo lo que sea texto en el PDF: nombres, direcciones, correos electrónicos, teléfonos, datos bancarios (IBAN), números de seguridad social o de identificación fiscal, salarios, referencias de expedientes, firmas escritas como texto. El buscador encuentra cada aparición en todas las páginas, sin distinguir mayúsculas ni acentos, así que el apellido de un cliente queda marcado en todo un archivo de 200 páginas con un solo clic. Si prefieres que los correos, teléfonos o IBAN se encuentren solos, usa la herramienta para [anonimizar un PDF](/es/anonimizar-pdf/), que detecta automáticamente los datos personales.
+
+      Si tu PDF es un **escaneo**, el «texto» es en realidad una imagen. Cambia al modo **Zona**, dibuja un rectángulo sobre el pasaje y marca **imágenes** en las opciones: los píxeles dentro del rectángulo se borran de la propia imagen.
+
+      ## ¿Quién necesita censurar o anonimizar un PDF?
+
+      - **Abogados y asistentes jurídicos** que preparan pruebas documentales y escritos judiciales.
+      - **Equipos de recursos humanos** que comparten nóminas, contratos o informes de investigación.
+      - **Cualquiera que responda a una solicitud de acceso del RGPD o de acceso a la información pública**, cuando hay que retirar los datos de terceros antes de entregar el documento.
+      - **Propietarios, inquilinos y trabajadores independientes** que envían extractos bancarios o documentos de identidad de los que solo hace falta una parte.
+
+      ## Comprueba la censura antes de enviar
+
+      Después de descargar, abre el archivo, selecciona la zona censurada e intenta copiarla; luego busca una de las palabras que eliminaste. No debería aparecer nada. Nuestra guía sobre [cómo censurar un PDF correctamente](/es/como-censurar-un-pdf/) recoge todas las comprobaciones. Ten en cuenta que la censura no toca el autor ni el título ocultos en las propiedades del archivo, salvo si dejas marcada la opción de metadatos; para saber más, mira cómo [eliminar los metadatos de un PDF](/es/eliminar-metadatos-pdf/).
+    faq:
+      - q: "¿El texto se borra de verdad o solo se tapa?"
+        a: "Se borra. pdfanonym aplica la censura al contenido de la página, así que los caracteres dejan de existir en el archivo. Copiar, buscar o extraer el texto no devuelve nada."
+      - q: "¿Puedo censurar un PDF escaneado?"
+        a: "Sí, con el modo Zona. Dibuja un rectángulo y marca “imágenes” en las opciones: la parte de la imagen escaneada que queda bajo el rectángulo se deja en blanco. La búsqueda de texto no funciona en los escaneos porque no tienen capa de texto."
+      - q: "¿Puedo eliminar el texto sin dejar un recuadro negro?"
+        a: "Sí. Desmarca “Dejar un recuadro negro” en las opciones, o usa nuestra herramienta para <a href=\"/es/borrar-texto-pdf/\">borrar texto de un PDF</a>, que deja un espacio en blanco."
+      - q: "¿Hay un límite de páginas o de tamaño?"
+        a: "No hay un límite fijo. Los archivos muy grandes (varios cientos de páginas) dependen de la memoria de tu equipo, pero los documentos habituales se abren en un segundo."
+      - q: "¿Puedo deshacer una censura?"
+        a: "Sí, mientras no hayas cerrado la página: pulsa Ctrl/Cmd+Z. Una vez descargado el archivo, la censura es permanente, y de eso se trata."
+      - q: "¿Se guardan mis archivos en algún sitio?"
+        a: "No. Nunca se suben, así que no tenemos nada que guardar ni que borrar."
+
+  remove:
+    slug: borrar-texto-pdf
+    nav: Borrar texto
+    card: Borra palabras o párrafos de un PDF y deja un espacio en blanco limpio.
+    title: "Borrar texto PDF o usar tipex, de verdad (gratis y sin conexión)"
+    description: "Borra, elimina o pon tipex al texto de un PDF sin dejar las palabras debajo. Un borrador de PDF gratuito que funciona en tu navegador: sin subidas, sin cuenta."
+    h1: 'Borrar texto de un PDF, <span class="hl">de verdad</span>'
+    h1_plain: Borrar texto de un PDF
+    lede: "Borra una palabra, una línea o un bloque entero de tu PDF. El texto se elimina del archivo, no se esconde bajo un rectángulo blanco, y el resto de la página se queda exactamente donde estaba."
+    black: false
+    suffix: editado
+    stepsTitle: Cómo borrar texto de un PDF
+    steps:
+      - h: Abre el PDF
+        p: "Suéltalo aquí. Lo lee tu navegador, no se envía a ningún sitio."
+      - h: Selecciona el texto
+        p: "Arrastra sobre él, haz clic en una palabra, o búscalo y pulsa <b>Marcar todo</b>. Usa el modo <b>Zona</b> para barrer un bloque entero."
+      - h: Borra y descarga
+        p: "Pulsa <kbd>Supr</kbd>. Las palabras desaparecen y dejan un espacio en blanco. Deshaz con <kbd>Ctrl/Cmd</kbd>+<kbd>Z</kbd> y luego descarga."
+    compare:
+      title: "Por qué el «corrector» de otras herramientas deja tu texto debajo"
+      intro: "Muchas herramientas ofrecen un pincel corrector. Pinta una forma blanca sobre las palabras, algo que funciona en papel y falla en un PDF."
+      bad_h: Corrector blanco encima
+      bad_p: "Las palabras siguen bajo la forma blanca. Copia la página, o ábrela en otro editor, y vuelven a aparecer. Los lectores de pantalla también las leen en voz alta."
+      good_h: Borrado de la página
+      good_p: "pdfanonym elimina los propios caracteres. El texto de alrededor conserva su posición exacta, así que el diseño no se mueve, y no queda nada debajo que encontrar."
+    body: |
+      ## Cómo poner tipex en un PDF sin dejar el texto debajo
+
+      En un PDF, el «tipex» suele consistir en pintar un rectángulo blanco sobre las palabras, la versión digital del corrector líquido. Solo oculta el texto a la vista. pdfanonym hace lo que de verdad esperas de un tipex: las palabras se borran del archivo y en su lugar queda un espacio en blanco. Selecciona el texto, pulsa <kbd>Supr</kbd> y el resultado se ve exactamente igual que con tipex, salvo que no queda nada que recuperar.
+
+      ## Antes de eliminar texto de un PDF, conviene saberlo
+
+      Un PDF no es un documento de procesador de textos: cada palabra ocupa una posición fija en la página. Cuando eliminas una palabra en mitad de una línea, las siguientes **no** se desplazan a la izquierda para llenar el hueco; queda un espacio en blanco. Es justo lo que buscas por confidencialidad, y además mantiene intacto el diseño.
+
+      Si necesitas **reemplazar** un texto por otro, bórralo primero aquí y luego escribe el nuevo en el mismo hueco con la herramienta para [añadir texto a un PDF](/es/anadir-texto-pdf/).
+
+      ## Usos habituales
+
+      - Quitar un precio, un nombre o una fecha de un presupuesto antes de reutilizarlo como plantilla.
+      - Eliminar notas de borrador o menciones «CONFIDENCIAL» olvidadas en un documento.
+      - Borrar datos personales de un formulario antes de compartir un ejemplo. Si el nombre figura también como autor del archivo, [elimina los metadatos del PDF](/es/eliminar-metadatos-pdf/).
+
+      ¿Prefieres una barra negra visible? Usa [Censurar PDF](/es/censurar-pdf/).
+    faq:
+      - q: "¿Se moverá el texto restante?"
+        a: "No. Todos los demás caracteres conservan su posición exacta. Queda un espacio en blanco donde estaba el texto eliminado."
+      - q: "¿Puedo borrar texto de un PDF escaneado?"
+        a: "Los escaneos contienen una imagen del texto, no texto. Usa el modo Zona y marca “imágenes” para dejar en blanco esa parte de la imagen."
+      - q: "¿Borrar texto reduce la calidad?"
+        a: "No. Solo se tocan los caracteres seleccionados; el resto de la página, las fuentes y las imágenes se quedan tal cual."
+      - q: "¿Es gratis?"
+        a: "Sí, sin cuenta, sin límite y sin marca de agua."
+
+  metadata:
+    slug: eliminar-metadatos-pdf
+    nav: Editar o eliminar metadatos
+    card: Consulta, edita o elimina el autor, el software, las fechas, los comentarios y los adjuntos ocultos en un PDF.
+    title: "Editar metadatos PDF: ver, cambiar o eliminar, gratis"
+    description: "Editor de metadatos PDF gratuito: mira el autor, el título, el software y las fechas ocultos en un PDF, cámbialos o elimínalos todos. En tu navegador, sin subir nada."
+    h1: 'Ver, editar o eliminar los <span class="hl">metadatos</span> de un PDF'
+    h1_plain: Editor de metadatos PDF
+    lede: "Tu PDF puede llevar tu nombre, tu empresa, el software que usaste y la fecha en que lo escribiste, además de comentarios que ya habías olvidado. Mira exactamente qué contiene y luego elimínalo o sustitúyelo por tus propios valores."
+    suffix: limpio
+    reportCaption: Lo que lleva este PDF además de su contenido visible
+    runLabel: Eliminar metadatos y descargar
+    stepsTitle: Cómo eliminar los metadatos de un PDF
+    steps:
+      - h: Abre el PDF
+        p: "Suéltalo en la página. Se analiza en tu equipo."
+      - h: Lee el informe
+        p: "Cada campo con contenido aparece en rojo: autor, título, software, fechas, bloque XMP, comentarios, adjuntos, scripts."
+      - h: Limpia y descarga
+        p: "Haz clic en el botón. Guardamos un archivo nuevo sin todo eso, lo volvemos a comprobar y te mostramos lo que queda."
+    body: |
+      ## ¿Qué son los metadatos de un PDF?
+
+      Además de las páginas que ves, un PDF guarda información sobre sí mismo. Las **propiedades del documento** incluyen un título, un autor, un asunto, palabras clave, la aplicación que creó el archivo (por ejemplo «Microsoft Word») y la que lo convirtió en PDF, además de las fechas de creación y modificación. Muchos archivos contienen también un **bloque XMP**, una segunda copia de esos mismos datos en XML que algunas herramientas olvidan limpiar.
+
+      Otras cosas viajan con el archivo sin ser «metadatos» en sentido estricto: **comentarios y notas adhesivas**, **resaltados**, **archivos adjuntos** y, a veces, **JavaScript**. Si quieres conservar visibles los comentarios y sellos pero sin que nadie pueda editarlos, puedes [aplanar el PDF](/es/aplanar-pdf/) antes de limpiar los metadatos.
+
+      ## ¿Por qué eliminarlos?
+
+      - El campo autor suele contener el nombre completo de quien escribió el Word original, o el nombre al que está registrada la licencia de la empresa.
+      - Las fechas revelan cuándo se redactó realmente un documento, algo que puede pesar en una negociación o en un litigio.
+      - Los comentarios que quedan de una revisión («comprobar esta cifra con el cliente») se olvidan con facilidad y se leen con la misma facilidad.
+      - Un archivo adjunto puede contener otro documento entero.
+
+      ## Editar metadatos PDF en lugar de eliminarlos
+
+      A veces no quieres propiedades vacías, sino limpias y correctas: un título adecuado que aparezca en las pestañas del navegador y en los resultados de búsqueda, tu empresa como autor, palabras clave con sentido. Abre **Editar las propiedades en su lugar** debajo del informe, cambia el título, el autor, el asunto, las palabras clave, el creador o el productor, y descarga. Los campos vacíos se eliminan. El antiguo bloque XMP se descarta al mismo tiempo, porque si no algunos lectores seguirían mostrando los valores anteriores.
+
+      ## Lo que esta herramienta no cambia
+
+      No toca el contenido visible de tus páginas. Si un nombre aparece impreso en la página, usa [Censurar PDF](/es/censurar-pdf/) para borrarlo. Combina las dos herramientas y tendrás un documento listo para publicar.
+    faq:
+      - q: "¿Qué metadatos se eliminan?"
+        a: "El diccionario de información del documento (título, autor, asunto, palabras clave, creador, productor, fechas), el flujo de metadatos XMP, los datos privados de aplicaciones y, si los marcas, los comentarios, los adjuntos y el JavaScript. El archivo recibe además un nuevo identificador interno."
+      - q: "¿Puedo cambiar el título o el autor en lugar de borrarlos?"
+        a: "Sí. Abre “Editar las propiedades en su lugar” debajo del informe, escribe los nuevos valores y descarga. Deja un campo vacío para eliminarlo."
+      - q: "¿Cómo compruebo el resultado?"
+        a: "Tras la limpieza, la herramienta vuelve a abrir el archivo nuevo y muestra otra vez su informe. También puedes comprobarlo en tu lector de PDF, en Archivo y luego Propiedades."
+      - q: "¿Cambia el contenido visible?"
+        a: "No. El texto, las imágenes y el diseño quedan exactamente igual."
+      - q: "¿Por qué mi lector de PDF sigue mostrando un productor?"
+        a: "Algunos lectores muestran un valor por defecto cuando el campo está vacío, o bien el archivo que abriste es el original. Abre la copia descargada, cuyo nombre termina en “-limpio”."
+
+  flatten:
+    slug: aplanar-pdf
+    nav: Aplanar PDF
+    card: Convierte campos de formulario, comentarios y sellos en contenido fijo que nadie puede editar.
+    title: "Aplanar PDF online gratis: bloquea formularios y anotaciones"
+    description: "Aplanar PDF: convierte campos de formulario rellenados, comentarios y firmas en contenido fijo de la página. Gratis, en tu navegador, sin subir nada."
+    h1: 'Aplanar un PDF: <span class="hl">bloquea</span> formularios y anotaciones'
+    h1_plain: Aplanar PDF
+    lede: "¿Completaste un formulario? Al aplanar el PDF, los valores de los campos, los comentarios y los sellos se integran en la propia página: se imprimen sin sorpresas y ya no se pueden modificar."
+    suffix: aplanado
+    reportCaption: Elementos interactivos encontrados en este PDF
+    runLabel: Aplanar y descargar
+    stepsTitle: Cómo aplanar un PDF
+    steps:
+      - h: Abre el PDF
+        p: "Suelta aquí tu formulario completado o tu documento anotado."
+      - h: Elige qué aplanar
+        p: "Campos de formulario, comentarios y sellos, o ambos. Puedes eliminar los metadatos ocultos al mismo tiempo."
+      - h: Descarga
+        p: "Obtienes un PDF normal en el que todo forma parte de la página."
+    body: |
+      ## ¿Qué significa aplanar un PDF?
+
+      Un PDF interactivo tiene capas encima de la página: campos de formulario en los que escribir, casillas, comentarios, sellos, dibujos. El lector los muestra, pero son objetos independientes que se pueden editar, mover o borrar.
+
+      **Aplanar** dibuja esos elementos dentro del contenido de la página y elimina los objetos interactivos. El documento se ve igual, pero ahora se comporta como una hoja impresa.
+
+      ## ¿Cuándo conviene aplanar?
+
+      - **Antes de enviar un formulario completado**, para que el destinatario no pueda alterar tus respuestas y todos los visores las muestren igual.
+      - **Antes de imprimir**, porque algunas impresoras y lectores antiguos omiten los campos de formulario.
+      - **Antes de archivar** contratos o informes. Si además el archivo no debe abrirlo cualquiera, [protege el PDF con contraseña](/es/proteger-pdf/) después de aplanarlo.
+      - **Antes de censurar**: el texto escrito en un campo de formulario no forma parte de la página. Nuestra [herramienta de censura](/es/censurar-pdf/) integra los campos automáticamente, pero muchas otras no lo hacen.
+      - **Antes de subirlo a un portal** que rechaza los formularios interactivos o los muestra vacíos.
+
+      ## ¿Por qué desaparecen las respuestas de mi formulario al enviar un PDF?
+
+      Porque nunca formaron parte de la página. Los valores de un formulario viven en objetos de campo independientes, y cada lector decide cómo dibujarlos. Algunas apps móviles, vistas previas de correo, impresoras y lectores antiguos los omiten por completo, o solo los muestran al hacer clic en un campo. Aplanar lo resuelve escribiendo los valores en el contenido de la página, donde todos los visores tienen que mostrarlos. Si tu formulario no tiene campos rellenables, puedes [añadir texto al PDF](/es/anadir-texto-pdf/) directamente sobre la página.
+
+      ## Aplanar o «Imprimir como PDF»
+
+      Un truco habitual es imprimir el documento en una impresora PDF. A menudo funciona, pero reconstruye todo el archivo: se pueden perder enlaces, marcadores y etiquetas de accesibilidad, y algunos controladores convierten las páginas en imágenes o cambian el tamaño de página. Aplanar solo toca las partes interactivas y deja todo lo demás como estaba.
+
+      ## Qué se aplana
+
+      | Elemento | Después de aplanar |
+      |---|---|
+      | Campos de texto, casillas, botones de opción, listas desplegables | Su valor actual se dibuja en la página |
+      | Comentarios, resaltados, sellos, dibujos | Se dibujan en la página tal como se ven |
+      | Firma dibujada o estampada | Se conserva como parte de la página |
+      | Enlaces y marcadores | Se conservan |
+      | Texto | Sigue siendo texto real y seleccionable |
+    faq:
+      - q: "¿Se puede revertir el aplanado de un PDF?"
+        a: "No. Una vez aplanado, los valores de los campos son contenido normal de la página. Conserva el archivo original si crees que tendrás que editar el formulario de nuevo."
+      - q: "¿Se mantiene mi firma?"
+        a: "Una firma dibujada o estampada como anotación se conserva y pasa a formar parte de la página. En cambio, una firma digital certificada queda invalidada por cualquier cambio en el archivo, incluido el aplanado."
+      - q: "¿Aplanar reduce la calidad?"
+        a: "No. El texto sigue siendo texto nítido y seleccionable; nada se convierte en imagen."
+      - q: "¿Aplanar reduce el tamaño del archivo?"
+        a: "Normalmente un poco, porque se eliminan los objetos de campo, pero la diferencia es pequeña. Aplanar sirve para bloquear el contenido, no para comprimirlo."
+      - q: "¿Puedo aplanar solo el formulario y conservar los comentarios?"
+        a: "Sí. Desmarca “Comentarios, sellos y dibujos” antes de aplanar: solo los campos de formulario se integran en la página."
+      - q: "¿Aplana también las capas?"
+        a: "No. Las capas de contenido opcional (OCG), que se usan en algunos planos técnicos y mapas, se conservan tal cual. Esta herramienta aplana campos de formulario y anotaciones."
+
+  delete_pages:
+    slug: eliminar-paginas-pdf
+    nav: Eliminar páginas
+    card: Quita páginas en blanco, duplicadas o que sobran de un PDF en pocos clics.
+    title: "Eliminar páginas PDF online, gratis y sin subir el archivo"
+    description: "Eliminar páginas de un PDF en tu navegador: haz clic en las que sobran, elimínalas y descarga. Gratis, sin subir nada, sin registro y sin marca de agua."
+    h1: 'Eliminar páginas de un PDF <span class="hl">sin subirlo</span>'
+    h1_plain: Eliminar páginas PDF
+    lede: "Ve todas las páginas en miniatura, haz clic en las que no necesitas y elimínalas. Tu PDF se procesa en tu equipo y nunca se envía a ningún sitio."
+    suffix: editado
+    hint: "Haz clic en las páginas para seleccionarlas (Mayús+clic para un rango) y pulsa Supr o “Eliminar seleccionadas”."
+    stepsTitle: Cómo eliminar páginas de un PDF
+    steps:
+      - h: Abre tu PDF
+        p: "Suéltalo en la página. Las miniaturas de todas las páginas aparecen en un segundo."
+      - h: Selecciona las páginas que sobran
+        p: "Haz clic en una página para seleccionarla, Mayús+clic para seleccionar un rango, o usa la ✕ de una miniatura para eliminar una sola página."
+      - h: Elimina y descarga
+        p: "Pulsa <kbd>Supr</kbd> o <b>Eliminar seleccionadas</b>. ¿Te equivocaste? <kbd>Ctrl/Cmd</kbd>+<kbd>Z</kbd>. Después, <b>Descargar</b>."
+    body: |
+      ## Eliminar páginas PDF sin perder calidad
+
+      Eliminar páginas de un PDF no vuelve a codificar el resto del documento: las páginas que quedan se copian tal cual, con su texto, sus fuentes, sus imágenes, sus comentarios y sus enlaces web. No se comprime ni se convierte nada en imagen, así que el resultado es idéntico al original, sin las páginas que quitaste. Si solo quieres conservar unas pocas páginas, es más rápido [extraer páginas del PDF](/es/extraer-paginas-pdf/) a un archivo nuevo.
+
+      ## Motivos habituales para eliminar páginas
+
+      - Páginas en blanco que deja un escáner a doble cara.
+      - Una portada, la cabecera de un fax o unas condiciones generales que no hace falta enviar.
+      - Páginas con datos personales que no deberías compartir. Si solo se trata de una línea, mejor [censúrala](/es/censurar-pdf/) en lugar de eliminar la página entera.
+      - Duplicados después de [unir varios PDF](/es/unir-pdf/).
+
+      ## Privado desde el diseño
+
+      Los servicios online para eliminar páginas suelen subir el documento completo para quitar una sola hoja. Aquí el PDF se queda en tu dispositivo: el motor de páginas funciona en tu navegador, por eso también funciona sin conexión una vez cargado.
+    faq:
+      - q: ¿Puedo eliminar varias páginas a la vez?
+        a: "Sí. Haz clic en cada página que quieras quitar, o haz clic en una y Mayús+clic en otra para seleccionar todas las intermedias, y luego pulsa Supr."
+      - q: ¿Puedo deshacer una eliminación?
+        a: "Sí, mientras no hayas cerrado la página: pulsa Ctrl/Cmd+Z o el botón Deshacer, tantas veces como necesites."
+      - q: ¿Eliminar páginas reduce el tamaño del archivo?
+        a: "Normalmente sí, porque el contenido que solo usaban las páginas eliminadas se descarta al guardar el archivo."
+      - q: ¿Hay un límite de páginas?
+        a: "No hay un límite fijo. Los documentos grandes (varios cientos de páginas) dependen de la memoria de tu equipo."
+
+  extract_pages:
+    slug: extraer-paginas-pdf
+    nav: Extraer páginas
+    card: Guarda las páginas que elijas de un PDF en un archivo nuevo e independiente.
+    title: "Extraer páginas PDF online: guárdalas en un archivo nuevo"
+    description: "Extraer páginas de un PDF y guardarlas en un archivo nuevo, gratis y en tu navegador: sin subir nada, sin registro, sin marca de agua y con la calidad original."
+    h1: 'Extraer páginas de un PDF a un <span class="hl">archivo nuevo</span>'
+    h1_plain: Extraer páginas PDF
+    lede: "Elige las páginas que necesitas, en el orden que quieras, y guárdalas en un PDF aparte. El archivo original no se toca."
+    suffix: editado
+    hint: "Selecciona las páginas que quieres conservar (Mayús+clic para un rango) y luego “Extraer seleccionadas”. Antes puedes cambiar su orden."
+    stepsTitle: Cómo extraer páginas de un PDF
+    steps:
+      - h: Abre tu PDF
+        p: "Suéltalo aquí. Cada página aparece en miniatura."
+      - h: Selecciona las páginas
+        p: "Haz clic en las páginas que quieres extraer. Mayús+clic selecciona un rango. Arrastra las miniaturas para cambiar su orden."
+      - h: Extrae
+        p: "Haz clic en <b>Extraer seleccionadas</b>: se descarga un PDF nuevo solo con esas páginas."
+    body: |
+      ## ¿Extraer o dividir?
+
+      Extraer páginas de un PDF significa copiar algunas de ellas en un documento nuevo, mientras el original sigue completo. Es la forma más rápida de enviar solo la parte que importa de un archivo largo: un capítulo de un informe, la página de firmas de un contrato, las facturas de un solo mes dentro de un export anual. Si prefieres quedarte con todo salvo unas pocas hojas, puedes [eliminar páginas del PDF](/es/eliminar-paginas-pdf/) directamente.
+
+      Puedes extraer varias veces del mismo archivo: selecciona un primer grupo, extrae, luego selecciona otro grupo y vuelve a extraer. Cada extracción descarga un PDF distinto.
+
+      ## Combina páginas de varios PDF
+
+      Haz clic en **Añadir PDF** para cargar más archivos. Sus páginas se suman a la cuadrícula, puedes mezclarlas y reordenarlas, y después extraer la selección o descargarlo todo como un único documento. Si solo quieres juntar documentos completos, la herramienta para [unir PDF](/es/unir-pdf/) va más directa.
+
+      ## La misma calidad que el original
+
+      Las páginas se copian tal cual, con texto real, fuentes, imágenes, comentarios y enlaces web. Nada se convierte en imagen, así que las páginas extraídas siguen nítidas y se puede buscar en ellas. Si alguna contiene datos que no deben salir, [censúralos en local](/es/censurar-pdf/) antes de enviarla. Si necesitas una página como imagen, extráela y luego [convierte el PDF a JPG](/es/pdf-a-jpg/).
+    faq:
+      - q: ¿Se modifica el PDF original?
+        a: "No. La extracción crea un archivo nuevo; el original queda exactamente igual en tu equipo."
+      - q: ¿Puedo extraer páginas en otro orden?
+        a: "Sí. Arrastra las miniaturas al orden que quieras antes de extraer: el PDF nuevo sigue el orden de las páginas seleccionadas en la cuadrícula."
+      - q: ¿Puedo extraer páginas de un PDF protegido con contraseña?
+        a: "Si conoces la contraseña, sí: se te pide al abrir el archivo. El PDF extraído se guarda sin contraseña."
+      - q: ¿Funciona en el móvil?
+        a: "Sí. Toca las páginas para seleccionarlas y mantén pulsada una miniatura para moverla."
+
+  rotate:
+    slug: rotar-pdf
+    nav: Rotar PDF
+    card: Gira 90° una página o todo el documento y guárdalo en la posición correcta.
+    title: "Rotar PDF online y guardarlo girado, gratis y privado"
+    description: "Rotar PDF o girar una sola página 90° a la izquierda o a la derecha y guardarlo de forma permanente. Gratis, en tu navegador, sin subir nada ni registrarte."
+    h1: 'Rotar páginas PDF y <span class="hl">guardarlas</span> así'
+    h1_plain: Rotar PDF
+    lede: "Arregla un escaneo que salió de lado o al revés. Rota páginas sueltas o el documento entero y descarga un PDF que se abre derecho en cualquier sitio."
+    suffix: rotado
+    hint: "Rota una página con las flechas de su miniatura, o selecciona páginas (ninguna = todas) y usa Izquierda / Derecha."
+    stepsTitle: Cómo rotar un PDF
+    steps:
+      - h: Abre tu PDF
+        p: "Suéltalo en la página y verás todas las páginas en miniatura."
+      - h: Rota
+        p: "Usa ↺ o ↻ en una sola página, o selecciona varias (o ninguna, para todo el archivo) y haz clic en <b>Izquierda</b> o <b>Derecha</b>."
+      - h: Descarga
+        p: "La rotación queda guardada en el archivo: se abrirá bien en cualquier lector y en cualquier dispositivo."
+    body: |
+      ## Rotar PDF de forma permanente, no solo en pantalla
+
+      El botón de girar de la mayoría de los lectores PDF solo cambia la vista. Cierras el archivo, lo envías, y vuelve a estar de lado. pdfanonym escribe la rotación en el propio PDF, así que cualquier lector muestra las páginas en la posición correcta. Si tus páginas son fotos hechas con el móvil, [convierte primero las imágenes JPG a PDF](/es/jpg-a-pdf/) y luego gira las que hayan quedado de lado.
+
+      ## Girar solo algunas páginas
+
+      Los documentos que mezclan vertical y horizontal son frecuentes: un informe con una tabla ancha, un escaneo en el que una hoja entró al revés. Gira esas páginas una a una con las flechas de su miniatura y deja las demás como están. Si además están en mal orden, usa la herramienta para [ordenar páginas de un PDF](/es/ordenar-paginas-pdf/).
+
+      ## Sin pérdida de calidad
+
+      La rotación es un ajuste de la página, no una transformación de imagen. El texto sigue siendo texto, no se recomprime nada y el tamaño del archivo apenas cambia. Todo ocurre en tu navegador, igual que el [censurado de PDF en local](/es/censurar-pdf/).
+    faq:
+      - q: ¿Cómo roto todas las páginas a la vez?
+        a: "Asegúrate de que no haya ninguna página seleccionada y haz clic en Izquierda o Derecha: la rotación se aplica a todo el documento."
+      - q: ¿Se guarda la rotación?
+        a: "Sí. Se escribe en el PDF descargado, así que se abre derecho en cualquier lector."
+      - q: ¿Puedo girar 180°?
+        a: "Haz clic dos veces en la misma flecha."
+      - q: ¿Rotar reduce la calidad?
+        a: "No. Solo cambia el ajuste de orientación de la página; el texto y las imágenes no se vuelven a codificar."
+
+  reorder:
+    slug: ordenar-paginas-pdf
+    nav: Ordenar páginas
+    card: Arrastra y suelta las miniaturas para poner las páginas de un PDF en el orden correcto.
+    title: "Ordenar páginas PDF online: arrastrar y soltar, gratis"
+    description: "Ordenar páginas PDF arrastrando y soltando, combinar varios archivos y descargar el resultado. Gratis, en tu navegador, sin subir nada y sin registro."
+    h1: 'Ordenar páginas PDF <span class="hl">arrastrando y soltando</span>'
+    h1_plain: Ordenar páginas PDF
+    lede: "Mueve las páginas hasta que el documento se lea en el orden correcto, añade páginas de otros PDF y descarga un archivo limpio. Nada sale de tu equipo."
+    suffix: ordenado
+    hint: "Arrastra una miniatura para moverla. En el móvil, mantén pulsado y luego arrastra."
+    stepsTitle: Cómo ordenar las páginas de un PDF
+    steps:
+      - h: Abre tu PDF
+        p: "Suéltalo aquí. Añade más archivos con <b>Añadir PDF</b> para combinarlos."
+      - h: Arrastra las páginas a su sitio
+        p: "Arrastra una miniatura y suéltala donde corresponde. Si hace falta, elimina o rota páginas por el camino."
+      - h: Descarga
+        p: "Haz clic en <b>Descargar</b> para guardar el PDF con el nuevo orden."
+    body: |
+      ## Ordenar páginas PDF en segundos
+
+      ¿Escaneaste un documento desordenado? ¿Necesitas el resumen antes de los anexos, o la página firmada al final? Arrastra las miniaturas a su sitio: los números de página se actualizan sobre la marcha y Ctrl/Cmd+Z deshace cualquier movimiento. Si sobra alguna hoja, también puedes [eliminar páginas del PDF](/es/eliminar-paginas-pdf/), y una vez todo en su sitio, [numerar las páginas del PDF](/es/numerar-paginas-pdf/) para que la numeración siga el nuevo orden.
+
+      ## Combina y ordena varios PDF
+
+      Usa **Añadir PDF** para incorporar otros archivos. Todas las páginas aparecen en una sola cuadrícula, así que puedes intercalarlas, quitar las que no necesitas y descargar un único documento bien ordenado. Para juntar archivos completos sin tocar el orden, también puedes [unir PDF](/es/unir-pdf/) directamente.
+
+      ## Qué se conserva
+
+      Cada página se copia tal cual: texto, fuentes, imágenes, comentarios y enlaces web. El documento no se reconstruye como imágenes, así que sigue siendo ligero y se puede buscar en él. Para ocultar un dato antes de compartirlo, usa el [censurado de PDF en local](/es/censurar-pdf/).
+    faq:
+      - q: ¿Puedo mover varias páginas a la vez?
+        a: "Muévelas una a una arrastrándolas; cada movimiento lleva un segundo y Ctrl/Cmd+Z revierte el último."
+      - q: ¿Puedo unir PDF aquí?
+        a: "Sí. Haz clic en “Añadir PDF” (o suelta varios archivos a la vez) para combinarlos, ordena las páginas y descarga un solo archivo."
+      - q: ¿Los marcadores siguen el nuevo orden?
+        a: "No. El archivo nuevo se construye página a página y no conserva los marcadores originales (el índice), ni los enlaces que llevan a otra página del documento. Los enlaces web de las páginas sí se conservan."
+      - q: ¿Funciona en el móvil?
+        a: "Sí. Mantén pulsada una miniatura y luego arrástrala a su nuevo sitio."
+
+  grayscale:
+    slug: pdf-blanco-y-negro
+    nav: Blanco y negro
+    card: Convierte un PDF en color a escala de grises con el texto nítido y seleccionable.
+    title: "PDF a blanco y negro: convertir a escala de grises gratis"
+    description: "Pasa un PDF a blanco y negro en tu navegador: el texto sigue siendo seleccionable, las imágenes pasan a escala de grises y no se sube nada. Gratis."
+    h1: 'Convertir un PDF a <span class="hl">blanco y negro</span>'
+    h1_plain: Convertir un PDF a blanco y negro
+    lede: "Pasa tu PDF a blanco y negro para ahorrar tinta, cumplir los requisitos de una imprenta o preparar un documento para imprimir sin color. Cada color se convierte en un tono de la escala de grises y el texto sigue siendo texto real y seleccionable."
+    suffix: bn
+    reportCaption: Este PDF
+    runLabel: Convertir a blanco y negro y descargar
+    stepsTitle: Cómo convertir un PDF a blanco y negro
+    steps:
+      - h: Abre tu PDF
+        p: "Suéltalo en la página. Se procesa en tu equipo."
+      - h: Convierte
+        p: "Haz clic en el botón. Texto, formas, imágenes, comentarios y la apariencia de los campos de formulario pasan a escala de grises."
+      - h: Revisa y descarga
+        p: "El nuevo archivo se descarga al instante y aparece una vista previa de su primera página para que compruebes el resultado."
+    body: |
+      ## PDF a blanco y negro sin convertir las páginas en imágenes
+
+      Para pasar un PDF a blanco y negro, muchos conversores «imprimen» cada página como imagen y vuelven a meter esas imágenes en un PDF. Funciona, pero el texto deja de ser texto: no puedes seleccionarlo, buscarlo ni copiarlo, y el archivo suele pesar mucho más. pdfanonym reescribe los colores dentro del propio documento, en escala de grises. El texto se ve nítido con cualquier zoom, los enlaces siguen funcionando y el archivo suele pesar menos que el original, porque las fotos en color pasan a ser imágenes en escala de grises de un solo canal. Si necesitas reducirlo aún más, [comprime el PDF](/es/comprimir-pdf/) después de convertirlo.
+
+      ## Qué se convierte
+
+      | Elemento | Resultado |
+      |---|---|
+      | Texto y formas en color (RGB y CMYK) | Tonos de gris con el mismo brillo |
+      | Fotos e ilustraciones | Imágenes en escala de grises |
+      | Comentarios, sellos, apariencia de los campos de formulario | Escala de grises |
+      | Texto | Sigue siendo texto real y seleccionable |
+
+      El brillo se conserva con la fórmula estándar de luminancia: los colores claros siguen siendo claros y los oscuros, oscuros. Un título rojo no se convierte en un bloque negro.
+
+      ## Límites
+
+      Algunos elementos poco habituales se dejan como están y se indican después de la conversión: los degradados suaves (sombreados), los colores directos que se usan en archivos de impresión profesional y las imágenes diminutas incrustadas directamente en el código de la página. La vista previa muestra el resultado para que lo revises antes de imprimir. La conversión se aplica a todo el documento: para convertir solo algunas páginas, [extrae primero las páginas del PDF](/es/extraer-paginas-pdf/) que necesitas.
+
+      ## ¿Blanco y negro o escala de grises?
+
+      Lo que casi todo el mundo llama «blanco y negro» es en realidad escala de grises: 256 tonos entre el negro y el blanco, lo que mantiene las fotos legibles. Eso es lo que genera esta herramienta. Después, la impresora reproduce los grises solo con tinta negra.
+    faq:
+      - q: ¿El texto seguirá siendo seleccionable?
+        a: "Sí. El texto no se convierte en imagen: puedes seleccionarlo, buscarlo y copiarlo igual que antes."
+      - q: ¿Reduce el tamaño del archivo?
+        a: "A menudo sí, porque las imágenes en color se guardan con un canal en lugar de tres. Los archivos que solo contienen texto apenas cambian."
+      - q: ¿Puedo convertir solo algunas páginas?
+        a: "No con esta herramienta. Usa primero <a href=\"/es/extraer-paginas-pdf/\">Extraer páginas</a> para quedarte con las páginas que necesitas y luego convierte ese archivo."
+      - q: ¿Por qué algo sigue en color?
+        a: "Los degradados suaves y los colores directos profesionales no se convierten. Son raros en documentos de oficina; el informe que aparece después de la conversión te indica si tu archivo los contiene."
+
+  anonymize:
+    slug: anonimizar-pdf
+    nav: Anonimizar PDF
+    card: Detecta correos, teléfonos, IBAN y nombres automáticamente y censúralos con un clic.
+    title: "Anonimizar PDF: censura automática de datos personales"
+    description: "Anonimizar PDF: encuentra correos, teléfonos, IBAN, tarjetas y nombres automáticamente y censúralos para siempre. Apto para el RGPD, sin salir del navegador."
+    h1: 'Anonimizar un PDF: datos personales <span class="redacted">localizados</span> por ti'
+    h1_plain: Anonimizar PDF
+    lede: "Abre tu documento para anonimizar el PDF: pdfanonym analiza cada página en busca de correos, teléfonos, datos bancarios, números de tarjeta y nombres, y te deja censurarlos todos de una vez. No se sube nada."
+    black: true
+    suffix: anonimizado
+    stepsTitle: Cómo anonimizar un PDF
+    steps:
+      - h: Abre tu PDF
+        p: "Suéltalo en la página. El análisis empieza solo, en tu equipo."
+      - h: Revisa lo que se encontró
+        p: "Los datos personales se agrupan por tipo, con ejemplos. Desmarca lo que deba quedarse y haz clic en <b>Marcar seleccionados</b>. Añade cualquier otra cosa a mano o con el buscador."
+      - h: Censura y descarga
+        p: "Pulsa <kbd>Supr</kbd> o <b>Aplicar</b>: el texto se borra del archivo. Los metadatos ocultos también se eliminan."
+    body: |
+      ## Qué detecta el análisis
+
+      | Dato | Cómo se comprueba |
+      |---|---|
+      | Direcciones de correo electrónico | Formato estándar de dirección |
+      | Números de teléfono | Formatos internacionales (+33, +49…) y nacionales |
+      | IBAN | Dígitos de control oficiales (mod 97): los números no válidos se ignoran |
+      | Números de tarjeta bancaria | Algoritmo de Luhn; se excluyen los números de empresa como el SIRET |
+      | Números de seguridad social franceses | Clave de control verificada |
+      | Direcciones IP | Solo rangos válidos |
+      | Nombres tras un tratamiento | Mr, Mrs, Dr, Monsieur, Madame, Herr, Frau, Sr., Sra., Sig.… |
+      | Fechas | Se detectan pero quedan desmarcadas, porque los documentos están llenos de fechas que no son personales |
+
+      Los dígitos de control importan: reducen los falsos positivos, así que puedes fiarte de la lista en lugar de revisar cientos de números al azar. Si tienes decenas de archivos, puedes [anonimizar PDF por lotes](/es/anonimizar-pdf-por-lotes/) con las mismas reglas.
+
+      ## Lo que no puede adivinar
+
+      Un nombre escrito sin tratamiento («Jean Dupont firmó…») parece una palabra cualquiera, así que no se detecta automáticamente. Escríbelo en el buscador y pulsa **Marcar todo**: se encuentran todas sus apariciones, en mayúsculas o no, con o sin acentos. Tampoco se detectan las direcciones postales ni la información manuscrita: márcalas a mano con la herramienta para [censurar un PDF](/es/censurar-pdf/). Lee siempre el documento una vez antes de compartirlo; nuestra guía sobre [cómo censurar un PDF correctamente](/es/como-censurar-un-pdf/) detalla las comprobaciones.
+
+      ## Por qué importa anonimizar en local
+
+      Enviar un archivo lleno de datos personales a un servicio online para quitarle esos datos personales es una contradicción: según el RGPD, supone recurrir a otro encargado del tratamiento. pdfanonym funciona por completo en tu navegador, así que los datos nunca salen de tu dispositivo.
+    faq:
+      - q: "¿Los datos detectados se eliminan de verdad?"
+        a: "Sí, en cuanto aplicas la censura. Los caracteres se borran del archivo, no se ocultan bajo un recuadro, y los metadatos del documento (autor, título…) también se limpian."
+      - q: "¿Funciona con PDF escaneados?"
+        a: "No: un escaneo contiene imágenes, no texto, así que no hay nada que analizar. Usa el modo Zona para tachar los pasajes a mano."
+      - q: "¿Qué idiomas y países abarca?"
+        a: "Los correos, los teléfonos internacionales, los IBAN, las tarjetas y las direcciones IP funcionan para cualquier país. Los tratamientos se reconocen en inglés, francés, alemán, español, italiano y portugués. Los números de seguridad social se comprueban con el formato francés."
+      - q: "¿Puedo conservar algunos de los datos detectados?"
+        a: "Sí. Desmarca una categoría antes de marcar, o quita marcas sueltas de la lista de la derecha."
+
+  merge:
+    slug: unir-pdf
+    nav: Unir PDF
+    card: Combina varios PDF en un solo archivo, en el orden que elijas.
+    title: "Unir PDF online gratis y privado (sin subir archivos)"
+    description: "Unir PDF en tu navegador: suelta varios archivos, reordena las páginas arrastrando y descarga un único documento. Gratis, sin subir nada y sin cuenta."
+    h1: 'Unir PDF <span class="hl">sin subir los archivos</span>'
+    h1_plain: Unir PDF
+    lede: "Para unir PDF, suelta varios archivos a la vez, coloca las páginas en el orden correcto y descarga un único documento. Tus archivos se combinan en tu propio equipo."
+    suffix: unido
+    hint: "Suelta varios archivos a la vez o usa “Añadir PDF”. Arrastra las miniaturas para cambiar el orden."
+    stepsTitle: Cómo unir archivos PDF
+    steps:
+      - h: Suelta tus PDF
+        p: "Selecciona varios archivos a la vez o añádelos uno a uno con <b>Añadir PDF</b>."
+      - h: Ordena las páginas
+        p: "Cada página aparece en miniatura. Arrastra para reordenar y, si hace falta, rota o elimina páginas."
+      - h: Descarga
+        p: "Haz clic en <b>Descargar</b> para obtener un único PDF."
+    body: |
+      ## Unir y ordenar de una vez
+
+      Unir PDF rara vez consiste solo en pegar archivos uno detrás de otro. Aquí todas las páginas de todos los archivos aparecen en una sola cuadrícula, así que puedes poner la página firmada donde corresponde, quitar una página en blanco o girar un escaneo torcido antes de descargar. Para reorganizar un solo documento sin añadir otros, usa la herramienta para [ordenar páginas de un PDF](/es/ordenar-paginas-pdf/). Cuando el dossier esté listo, puedes [numerar las páginas del PDF](/es/numerar-paginas-pdf/) para que la numeración recorra todo el conjunto.
+
+      ## Calidad y enlaces
+
+      Las páginas se copian tal cual: el texto sigue siendo texto, las imágenes conservan su resolución y se mantienen los comentarios y los enlaces web. Los recursos que comparten varias páginas de un mismo archivo se guardan una sola vez, así que el resultado sigue siendo ligero. Si aun así pesa demasiado para un correo, [comprime el PDF](/es/comprimir-pdf/) unido.
+
+      ## Privado por diseño
+
+      Unir contratos, nóminas o informes médicos en un sitio que obliga a subirlos supone enviarlos todos a un servidor. Aquí nunca salen de tu dispositivo.
+    faq:
+      - q: "¿Cuántos archivos puedo unir?"
+        a: "No hay un límite fijo. Los conjuntos muy grandes dependen de la memoria de tu equipo."
+      - q: "¿Puedo unir PDF protegidos con contraseña?"
+        a: "Sí, si conoces sus contraseñas: se te pide cada una al añadir el archivo. El archivo unido no tiene contraseña; si hace falta, añádele una con la herramienta Proteger PDF."
+      - q: "¿Se conservan los marcadores?"
+        a: "No. El archivo unido no conserva los marcadores originales (el índice) ni los enlaces que llevan a otra página. Los enlaces web sí se conservan."
+
+  add_text:
+    slug: anadir-texto-pdf
+    nav: Añadir texto
+    card: Escribe en cualquier punto de una página PDF, como en un formulario sin campos.
+    title: "Añadir texto a PDF online: escribe donde quieras, gratis"
+    description: "Añadir texto a PDF en tu navegador: haz clic donde quieras, escribe, elige tamaño y color, y descarga. Texto real, sin subir nada, sin cuenta ni marca de agua."
+    h1: 'Añadir texto a un PDF, <span class="hl">en cualquier punto de la página</span>'
+    h1_plain: Añadir texto a PDF
+    lede: "Añadir texto a PDF te sirve para rellenar un formulario sin campos, poner una fecha o una nota, o completar un documento antes de imprimirlo. Haz clic, escribe, descarga."
+    suffix: editado
+    hint: "Haz clic en una página para escribir. Arrastra un texto para moverlo, haz clic en él para editarlo, Supr para borrarlo."
+    stepsTitle: Cómo añadir texto a un PDF
+    steps:
+      - h: Abre tu PDF
+        p: "Suéltalo en la página. Se abre en tu equipo."
+      - h: Haz clic y escribe
+        p: "Haz clic donde debe ir el texto y escribe. Elige el tamaño y el color en la barra de herramientas; arrastra un texto para moverlo."
+      - h: Descarga
+        p: "El texto se escribe en el PDF como texto real y seleccionable."
+    body: |
+      ## Texto real, no una imagen
+
+      Lo que escribes se añade a la página como texto de verdad, en una fuente estándar (Helvetica). Se ve nítido con cualquier zoom, se puede seleccionar y buscar, y se imprime exactamente como aparece en pantalla. Para sustituir un texto existente, primero [borra el texto del PDF](/es/borrar-texto-pdf/) y luego escribe el nuevo en el hueco.
+
+      ## Usos habituales
+
+      - Rellenar un formulario «plano», que tiene casillas en la página pero ningún campo rellenable. Si el formulario sí tiene campos, rellénalos en tu lector y luego [aplana el PDF](/es/aplanar-pdf/) para fijar las respuestas.
+      - Añadir una fecha, una referencia o «Leído y conforme» antes de firmar.
+      - Escribir una nota en un plano o en un documento antes de devolverlo.
+
+      Para añadir también una firma manuscrita, cambia a **Firma** en la barra de herramientas o usa [Firmar PDF](/es/firmar-pdf/).
+
+      ## Caracteres
+
+      El texto se escribe en Helvetica, que cubre el alfabeto latino con los acentos de Europa occidental (é, ü, ñ, ç, ß…). Los caracteres que quedan fuera de ese conjunto, como el cirílico o el chino, se sustituyen por un signo de interrogación.
+    faq:
+      - q: "¿Puedo editar el texto que ya estaba en el PDF?"
+        a: "No con esta herramienta: añade texto nuevo. Para quitar primero el texto existente, usa Borrar texto y luego añade aquí tu texto nuevo."
+      - q: "¿Puedo escribir varias líneas?"
+        a: "Sí. Pulsa Enter mientras escribes para empezar una línea nueva."
+      - q: "¿El texto añadido se puede editar después?"
+        a: "No en pdfanonym una vez descargado: pasa a formar parte de la página. Conserva el original si crees que tendrás que hacer cambios."
+
+  sign:
+    slug: firmar-pdf
+    nav: Firmar PDF
+    card: Dibuja tu firma y colócala en el documento, sin imprimir ni escanear.
+    title: "Firmar PDF online: dibuja tu firma, gratis y privado"
+    description: "Firmar PDF online: dibuja tu firma con el ratón o con el dedo y colócala en el documento. Gratis, en tu navegador, sin subir nada, sin cuenta ni marca de agua."
+    h1: 'Firmar un PDF con tu <span class="hl">propia firma</span>'
+    h1_plain: Firmar PDF
+    lede: "Para firmar un PDF ya no hace falta imprimir, firmar y escanear. Dibuja tu firma una vez, colócala donde corresponde y descarga el PDF firmado."
+    suffix: firmado
+    hint: "Haz clic en una página para colocar tu firma. Arrastra para moverla, usa la esquina para cambiar su tamaño."
+    stepsTitle: Cómo firmar un PDF
+    steps:
+      - h: Abre tu PDF
+        p: "Suelta el documento que vas a firmar. Se queda en tu equipo."
+      - h: Dibuja tu firma
+        p: "Dibújala con el ratón, el panel táctil o el dedo y haz clic en <b>Usar esta firma</b>."
+      - h: Colócala y descarga
+        p: "Haz clic donde va, ajusta su tamaño, añade la fecha con la herramienta <b>Texto</b> si hace falta y descarga."
+    body: |
+      ## Una firma limpia y transparente
+
+      Tu dibujo se recorta automáticamente y se coloca con fondo transparente, así que queda sobre las líneas de firma y las tablas sin un recuadro blanco alrededor. Puedes colocarla en varias páginas y cambiar el tamaño de cada copia. Si también necesitas la fecha o tu nombre, puedes [añadir texto al PDF](/es/anadir-texto-pdf/) junto a la firma.
+
+      ## ¿Qué tipo de firma es?
+
+      Una firma dibujada es lo que el reglamento europeo eIDAS llama firma electrónica simple. Se usa mucho en documentos cotidianos: presupuestos, albaranes, formularios internos, contratos de alquiler entre particulares. Algunos documentos exigen una firma electrónica avanzada o cualificada, basada en un certificado y en la verificación de la identidad; para esos, usa un servicio de firma especializado.
+
+      ## Tu firma se queda contigo
+
+      La imagen de la firma se crea en tu navegador y se escribe en tu PDF, en tu equipo. Nunca la subimos ni la guardamos. Antes de enviarlo, puedes [aplanar el PDF](/es/aplanar-pdf/) para que la firma quede integrada en la página, y [proteger el PDF con contraseña](/es/proteger-pdf/) si contiene datos sensibles.
+    faq:
+      - q: "¿Puedo firmar desde el móvil?"
+        a: "Sí. Abre la página en tu móvil, dibuja con el dedo y toca donde debe ir la firma."
+      - q: "¿Puedo añadir la fecha y mi nombre?"
+        a: "Sí. Cambia a la herramienta Texto en la barra de herramientas, haz clic junto a la firma y escribe."
+      - q: "¿Se guarda mi firma para la próxima vez?"
+        a: "No. No se guarda nada: la dibujas de nuevo para cada documento, lo que también significa que nadie más puede reutilizarla desde este sitio."
+
+  watermark:
+    slug: marca-de-agua-pdf
+    nav: Marca de agua
+    card: Estampa CONFIDENCIAL, BORRADOR o tu nombre en todas las páginas.
+    title: "Poner marca de agua PDF online, gratis y privado"
+    description: "Añade una marca de agua PDF de texto (CONFIDENCIAL, BORRADOR, COPIA…) a todas las páginas. Elige opacidad, color y dirección con vista previa. Sin subir nada."
+    h1: 'Añadir una <span class="hl">marca de agua</span> a un PDF'
+    h1_plain: Añadir marca de agua a PDF
+    lede: "Con una marca de agua PDF señalas un documento como confidencial, como borrador o como copia para un destinatario concreto. Escribe el texto, ajústalo con la vista previa en directo y descarga."
+    suffix: marcado
+    runLabel: Añadir marca de agua y descargar
+    stepsTitle: Cómo poner una marca de agua en un PDF
+    steps:
+      - h: Abre tu PDF
+        p: "Suéltalo en la página."
+      - h: Configura la marca de agua
+        p: "Escribe el texto y elige la opacidad, el color y la dirección. La vista previa de la primera página se actualiza sobre la marcha."
+      - h: Descarga
+        p: "La marca de agua se añade a todas las páginas."
+    body: |
+      ## Ideas de marca de agua
+
+      - **CONFIDENCIAL** o **INTERNO** en documentos que no deben circular.
+      - **BORRADOR** en versiones que no son definitivas.
+      - **Copia para [destinatario]** en un documento de identidad o una nómina que envías a un casero o a una agencia: si se filtra, queda claro de dónde salió y para qué era.
+
+      ## Lo que hace y lo que no hace una marca de agua
+
+      Una marca de agua disuade del mal uso y deja clara la procedencia de una copia. No impide que alguien decidido la quite con un programa de edición. Para una protección más fuerte, [aplana](/es/aplanar-pdf/) también el archivo y [protégelo con contraseña](/es/proteger-pdf/).
+
+      ## Caracteres
+
+      La marca de agua usa Helvetica Bold, que cubre el alfabeto latino con los acentos de Europa occidental. Los demás sistemas de escritura no son compatibles.
+    faq:
+      - q: "¿El texto que hay bajo la marca de agua sigue siendo legible?"
+        a: "Sí. La marca de agua es semitransparente; ajusta la opacidad entre el 5 % y el 60 %."
+      - q: "¿Puedo poner la marca de agua solo en algunas páginas?"
+        a: "Esta herramienta marca todas las páginas. Para marcar una selección, extrae primero esas páginas, ponles la marca de agua y luego únelas."
+      - q: "¿Puedo usar una imagen como marca de agua?"
+        a: "Todavía no: por ahora solo se admiten marcas de agua de texto."
+
+  page_numbers:
+    slug: numerar-paginas-pdf
+    nav: Numerar páginas
+    card: Numera las páginas de un PDF con la posición y el formato que elijas.
+    title: "Numerar páginas PDF online, gratis y privado"
+    description: "Numerar páginas PDF: posición, formato (1, Página 1, Página 1 de 10), número inicial, portada sin numerar. Vista previa en directo, sin subir nada."
+    h1: 'Numerar las <span class="hl">páginas</span> de un PDF'
+    h1_plain: Numerar páginas PDF
+    lede: "Numerar páginas PDF de un informe, un anexo o un dossier lleva unos segundos. Elige dónde van los números y cómo se ven; la vista previa se actualiza en directo."
+    suffix: numerado
+    runLabel: Añadir números de página y descargar
+    stepsTitle: Cómo numerar las páginas de un PDF
+    steps:
+      - h: Abre tu PDF
+        p: "Suéltalo en la página."
+      - h: Elige posición y formato
+        p: "Abajo o arriba; a la izquierda, en el centro o a la derecha; 1, Página 1 o Página 1 de 12; número inicial; omite la portada si hace falta."
+      - h: Descarga
+        p: "Los números se añaden a todas las páginas como texto real."
+    body: |
+      ## Formatos para cada uso
+
+      Los números simples sirven para la mayoría de los documentos. «Página 1 de 12» es habitual en contratos y documentos oficiales, porque así una página que falta salta a la vista. Cuando un documento continúa otro, fija el número inicial (por ejemplo 25) y marca **Omitir la primera página (portada)** para dejar la portada sin numerar.
+
+      ## Correctos en todas las páginas
+
+      Los números se colocan según lo que ves en pantalla, incluso en páginas giradas o recortadas, así que nunca acaban de lado ni fuera de la página.
+
+      ## Combínalo con otras herramientas
+
+      ¿Preparas un dossier con varios documentos? Primero [une](/es/unir-pdf/) los archivos y luego numera el resultado para que la numeración recorra todo el conjunto. Si el dossier es confidencial, puedes añadir después una [marca de agua al PDF](/es/marca-de-agua-pdf/) en todas las páginas.
+    faq:
+      - q: "¿Puedo empezar la numeración en un número distinto de 1?"
+        a: "Sí. Pon cualquier número en “Empezar en”."
+      - q: "¿Puedo dejar la portada sin número?"
+        a: "Sí. Marca “Omitir la primera página (portada)”: la numeración empieza en la segunda página."
+      - q: "¿Los números son texto que se puede buscar?"
+        a: "Sí. Se añaden como texto real en Helvetica."
+
+  compress:
+    slug: comprimir-pdf
+    nav: Comprimir PDF
+    card: Reduce el peso de un PDF para el correo y los portales encogiendo las imágenes demasiado grandes.
+    title: "Comprimir PDF online: reducir tamaño PDF gratis y privado"
+    description: "Comprimir PDF en tu navegador: las imágenes demasiado grandes se reducen y recomprimen, y las fuentes se recortan. Tres niveles, sin subir nada."
+    h1: 'Comprimir un PDF <span class="hl">sin subirlo</span>'
+    h1_plain: Comprimir PDF
+    lede: "¿Pesa demasiado para enviarlo por correo o subirlo a un portal? Reduce el tamaño del PDF encogiendo las imágenes sobredimensionadas y los datos sin usar, conserva el texto nítido y compara el tamaño antes y después."
+    suffix: comprimido
+    runLabel: Comprimir y descargar
+    stepsTitle: Cómo comprimir un PDF
+    steps:
+      - h: Abre tu PDF
+        p: "Suéltalo en la página. Se muestra su tamaño actual."
+      - h: Elige un nivel
+        p: "Ligero, Recomendado o Fuerte. Recomendado va bien para pantalla e impresión de oficina."
+      - h: Descarga
+        p: "Ves el nuevo tamaño y el porcentaje ahorrado. Si no se puede reducir, tu archivo se queda como estaba."
+    body: |
+      ## Qué hace pesado un PDF
+
+      Casi siempre, las imágenes. Una foto sacada directamente del móvil o un escaneo a 600 dpi contiene muchos más píxeles de los que necesita una página. Para comprimir el PDF, pdfanonym reduce cada imagen a la resolución que la página puede mostrar de verdad (unos 220, 150 o 100 dpi según el nivel) y la vuelve a comprimir. Las fuentes se recortan a los caracteres que realmente se usan y se eliminan los objetos sin usar. Si creas el PDF a partir de fotos, la herramienta para [convertir JPG a PDF](/es/jpg-a-pdf/) incrusta las imágenes sin recomprimir, así que conviene comprimir el resultado después.
+
+      ## Qué puedes esperar
+
+      | Documento | Resultado habitual |
+      |---|---|
+      | Fotos, escaneos en color, presentaciones | Gran reducción, a menudo del 50 % al 90 % |
+      | Informes mixtos | Reducción moderada |
+      | Documentos solo de texto, archivos ya optimizados | Poco o ningún cambio |
+
+      El texto y los dibujos vectoriales nunca se convierten en imágenes, así que siguen perfectamente nítidos en cualquier nivel. Para documentos que se van a imprimir, [pasar el PDF a blanco y negro](/es/pdf-blanco-y-negro/) también reduce el peso de las fotos en color.
+
+      ## Archivos grandes
+
+      Todo se ejecuta en tu equipo, así que un escaneo de 100 páginas puede tardar unos segundos. No hay tiempo de subida ni límite de tamaño impuesto por un servidor. Si solo necesitas enseñar una página, [convertir el PDF a JPG](/es/pdf-a-jpg/) suele dar un archivo mucho más ligero.
+    faq:
+      - q: "¿La compresión reduce la calidad?"
+        a: "Ligero mantiene las imágenes cerca del original. Con Recomendado la diferencia apenas se nota en pantalla y en impresión de oficina. Fuerte muestra una pérdida visible en las fotos al ampliar. El texto nunca se ve afectado."
+      - q: "¿Por qué mi archivo apenas se ha reducido?"
+        a: "Contiene pocos datos de imagen, o sus imágenes ya estaban comprimidas. En ese caso la herramienta te lo indica y deja tu archivo tal cual."
+      - q: "¿Hay un límite de tamaño?"
+        a: "No imponemos ningún límite; los archivos muy grandes dependen de la memoria de tu equipo."
+
+  pdf_to_jpg:
+    slug: pdf-a-jpg
+    nav: PDF a JPG
+    card: Convierte cada página de un PDF en una imagen JPG o PNG.
+    title: "PDF a JPG online: convierte páginas en imágenes, gratis"
+    description: "Pasa de PDF a JPG o PNG cada página, con calidad de pantalla o de impresión. Si hay varias páginas, se descargan en un ZIP. Sin subir nada y sin cuenta."
+    h1: 'Convertir PDF a JPG: <span class="hl">páginas en imágenes</span>'
+    h1_plain: PDF a JPG
+    lede: "Pasa de PDF a JPG para compartir una página en redes sociales, insertarla en una presentación o enviarla donde no se aceptan PDF. Cada página se convierte en una imagen."
+    suffix: imagenes
+    runLabel: Convertir y descargar
+    stepsTitle: Cómo convertir PDF a JPG
+    steps:
+      - h: Abre tu PDF
+        p: "Suéltalo en la página."
+      - h: Elige formato y calidad
+        p: "JPG para fotos y archivos pequeños, PNG para texto y dibujos nítidos. 150 dpi va bien para pantalla, 300 dpi para imprimir."
+      - h: Descarga
+        p: "Una página da una imagen; varias páginas se agrupan en un archivo ZIP."
+    body: |
+      ## ¿JPG o PNG?
+
+      **JPG** genera archivos pequeños y se acepta en todas partes; es la opción adecuada para páginas con fotos. **PNG** no tiene pérdida: el texto y las líneas se mantienen perfectamente nítidos, a cambio de archivos más grandes. Si solo quieres enviar el documento más ligero, quizá te baste con [comprimir el PDF](/es/comprimir-pdf/) sin convertirlo.
+
+      ## ¿Qué calidad?
+
+      | Ajuste | Uso |
+      |---|---|
+      | 96 dpi | Pantallas, mensajes, vistas previas |
+      | 150 dpi | Uso general, presentaciones |
+      | 300 dpi | Impresión, archivo |
+
+      ## Convertido en tu equipo
+
+      Las páginas las genera el mismo motor que usan muchos lectores de PDF, directamente en tu navegador. Tu documento no se envía a ningún sitio. Para convertir solo una página, [extrae las páginas del PDF](/es/extraer-paginas-pdf/) que necesitas antes; para volver a juntar imágenes en un documento, usa [convertir JPG a PDF](/es/jpg-a-pdf/).
+    faq:
+      - q: "¿Cómo convierto una sola página?"
+        a: "Usa Extraer páginas para quedarte con la página que necesitas y luego convierte ese archivo. Una sola página se descarga como una sola imagen."
+      - q: "¿Puedo volver a convertir las imágenes en PDF?"
+        a: "Sí, con JPG a PDF."
+      - q: "¿El texto de las imágenes se puede seleccionar?"
+        a: "No. Una imagen es una foto de la página; conserva el PDF si necesitas texto seleccionable."
+
+  jpg_to_pdf:
+    slug: jpg-a-pdf
+    nav: JPG a PDF
+    card: Junta fotos y escaneos en un solo PDF, en el orden que elijas.
+    title: "JPG a PDF online: convierte imágenes en PDF, gratis"
+    description: "Pasa de JPG a PDF: convierte JPG, PNG y otras imágenes en un único PDF. Reordena arrastrando, elige tamaño de página y margen. Gratis y sin subir nada."
+    h1: 'De JPG a PDF: tus imágenes en <span class="hl">un solo PDF</span>'
+    h1_plain: JPG a PDF
+    lede: "Fotos de tiques, páginas escaneadas, capturas de pantalla: suéltalas, ordénalas y pasa de JPG a PDF en un único archivo listo para enviar."
+    suffix: imagenes
+    hint: "Arrastra las miniaturas para cambiar el orden. ✕ quita una imagen."
+    runLabel: Crear PDF
+    stepsTitle: Cómo convertir JPG a PDF
+    steps:
+      - h: Suelta tus imágenes
+        p: "JPG, PNG y otros formatos habituales. Añade más con <b>Añadir imágenes</b>."
+      - h: Ordena y configura
+        p: "Arrastra para reordenar. Elige el tamaño de página (igual que la imagen, A4 o Letter) y el margen."
+      - h: Crea el PDF
+        p: "Una imagen por página, en tu orden, descargadas en un solo archivo."
+    body: |
+      ## Tamaño de página: ¿cuál elegir?
+
+      **Igual que la imagen** crea páginas que se ajustan exactamente a cada foto, lo ideal para capturas de pantalla y fotos. **A4** o **Letter** coloca cada imagen en una página estándar, centrada y escalada para que quepa, mejor para documentos que vas a imprimir o enviar a una administración. Las imágenes horizontales reciben automáticamente páginas horizontales. Si una foto sale de lado, puedes [rotar el PDF](/es/rotar-pdf/) página por página.
+
+      ## Formatos compatibles
+
+      JPG y PNG se añaden tal cual, sin recomprimir. Los demás formatos que tu navegador puede abrir (GIF, BMP, WebP y, en algunos dispositivos, HEIC) se convierten primero. Las fotos de móvil pesan mucho: si el PDF final es demasiado grande para enviarlo, [comprime el PDF](/es/comprimir-pdf/) después.
+
+      ## Privado por diseño
+
+      Tiques, documentos de identidad y extractos bancarios son cosas que la gente suele convertir en PDF. Aquí las imágenes se quedan en tu dispositivo. Para añadirlas a un documento que ya tienes, [une los PDF](/es/unir-pdf/) en un solo archivo.
+    faq:
+      - q: "¿Se reduce la calidad de las imágenes?"
+        a: "Las imágenes JPG y PNG se incrustan tal cual, sin recomprimir. Usa Comprimir PDF después si el archivo pesa demasiado."
+      - q: "¿Cuántas imágenes puedo añadir?"
+        a: "No hay un límite fijo; las fotos muy grandes usan más memoria."
+      - q: "¿Puedo mezclar fotos y un PDF existente?"
+        a: "Crea aquí un PDF con las fotos y luego usa Unir PDF para combinarlo con tu otro documento."
+
+  protect:
+    slug: proteger-pdf
+    nav: Proteger PDF
+    card: Bloquea un PDF con contraseña mediante cifrado AES-256.
+    title: "Proteger PDF con contraseña online: AES-256, gratis"
+    description: "Proteger PDF con contraseña y cifrado AES-256, eligiendo qué se permite (imprimir, copiar, editar). El archivo y la contraseña se quedan contigo."
+    h1: 'Proteger un PDF con <span class="hl">contraseña</span>'
+    h1_plain: Proteger PDF con contraseña
+    lede: "Protege tu PDF con contraseña antes de enviarlo por correo o guardarlo en la nube: el documento queda cifrado y solo quien tenga la contraseña puede abrirlo."
+    suffix: protegido
+    runLabel: Proteger y descargar
+    stepsTitle: Cómo proteger un PDF con contraseña
+    steps:
+      - h: Abre tu PDF
+        p: "Suéltalo en la página."
+      - h: Elige una contraseña
+        p: "Escríbela dos veces. Elige si se permite imprimir, copiar o editar una vez abierto el archivo."
+      - h: Descarga
+        p: "El PDF se cifra con AES-256, el cifrado PDF estándar más fuerte."
+    body: |
+      ## Cifrado fuerte, hecho en local
+
+      El PDF se cifra con AES-256. Sin la contraseña, su contenido no se puede leer. Como el cifrado se hace en tu navegador, ni el documento ni la contraseña se envían nunca a un servidor. El cifrado protege el contenido, pero quien tenga la contraseña verá también el autor y los comentarios: si no deben llegar al destinatario, [elimina los metadatos del PDF](/es/eliminar-metadatos-pdf/) antes de protegerlo.
+
+      ## Elige una buena contraseña
+
+      Usa al menos 12 caracteres, idealmente varias palabras sin relación entre sí. Envía la contraseña por un canal distinto al del archivo: si mandas el PDF por correo, da la contraseña por teléfono o por SMS. Si más adelante necesitas quitarla, podrás [desbloquear el PDF](/es/desbloquear-pdf/) con esa misma contraseña.
+
+      ## Permisos
+
+      También puedes restringir la impresión, la copia y la edición para quien abra el archivo. Los lectores más comunes respetan estas restricciones, pero por sí solas no son una protección fuerte; lo que mantiene privado el contenido es la contraseña. Si lo que quieres es que nadie cambie las respuestas de un formulario, [aplanar el PDF](/es/aplanar-pdf/) antes de protegerlo es más eficaz.
+    faq:
+      - q: "¿Qué pasa si olvido la contraseña?"
+        a: "No se puede recuperar, ni nosotros ni nadie: nunca la vemos. Guarda una copia del archivo sin proteger en un lugar seguro."
+      - q: "¿Qué lectores pueden abrir el archivo protegido?"
+        a: "Todos los lectores de PDF actuales (Adobe Acrobat Reader, los navegadores, Vista Previa de Apple, las apps móviles) admiten AES-256."
+      - q: "¿Puedo quitar la contraseña más adelante?"
+        a: "Sí, con Desbloquear PDF, siempre que conozcas la contraseña."
+
+  unlock:
+    slug: desbloquear-pdf
+    nav: Desbloquear PDF
+    card: Quita la contraseña o las restricciones de impresión y copia de tu propio PDF.
+    title: "Desbloquear PDF online: quitar contraseña PDF y restricciones"
+    description: "Desbloquear PDF: quita la contraseña de un PDF que puedes abrir o quita sus límites de impresión y copia. En tu navegador, sin subir nada. Solo tus documentos."
+    h1: 'Desbloquear un PDF <span class="hl">que es tuyo</span>'
+    h1_plain: Desbloquear PDF
+    lede: "¿Cansado de escribir cada vez la contraseña de tu propio extracto bancario? Quita la contraseña del PDF una sola vez. También puedes levantar las restricciones que bloquean la impresión o la copia."
+    suffix: desbloqueado
+    runLabel: Desbloquear y descargar
+    stepsTitle: Cómo desbloquear un PDF
+    steps:
+      - h: Abre tu PDF
+        p: "Suéltalo en la página. Si necesita contraseña para abrirse, aparece un campo."
+      - h: Escribe la contraseña
+        p: "Escribe la contraseña que usas normalmente para abrirlo. Los archivos que se abren sin contraseña no necesitan nada."
+      - h: Descarga
+        p: "Obtienes el mismo documento, sin contraseña ni restricciones."
+    body: |
+      ## Dos tipos de protección PDF
+
+      Algunos PDF piden una contraseña para **abrirlos**; es habitual en extractos bancarios, nóminas y documentos fiscales. Otros se abren sin problema pero **restringen** lo que puedes hacer: imprimir, copiar texto, rellenar formularios. Esta herramienta resuelve los dos casos, siempre que puedas abrir el archivo con normalidad. Una vez desbloqueado, puedes trabajar con él en las demás herramientas, por ejemplo para [comprimir el PDF](/es/comprimir-pdf/) antes de enviarlo.
+
+      ## Solo para tus propios documentos
+
+      Para desbloquear hace falta la contraseña del archivo: no es un programa para descifrar contraseñas. Úsala con documentos que te pertenecen o que tienes permiso para modificar, como tus propios extractos o archivos cuyo autor te dio la contraseña.
+
+      ## Se queda en tu equipo
+
+      Tu PDF y su contraseña se procesan en tu navegador y nunca se envían a ningún sitio. Si después quieres volver a cifrarlo, puedes [proteger el PDF](/es/proteger-pdf/) con una contraseña nueva.
+    faq:
+      - q: "¿Se puede desbloquear un PDF si olvidé la contraseña?"
+        a: "No. La contraseña es necesaria para descifrar el archivo; no intentamos adivinarla ni romperla."
+      - q: "¿Cambia el contenido?"
+        a: "No. Las páginas, el texto, las imágenes y los enlaces quedan igual; solo se eliminan el cifrado y las restricciones."
+      - q: "¿Puedo volver a protegerlo con otra contraseña?"
+        a: "Sí, con Proteger PDF."
+
+  batch:
+    slug: anonimizar-pdf-por-lotes
+    nav: Anonimizar por lotes
+    card: "Pro: anonimiza decenas de PDF de una vez, con un informe CSV."
+    title: "Anonimizar PDF por lotes: censura muchos documentos a la vez"
+    description: "Anonimiza varios PDF de una vez: correos, teléfonos, IBAN, nombres, direcciones y tus propias listas de términos, censurados en cada archivo. ZIP e informe CSV. Local, Pro."
+    h1: 'Anonimiza <span class="hl">muchos PDF</span> a la vez'
+    h1_plain: Anonimizar PDF por lotes
+    lede: "Suelta una carpeta de documentos, elige lo que debe desaparecer y recibe todos los archivos censurados en un ZIP, con un informe CSV para tus registros. Sigue siendo 100 % local."
+    suffix: anonimizado
+    runLabel: Anonimizar todo
+    stepsTitle: Cómo funciona la anonimización por lotes
+    steps:
+      - h: Suelta tus PDF
+        p: "Selecciona todos los archivos que necesites. Se procesan uno tras otro en tu equipo."
+      - h: Elige qué censurar
+        p: "Marca las categorías (correos, teléfonos, IBAN, nombres, direcciones…) y añade tus propios términos: nombres de clientes, números de expediente, códigos internos."
+      - h: Descarga el ZIP
+        p: "Cada archivo se censura y se limpia de metadatos. Un informe CSV indica, por archivo y por página, cuántos elementos se eliminaron en cada categoría."
+    body: |
+      ## Pensado para el trabajo recurrente
+
+      Responder a solicitudes de acceso del RGPD, preparar expedientes, publicar resoluciones, compartir documentos de RR. HH. con un auditor: cuando los mismos tipos de datos deben desaparecer de muchos documentos, el modo por lotes hace en una pasada lo que, si no, te llevaría una tarde.
+
+      ## Qué se detecta
+
+      Todo lo que encuentra el [anonimizador gratuito](/es/anonimizar-pdf/) (correos, teléfonos, IBAN, tarjetas, números de seguridad social, IP, nombres tras un tratamiento), más la detección Pro: nombres escritos sin tratamiento, direcciones postales, fechas de nacimiento, matrículas y números de IVA. Tus listas de términos se aplican a todos los archivos, sin tener en cuenta mayúsculas ni tildes.
+
+      ## Revisa antes de compartir
+
+      La detección automática no es exhaustiva. El informe CSV te ayuda a localizar los archivos en los que no se encontró nada o muy poco, que merecen una revisión más atenta. El texto de las páginas escaneadas no se analiza. Para revisar lo que queda en las propiedades de un archivo (autor, título, fechas), usa la herramienta para [eliminar los metadatos de un PDF](/es/eliminar-metadatos-pdf/).
+    faq:
+      - q: "¿El modo por lotes está incluido en el plan Pro?"
+        a: "Sí, en el pase de 24 horas y en los planes Pro y Equipo."
+      - q: "¿Cuántos archivos puedo procesar a la vez?"
+        a: "No hay un límite fijo. Los archivos se procesan uno a uno, así que el límite es la memoria de tu equipo y tu paciencia: cientos de documentos normales no son problema."
+      - q: "¿Se suben mis archivos para el procesamiento por lotes?"
+        a: "No. Como todas las herramientas de pdfanonym, el modo por lotes funciona por completo en tu navegador."
+
+  pricing:
+    slug: precios
+    nav: Precios
+    title: "pdfanonym Pro: precios de la anonimización por lotes y los informes"
+    description: "Las herramientas gratuitas siguen siendo gratuitas. Pro añade anonimización por lotes, detección ampliada (nombres, direcciones), listas de términos guardadas e informes de censura. Desde 3 € por 24 horas."
+    h1: 'Ve más allá con <span class="hl">pdfanonym Pro</span>'
+    lede: "Todas las herramientas del sitio siguen siendo gratuitas para todos. Pro está pensado para profesionales que anonimizan documentos como parte de su trabajo: abogados, DPO, equipos de RR. HH., despachos y organismos públicos."
+    billing: Periodo de facturación
+    monthly: Mensual
+    yearly: Anual
+    save: −32 %
+    popular: El más elegido
+    per_month: "/ mes sin IVA"
+    per_year: "/ año sin IVA"
+    per_user_month: "/ usuario / mes sin IVA"
+    free_h: Gratis
+    free_p: Para necesidades puntuales.
+    free_f:
+      - Las 20 herramientas, sin límite
+      - Censura real, limpieza de metadatos
+      - Detección de correos, teléfonos, IBAN, tarjetas
+      - Los archivos nunca salen de tu dispositivo
+    free_cta: Usar las herramientas gratuitas
+    pass_h: Pase de 24 horas
+    pass_unit: "pago único, sin IVA"
+    pass_p: Para un archivo o una solicitud puntual.
+    pass_f:
+      - Todas las funciones Pro durante 24 horas
+      - Sin suscripción, nada que cancelar
+      - Factura con tu número de IVA
+    pass_cta: Comprar un pase de 24 horas
+    pro_h: Pro
+    pro_p: Para profesionales independientes.
+    pro_f:
+      - Anonimización por lotes de muchos PDF
+      - "Detección ampliada: nombres, direcciones, fechas de nacimiento, matrículas, números de IVA"
+      - Listas de términos guardadas
+      - Informes de censura (PDF y CSV)
+      - Cancela cuando quieras
+    pro_cta: Obtener Pro
+    team_h: Equipo
+    team_p: Para despachos y departamentos.
+    team_f:
+      - Todo lo de Pro, por usuario
+      - Una sola factura para todo el equipo
+      - Añade o quita usuarios cuando quieras
+    seats: Usuarios
+    team_cta: Obtener Equipo
+    consent: "Compro para mi actividad profesional (empresa, autónomo, organismo público). Acepto las <a href=\"{terms}\">condiciones de uso y de venta</a> y solicito el acceso inmediato a las funciones Pro."
+    vat_note: "Precios sin IVA. Los planes Pro están reservados a profesionales. El IVA se añade según tu país; las empresas de la UE con un número de IVA válido reciben la factura sin IVA (inversión del sujeto pasivo). Pago seguro con Stripe; nunca vemos los datos de tu tarjeta."
+    body: |
+      ## Cómo funciona la licencia
+
+      Tras el pago, se guarda una clave de licencia en tu navegador. Se comprueba en tu dispositivo, sin contactar con nuestros servidores, así que las funciones Pro funcionan sin conexión y tus documentos siguen sin salir nunca de tu equipo. Para usar Pro en otro dispositivo o compartir una licencia Equipo con un compañero, copia la clave desde tu [página de cuenta](/es/cuenta/).
+
+      ## ¿Por qué funciones de pago?
+
+      Las herramientas gratuitas nos cuestan muy poco de mantener, y por eso siguen siendo gratuitas. Pro financia el desarrollo de las funciones que piden los profesionales y mantiene el sitio sin publicidad.
+    faq:
+      - q: "¿Puede un particular comprar Pro?"
+        a: "No. Los planes de pago están reservados a profesionales que compran para su actividad. Todas las herramientas gratuitas siguen disponibles para todos, sin cuenta."
+      - q: "¿Puedo cancelar mi suscripción?"
+        a: "Sí, en cualquier momento desde tu página de cuenta. Conservas Pro hasta el final del periodo ya pagado; ese periodo no se reembolsa automáticamente."
+      - q: "¿Recibo una factura?"
+        a: "Sí. Stripe envía un recibo y una factura por correo electrónico. Indica el nombre de tu empresa y tu número de IVA al pagar para que aparezcan en la factura."
+      - q: "¿Qué pasa cuando termina el pase de 24 horas?"
+        a: "Las funciones Pro vuelven a bloquearse. Los archivos que ya procesaste se quedan como están. Nada se renueva automáticamente."
+      - q: "¿Están seguros mis datos de pago?"
+        a: "El pago lo gestiona Stripe en su propia página segura. Nunca recibimos los datos de tu tarjeta."
+
+  account:
+    slug: cuenta
+    nav: Mi cuenta
+    noindex: true
+    title: "Mi cuenta Pro · pdfanonym"
+    description: "Gestiona tu licencia pdfanonym Pro: estado, suscripción, clave de licencia."
+    h1: Mi cuenta Pro
+    lede: "Tu licencia se guarda solo en este navegador. Sin cuenta, sin contraseña."
+    loading: Comprobando tu licencia…
+    manage: Gestionar la suscripción y las facturas
+    key_h: Clave de licencia
+    key_p: "Copia esta clave para usar Pro en otro dispositivo o navegador (o dásela a un compañero en un plan Equipo). Pega aquí una clave para activarla."
+    key_ph: Pega una clave de licencia
+    copy: Copiar la clave
+    activate: Activar esta clave
+    remove: Eliminar de este dispositivo
+    body: |
+      ¿Tienes preguntas sobre un pago o una factura? Escribe a contact@pdfanonym.com desde la dirección de correo electrónico que usaste al pagar.
+
+  guide:
+    slug: como-censurar-un-pdf
+    nav: Cómo censurar un PDF
+    title: "Cómo censurar un PDF correctamente (y comprobar que funcionó)"
+    description: "Guía para censurar PDF: por qué fallan los recuadros negros, cómo hacerlo gratis, escaneos, metadatos y cinco comprobaciones antes de enviar."
+    h1: Cómo censurar un PDF correctamente
+    lede: "Censurar un PDF lleva un minuto. Censurarlo mal lleva el mismo minuto, y el error solo se ve cuando otra persona encuentra el texto. Así se hace bien."
+    cta_tool: redact
+    cta: Abrir la herramienta gratuita de censura
+    body: |
+      ## La respuesta corta
+
+      Usa una herramienta que **elimine** el texto, no una que lo tape. Abre tu PDF en [la herramienta de censura de pdfanonym](/es/censurar-pdf/), selecciona lo que debe desaparecer (o búscalo), pulsa **Aplicar**, descarga y comprueba el resultado intentando copiar y buscar las palabras censuradas. Si no aparece nada, la censura funcionó.
+
+      El resto de esta guía explica por qué importa esa comprobación y cómo resolver los casos en los que más gente tropieza.
+
+      ## Por qué fallan los rectángulos negros
+
+      Una página PDF se construye con instrucciones: «escribe estos caracteres aquí», «dibuja esta forma allí». Cuando dibujas un rectángulo negro sobre un nombre, añades una instrucción más encima. La instrucción que escribe el nombre sigue en el archivo.
+
+      En pantalla y en papel, el resultado parece perfecto. Pero selecciona la zona y cópiala, y el nombre acaba en tu portapapeles. Busca en el documento, y el lector salta directamente a él. Las herramientas de extracción de texto, los buscadores y los asistentes de IA leen las palabras ocultas con la misma facilidad que las visibles.
+
+      No es un riesgo teórico. En 2019, un escrito judicial de los abogados de Paul Manafort en Estados Unidos contenía pasajes «censurados» que unos periodistas recuperaron simplemente copiándolos y pegándolos. Descuidos parecidos han dejado al descubierto manuales de seguridad, contratos y datos personales en muchos países.
+
+      ## Paso a paso: censurar un PDF con texto
+
+      1. **Conserva el original.** La censura es permanente por diseño. Trabaja sobre una copia.
+      2. **Abre el archivo** en una herramienta de censura de verdad. Con pdfanonym, suéltalo en [la página de censura](/es/censurar-pdf/); se abre en local.
+      3. **Encuentra cada aparición.** Escribe un nombre, una referencia o un número en el buscador y pulsa *Marcar todo*. La búsqueda ignora mayúsculas y acentos, así que «Müller» también encuentra «MULLER». Repite con cada dato. Para correos, teléfonos o IBAN, la herramienta para [anonimizar un PDF](/es/anonimizar-pdf/) los detecta automáticamente.
+      4. **Marca el resto a mano.** Arrastra sobre los pasajes, haz clic en palabras sueltas, doble clic en una línea para tomarla entera.
+      5. **Aplica.** El texto bajo cada marca se borra y se sustituye por un recuadro negro (o por un espacio en blanco, si lo prefieres).
+      6. **Elimina también los metadatos.** Deja la opción marcada: los campos autor, título y software suelen contener justo los nombres que acabas de censurar. También puedes revisarlos y editarlos aparte con la herramienta para [eliminar los metadatos de un PDF](/es/eliminar-metadatos-pdf/).
+      7. **Descarga y comprueba** (ver más abajo).
+
+      ## Censurar un PDF escaneado
+
+      Un escaneo es una foto de una página. No hay texto que borrar, solo píxeles. Eso tiene dos consecuencias:
+
+      - Buscar un nombre no devuelve nada, así que tienes que localizar cada aparición a ojo.
+      - La censura tiene que modificar la propia imagen. En pdfanonym, cambia al modo **Zona**, marca **imágenes** en las opciones y dibuja un rectángulo sobre cada pasaje: los píxeles de dentro se borran de la imagen.
+
+      Algunos escaneos llevan además una capa de texto OCR invisible, que el escáner añade para que se pueda buscar en el documento. En ese caso también hay que eliminar esa capa oculta. El modo Zona elimina a la vez el texto y la imagen que quedan bajo el rectángulo.
+
+      ## Cinco comprobaciones antes de enviar
+
+      1. **Prueba de copia.** Selecciona la zona censurada, copia y pega en un editor de texto plano. No debería aparecer nada.
+      2. **Prueba de búsqueda.** Busca en el PDF cada palabra censurada. Cero resultados.
+      3. **Prueba de propiedades.** En tu lector, abre Archivo y luego Propiedades. El autor, el título y el asunto no deberían revelar nada.
+      4. **Prueba de comentarios.** Abre el panel de comentarios: las notas de revisión pueden citar justo el pasaje que eliminaste. Si quieres conservarlas visibles, [aplana el PDF](/es/aplanar-pdf/) antes de censurar para que pasen a formar parte de la página.
+      5. **Prueba de adjuntos.** Busca un icono de clip o un panel de adjuntos. Un archivo incrustado puede contener el original sin censurar.
+
+      ## Censura y RGPD
+
+      Según el RGPD, cuando entregas un documento en respuesta a una solicitud de acceso, por lo general hay que eliminar los datos de otras personas o justificar su comunicación. Censurar o anonimizar el documento es la forma habitual de hacerlo. Hacerlo con un servicio que exige subir el archivo supone enviar los datos de esas personas a otro encargado del tratamiento más, del que luego tendrías que rendir cuentas. Una herramienta que funciona en local evita la cuestión por completo. Si tienes muchos documentos que tratar, puedes [anonimizar PDF por lotes](/es/anonimizar-pdf-por-lotes/) en una sola pasada.
+    faq:
+      - q: "¿Se puede recuperar el texto de un PDF censurado?"
+        a: "Si el texto se eliminó de verdad, no: no queda nada que recuperar. Si solo se tapó con una forma, sí, a menudo con un simple copiar y pegar. Por eso importa la prueba de copia."
+      - q: "¿Adobe Acrobat Reader permite censurar gratis?"
+        a: "El Reader gratuito no incluye censura real; está reservada a las versiones de pago de Acrobat. Dibujar un rectángulo con las herramientas de comentario no censura nada."
+      - q: "¿Y censurar desde el teléfono?"
+        a: "pdfanonym funciona en los navegadores móviles: abre la página de censura, elige el PDF entre tus archivos y marca el texto con el dedo. Para documentos largos, un PC resulta más cómodo."
+
+  privacy:
+    slug: privacidad
+    nav: Privacidad
+    title: "Privacidad: tus archivos no salen de tu dispositivo · pdfanonym"
+    description: "pdfanonym procesa los PDF en tu navegador. No recibimos, guardamos ni vemos tus archivos, y no usamos cookies ni rastreadores."
+    h1: Privacidad
+    lede: "En resumen: nunca vemos tus archivos y no te rastreamos."
+    body: |
+      ## Tus documentos
+
+      Los PDF que abres en pdfanonym se procesan **dentro de tu navegador**, en tu propio dispositivo, con un motor PDF que se descarga junto con la página. No se suben a nuestros servidores ni a los de nadie. No tenemos ninguna copia, ninguna forma de leerlos ni nada que borrar.
+
+      Puedes comprobarlo: abre las herramientas para desarrolladores de tu navegador, selecciona la pestaña Red y procesa un archivo. Ninguna solicitud transporta tu documento. El sitio envía además una cabecera Content-Security-Policy que impide a la página conectarse a cualquier otro dominio.
+
+      ## Cookies y rastreo
+
+      pdfanonym **no instala cookies**, **no usa scripts de analítica ni de publicidad** y **no carga recursos de terceros** (las fuentes y los scripts se sirven desde nuestro propio dominio). Tu navegador puede guardar pequeñas preferencias en local; nunca salen de tu dispositivo.
+
+      ## Compras
+
+      Si compras un plan Pro, el pago lo gestiona Stripe, que trata los datos de tu tarjeta, tu correo electrónico y tus datos de facturación conforme a su propia política de privacidad; nunca vemos el número de tu tarjeta. Nuestro servicio de licencias solo recibe el identificador de tu sesión de pago de Stripe y devuelve una clave de licencia firmada, que se guarda en tu navegador. Los datos de facturación (nombre, correo electrónico, dirección, número de IVA, facturas) los conservan Stripe y METIS durante el tiempo que exige la normativa contable. Tus archivos PDF nunca intervienen.
+
+      ## Registros del servidor
+
+      Como cualquier sitio web, nuestro proveedor de alojamiento (Cloudflare) trata los datos técnicos necesarios para servir las páginas, como tu dirección IP y el tipo de navegador, y puede conservar registros de corta duración por seguridad. Esos registros nunca incluyen tus documentos.
+
+      ## Contacto
+
+      Preguntas sobre privacidad: contact@pdfanonym.com.
+
+  terms:
+    slug: condiciones-de-uso
+    nav: Condiciones de uso
+    title: "Condiciones de uso · pdfanonym"
+    description: "Condiciones de uso de pdfanonym.com: herramientas gratuitas ofrecidas tal cual, procesamiento local, tus responsabilidades, uso lícito y limitación de responsabilidad."
+    h1: Condiciones de uso
+    lede: "Última actualización: 9 de octubre de 2026. Al usar pdfanonym.com, aceptas estas condiciones."
+    body: |
+      ## 1. El servicio
+
+      pdfanonym.com, editado por METIS (consulta el [aviso legal](/es/aviso-legal/)), ofrece herramientas en línea gratuitas para procesar archivos PDF: censura, anonimización, eliminación de texto, limpieza de metadatos, edición de páginas, conversión, compresión, firma y protección con contraseña. No se necesita ninguna cuenta.
+
+      ## 2. Procesamiento en tu dispositivo
+
+      Los archivos se procesan en tu navegador web, en tu propio dispositivo. No se envían a nuestros servidores y no tenemos acceso a ellos. Sigues siendo el único titular de tus documentos y de su contenido. La [página de privacidad](/es/privacidad/) lo explica en detalle.
+
+      ## 3. Servicio ofrecido tal cual
+
+      Las herramientas se ofrecen de forma gratuita y tal cual, sin ninguna garantía de resultado, disponibilidad o idoneidad para un fin determinado. Pueden modificarse, interrumpirse o retirarse en cualquier momento.
+
+      ## 4. Revisa el resultado antes de compartirlo
+
+      Eres responsable de revisar cada documento antes de usarlo o compartirlo. En particular:
+
+      - **La detección automática de datos personales no es exhaustiva.** Es posible que no se detecten los nombres escritos sin tratamiento, las direcciones postales, el texto manuscrito, las páginas escaneadas y los formatos poco comunes. Lee el documento y completa tú mismo la censura.
+      - **La censura solo se aplica a lo que marcas.** La información también puede aparecer en imágenes, archivos adjuntos, comentarios u otras copias del archivo. Nuestra [guía](/es/como-censurar-un-pdf/) enumera las comprobaciones que debes hacer.
+      - **Conserva tus archivos originales.** Los cambios que hacen las herramientas, como la censura, el aplanado o el cifrado, son permanentes por diseño.
+
+      ## 5. Uso lícito
+
+      Te comprometes a usar las herramientas solo con documentos de los que eres titular o que estás autorizado a modificar, y respetando la ley. En particular, no debes usar la herramienta de desbloqueo para quitar protecciones de documentos que no tienes derecho a modificar, ni usar ninguna herramienta para vulnerar los derechos de terceros, incluidos los derechos de autor y la privacidad.
+
+      ## 6. Firma electrónica
+
+      Una firma dibujada con la herramienta de firma es una firma electrónica simple en el sentido del reglamento europeo eIDAS. No sustituye a una firma electrónica avanzada o cualificada cuando se exija una.
+
+      ## 7. Responsabilidad
+
+      En la medida permitida por la ley, METIS no será responsable de ningún daño derivado del uso de las herramientas o de la imposibilidad de usarlas, incluida la divulgación de información que no se haya censurado, la pérdida o alteración de archivos, o una decisión tomada a partir de un documento procesado. Nada de lo dispuesto en estas condiciones limita la responsabilidad que no pueda limitarse conforme a la ley aplicable, ni los derechos que asisten a los consumidores en virtud de las normas imperativas de su país de residencia.
+
+      ## 8. Software de código abierto
+
+      El código fuente del sitio se publica bajo la GNU Affero General Public License v3 (consulta [Código fuente](/es/codigo-fuente/)). Esa licencia rige tus derechos sobre el código. El nombre y el logotipo de pdfanonym no están cubiertos por ella.
+
+      ## 9. Planes de pago (solo profesionales)
+
+      Los planes de pago (pase de 24 horas, Pro, Equipo) los vende METIS **exclusivamente a clientes profesionales**: empresas, autónomos y organismos públicos que compran para los fines de su actividad comercial, empresarial o profesional. No se ofrecen a consumidores. Al realizar un pedido, confirmas que actúas como profesional.
+
+      - **Los precios** figuran en la [página de precios](/es/precios/) sin IVA. El IVA se añade según las normas aplicables en tu país; las empresas de la UE con un número de IVA válido reciben la factura con el mecanismo de inversión del sujeto pasivo. El pago lo procesa Stripe.
+      - **El acceso** comienza inmediatamente después del pago.
+      - **Las suscripciones** (Pro, Equipo) se renuevan automáticamente por el mismo periodo hasta que se cancelan. Puedes cancelarlas en cualquier momento desde tu página de cuenta; la cancelación surte efecto al final del periodo ya pagado, que no se reembolsa.
+      - **El pase de 24 horas** da acceso a las funciones Pro durante 24 horas desde el pago y no se renueva.
+      - **Las licencias** son personales en Pro y por usuario en Equipo. La clave de licencia se guarda en tu navegador; conserva una copia para usarla en otro dispositivo.
+      - **Preguntas y reclamaciones**: contact@pdfanonym.com.
+
+      ## 10. Modificaciones y ley aplicable
+
+      Estas condiciones pueden actualizarse; la fecha que figura en la parte superior de la página indica la última versión. Se rigen por la ley francesa. Contacto: contact@pdfanonym.com.
+
+  source:
+    slug: codigo-fuente
+    nav: Código fuente
+    title: "Código fuente y licencia (AGPL) · pdfanonym"
+    description: "pdfanonym es de código abierto bajo la GNU AGPL v3. Descarga el código fuente completo del sitio y de su motor PDF."
+    h1: Código fuente
+    lede: "pdfanonym es de código abierto. Puedes leer exactamente qué hace con tus archivos y ejecutar tu propia copia."
+    body: |
+      ## Licencia
+
+      El sitio se distribuye bajo la **GNU Affero General Public License, versión 3** (AGPL-3.0). Se basa en [MuPDF](https://mupdf.com), de Artifex Software, usado bajo la misma licencia y compilado a WebAssembly.
+
+      ## Descarga
+
+      - [Código fuente completo de este sitio (zip)](/source/pdfanonym-source.zip): plantillas, textos, scripts, estilos y script de compilación.
+      - El motor PDF es el paquete oficial [mupdf.js](https://www.npmjs.com/package/mupdf), incluido sin modificar en el archivo comprimido (carpeta `src/assets/mupdf`). Artifex publica su propio código fuente en [github.com/ArtifexSoftware/mupdf.js](https://github.com/ArtifexSoftware/mupdf.js).
+
+      ## Ejecútalo tú mismo
+
+      Descomprime el archivo y sirve la carpeta `src` con cualquier servidor web estático, o ejecuta `python3 build.py` para regenerar las páginas. Sin base de datos, sin backend.
+
+  legal:
+    slug: aviso-legal
+    nav: Aviso legal
+    title: "Aviso legal · pdfanonym"
+    description: "Datos del editor y del alojamiento de pdfanonym.com."
+    h1: Aviso legal
+    body: |
+      ## Editor
+
+      pdfanonym.com es un sitio editado por **METIS**, sociedad por acciones simplificada unipersonal (SASU) con un capital social de 100 €, inscrita en el Registro Mercantil y de Sociedades (RCS) de Marsella con el número 991 555 574.
+
+      - Domicilio social: 120 Chemin de Ceinture, 13400 Aubagne, Francia
+      - SIRET: 991 555 574 00011
+      - IVA intracomunitario: FR35991555574
+      - Director de la publicación: Julien Sikoutris
+      - Contacto: contact@pdfanonym.com
+
+      ## Alojamiento
+
+      Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, Estados Unidos.
+
+      ## Responsabilidad
+
+      pdfanonym se ofrece de forma gratuita y tal cual. Comprueba siempre un documento censurado antes de compartirlo; la [guía](/es/como-censurar-un-pdf/) explica cómo hacerlo. Sigues siendo responsable de los documentos que procesas y compartes.

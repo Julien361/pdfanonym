@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="{{ L.lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ P.title }}</title>
+<meta name="description" content="{{ P.description }}">
+{% if P.noindex %}<meta name="robots" content="noindex">
+{% endif %}<link rel="canonical" href="{{ site }}{{ url }}">
+{% for alt in alternates %}<link rel="alternate" hreflang="{{ alt.lang }}" href="{{ site }}{{ alt.url }}">
+{% endfor %}{% if xdefault %}<link rel="alternate" hreflang="x-default" href="{{ site }}{{ xdefault }}">
+{% endif %}<meta property="og:type" content="website">
+<meta property="og:site_name" content="pdfanonym">
+<meta property="og:title" content="{{ P.title }}">
+<meta property="og:description" content="{{ P.description }}">
+<meta property="og:url" content="{{ site }}{{ url }}">
+<meta property="og:image" content="{{ site }}/assets/img/og.png">
+<meta property="og:locale" content="{{ L.locale }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#121417">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css?v={{ v }}">
+{% for ld in jsonld %}<script type="application/ld+json">{{ ld }}</script>
+{% endfor %}</head>
+<body>
+<a class="skip" href="#main">{{ L.ui.skip }}</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="{{ L.home_url }}" aria-label="pdfanonym">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="5" y="2" width="22" height="28" rx="3" fill="currentColor" opacity=".12"/><rect x="5" y="2" width="22" height="28" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><rect x="9" y="9" width="14" height="3" rx="1" fill="currentColor" opacity=".35"/><rect x="9" y="15" width="14" height="4" rx="1" fill="currentColor"/><rect x="9" y="22" width="9" height="3" rx="1" fill="currentColor" opacity=".35"/></svg>
+      <span translate="no">pdf<b>anonym</b></span>
+    </a>
+    <button class="btn menu-btn" type="button" aria-expanded="false" aria-controls="nav">{{ L.ui.menu }}</button>
+    <nav class="nav" id="nav" aria-label="{{ L.ui.tools }}">
+      {% for k in tool_keys if L.urls[k] %}<a href="{{ L.urls[k] }}"{% if page_key == k %} aria-current="page"{% endif %}>{{ L.nav[k] }}</a>
+      {% endfor %}{% if L.urls.pricing %}<a class="pro-link" href="{{ L.urls.pricing }}"{% if page_key in ["pricing", "account"] %} aria-current="page"{% endif %}>{{ L.nav.pricing }}</a>
+      {% endif %}<details class="mega">
+        <summary>{{ L.ui.allTools }} ▾</summary>
+        <div class="mega-panel">{% for g, keys in groups %}
+          <div><h4>{{ L.ui["g_" ~ g] }}</h4><ul>{% for k in keys if L.urls[k] %}<li><a href="{{ L.urls[k] }}"{% if page_key == k %} aria-current="page"{% endif %}>{{ L.nav[k] }}</a></li>{% endfor %}</ul></div>{% endfor %}
+        </div>
+      </details>
+      <details class="lang">
+        <summary>{{ L.code_label }} ▾ <span class="sr-only">{{ L.ui.language }}</span></summary>
+        <ul>{% for alt in lang_menu %}<li><a href="{{ alt.url }}" hreflang="{{ alt.lang }}" lang="{{ alt.lang }}">{{ alt.name }}</a></li>{% endfor %}</ul>
+      </details>
+    </nav>
+  </div>
+</header>
+<main id="main">
+{% block main %}{% endblock %}
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <a class="brand" href="{{ L.home_url }}"><span translate="no">pdf<b>anonym</b></span></a>
+        <p class="muted" style="margin-top:10px">{{ L.ui.foot_tagline }}</p>
+      </div>
+      {% for g, keys in groups %}<div><h4>{{ L.ui["g_" ~ g] }}</h4><ul>{% for k in keys if L.urls[k] %}<li><a href="{{ L.urls[k] }}">{{ L.nav[k] }}</a></li>{% endfor %}</ul></div>
+      {% endfor %}      <div><h4>{{ L.ui.learn }}</h4><ul>{% for k in learn_keys %}<li><a href="{{ L.urls[k] }}">{{ L.pages[k].nav }}</a></li>{% endfor %}</ul></div>
+      <div><h4>{{ L.ui.language }}</h4><ul>{% for alt in lang_menu %}<li><a href="{{ alt.url }}" hreflang="{{ alt.lang }}" lang="{{ alt.lang }}">{{ alt.name }}</a></li>{% endfor %}</ul></div>
+    </div>
+    <p class="legal">© {{ year }} METIS · {{ L.ui.foot_legal }}</p>
+  </div>
+</footer>
+<script type="module" src="/assets/js/common.js?v={{ v }}"></script>
+</body>
+</html>

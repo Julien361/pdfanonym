@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block main %}
+<section class="hero">
+  <div class="wrap">
+    <h1>{{ P.h1 | safe }}</h1>
+    <p class="lede">{{ P.lede | safe }}</p>
+    <p style="margin-top:22px"><a class="btn primary big" href="{{ L.urls.redact }}">{{ P.cta }}</a></p>
+    <ul class="trust">{% for tr in L.ui.trust %}<li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>{{ tr }}</li>{% endfor %}</ul>
+  </div>
+</section>
+<section class="section" id="tools">
+  <div class="wrap">
+    <h2>{{ P.toolsTitle }}</h2>
+    {% for g, keys in groups %}<h3 class="group-title">{{ L.ui["g_" ~ g] }}</h3>
+    <div class="cards">{% for k in keys if L.urls[k] %}<a class="card" href="{{ L.urls[k] }}">
+      <svg class="ico" viewBox="0 0 34 34" fill="none" aria-hidden="true">{{ icons.get(k, icons.redact) | safe }}</svg>
+      <h3>{{ L.nav[k] }}</h3><p>{{ L.pages[k].card }}</p></a>{% endfor %}</div>{% endfor %}
+  </div>
+</section>
+<section class="section">
+  <div class="wrap prose">{{ P.body_html | safe }}</div>
+</section>
+{% if P.faq %}<section class="section faq">
+  <div class="wrap prose">
+    <h2>{{ L.ui.faq }}</h2>
+    {% for f in P.faq %}<details><summary>{{ f.q }}</summary><p>{{ f.a | safe }}</p></details>
+    {% endfor %}
+  </div>
+</section>{% endif %}
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block main %}
+<section class="hero"><div class="wrap"><h1>{{ P.h1 | safe }}</h1><p class="lede">{{ P.lede | safe }}</p></div></section>
+<section class="section account" data-lang="{{ L.lang }}" data-pricing="{{ L.urls.pricing }}" style="padding-top:0">
+  <div class="wrap">
+    <div class="card acc">
+      <h2 data-el="title">{{ P.loading }}</h2>
+      <p data-el="detail" class="muted"></p>
+      <div class="actions" data-el="actions" hidden>
+        <button class="btn primary" type="button" data-el="portal" hidden>{{ P.manage }}</button>
+        <a class="btn" href="{{ L.urls.batch }}">{{ L.nav.batch }}</a>
+        <a class="btn" href="{{ L.urls.anonymize }}">{{ L.nav.anonymize }}</a>
+      </div>
+      <p class="status" role="status" aria-live="polite" data-el="status"></p>
+    </div>
+    <div class="card acc">
+      <h3>{{ P.key_h }}</h3>
+      <p class="muted small">{{ P.key_p }}</p>
+      <textarea data-el="key" rows="3" spellcheck="false" placeholder="{{ P.key_ph }}"></textarea>
+      <div class="actions">
+        <button class="btn" type="button" data-el="copy">{{ P.copy }}</button>
+        <button class="btn dark" type="button" data-el="activate">{{ P.activate }}</button>
+        <button class="btn" type="button" data-el="remove">{{ P.remove }}</button>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section"><div class="wrap prose">{{ P.body_html | safe }}</div></section>
+<script type="module" src="/assets/js/pro.js?v={{ v }}"></script>
+{% endblock %}

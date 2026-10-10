@@ -1,0 +1,20 @@
+<section class="app notranslate" translate="no" data-tool="jpg_to_pdf" data-suffix="{{ P.suffix }}" aria-label="{{ P.nav }}">
+  {% set accept = "image/*" %}{% set dropTitle = L.ui.dropTitleImg %}
+  {% include "drop.html" %}
+  <div class="work">
+    <div class="toolbar">
+      <div class="group"><button class="btn" type="button" data-el="close">← {{ L.ui.newFile }}</button><span class="filename" data-el="filename"></span></div>
+      <div class="group">
+        <button class="btn" type="button" data-el="add">+ {{ L.ui.addImages }}</button><input type="file" accept="image/*" multiple hidden data-el="addInput">
+        <label class="field inline"><span>{{ L.ui.pageSize }}</span><select data-el="size"><option value="fit">{{ L.ui.sizeFit }}</option><option value="a4">A4</option><option value="letter">Letter</option></select></label>
+        <label class="field inline"><span>{{ L.ui.margin }}</span><select data-el="margin"><option value="0">{{ L.ui.marginNone }}</option><option value="20" selected>{{ L.ui.marginSmall }}</option><option value="50">{{ L.ui.marginLarge }}</option></select></label>
+      </div>
+      <div class="grow"></div>
+      <button class="btn primary" type="button" data-el="run">{{ P.runLabel }}</button>
+    </div>
+    <p class="pages-hint"><span data-el="count"></span> · {{ P.hint }}</p>
+    <ol class="grid" data-el="grid"></ol>
+    <div class="status" role="status" aria-live="polite"></div>
+  </div>
+  <div class="status" role="status" aria-live="polite" data-pre></div>
+</section>

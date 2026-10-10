@@ -1,0 +1,59 @@
+<section class="app notranslate" translate="no" data-tool="{{ tool }}" data-suffix="{{ P.suffix }}" aria-label="{{ P.nav }}">
+  {% include "drop.html" %}
+  <div class="work">
+    <div class="toolbar">
+      <div class="group"><button class="btn" type="button" data-el="close">← {{ L.ui.newFile }}</button><span class="filename" data-el="filename"></span></div>
+      <div class="grow"></div><span class="muted small" data-el="info"></span>
+    </div>
+    <div class="process">
+      <div class="opts">
+      {% if tool == "compress" %}
+        <fieldset><legend>{{ L.ui.level }}</legend>
+          <label class="opt"><input type="radio" name="level" value="light"> <span><b>{{ L.ui.lvlLight }}</b> · {{ L.ui.lvlLightHint }}</span></label>
+          <label class="opt"><input type="radio" name="level" value="recommended" checked> <span><b>{{ L.ui.lvlRec }}</b> · {{ L.ui.lvlRecHint }}</span></label>
+          <label class="opt"><input type="radio" name="level" value="strong"> <span><b>{{ L.ui.lvlStrong }}</b> · {{ L.ui.lvlStrongHint }}</span></label>
+        </fieldset>
+      {% elif tool == "protect" %}
+        <label class="field"><span>{{ L.ui.pw }}</span><input type="password" data-el="pw1" autocomplete="new-password"></label>
+        <label class="field"><span>{{ L.ui.pw2 }}</span><input type="password" data-el="pw2" autocomplete="new-password"></label>
+        <label class="opt"><input type="checkbox" data-el="showPw"> <span>{{ L.ui.showPw }}</span></label>
+        <fieldset><legend>{{ L.ui.perms }}</legend>
+          <label class="opt"><input type="checkbox" data-el="allowPrint" checked> <span>{{ L.ui.allowPrint }}</span></label>
+          <label class="opt"><input type="checkbox" data-el="allowCopy"> <span>{{ L.ui.allowCopy }}</span></label>
+          <label class="opt"><input type="checkbox" data-el="allowEdit"> <span>{{ L.ui.allowEdit }}</span></label>
+        </fieldset>
+        <p class="muted small">{{ L.ui.pwNote }}</p>
+      {% elif tool == "unlock" %}
+        <label class="field" data-el="pwField" hidden><span>{{ L.ui.pwCurrent }}</span><input type="password" data-el="pw1" autocomplete="current-password"></label>
+        <p class="muted small">{{ L.ui.unlockNote }}</p>
+        <label class="opt rights"><input type="checkbox" data-el="rightsOk"> <span>{{ L.ui.rightsOk | replace("{terms}", L.urls.terms or "#") | safe }}</span></label>
+      {% elif tool == "watermark" %}
+        <label class="field"><span>{{ L.ui.wmText }}</span><input type="text" data-el="wmText" value="{{ L.ui.wmDefault }}" maxlength="60"></label>
+        <label class="field"><span>{{ L.ui.wmOpacity }}</span><input type="range" data-el="wmOpacity" min="5" max="60" value="18"></label>
+        <label class="field"><span>{{ L.ui.color }}</span><select data-el="wmColor"><option value="0.5,0.5,0.5">{{ L.ui.cGray }}</option><option value="0.85,0.1,0.1">{{ L.ui.cRed }}</option><option value="0.1,0.3,0.8">{{ L.ui.cBlue }}</option><option value="0,0,0">{{ L.ui.cBlack }}</option></select></label>
+        <label class="field"><span>{{ L.ui.wmAngle }}</span><select data-el="wmAngle"><option value="-45">{{ L.ui.diagonal }}</option><option value="0">{{ L.ui.horizontal }}</option></select></label>
+      {% elif tool == "page_numbers" %}
+        <label class="field"><span>{{ L.ui.position }}</span><select data-el="pnPos">
+          <option value="bottom-center">{{ L.ui.posBC }}</option><option value="bottom-right">{{ L.ui.posBR }}</option><option value="bottom-left">{{ L.ui.posBL }}</option>
+          <option value="top-center">{{ L.ui.posTC }}</option><option value="top-right">{{ L.ui.posTR }}</option><option value="top-left">{{ L.ui.posTL }}</option></select></label>
+        <label class="field"><span>{{ L.ui.format }}</span><select data-el="pnFmt">
+          <option value="{n}">1</option><option value="{{ L.ui.fmtPage }}">{{ L.ui.fmtPage | replace("{n}", "1") }}</option>
+          <option value="{{ L.ui.fmtPageOf }}">{{ L.ui.fmtPageOf | replace("{n}", "1") | replace("{total}", "12") }}</option><option value="{n} / {total}">1 / 12</option></select></label>
+        <label class="field"><span>{{ L.ui.startAt }}</span><input type="number" data-el="pnStart" value="1" min="0" max="9999"></label>
+        <label class="field"><span>{{ L.ui.fontSize }}</span><input type="number" data-el="pnSize" value="11" min="6" max="40"></label>
+        <label class="opt"><input type="checkbox" data-el="pnSkip"> <span>{{ L.ui.skipFirst }}</span></label>
+      {% elif tool == "pdf_to_jpg" %}
+        <label class="field"><span>{{ L.ui.format }}</span><select data-el="imgFmt"><option value="jpg">JPG</option><option value="png">PNG</option></select></label>
+        <label class="field"><span>{{ L.ui.quality }}</span><select data-el="imgDpi"><option value="96">{{ L.ui.dpiScreen }}</option><option value="150" selected>{{ L.ui.dpiStd }}</option><option value="300">{{ L.ui.dpiPrint }}</option></select></label>
+        <p class="muted small">{{ L.ui.zipNote }}</p>
+      {% endif %}
+        <label class="opt"{% if tool in ["pdf_to_jpg"] %} hidden{% endif %}><input type="checkbox" data-el="optMetaToo"> <span>{{ L.ui.optMeta }}</span></label>
+        <div class="actions"><button class="btn primary big" type="button" data-el="run" disabled>{{ P.runLabel }}</button></div>
+        <div class="result" data-el="result" hidden><strong>✓</strong> <span data-el="resultText"></span></div>
+      </div>
+      <figure class="pv" data-el="pvBox" hidden><img data-el="preview" alt=""><figcaption class="muted small">{{ L.ui.previewCap }}</figcaption></figure>
+    </div>
+    <div class="status" role="status" aria-live="polite"></div>
+  </div>
+  <div class="status" role="status" aria-live="polite" data-pre></div>
+</section>

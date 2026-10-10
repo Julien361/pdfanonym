@@ -1,0 +1,27 @@
+<section class="app notranslate" translate="no" data-tool="pages" data-focus="{{ page_key }}" data-suffix="{{ P.suffix }}" aria-label="{{ P.nav }}">
+  {% include "drop.html" %}
+  <div class="work">
+    <div class="toolbar">
+      <div class="group"><button class="btn" type="button" data-el="close">← {{ L.ui.newFile }}</button><span class="filename" data-el="filename"></span></div>
+      <div class="group">
+        <button class="btn{% if page_key == 'merge' %} dark{% endif %}" type="button" data-el="add">+ {{ L.ui.addPdf }}</button><input type="file" accept="application/pdf,.pdf" multiple hidden data-el="addInput">
+        <button class="btn" type="button" data-el="selAll">{{ L.ui.selAll }}</button>
+      </div>
+      <div class="group">
+        <button class="btn{% if page_key == 'rotate' %} dark{% endif %}" type="button" data-el="rotL" title="{{ L.ui.rotLTip }}">↺ {{ L.ui.rotL }}</button>
+        <button class="btn{% if page_key == 'rotate' %} dark{% endif %}" type="button" data-el="rotR" title="{{ L.ui.rotRTip }}">↻ {{ L.ui.rotR }}</button>
+        <button class="btn{% if page_key == 'delete_pages' %} dark{% endif %}" type="button" data-el="delSel">✕ {{ L.ui.delSel }}</button>
+      </div>
+      <div class="grow"></div>
+      <div class="group">
+        <button class="btn" type="button" data-el="undo" title="{{ L.ui.undoTip }}">{{ L.ui.undo }}</button>
+        <button class="btn{% if page_key == 'extract_pages' %} primary{% else %} dark{% endif %}" type="button" data-el="extract">{{ L.ui.extractSel }}</button>
+        <button class="btn{% if page_key != 'extract_pages' %} primary{% endif %}" type="button" data-el="download">{{ L.ui.download }}</button>
+      </div>
+    </div>
+    <p class="pages-hint"><span data-el="count"></span> · {{ P.hint }}</p>
+    <ol class="grid" data-el="grid"></ol>
+    <div class="status" role="status" aria-live="polite"></div>
+  </div>
+  <div class="status" role="status" aria-live="polite" data-pre></div>
+</section>

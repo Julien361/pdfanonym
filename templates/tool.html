@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block main %}
+<section class="hero">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="{{ L.ui.breadcrumb }}"><a href="{{ L.home_url }}">pdfanonym</a> › <a href="{{ L.home_url }}#tools">{{ L.ui["g_" ~ group_of[page_key]] }}</a> › <span aria-current="page">{{ L.nav[page_key] }}</span></nav>
+    <h1>{{ P.h1 | safe }}</h1>
+    <p class="lede">{{ P.lede | safe }}</p>
+    <ul class="trust">{% for tr in L.ui.trust %}<li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>{{ tr }}</li>{% endfor %}</ul>
+  </div>
+</section>
+
+<div class="wrap">
+{% include "tools/" ~ ui ~ ".html" %}
+</div>
+
+<section class="section">
+  <div class="wrap">
+    <h2>{{ P.stepsTitle }}</h2>
+    <ol class="steps">{% for s in P.steps %}<li><h3>{{ s.h }}</h3><p>{{ s.p | safe }}</p></li>{% endfor %}</ol>
+  </div>
+</section>
+
+{% if P.compare %}
+<section class="section">
+  <div class="wrap prose">
+    <h2>{{ P.compare.title }}</h2>
+    <p>{{ P.compare.intro | safe }}</p>
+  </div>
+  <div class="wrap"><div class="compare">
+    <div class="bad"><h3>{{ P.compare.bad_h }}</h3><p>{{ P.compare.bad_p | safe }}</p></div>
+    <div class="good"><h3>{{ P.compare.good_h }}</h3><p>{{ P.compare.good_p | safe }}</p></div>
+  </div></div>
+</section>
+{% endif %}
+
+<section class="section">
+  <div class="wrap prose">{{ P.body_html | safe }}</div>
+</section>
+
+{% if next_tools %}<section class="section next">
+  <div class="wrap prose">
+    <h2>{{ L.ui.nextTitle }}</h2>
+    <ul class="next-list">{% for k in next_tools if L.urls[k] %}<li><a href="{{ L.urls[k] }}"><strong>{{ L.nav[k] }}</strong></a> : {{ L.pages[k].card }}</li>{% endfor %}</ul>
+    {% if group_of[page_key] == "privacy" and L.urls.guide %}<p class="muted">{{ L.ui.guideHint }} <a href="{{ L.urls.guide }}">{{ L.pages.guide.nav }}</a>.</p>{% endif %}
+  </div>
+</section>{% endif %}
+
+<section class="section faq">
+  <div class="wrap prose">
+    <h2>{{ L.ui.faq }}</h2>
+    {% for f in P.faq %}<details><summary>{{ f.q }}</summary><p>{{ f.a | safe }}</p></details>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>{{ L.ui.related }}</h2>
+    <div class="cards">{% set g = group_of[page_key] %}{% for gname, keys in groups if gname == g %}{% for k in keys if k != page_key and L.urls[k] %}<a class="card" href="{{ L.urls[k] }}"><h3>{{ L.nav[k] }}</h3><p>{{ L.pages[k].card }}</p></a>{% endfor %}{% endfor %}{% for k in ["redact", "anonymize", "compress"] if k != page_key and group_of[k] != group_of[page_key] and L.urls[k] %}<a class="card" href="{{ L.urls[k] }}"><h3>{{ L.nav[k] }}</h3><p>{{ L.pages[k].card }}</p></a>{% endfor %}</div>
+  </div>
+</section>
+<script type="module" src="/assets/js/{{ script }}.js?v={{ v }}"></script>
+{% endblock %}

@@ -1,0 +1,37 @@
+<section class="app notranslate" translate="no" data-tool="annotate" data-focus="{{ page_key }}" data-suffix="{{ P.suffix }}" aria-label="{{ P.nav }}">
+  {% include "drop.html" %}
+  <div class="work">
+    <div class="toolbar">
+      <div class="group"><button class="btn" type="button" data-el="close">← {{ L.ui.newFile }}</button><span class="filename" data-el="filename"></span></div>
+      <div class="group" role="group" aria-label="{{ L.ui.selMode }}">
+        <button class="btn{% if page_key != 'sign' %} active{% endif %}" type="button" data-mode="text" aria-pressed="{{ 'false' if page_key == 'sign' else 'true' }}">T {{ L.ui.addTextBtn }}</button>
+        <button class="btn{% if page_key == 'sign' %} active{% endif %}" type="button" data-mode="sign" aria-pressed="{{ 'true' if page_key == 'sign' else 'false' }}">✍ {{ L.ui.signBtn }}</button>
+      </div>
+      <div class="group">
+        <label class="field inline"><span>{{ L.ui.fontSize }}</span><input type="number" data-el="size" value="14" min="6" max="96" style="width:64px"></label>
+        <label class="field inline"><span>{{ L.ui.color }}</span><input type="color" data-el="color" value="#111111"></label>
+      </div>
+      <div class="grow"></div>
+      <div class="group">
+        <button class="btn" type="button" data-el="zoomOut" aria-label="{{ L.ui.zoomOut }}">−</button>
+        <span class="zoomval" data-el="zoomVal">100 %</span>
+        <button class="btn" type="button" data-el="zoomIn" aria-label="{{ L.ui.zoomIn }}">+</button>
+      </div>
+      <button class="btn primary" type="button" data-el="download">{{ L.ui.download }}</button>
+    </div>
+    <p class="pages-hint" data-el="hint">{{ P.hint }}</p>
+    <div class="viewer annot" data-el="viewer"></div>
+    <div class="status" role="status" aria-live="polite"></div>
+  </div>
+  <div class="status" role="status" aria-live="polite" data-pre></div>
+  <dialog class="sigpad" data-el="pad">
+    <h3>{{ L.ui.drawSig }}</h3>
+    <canvas data-el="canvas" width="900" height="300"></canvas>
+    <div class="actions">
+      <button class="btn" type="button" data-el="padClear">{{ L.ui.clear }}</button>
+      <div class="grow"></div>
+      <button class="btn" type="button" data-el="padCancel">{{ L.ui.cancel }}</button>
+      <button class="btn primary" type="button" data-el="padOk">{{ L.ui.useSig }}</button>
+    </div>
+  </dialog>
+</section>

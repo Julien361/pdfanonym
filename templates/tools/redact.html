@@ -1,0 +1,62 @@
+<section class="app notranslate" translate="no" data-tool="redact" data-focus="{{ page_key }}" data-pricing="{{ L.urls.pricing or '#' }}" data-black="{{ 1 if P.black else 0 }}" data-suffix="{{ P.suffix }}" aria-label="{{ P.nav }}">
+  {% include "drop.html" %}
+  <div class="work">
+    <div class="toolbar">
+      <div class="group"><button class="btn" type="button" data-el="close">← {{ L.ui.newFile }}</button><span class="filename" data-el="filename"></span></div>
+      <div class="group" role="group" aria-label="{{ L.ui.selMode }}">
+        <button class="btn active" type="button" data-mode="text" aria-pressed="true" title="{{ L.ui.modeTextTip }}">{{ L.ui.modeText }}</button>
+        <button class="btn" type="button" data-mode="zone" aria-pressed="false" title="{{ L.ui.modeZoneTip }}">{{ L.ui.modeZone }}</button>
+      </div>
+      <form class="group" data-el="searchForm" role="search">
+        <input type="search" data-el="search" placeholder="{{ L.ui.searchPh }}" aria-label="{{ L.ui.searchPh }}" autocomplete="off">
+        <button class="btn" type="submit">{{ L.ui.markAll }}</button>
+      </form>
+      <div class="grow"></div>
+      <div class="group">
+        <button class="btn" type="button" data-el="zoomOut" aria-label="{{ L.ui.zoomOut }}">−</button>
+        <span class="zoomval" data-el="zoomVal">100 %</span>
+        <button class="btn" type="button" data-el="zoomIn" aria-label="{{ L.ui.zoomIn }}">+</button>
+      </div>
+      <div class="group">
+        <button class="btn" type="button" data-el="undo" title="{{ L.ui.undoTip }}">{{ L.ui.undo }}</button>
+        <button class="btn dark" type="button" data-el="apply" title="{{ L.ui.applyTip }}">{{ L.ui.apply }}</button>
+        <button class="btn primary" type="button" data-el="download" title="{{ L.ui.downloadTip }}">{{ L.ui.download }}</button>
+      </div>
+    </div>
+    <div class="editor">
+      <div class="viewer" data-el="viewer"></div>
+      <aside class="side">
+        <div class="pii{% if page_key == 'anonymize' %} hot{% endif %}">
+          <h3>{{ L.ui.piiTitle }}</h3>
+          <button class="btn{% if page_key == 'anonymize' %} primary{% endif %}" type="button" data-el="piiScan">{{ L.ui.piiScan }}</button>
+          <div data-el="piiList"></div>
+        </div>
+        <details class="terms-box">
+          <summary>{{ L.ui.termsTitle }} <b class="pro-badge">PRO</b></summary>
+          <textarea data-el="terms" rows="4" placeholder="{{ L.ui.termsPh }}"></textarea>
+          <button class="btn" type="button" data-el="termsMark">{{ L.ui.termsMark }}</button>
+        </details>
+        <h3>{{ L.ui.toRemove }} <span class="badge" data-el="count">0</span></h3>
+        <ul class="marks" data-el="marks"></ul>
+        <h3>{{ L.ui.options }}</h3>
+        <label class="opt"><input type="checkbox" data-el="optBlack"> <span>{{ L.ui.optBlack }}</span></label>
+        <label class="opt"><input type="checkbox" data-el="optMeta" checked> <span>{{ L.ui.optMeta }}</span></label>
+        <label class="opt"><input type="checkbox" data-el="optReport"> <span>{{ L.ui.optReport }} <b class="pro-badge">PRO</b></span></label>
+        <p class="muted" style="margin:10px 0 2px;font-size:.85rem">{{ L.ui.inAreas }}</p>
+        <label class="opt"><input type="checkbox" data-el="optImages"> <span>{{ L.ui.optImages }}</span></label>
+        <label class="opt"><input type="checkbox" data-el="optLines"> <span>{{ L.ui.optLines }}</span></label>
+        <h3 style="margin-top:16px">{{ L.ui.keyboard }}</h3>
+        <dl class="keys">
+          <dt><kbd>Del</kbd> <kbd>⌫</kbd></dt><dd>{{ L.ui.kDel }}</dd>
+          <dt><kbd>⌘/Ctrl</kbd> <kbd>Z</kbd></dt><dd>{{ L.ui.kUndo }}</dd>
+          <dt><kbd>Esc</kbd></dt><dd>{{ L.ui.kEsc }}</dd>
+          <dt><kbd>⌘/Ctrl</kbd> <kbd>F</kbd></dt><dd>{{ L.ui.kFind }}</dd>
+          <dt><kbd>⌘/Ctrl</kbd> <kbd>S</kbd></dt><dd>{{ L.ui.kSave }}</dd>
+          <dt><kbd>T</kbd> / <kbd>R</kbd></dt><dd>{{ L.ui.kMode }}</dd>
+        </dl>
+      </aside>
+    </div>
+    <div class="status" role="status" aria-live="polite"></div>
+  </div>
+  <div class="status" role="status" aria-live="polite" data-pre></div>
+</section>

@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block main %}
+<section class="hero"><div class="wrap prose"><h1>{{ P.h1 | safe }}</h1>{% if P.lede %}<p class="lede">{{ P.lede | safe }}</p>{% endif %}</div></section>
+<section class="section" style="padding-top:0"><div class="wrap prose">{{ P.body_html | safe }}</div></section>
+{% if P.faq %}<section class="section faq"><div class="wrap prose"><h2>{{ L.ui.faq }}</h2>
+{% for f in P.faq %}<details><summary>{{ f.q }}</summary><p>{{ f.a | safe }}</p></details>
+{% endfor %}</div></section>{% endif %}
+{% if P.cta_tool %}<section class="section"><div class="wrap"><a class="btn primary big" href="{{ L.urls[P.cta_tool] }}">{{ P.cta }}</a></div></section>{% endif %}
+{% endblock %}

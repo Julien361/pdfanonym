@@ -1,0 +1,1628 @@
+name: Deutsch
+locale: de_DE
+
+nav:
+  redact: PDF schwärzen
+  remove: Text löschen
+  metadata: Metadaten entfernen
+  flatten: PDF flatten
+  pages: Seiten bearbeiten
+  delete_pages: Seiten löschen
+  extract_pages: Seiten extrahieren
+  rotate: PDF drehen
+  reorder: Seiten sortieren
+  grayscale: Schwarz-Weiß
+  anonymize: PDF anonymisieren
+  merge: PDF zusammenfügen
+  add_text: Text einfügen
+  sign: PDF unterschreiben
+  watermark: Wasserzeichen
+  page_numbers: Seitenzahlen
+  compress: PDF komprimieren
+  pdf_to_jpg: PDF in JPG
+  jpg_to_pdf: JPG in PDF
+  protect: PDF schützen
+  unlock: PDF entsperren
+  batch: Stapel-Anonymisierung
+  pricing: Pro
+
+ui:
+  skip: Zum Inhalt springen
+  menu: Menü
+  tools: Werkzeuge
+  learn: Wissen
+  language: Sprache
+  faq: Häufige Fragen
+  related: Weitere Werkzeuge
+  foot_tagline: Kostenlose PDF-Werkzeuge, die komplett in deinem Browser laufen. Deine Dateien verlassen nie dein Gerät.
+  foot_legal: Open Source (AGPL). Kein Konto, kein Tracking, kein Upload.
+  trust:
+    - Deine Dateien verlassen nie dein Gerät
+    - Text wird wirklich gelöscht, nicht nur verdeckt
+    - Kostenlos, ohne Konto, ohne Wasserzeichen
+  choose: PDF auswählen
+  dropTitle: Zieh dein PDF hierher
+  dropOr: oder
+  dropNote: Wird auf deinem Rechner verarbeitet. Nichts wird hochgeladen.
+  newFile: Neue Datei
+  selMode: Auswahlmodus
+  modeText: Text
+  modeTextTip: "Ziehen, um Text auszuwählen. Klick = ein Wort, Doppelklick = die ganze Zeile (T)"
+  modeZone: Bereich
+  modeZoneTip: "Rechteck aufziehen: Alles darin wird entfernt (R)"
+  searchPh: Text suchen, der weg soll…
+  markAll: Alle markieren
+  zoomIn: Vergrößern
+  zoomOut: Verkleinern
+  undo: Rückgängig
+  undoTip: Rückgängig (Strg/Cmd+Z)
+  apply: Anwenden
+  applyTip: Markierten Text jetzt löschen (Entf)
+  download: Herunterladen
+  downloadTip: Bereinigtes PDF herunterladen (Strg/Cmd+S)
+  toRemove: Wird entfernt
+  options: Optionen
+  optBlack: Schwarzen Balken anzeigen, wo Text entfernt wurde
+  optMeta: Auch versteckte Metadaten entfernen (Autor, Titel, Software, Datum)
+  inAreas: "In Bereichen zusätzlich entfernen:"
+  optImages: Bilder
+  optLines: Linien und farbige Hintergründe
+  keyboard: Tastatur
+  kDel: markierten Text löschen
+  kUndo: rückgängig
+  kEsc: Auswahl aufheben
+  kFind: suchen (dann Enter)
+  kSave: herunterladen
+  kMode: Modus Text / Bereich
+  optInfo: Dokumenteigenschaften (Autor, Titel, Software, Datum) und XMP
+  optComments: Kommentare, Notizen und Hervorhebungen
+  optAttachments: Angehängte Dateien
+  optJs: Eingebettetes JavaScript
+  editTitle: Stattdessen Eigenschaften bearbeiten
+  editHint: "Ändere Titel, Autor oder andere Felder und lade eine Kopie mit deinen Angaben herunter. Lässt du ein Feld leer, wird es entfernt."
+  saveEdits: Änderungen speichern und herunterladen
+  addPdf: PDF hinzufügen
+  selAll: Alle auswählen
+  rotL: Links
+  rotR: Rechts
+  rotLTip: Ausgewählte Seiten (oder alle) um 90° nach links drehen
+  rotRTip: Ausgewählte Seiten (oder alle) um 90° nach rechts drehen
+  delSel: Auswahl löschen
+  extractSel: Auswahl extrahieren
+  grayNote: "Text bleibt echter, markierbarer Text. Nur die Farben ändern sich: Seiteninhalt, Bilder, Kommentare und die Darstellung von Formularfeldern werden in Graustufen umgewandelt."
+  allTools: Alle Werkzeuge
+  g_privacy: Datenschutz
+  g_pages: Seiten
+  g_edit: Bearbeiten
+  g_convert: Optimieren & umwandeln
+  g_security: Sicherheit
+  dropTitleImg: Zieh deine Bilder hierher
+  addImages: Bilder hinzufügen
+  pageSize: Seitengröße
+  sizeFit: Wie das Bild
+  margin: Rand
+  marginNone: Keiner
+  marginSmall: Schmal
+  marginLarge: Breit
+  level: Komprimierungsstufe
+  lvlLight: Leicht
+  lvlLightHint: beste Qualität, geringere Ersparnis
+  lvlRec: Empfohlen
+  lvlRecHint: gute Qualität für Bildschirm und Bürodruck
+  lvlStrong: Stark
+  lvlStrongHint: kleinste Datei, sichtbarer Verlust bei Fotos
+  pw: Passwort
+  pw2: Passwort bestätigen
+  showPw: Passwort anzeigen
+  perms: Ohne Passwort erlauben
+  allowPrint: Drucken
+  allowCopy: Text und Bilder kopieren
+  allowEdit: Bearbeiten, Kommentieren und Formulare ausfüllen
+  pwNote: "Verschlüsselt mit AES-256. Bewahr das Passwort gut auf: Niemand, auch wir nicht, kann es wiederherstellen."
+  pwCurrent: Aktuelles Passwort
+  unlockNote: "Nur für PDFs, die du öffnen darfst. Dateien, die sich ohne Passwort öffnen, aber Drucken oder Kopieren sperren, werden direkt entsperrt."
+  wmText: Text des Wasserzeichens
+  wmDefault: VERTRAULICH
+  wmOpacity: Deckkraft
+  color: Farbe
+  cGray: Grau
+  cRed: Rot
+  cBlue: Blau
+  cBlack: Schwarz
+  wmAngle: Ausrichtung
+  diagonal: Diagonal
+  horizontal: Waagerecht
+  position: Position
+  posBC: Unten mittig
+  posBR: Unten rechts
+  posBL: Unten links
+  posTC: Oben mittig
+  posTR: Oben rechts
+  posTL: Oben links
+  format: Format
+  fmtPage: "Seite {n}"
+  fmtPageOf: "Seite {n} von {total}"
+  startAt: Beginnen bei
+  fontSize: Größe
+  skipFirst: Erste Seite auslassen (Deckblatt)
+  quality: Qualität
+  dpiScreen: Bildschirm (96 dpi)
+  dpiStd: Standard (150 dpi)
+  dpiPrint: Druck (300 dpi)
+  zipNote: Mehrere Seiten werden als ZIP-Datei heruntergeladen, ein Bild pro Seite.
+  previewCap: Vorschau der ersten Seite
+  addTextBtn: Text
+  signBtn: Unterschrift
+  drawSig: Zeichne deine Unterschrift
+  clear: Leeren
+  cancel: Abbrechen
+  useSig: Diese Unterschrift verwenden
+  piiTitle: Personenbezogene Daten
+  piiScan: Personenbezogene Daten erkennen
+  rightsOk: "Dieses Dokument gehört mir oder ich bin berechtigt, es zu ändern (siehe die <a href=\"{terms}\">Nutzungsbedingungen</a>)."
+  termsTitle: Meine Begriffslisten
+  termsPh: "Ein Name oder Begriff pro Zeile, z. B. Kundennamen, Aktenzeichen…"
+  termsMark: Alle Begriffe markieren
+  optReport: Schwärzungsbericht herunterladen
+  dropTitleMany: Zieh deine PDFs hierher
+  breadcrumb: "Brotkrümelnavigation"
+  nextTitle: "Und als Nächstes?"
+  guideHint: "Unsicher, ob alles entfernt ist? Lies"
+  optForms: Formularfelder (die Werte werden normaler Seiteninhalt)
+  optAnnots: Kommentare, Stempel und Zeichnungen
+
+js:
+  pw.prompt: "Dieses PDF ist passwortgeschützt. Passwort:"
+  pw.wrong: falsches Passwort
+  err.notpdf: diese Datei ist kein PDF
+  err.dropPdf: Bitte zieh eine PDF-Datei hierher.
+  err.open: "Die Datei konnte nicht geöffnet werden: {msg}"
+  err.process: "Da ist etwas schiefgelaufen: {msg}"
+  status.opening: Wird geöffnet…
+  status.ready: "{n} Seite(n). Markiere den Text, der weg soll, oder such danach."
+  status.noText: "Kein auswählbarer Text gefunden: Das sieht nach einem Scan aus. Nutze den Modus „Bereich“ und setz den Haken bei „Bilder“."
+  status.forms: "Formularfelder wurden in die Seite übernommen, damit auch ihr Inhalt geschwärzt werden kann."
+  status.found: "{n} Treffer für „{q}“ markiert. Drück Entf, um sie zu löschen."
+  status.notFound: "„{q}“ nicht gefunden (oder schon markiert)."
+  status.applied: "Text gelöscht ({n} Bereich(e)). Mit Strg/Cmd+Z machst du es rückgängig."
+  status.nothing: "Noch nichts markiert: Wähl zuerst etwas Text aus."
+  status.unmarked: Letzte Auswahl entfernt.
+  status.undone: Löschen rückgängig gemacht.
+  status.downloaded: "Heruntergeladen: {name}"
+  status.cleared: Auswahl aufgehoben.
+  confirm.close: "Dieses PDF schließen? Änderungen, die du nicht heruntergeladen hast, gehen verloren."
+  page: "Seite {n}"
+  pageShort: "S. {n}"
+  marks.empty: Noch nichts markiert.
+  mark.text: "(Text)"
+  mark.zone: "Bereich (ohne Text)"
+  mark.zoneWith: "Bereich: {text}"
+  mark.remove: Diesen Text behalten
+  rep.found: "{n} gefunden"
+  rep.none: keine
+  rep.empty: leer
+  rep.present: vorhanden
+  rep.xmp: XMP-Metadatenblock
+  rep.comments: Kommentare und Notizen
+  rep.attachments: Angehängte Dateien
+  rep.javascript: JavaScript
+  rep.private: Private Anwendungsdaten
+  rep.widgets: Formularfelder
+  rep.annots: Kommentare, Stempel, Zeichnungen
+  rep.pages: Seiten
+  meta.Title: Titel
+  meta.Author: Autor
+  meta.Subject: Betreff
+  meta.Keywords: Stichwörter
+  meta.Creator: Erstellt mit
+  meta.Producer: PDF-Erzeuger
+  meta.CreationDate: Erstellt am
+  meta.ModDate: Geändert am
+  metadata.foundSome: "{n} versteckte Angabe(n) gefunden. Schau sie dir an und bereinige dann die Datei."
+  metadata.foundNone: Dieses PDF enthält keine versteckten Metadaten. Du kannst es trotzdem bereinigen, um seine interne ID zurückzusetzen.
+  metadata.done: "Bereinigte Kopie heruntergeladen: {name}. Die Tabelle oben zeigt, was noch darin steckt."
+  metadata.edited: "Kopie mit deinen neuen Eigenschaften heruntergeladen: {name}."
+  pages.ready: "{n} Seite(n). Klick auf Seiten, um sie auszuwählen, und zieh sie, um die Reihenfolge zu ändern."
+  pages.added: "{n} Seite(n) aus {name} hinzugefügt."
+  pages.files: "{n} Dateien"
+  pages.fileShort: "Datei {n}"
+  pages.rotL: Nach links drehen
+  pages.rotR: Nach rechts drehen
+  pages.del: Diese Seite löschen
+  pages.selected: "{n} von {total} Seiten ausgewählt"
+  pages.total: "{total} Seiten"
+  pages.undone: Letzte Änderung rückgängig gemacht.
+  pages.rotated: "{n} Seite(n) gedreht."
+  pages.cantAll: Ein PDF braucht mindestens eine Seite. Behalte eine oder öffne eine neue Datei.
+  pages.deleted: "{n} Seite(n) gelöscht. Mit Strg/Cmd+Z machst du es rückgängig."
+  pages.moved: Seite verschoben.
+  pages.extractSuffix: auszug
+  pages.extracted: "{n} Seite(n) als {name} extrahiert."
+  gray.images: Bilder umgewandelt
+  gray.left: Farbig belassen
+  gray.leftSome: "{n} Element(e): Verläufe oder Schmuckfarben, prüf die Vorschau"
+  grayscale.foundSome: "{n} Seite(n) bereit. Klick auf den Button, um das ganze PDF in Schwarz-Weiß umzuwandeln."
+  grayscale.foundNone: Dieses PDF ist leer.
+  grayscale.done: "Schwarz-Weiß-Kopie heruntergeladen: {name}. Vorschau der ersten Seite unten."
+  status.working: Wird verarbeitet…
+  status.progress: "Seite {i} von {n}…"
+  compress.ready: "{n} Seite(n). Wähl eine Stufe und komprimiere."
+  compress.noGain: Dieses PDF ist schon gut optimiert, Komprimieren würde es nicht kleiner machen. Deine Datei wurde nicht verändert.
+  compress.done: "{before} → {after} (−{pct} %)."
+  protect.ready: "{n} Seite(n). Wähl ein Passwort."
+  protect.empty: Gib ein Passwort ein.
+  protect.mismatch: Die beiden Passwörter stimmen nicht überein.
+  protect.comma: Kommas werden in Passwörtern nicht unterstützt. Bitte wähl ein anderes.
+  protect.done: PDF geschützt.
+  unlock.needPw: Dieses PDF ist passwortgeschützt. Gib sein Passwort ein und entsperr es dann.
+  unlock.noPw: Dieses PDF öffnet sich ohne Passwort. Beim Entsperren werden die Sperren für Drucken und Kopieren aufgehoben.
+  unlock.done: PDF entsperrt.
+  unlock.wrong: Falsches Passwort. Bitte versuch es noch einmal.
+  watermark.ready: "{n} Seite(n). Pass das Wasserzeichen an: Die Vorschau ändert sich, während du tippst."
+  watermark.empty: Gib den Text des Wasserzeichens ein.
+  watermark.done: Wasserzeichen hinzugefügt.
+  page_numbers.ready: "{n} Seite(n). Wähl, wo die Zahlen stehen sollen: Die Vorschau ändert sich sofort."
+  page_numbers.done: Seitenzahlen eingefügt.
+  pdf_to_jpg.ready: "{n} Seite(n) werden in Bilder umgewandelt."
+  pdf_to_jpg.done: "{n} Bild(er) heruntergeladen."
+  images.ready: "{n} Bild(er). Zieh sie in die richtige Reihenfolge und erstell dann das PDF."
+  images.bad: "„{name}“ konnte nicht als Bild gelesen werden."
+  images.remove: Dieses Bild entfernen
+  images.count: "{n} Bild(er)"
+  images.done: "PDF mit {n} Seite(n) heruntergeladen: {name}"
+  annot.readyText: Klick irgendwo auf eine Seite, um Text einzufügen.
+  annot.readySign: Zeichne deine Unterschrift und klick dann auf die Stelle der Seite, an die sie gehört.
+  annot.placed: Unterschrift platziert. Zieh sie, um sie zu verschieben, und nutz die Ecke, um ihre Größe zu ändern.
+  annot.remove: Entfernen
+  annot.hintText: "Klick auf eine Seite, um zu schreiben. Zieh einen Text, um ihn zu verschieben, klick darauf, um ihn zu bearbeiten, Entf löscht ihn."
+  annot.hintSign: "Klick auf eine Seite, um deine Unterschrift zu platzieren. Ziehen zum Verschieben, Ecke für die Größe."
+  annot.sigReady: Unterschrift bereit. Klick auf die Stelle der Seite, an die sie gehört.
+  annot.done: "{n} Element(e) hinzugefügt. Heruntergeladen: {name}"
+  pii.none: Keine personenbezogenen Daten erkannt. Namen ohne Anrede (Herr, Frau…) werden nicht automatisch erkannt, nutz dafür das Suchfeld.
+  pii.found: "{n} personenbezogene Angabe(n) erkannt. Nimm den Haken bei allem raus, was bleiben soll, und markiere dann."
+  pii.mark: Auswahl markieren
+  pii.marked: "{n} Vorkommen markiert. Prüf sie und drück dann Entf oder Anwenden."
+  pii.nothingMarked: Nichts zum Markieren ausgewählt.
+  pii.email: E-Mail-Adressen
+  pii.phone: Telefonnummern
+  pii.iban: IBAN (geprüft)
+  pii.card: Kartennummern (geprüft)
+  pii.nir: Französische Sozialversicherungsnummern
+  pii.ip: IP-Adressen
+  pii.date: Datumsangaben
+  pii.name: Namen nach einer Anrede
+  pii.warn: "Die automatische Erkennung ist nicht vollständig: Namen ohne Anrede, Adressen und gescannter Text werden nicht gefunden. Lies das Dokument, bevor du es weitergibst."
+  unlock.rights: Bitte bestätige, dass du berechtigt bist, dieses Dokument zu ändern.
+  pii.fullname: Namen ohne Anrede
+  pii.address: Postanschriften
+  pii.birth: Geburtsdaten
+  pii.plate: Kfz-Kennzeichen
+  pii.vat: USt-IdNr.
+  cat.email: E-Mail-Adressen
+  cat.phone: Telefonnummern
+  cat.iban: IBAN
+  cat.card: Kartennummern
+  cat.nir: Sozialversicherungsnummern
+  cat.ip: IP-Adressen
+  cat.date: Datumsangaben
+  cat.name: Namen nach einer Anrede
+  cat.fullname: Namen
+  cat.address: Postanschriften
+  cat.birth: Geburtsdaten
+  cat.plate: Kfz-Kennzeichen
+  cat.vat: USt-IdNr.
+  cat.manual: Manuelle Auswahl
+  cat.search: Suche
+  cat.area: Bereich
+  cat.list: Begriffsliste
+  report.title: Schwärzungsbericht
+  report.file: Datei
+  report.date: Datum
+  report.pages: Seiten im Dokument
+  report.total: Geschwärzte Elemente
+  report.byCat: Nach Kategorie
+  report.byPage: Nach Seite
+  report.note: "Geschwärzte Werte werden in diesem Bericht nicht wiedergegeben. Der SHA-256-Fingerabdruck identifiziert die ausgelieferte Datei."
+  report.by: Lokal erstellt von pdfanonym.com
+  report.suffix: bericht
+  pro.locked: Gefunden. Schwärze sie mit Pro.
+  pro.unlock: Mit Pro freischalten
+  pro.reportLocked: Der Schwärzungsbericht ist eine Pro-Funktion.
+  pro.needConsent: Bitte setz zuerst den Haken unter den Tarifen.
+  pro.redirecting: Weiterleitung zur sicheren Zahlung…
+  pro.checkoutError: Die Zahlungsseite konnte nicht geöffnet werden. Bitte versuch es gleich noch einmal.
+  batch.ready: "{n} PDF-Datei(en). Wähl aus, was geschwärzt werden soll, und starte."
+  batch.progress: "Datei {i} von {n}…"
+  batch.doneOne: "fertig ({n})"
+  batch.errOne: konnte nicht verarbeitet werden
+  batch.done: "{n} von {total} Datei(en) anonymisiert. Die ZIP-Datei enthält die Dateien und einen CSV-Bericht."
+  plan.pass: 24-Stunden-Pass
+  plan.pro: Pro
+  plan.team: Team
+  acc.none: Keine Pro-Lizenz auf diesem Gerät
+  acc.noneHint: Kauf einen Tarif oder füg unten einen Lizenzschlüssel ein.
+  acc.seePlans: Tarife ansehen
+  acc.active: "{plan} aktiv"
+  acc.expired: "{plan} abgelaufen"
+  acc.expiredHint: Verlängere deinen Tarif, um die Pro-Funktionen wieder zu nutzen.
+  acc.renews: "Verlängert sich am {date}."
+  acc.until: "Gültig bis {date}."
+  acc.seats: "{n} Nutzer."
+  acc.fetching: Deine Zahlung wird bestätigt…
+  acc.thanks: "Danke! Deine Lizenz ist auf diesem Gerät aktiv. Eine Quittung wurde an {email} gesendet."
+  acc.fetchError: "Wir konnten die Zahlung noch nicht bestätigen. Lade diese Seite in einer Minute neu oder schreib an contact@pdfanonym.com."
+  acc.copied: Lizenzschlüssel kopiert.
+  acc.badKey: Dieser Lizenzschlüssel ist ungültig.
+  acc.activated: Lizenz auf diesem Gerät aktiviert.
+  acc.removed: Lizenz von diesem Gerät entfernt.
+  acc.confirmRemove: Lizenz von diesem Gerät entfernen? Du kannst den Schlüssel später wieder einfügen.
+  flatten.foundSome: "{n} interaktive(s) Element(e) gefunden. Beim Flatten werden sie zu festem Seiteninhalt."
+  flatten.foundNone: In diesem PDF ist nichts interaktiv. Flatten würde nichts daran ändern.
+  flatten.done: "Fixierte Kopie heruntergeladen: {name}."
+
+pages:
+  home:
+    slug: ""
+    title: "pdfanonym: PDF schwärzen und anonymisieren, privat im Browser"
+    description: "Kostenlos PDF schwärzen, Text wirklich löschen und Metadaten entfernen, ohne Upload. PDF anonymisieren direkt im Browser: kein Konto, kein Wasserzeichen."
+    h1: 'PDF schwärzen und bereinigen, <span class="hl">bevor</span> du es teilst'
+    lede: "Namen schwärzen, Text löschen, versteckte Metadaten entfernen: So anonymisierst du ein PDF, ohne es aus der Hand zu geben. Alles passiert auf deinem eigenen Rechner, dein Dokument geht an keinen Server, auch nicht an unseren."
+    cta: Jetzt PDF schwärzen
+    toolsTitle: Wähl ein Werkzeug
+    faq:
+      - q: Ist pdfanonym wirklich kostenlos?
+        a: "Ja. Alle 20 Werkzeuge sind kostenlos, ohne Konto, ohne Tageslimit und ohne Wasserzeichen. Ein optionaler <a href=\"/de/preise/\">Pro-Tarif</a> bietet Profis zusätzlich Stapel-Anonymisierung, erweiterte Erkennung und Berichte."
+      - q: Wie kann ich prüfen, dass meine Datei nicht hochgeladen wird?
+        a: "Öffne die Entwicklertools deines Browsers, geh auf den Tab „Netzwerk“ und bearbeite eine Datei: Du wirst keine Anfrage sehen, die sie überträgt. Die Seite liefert außerdem eine Sicherheitsrichtlinie mit, die ihr verbietet, Daten an andere Websites zu senden. Und der komplette Quellcode ist öffentlich einsehbar."
+      - q: Funktioniert es auch offline?
+        a: "Ja. Sobald eine Werkzeugseite fertig geladen ist, kannst du die Internetverbindung trennen und weiter an deinen PDFs arbeiten."
+    body: |
+      ## Warum noch ein PDF-Werkzeug?
+
+      Weil die meisten einen entscheidenden Fehler machen. Wenn du in einem typischen Online-Editor einen Namen „schwärzt“, legt er nur ein Rechteck über den Text. Die Seite sieht sauber aus, aber jeder kann die Wörter darunter weiterhin markieren, kopieren oder durchsuchen. Genau das ist schon Anwälten in Gerichtsakten passiert, und auch Behörden.
+
+      pdfanonym entfernt die Zeichen aus der Datei selbst. Was du löschst, ist weg: Es lässt sich weder kopieren noch finden noch wiederherstellen. Willst du nicht selbst suchen, kannst du ein [PDF anonymisieren](/de/pdf-anonymisieren/) lassen: E-Mails, Telefonnummern und IBANs werden automatisch gefunden.
+
+      ## Privat durch Technik, nicht durch ein Versprechen
+
+      Dienste mit Upload verlangen, dass du ihnen deinen Vertrag, deine Gehaltsabrechnung oder deinen Arztbrief anvertraust. Wir verlangen dieses Vertrauen nicht, weil wir die Datei nie bekommen. Die PDF-Engine läuft in deinem Browser (es ist [MuPDF](https://mupdf.com), kompiliert zu WebAssembly). Das Dokument geht also von deiner Festplatte auf deinen Bildschirm und wieder zurück auf deine Festplatte.
+
+      Das zählt, wenn du Mandantenakten, Personalunterlagen oder irgendetwas bearbeitest, das unter die DSGVO fällt: Es gibt keinen Dritten, den du angeben musst, und hinterher nichts, was gelöscht werden müsste. Dasselbe gilt, wenn du mehrere Dateien [PDF zusammenfügen](/de/pdf-zusammenfuegen/) oder ein zu großes [PDF komprimieren](/de/pdf-komprimieren/) willst.
+
+  redact:
+    slug: pdf-schwaerzen
+    nav: PDF schwärzen
+    card: Namen, Nummern und heikle Passagen schwärzen. Der Text unter dem Balken wird gelöscht.
+    title: "PDF schwärzen online: kostenlos und Text wirklich gelöscht"
+    description: "PDF Text schwärzen und endgültig löschen: echtes Schwärzen im Browser, ohne Upload, ohne Konto, ohne Wasserzeichen. Alle Treffer auf einmal schwärzen."
+    h1: 'PDF schwärzen: Text <span class="redacted">dauerhaft</span> unkenntlich machen'
+    h1_plain: PDF schwärzen
+    lede: "Markier einen Namen, eine Kontonummer oder einen ganzen Absatz: pdfanonym entfernt den Text aus der Datei und setzt einen schwarzen Balken an seine Stelle. So schwärzt du ein PDF richtig, ohne Upload."
+    black: true
+    suffix: geschwaerzt
+    stepsTitle: PDF schwärzen in drei Schritten
+    steps:
+      - h: PDF öffnen
+        p: "Zieh es auf die Seite oder wähl es auf deinem Rechner aus. Es öffnet sich sofort, weil es dein Gerät nie verlässt."
+      - h: Markieren, was verschwinden soll
+        p: "Zieh über den Text, klick auf ein Wort, doppelklick auf eine Zeile oder gib einen Namen ins Suchfeld ein und drück <b>Alle markieren</b>. Bei Scans wechselst du zu <b>Bereich</b> und ziehst ein Rechteck auf."
+      - h: Anwenden und herunterladen
+        p: "Drück <kbd>Entf</kbd> oder <b>Anwenden</b>, um den Text zu löschen, kontrollier das Ergebnis und klick auf <b>Herunterladen</b>. Versteckte Metadaten werden standardmäßig gleich mit entfernt."
+    compare:
+      title: Ein schwarzer Kasten ist noch keine Schwärzung
+      intro: "Die meisten PDF-Editoren lassen dich ein schwarzes Rechteck zeichnen und nennen das Schwärzen. Der Unterschied fällt erst auf, wenn jemand den Text kopiert."
+      bad_h: Kasten darübergelegt
+      bad_p: "Die Seite sieht geschwärzt aus, aber die Wörter stecken noch in der Datei. Bereich markieren, kopieren, in eine E-Mail einfügen: Schon taucht der verdeckte Name auf. Die Suche findet ihn auch, genau wie jedes Programm zur Textextraktion."
+      good_h: Echte Schwärzung
+      good_p: "Die Zeichen unter dem Balken werden aus dem Seiteninhalt entfernt. Es bleibt nichts zum Kopieren, Suchen oder Extrahieren. Der schwarze Balken ist nur eine sichtbare Markierung, du kannst stattdessen auch eine weiße Fläche lassen."
+    body: |
+      ## Was kannst du schwärzen?
+
+      Alles, was im PDF als Text vorliegt: Namen, Adressen, E-Mail-Adressen, Telefonnummern, Bankdaten (IBAN), Sozialversicherungs- oder Steuernummern, Gehälter, Aktenzeichen, als Text getippte Unterschriften. Das Suchfeld findet jedes Vorkommen auf allen Seiten und ignoriert dabei Groß- und Kleinschreibung sowie Akzente. So erwischst du den Nachnamen eines Mandanten mit einem Klick überall in einer 200-seitigen Datei. Willst du E-Mail-Adressen, Telefonnummern und IBANs nicht einzeln suchen, kannst du dein [PDF anonymisieren](/de/pdf-anonymisieren/): Die personenbezogenen Daten werden dabei automatisch erkannt.
+
+      Ist dein PDF ein **Scan**, dann ist der „Text“ in Wahrheit ein Bild. Wechsle in den Modus **Bereich**, zieh ein Rechteck über die Stelle und setz in den Optionen den Haken bei **Bilder**: Die Pixel im Rechteck werden direkt im Bild gelöscht.
+
+      ## Wer muss PDFs schwärzen?
+
+      - **Anwälte und Kanzleimitarbeiter**, die Anlagen und Schriftsätze vorbereiten.
+      - **Personalabteilungen**, die Gehaltsabrechnungen, Verträge oder Untersuchungsberichte weitergeben.
+      - **Alle, die ein Auskunftsersuchen nach Art. 15 DSGVO oder eine Anfrage nach dem Informationsfreiheitsgesetz beantworten** und dabei Daten Dritter vor der Herausgabe entfernen müssen.
+      - **Vermieter, Mieter und Selbstständige**, die Kontoauszüge oder Ausweise verschicken, von denen nur ein Teil der Angaben gebraucht wird.
+
+      ## Schwärzung vor dem Versand prüfen
+
+      Öffne die Datei nach dem Herunterladen, markier den geschwärzten Bereich und versuch ihn zu kopieren. Such danach eines der Wörter, die du entfernt hast. Es sollte nichts zurückkommen. Unser Leitfaden [PDF richtig schwärzen](/de/pdf-richtig-schwaerzen/) listet alle Tests auf. Denk auch an die unsichtbaren Angaben: Ein schwarzer Balken auf der Seite löscht weder Autor noch Titel aus den Dokumenteigenschaften, es sei denn, die Option dafür bleibt angehakt. Mehr dazu erfährst du unter [PDF Metadaten entfernen](/de/pdf-metadaten-entfernen/).
+    faq:
+      - q: Wird der Text wirklich gelöscht oder nur verdeckt?
+        a: "Gelöscht. pdfanonym wendet die Schwärzung auf den Seiteninhalt an, die Zeichen existieren danach nicht mehr in der Datei. Kopieren, Suchen und Textextraktion liefern nichts."
+      - q: Kann ich ein gescanntes PDF schwärzen?
+        a: "Ja, mit dem Modus „Bereich“. Zieh ein Rechteck auf und setz in den Optionen den Haken bei „Bilder“: Der Teil des Scans unter dem Rechteck wird ausgeblendet. Die Textsuche funktioniert bei Scans nicht, weil es keine Textebene gibt."
+      - q: Kann ich Text entfernen, ohne einen schwarzen Balken zu hinterlassen?
+        a: "Ja. Nimm in den Optionen den Haken bei „Schwarzen Balken anzeigen“ raus oder nutz unser Werkzeug <a href=\"/de/pdf-text-loeschen/\">PDF Text löschen</a>, das stattdessen eine weiße Fläche lässt."
+      - q: Gibt es ein Limit für Seitenzahl oder Dateigröße?
+        a: "Kein festes Limit. Sehr große Dateien (mehrere hundert Seiten) hängen vom Arbeitsspeicher deines Rechners ab, normale Dokumente öffnen sich in einer Sekunde."
+      - q: Kann ich eine Schwärzung rückgängig machen?
+        a: "Ja, solange du die Seite nicht geschlossen hast: Drück Strg/Cmd+Z. Sobald die Datei heruntergeladen ist, ist die Schwärzung endgültig, und genau darum geht es."
+      - q: Werden meine Dateien irgendwo gespeichert?
+        a: "Nein. Sie werden nie hochgeladen, also gibt es bei uns nichts zu speichern oder zu löschen."
+
+  remove:
+    slug: pdf-text-loeschen
+    nav: Text löschen
+    card: Wörter oder Absätze aus einem PDF löschen und eine saubere weiße Fläche lassen.
+    title: "PDF Text löschen oder entfernen, wirklich und gratis"
+    description: "PDF Text löschen, entfernen oder weißen, ohne dass die Wörter darunter bleiben. Kostenloser PDF-Radierer im Browser: kein Upload, kein Konto."
+    h1: 'PDF Text löschen, und zwar <span class="hl">wirklich</span>'
+    h1_plain: PDF Text löschen
+    lede: "Lösch ein Wort, eine Zeile oder einen ganzen Block aus deinem PDF. Der Text wird aus der Datei entfernt, nicht unter einem weißen Rechteck versteckt, und der Rest der Seite bleibt genau da, wo er war."
+    black: false
+    suffix: bearbeitet
+    stepsTitle: So löschst du Text aus einem PDF
+    steps:
+      - h: PDF öffnen
+        p: "Zieh es hierher. Dein Browser liest es, es wird nirgendwohin geschickt."
+      - h: Text auswählen
+        p: "Zieh darüber, klick auf ein Wort oder such danach und drück <b>Alle markieren</b>. Mit dem Modus <b>Bereich</b> erfasst du einen ganzen Block."
+      - h: Löschen und herunterladen
+        p: "Drück <kbd>Entf</kbd>. Die Wörter verschwinden und hinterlassen eine weiße Fläche. Mit <kbd>Strg/Cmd</kbd>+<kbd>Z</kbd> machst du es rückgängig, danach lädst du die Datei herunter."
+    compare:
+      title: Warum Abdeck-Werkzeuge deinen Text zurücklassen
+      intro: "Viele Werkzeuge bieten einen weißen Pinsel zum Abdecken an. Er malt eine weiße Form über die Wörter. Auf Papier funktioniert das, im PDF nicht."
+      bad_h: Weiß übermalt
+      bad_p: "Die Wörter liegen weiterhin unter der weißen Form. Kopier die Seite oder öffne sie in einem anderen Editor, und sie sind wieder da. Screenreader lesen sie sogar laut vor."
+      good_h: Aus der Seite gelöscht
+      good_p: "pdfanonym entfernt die Zeichen selbst. Der umgebende Text behält seine exakte Position, das Layout verrutscht also nicht, und darunter gibt es nichts mehr zu finden."
+    body: |
+      ## PDF weißen, ohne dass der Text darunter bleibt
+
+      „Weißen“ heißt im PDF meist, ein weißes Rechteck über die Wörter zu malen, also digitales Tipp-Ex. Damit verschwindet der Text nur fürs Auge. pdfanonym macht, was man von Tipp-Ex eigentlich erwartet: Die Wörter werden aus der Datei gelöscht, an ihrer Stelle bleibt eine weiße Fläche. Markier den Text, drück <kbd>Entf</kbd>, und das Ergebnis sieht genauso aus wie geweißt, nur dass nichts mehr wiederherzustellen ist.
+
+      ## Gut zu wissen
+
+      PDFs sind keine Textverarbeitungsdateien: Jedes Wort sitzt an einer festen Stelle auf der Seite. Wenn du mitten in einer Zeile ein Wort löschst, rücken die folgenden Wörter **nicht** nach links, um die Lücke zu füllen. Es bleibt eine Leerstelle. Für die Vertraulichkeit ist das genau richtig, und das Layout bleibt intakt.
+
+      Willst du Text durch etwas anderes **ersetzen**, lösch ihn zuerst hier und füg den neuen Wortlaut dann mit [Text in PDF einfügen](/de/text-in-pdf-einfuegen/) an derselben Stelle ein.
+
+      ## Typische Anwendungen
+
+      - Einen Preis, einen Namen oder ein Datum aus einem Angebot entfernen, bevor du es als Vorlage wiederverwendest.
+      - Entwurfsnotizen oder vergessene „VERTRAULICH“-Vermerke aus einem Dokument löschen.
+      - Persönliche Angaben aus einem Formular entfernen, bevor du es als Muster weitergibst. Den Namen im Autorenfeld erwischst du dabei nicht: Dafür gibt es [PDF Metadaten entfernen](/de/pdf-metadaten-entfernen/).
+
+      Brauchst du stattdessen einen sichtbaren schwarzen Balken? Dann nimm [PDF schwärzen](/de/pdf-schwaerzen/).
+    faq:
+      - q: Verrutscht der restliche Text?
+        a: "Nein. Jedes andere Zeichen behält seine exakte Position. Wo der gelöschte Text stand, bleibt eine Leerstelle."
+      - q: Kann ich Text aus einem gescannten PDF löschen?
+        a: "Scans enthalten ein Bild des Textes, keinen Text. Nutze den Modus „Bereich“ und setz den Haken bei „Bilder“, um diesen Teil des Bildes auszublenden."
+      - q: Leidet die Qualität, wenn ich Text lösche?
+        a: "Nein. Nur die ausgewählten Zeichen werden angefasst, der Rest der Seite, die Schriften und die Bilder bleiben, wie sie sind."
+      - q: Ist das kostenlos?
+        a: "Ja, ohne Konto, ohne Limit und ohne Wasserzeichen."
+
+  metadata:
+    slug: pdf-metadaten-entfernen
+    nav: Metadaten bearbeiten
+    card: Autor, Software, Datum, Kommentare und Anhänge sehen, bearbeiten oder entfernen, die in einem PDF versteckt sind.
+    title: "PDF Metadaten bearbeiten oder entfernen, kostenlos"
+    description: "PDF Metadaten bearbeiten oder entfernen: Sieh Autor, Titel, Software und Datum in deiner Datei, ändere sie oder lösch alles. Kostenlos im Browser, ohne Upload."
+    h1: 'PDF <span class="hl">Metadaten</span> ansehen, bearbeiten oder entfernen'
+    h1_plain: PDF Metadaten bearbeiten
+    lede: "Dein PDF verrät womöglich deinen Namen, deine Firma, die verwendete Software und das Datum, an dem du es geschrieben hast, dazu Kommentare, die du längst vergessen hast. Sieh genau nach, was drinsteckt, und entferne es oder ersetze es durch deine eigenen Angaben."
+    suffix: bereinigt
+    reportCaption: Was dieses PDF außer dem sichtbaren Inhalt noch enthält
+    runLabel: Metadaten entfernen und herunterladen
+    stepsTitle: So entfernst du Metadaten aus einem PDF
+    steps:
+      - h: PDF öffnen
+        p: "Zieh es auf die Seite. Es wird auf deinem Rechner analysiert."
+      - h: Bericht lesen
+        p: "Jedes ausgefüllte Feld wird rot angezeigt: Autor, Titel, Software, Datum, XMP-Block, Kommentare, Anhänge, Skripte."
+      - h: Bereinigen und herunterladen
+        p: "Klick auf den Button. Wir speichern eine neue Datei ohne diese Angaben, prüfen sie erneut und zeigen dir, was übrig ist."
+    body: |
+      ## Was sind PDF-Metadaten?
+
+      Neben den sichtbaren Seiten speichert ein PDF Informationen über sich selbst. Die **Dokumenteigenschaften** enthalten Titel, Autor, Betreff, Stichwörter, das Programm, mit dem die Datei erstellt wurde (zum Beispiel „Microsoft Word“), und das Programm, das daraus ein PDF gemacht hat, außerdem Erstellungs- und Änderungsdatum. Viele Dateien enthalten zusätzlich einen **XMP-Block**: eine zweite Kopie derselben Angaben im XML-Format, die manche Werkzeuge beim Bereinigen vergessen.
+
+      Anderes reist mit der Datei mit, ohne im engeren Sinn „Metadaten“ zu sein: **Kommentare und Notizzettel**, **Hervorhebungen**, **angehängte Dateien** und manchmal **JavaScript**.
+
+      ## Warum solltest du sie entfernen?
+
+      - Im Autorenfeld steht oft der volle Name der Person, die die ursprüngliche Word-Datei geschrieben hat, oder der Name, auf den die Lizenz der Firma läuft.
+      - Datumsangaben verraten, wann ein Dokument tatsächlich entstanden ist. In einer Verhandlung oder einem Streit kann das eine Rolle spielen.
+      - Kommentare aus der Überarbeitung („Zahl noch mit dem Kunden abklären“) vergisst man leicht, und jeder kann sie lesen.
+      - Angehängte Dateien können ein komplett anderes Dokument enthalten.
+
+      ## PDF Metadaten bearbeiten statt entfernen
+
+      Manchmal willst du keine leeren, sondern saubere, korrekte Eigenschaften: einen ordentlichen Titel, der in Browser-Tabs und Suchergebnissen erscheint, deine Firma als Autor, aussagekräftige Stichwörter. Öffne unter dem Bericht **Stattdessen Eigenschaften bearbeiten**, ändere Titel, Autor, Betreff, Stichwörter, Ersteller oder Erzeuger und lade die Datei herunter. Leere Felder werden entfernt. Der alte XMP-Block fliegt dabei gleich mit raus, weil manche Reader sonst weiter die alten Werte anzeigen.
+
+      ## Was dieses Werkzeug nicht verändert
+
+      Der sichtbare Inhalt deiner Seiten bleibt unberührt. Steht ein Name auf der Seite, löschst du ihn mit [PDF schwärzen](/de/pdf-schwaerzen/). Kombinierst du beides, bekommst du ein Dokument, das du bedenkenlos veröffentlichen kannst. Sollen Formularfelder und Kommentare nicht entfernt, sondern sichtbar auf der Seite bleiben, kannst du das [PDF flatten](/de/pdf-flatten/).
+    faq:
+      - q: Welche Metadaten werden entfernt?
+        a: "Das Dokumentinformations-Dictionary (Titel, Autor, Betreff, Stichwörter, Ersteller, Erzeuger, Datumsangaben), der XMP-Metadatenstrom, private Anwendungsdaten und, wenn angehakt, Kommentare, Anhänge und JavaScript. Die Datei bekommt außerdem eine neue interne ID."
+      - q: Kann ich Titel oder Autor ändern, statt sie zu löschen?
+        a: "Ja. Öffne „Stattdessen Eigenschaften bearbeiten“ unter dem Bericht, gib die neuen Werte ein und lade die Datei herunter. Lässt du ein Feld leer, wird es entfernt."
+      - q: Wie prüfe ich das Ergebnis?
+        a: "Nach dem Bereinigen öffnet das Werkzeug die neue Datei erneut und zeigt dir ihren Bericht. Du kannst auch in deinem PDF-Reader unter Datei, dann Eigenschaften nachsehen."
+      - q: Wird der sichtbare Inhalt verändert?
+        a: "Nein. Text, Bilder und Layout bleiben exakt gleich."
+      - q: Warum zeigt mein PDF-Reader trotzdem noch einen Erzeuger an?
+        a: "Manche Reader zeigen einen Standardwert an, wenn das Feld leer ist, oder du hast die Originaldatei geöffnet. Öffne die heruntergeladene Kopie, deren Name auf „-bereinigt“ endet."
+
+  flatten:
+    slug: pdf-flatten
+    nav: PDF flatten
+    card: Formularfelder, Kommentare und Stempel in festen Inhalt verwandeln, den niemand mehr bearbeiten kann.
+    title: "PDF flatten online kostenlos: Formulare und Kommentare fixieren"
+    description: "PDF flatten: ausgefüllte Formularfelder, Kommentare und Unterschriften fest in die Seite einbrennen. Kostenlos, im Browser, ohne Upload, ohne Konto."
+    h1: 'PDF flatten: Formulare und Anmerkungen <span class="hl">fixieren</span>'
+    h1_plain: PDF flatten
+    lede: "Formular ausgefüllt? Beim Flatten (auch „Formularfelder fixieren“ oder „PDF reduzieren“ genannt) werden Feldwerte, Kommentare und Stempel direkt in die Seite übernommen. Sie werden zuverlässig gedruckt und lassen sich nicht mehr ändern."
+    suffix: flach
+    reportCaption: Interaktive Elemente in diesem PDF
+    runLabel: Flatten und herunterladen
+    stepsTitle: So flattest du ein PDF
+    steps:
+      - h: PDF öffnen
+        p: "Zieh dein ausgefülltes Formular oder kommentiertes Dokument hierher."
+      - h: Auswählen, was fixiert wird
+        p: "Formularfelder, Kommentare und Stempel, oder beides. Versteckte Metadaten kannst du dabei gleich mit entfernen."
+      - h: Herunterladen
+        p: "Du bekommst ein ganz normales PDF, in dem alles fester Teil der Seite ist."
+    body: |
+      ## Was bedeutet es, ein PDF zu flatten?
+
+      Ein interaktives PDF hat Ebenen über der eigentlichen Seite: Formularfelder zum Ausfüllen, Kontrollkästchen, Kommentare, Stempel, Zeichnungen. Der Reader zeigt sie an, aber es sind eigenständige Objekte, die sich bearbeiten, verschieben oder löschen lassen.
+
+      Beim **Flatten** (deutsch etwa „reduzieren“ oder „fixieren“) werden diese Elemente in den Seiteninhalt gezeichnet und die interaktiven Objekte entfernt. Das Dokument sieht genauso aus wie vorher, verhält sich aber jetzt wie ein gedrucktes Blatt.
+
+      ## Wann solltest du ein PDF flatten?
+
+      - **Bevor du ein ausgefülltes Formular verschickst**, damit der Empfänger deine Angaben nicht ändern kann und jedes Programm sie gleich anzeigt.
+      - **Vor dem Drucken**, weil manche Drucker und ältere Reader Formularfelder einfach weglassen.
+      - **Vor dem Archivieren** von Verträgen oder Berichten. Soll niemand außer dem Empfänger die Datei öffnen, kannst du danach das [PDF mit einem Passwort schützen](/de/pdf-passwort-schuetzen/).
+      - **Vor dem Schwärzen**: Text in einem Formularfeld gehört nicht zur Seite. Unser Werkzeug zum [Schwärzen](/de/pdf-schwaerzen/) übernimmt Felder automatisch, viele andere Werkzeuge aber nicht.
+      - **Vor dem Hochladen in ein Portal**, das interaktive Formulare ablehnt oder leer anzeigt.
+
+      ## Warum verschwinden meine Formularangaben, wenn ich ein PDF verschicke?
+
+      Weil sie nie Teil der Seite waren. Formularwerte stecken in eigenen Feldobjekten, und jeder Reader entscheidet selbst, wie er sie darstellt. Manche Handy-Apps, E-Mail-Vorschauen, Drucker und ältere Reader lassen sie komplett weg oder zeigen sie erst, wenn du in ein Feld klickst. Wenn du das PDF-Formular fixierst, ist das Problem gelöst: Die Werte landen im Seiteninhalt, und den muss jedes Programm anzeigen.
+
+      ## Flatten oder „Als PDF drucken“?
+
+      Ein beliebter Trick ist, das Dokument über einen PDF-Drucker auszudrucken. Das klappt oft, baut aber die ganze Datei neu auf: Links, Lesezeichen und Barrierefreiheits-Tags können verloren gehen, und manche Treiber machen aus den Seiten Bilder oder ändern das Seitenformat. Flatten fasst nur die interaktiven Teile an und lässt alles andere, wie es war. Fehlen in einem flachen Formular die Felder ganz, kannst du vorher [Text in PDF einfügen](/de/text-in-pdf-einfuegen/) und das Ergebnis dann fixieren.
+
+      ## Was beim Flatten fixiert wird
+
+      | Element | Nach dem Flatten |
+      |---|---|
+      | Textfelder, Kontrollkästchen, Optionsfelder, Dropdown-Listen | Ihr aktueller Wert wird auf die Seite gezeichnet |
+      | Kommentare, Hervorhebungen, Stempel, Zeichnungen | So auf die Seite gezeichnet, wie sie erscheinen |
+      | Gezeichnete oder gestempelte Unterschrift | Bleibt als Teil der Seite erhalten |
+      | Links und Lesezeichen | Bleiben erhalten |
+      | Text | Bleibt echter, auswählbarer Text |
+    faq:
+      - q: Kann ich das Flatten rückgängig machen?
+        a: "Nein. Nach dem Flatten sind die Feldwerte ganz normaler Seiteninhalt. Behalte deine Originaldatei, falls du das Formular noch einmal bearbeiten musst."
+      - q: Bleibt meine Unterschrift erhalten?
+        a: "Eine Unterschrift, die als Anmerkung gezeichnet oder gestempelt wurde, bleibt erhalten und wird Teil der Seite. Eine zertifizierte digitale Signatur dagegen wird durch jede Änderung an der Datei ungültig, auch durch das Flatten."
+      - q: Leidet die Qualität beim Flatten?
+        a: "Nein. Text bleibt gestochen scharf und auswählbar, nichts wird in ein Bild umgewandelt."
+      - q: Wird die Datei durch das Flatten kleiner?
+        a: "Meist ein wenig, weil die Feldobjekte wegfallen, aber der Unterschied ist gering. Beim Flatten geht es ums Fixieren, nicht ums Komprimieren."
+      - q: Kann ich nur das Formular flatten und die Kommentare behalten?
+        a: "Ja. Entferne vor dem Flatten den Haken bei „Kommentare, Stempel und Zeichnungen“: Dann werden nur die Formularfelder in die Seite übernommen."
+      - q: Werden dabei auch Ebenen reduziert?
+        a: "Nein. Optionale Inhaltsebenen (OCG), wie sie in manchen technischen Zeichnungen und Karten vorkommen, bleiben unverändert. Dieses Werkzeug fixiert Formularfelder und Anmerkungen, Ebenen reduziert es nicht."
+
+  delete_pages:
+    slug: pdf-seiten-loeschen
+    nav: Seiten löschen
+    card: Leere, doppelte oder überflüssige Seiten mit wenigen Klicks aus einem PDF entfernen.
+    title: "PDF Seiten löschen: online, kostenlos und ohne Upload"
+    description: "PDF Seiten löschen direkt im Browser: überflüssige Seiten anklicken, löschen, herunterladen. Kostenlos, ohne Upload, ohne Konto und ohne Wasserzeichen."
+    h1: 'PDF Seiten löschen, <span class="hl">ohne Upload</span>'
+    h1_plain: PDF Seiten löschen
+    lede: "Um PDF Seiten zu löschen, siehst du alle Seiten als Vorschaubilder, klickst die überflüssigen an und entfernst sie. Dein PDF wird auf deinem Computer verarbeitet und nirgendwohin geschickt."
+    suffix: bearbeitet
+    hint: "Klick auf Seiten, um sie auszuwählen (Umschalt+Klick für einen Bereich), dann drück Entf oder „Auswahl löschen“."
+    stepsTitle: So löschst du Seiten aus einem PDF
+    steps:
+      - h: PDF öffnen
+        p: "Zieh es auf die Seite. Nach einer Sekunde siehst du alle Seiten als Vorschaubilder."
+      - h: Seiten zum Entfernen auswählen
+        p: "Klick auf eine Seite, um sie auszuwählen, mit Umschalt+Klick wählst du einen Bereich, und über das ✕ auf einem Vorschaubild löschst du eine einzelne Seite."
+      - h: Löschen und herunterladen
+        p: "Drück <kbd>Entf</kbd> oder <b>Auswahl löschen</b>. Doch anders entschieden? <kbd>Strg/Cmd</kbd>+<kbd>Z</kbd>. Danach <b>Herunterladen</b>."
+    body: |
+      ## PDF Seiten löschen ohne Qualitätsverlust
+
+      Wenn du PDF Seiten löschst, wird der Rest des Dokuments nicht neu kodiert: Die übrigen Seiten werden unverändert übernommen, mit Text, Schriften, Bildern, Kommentaren und Weblinks. Nichts wird komprimiert oder in Bilder umgewandelt, das Ergebnis sieht also genauso aus wie das Original, nur ohne die entfernten Seiten.
+
+      ## Typische Gründe, Seiten aus einem PDF zu löschen
+
+      - Leere Seiten vom beidseitigen Scannen. Brauchst du umgekehrt nur wenige Seiten, ist es oft schneller, die [PDF Seiten zu extrahieren](/de/pdf-seiten-extrahieren/).
+      - Ein Deckblatt, eine Faxkopfzeile oder AGB, die du nicht mitschicken musst.
+      - Seiten mit persönlichen Daten, die du nicht weitergeben solltest. Geht es nur um eine Zeile, [schwärze](/de/pdf-schwaerzen/) sie lieber, statt die ganze Seite zu löschen.
+      - Doppelte Seiten, nachdem du mehrere Dokumente mit [PDF zusammenfügen](/de/pdf-zusammenfuegen/) kombiniert hast.
+
+      ## Privat von Grund auf
+
+      Online-Tools laden meist dein ganzes Dokument hoch, nur um eine Seite zu entfernen. Hier bleibt das PDF auf deinem Gerät: Die Seiten-Engine läuft in deinem Browser und funktioniert deshalb, einmal geladen, auch offline.
+    faq:
+      - q: Kann ich mehrere Seiten auf einmal löschen?
+        a: "Ja. Klick jede Seite an, die weg soll, oder klick eine an und dann mit Umschalt+Klick eine andere, um alles dazwischen auszuwählen. Dann drück Entf."
+      - q: Kann ich das Löschen rückgängig machen?
+        a: "Ja, solange du die Seite nicht geschlossen hast: Drück Strg/Cmd+Z oder den Button Rückgängig, so oft du willst."
+      - q: Wird die Datei kleiner, wenn ich Seiten lösche?
+        a: "Meistens ja, denn Inhalte, die nur auf den entfernten Seiten verwendet wurden, fallen beim Speichern weg."
+      - q: Gibt es ein Seitenlimit?
+        a: "Kein festes Limit. Bei großen Dokumenten (mehrere hundert Seiten) hängt es vom Arbeitsspeicher deines Computers ab."
+
+  extract_pages:
+    slug: pdf-seiten-extrahieren
+    nav: Seiten extrahieren
+    card: Ausgewählte Seiten eines PDFs als neue, separate Datei speichern.
+    title: "PDF Seiten extrahieren: online als neue Datei speichern"
+    description: "PDF Seiten extrahieren und als neues PDF speichern. Kostenlos direkt im Browser: ohne Upload, ohne Konto, ohne Wasserzeichen und in Originalqualität."
+    h1: 'PDF Seiten extrahieren und als <span class="hl">neue Datei</span> speichern'
+    h1_plain: PDF Seiten extrahieren
+    lede: "Wähl die Seiten, die du brauchst, in der gewünschten Reihenfolge und speichere sie als eigenes PDF. So kannst du PDF Seiten extrahieren, ohne die Originaldatei anzutasten."
+    suffix: bearbeitet
+    hint: "Wähl die Seiten aus, die du behalten willst (Umschalt+Klick für einen Bereich), dann „Auswahl extrahieren“. Du kannst sie vorher umsortieren."
+    stepsTitle: So extrahierst du Seiten aus einem PDF
+    steps:
+      - h: PDF öffnen
+        p: "Zieh es hierher. Jede Seite erscheint als Vorschaubild."
+      - h: Seiten auswählen
+        p: "Klick die Seiten an, die du extrahieren willst. Mit Umschalt+Klick wählst du einen Bereich. Zieh die Vorschaubilder, um die Reihenfolge zu ändern."
+      - h: Extrahieren
+        p: "Klick auf <b>Auswahl extrahieren</b>: Ein neues PDF mit genau diesen Seiten wird heruntergeladen."
+    body: |
+      ## Extrahieren oder teilen?
+
+      Beim Extrahieren kopierst du einzelne Seiten in ein neues Dokument, das Original bleibt vollständig. Willst du stattdessen das Original kürzen, kannst du die überflüssigen [PDF Seiten löschen](/de/pdf-seiten-loeschen/). So verschickst du am schnellsten nur den relevanten Teil einer langen Datei: ein Kapitel aus einem Bericht, die Unterschriftenseite eines Vertrags, die Rechnungen eines einzigen Monats aus einem Jahresexport.
+
+      Du kannst aus derselben Datei mehrmals extrahieren: erste Gruppe auswählen, extrahieren, dann die nächste Gruppe auswählen und wieder extrahieren. Jede Extraktion lädt ein eigenes PDF herunter.
+
+      ## Seiten aus mehreren PDFs kombinieren
+
+      Klick auf **PDF hinzufügen**, um weitere Dateien zu laden (geht es dir nur ums Aneinanderhängen ganzer Dateien, nimm [PDF zusammenfügen](/de/pdf-zusammenfuegen/)). Ihre Seiten landen im selben Raster, du kannst sie mischen und umsortieren und dann die Auswahl extrahieren oder alles als ein Dokument herunterladen.
+
+      ## Gleiche Qualität wie das Original
+
+      Die Seiten werden unverändert übernommen, mit echtem Text, Schriften, Bildern, Kommentaren und Weblinks. Nichts wird in Bilder umgewandelt, die extrahierten Seiten bleiben also scharf und durchsuchbar. Brauchst du eine Seite als Bild, etwa für eine Präsentation, kannst du sie mit [PDF in JPG umwandeln](/de/pdf-in-jpg/) exportieren.
+    faq:
+      - q: Wird das Original-PDF verändert?
+        a: "Nein. Beim Extrahieren entsteht eine neue Datei, dein Original bleibt genau so auf deinem Computer, wie es war."
+      - q: Kann ich Seiten in einer anderen Reihenfolge extrahieren?
+        a: "Ja. Zieh die Vorschaubilder vor dem Extrahieren in die gewünschte Reihenfolge: Das neue PDF übernimmt die Reihenfolge der ausgewählten Seiten im Raster."
+      - q: Kann ich Seiten aus einem passwortgeschützten PDF extrahieren?
+        a: "Wenn du das Passwort kennst, ja: Es wird beim Öffnen der Datei abgefragt. Das extrahierte PDF wird ohne Passwort gespeichert."
+      - q: Funktioniert das auch auf dem Handy?
+        a: "Ja. Tipp Seiten an, um sie auszuwählen, und halte ein Vorschaubild gedrückt, um es zu verschieben."
+
+  rotate:
+    slug: pdf-drehen
+    nav: PDF drehen
+    card: Eine Seite oder das ganze Dokument um 90° drehen und richtig herum speichern.
+    title: "PDF drehen und speichern: online, kostenlos, ohne Upload"
+    description: "PDF drehen: eine Seite oder das ganze Dokument um 90° nach links oder rechts drehen und dauerhaft speichern. Kostenlos, im Browser, ohne Upload und ohne Konto."
+    h1: 'PDF Seiten drehen und <span class="hl">dauerhaft speichern</span>'
+    h1_plain: PDF drehen
+    lede: "Ein Scan ist quer oder auf dem Kopf gelandet? PDF drehen geht hier seitenweise oder für das ganze Dokument. Danach lädst du ein PDF herunter, das sich überall richtig herum öffnet."
+    suffix: gedreht
+    hint: "Dreh eine Seite mit den Pfeilen auf ihrem Vorschaubild oder wähl Seiten aus (keine = alle) und nutze Links / Rechts."
+    stepsTitle: So drehst du ein PDF
+    steps:
+      - h: PDF öffnen
+        p: "Zieh es auf die Seite, dann siehst du alle Seiten als Vorschaubilder."
+      - h: Drehen
+        p: "Nutze ↺ oder ↻ auf einer einzelnen Seite, oder wähl mehrere Seiten aus (oder keine, für die ganze Datei) und klick auf <b>Links</b> oder <b>Rechts</b>."
+      - h: Herunterladen
+        p: "Die Drehung wird in der Datei gespeichert: Sie öffnet sich in jedem Reader und auf jedem Gerät richtig herum."
+    body: |
+      ## PDF Seiten drehen und speichern, nicht nur in der Anzeige
+
+      Der Drehen-Button der meisten PDF-Reader dreht nur die Ansicht. Datei schließen, verschicken, und sie liegt wieder quer. pdfanonym schreibt die Drehung ins PDF selbst, sodass jeder Reader die Seiten richtig herum anzeigt.
+
+      ## Nur einzelne Seiten drehen
+
+      Dokumente mit Hoch- und Querformat gemischt sind häufig: ein Bericht mit einer breiten Tabelle, ein Scan, bei dem ein einziges Blatt falsch herum eingezogen wurde. Dreh diese Seiten einzeln mit den Pfeilen auf ihren Vorschaubildern und lass die anderen, wie sie sind. Stimmt auch die Reihenfolge nicht, kannst du anschließend die [PDF Seiten sortieren](/de/pdf-seiten-sortieren/).
+
+      ## Kein Qualitätsverlust
+
+      Die Drehung ist eine Seiteneinstellung, keine Bildbearbeitung. Text bleibt Text, nichts wird neu komprimiert, und die Dateigröße ändert sich kaum. Hast du Seiten mit dem Handy fotografiert, wandelst du die Fotos zuerst mit [JPG in PDF umwandeln](/de/jpg-in-pdf/) um und drehst dann, was quer liegt.
+    faq:
+      - q: Wie drehe ich alle Seiten auf einmal?
+        a: "Achte darauf, dass keine Seite ausgewählt ist, und klick dann auf Links oder Rechts: Die Drehung gilt für das ganze Dokument."
+      - q: Wird die Drehung gespeichert?
+        a: "Ja. Sie wird ins heruntergeladene PDF geschrieben, deshalb öffnet es sich in jedem Reader richtig herum."
+      - q: Kann ich um 180° drehen?
+        a: "Klick zweimal auf denselben Pfeil."
+      - q: Verschlechtert das Drehen die Qualität?
+        a: "Nein. Nur die Ausrichtung der Seite ändert sich, Text und Bilder werden nicht neu kodiert."
+
+  reorder:
+    slug: pdf-seiten-sortieren
+    nav: Seiten sortieren
+    card: Vorschaubilder per Drag & Drop verschieben und die Seiten eines PDFs in die richtige Reihenfolge bringen.
+    title: "PDF Seiten sortieren: Reihenfolge per Drag & Drop ändern"
+    description: "PDF Seiten sortieren per Drag & Drop, mehrere Dateien kombinieren und das Ergebnis herunterladen. Kostenlos, direkt im Browser, ohne Upload und ohne Konto."
+    h1: 'PDF Seiten sortieren per <span class="hl">Drag & Drop</span>'
+    h1_plain: PDF Seiten sortieren
+    lede: "Ändere die Reihenfolge der Seiten, bis das Dokument stimmt, füg Seiten aus anderen PDFs hinzu und lade eine saubere Datei herunter. Nichts verlässt deinen Computer."
+    suffix: sortiert
+    hint: "Zieh ein Vorschaubild, um es zu verschieben. Auf dem Handy: gedrückt halten, dann ziehen."
+    stepsTitle: So sortierst du PDF Seiten neu
+    steps:
+      - h: PDF öffnen
+        p: "Zieh es hierher. Mit <b>PDF hinzufügen</b> lädst du weitere Dateien, um sie zu kombinieren."
+      - h: Seiten an ihren Platz ziehen
+        p: "Zieh ein Vorschaubild an die richtige Stelle und lass es los. Bei Bedarf kannst du dabei gleich Seiten löschen oder drehen."
+      - h: Herunterladen
+        p: "Klick auf <b>Herunterladen</b>, um das PDF in der neuen Reihenfolge zu speichern."
+    body: |
+      ## PDF Seiten sortieren in wenigen Sekunden
+
+      Ein Dokument in falscher Reihenfolge gescannt? Die Zusammenfassung gehört vor den Anhang, die unterschriebene Seite ans Ende? Zieh die Vorschaubilder an ihren Platz, um die Reihenfolge zu ändern: Die Seitenzahlen passen sich laufend an, und mit Strg/Cmd+Z machst du jede Verschiebung rückgängig.
+
+      ## Mehrere PDFs kombinieren und sortieren
+
+      Mit **PDF hinzufügen** holst du weitere Dateien dazu, ganz wie beim [PDF zusammenfügen](/de/pdf-zusammenfuegen/). Alle Seiten erscheinen in einem Raster, so kannst du sie ineinander verschachteln, überflüssige entfernen und ein einziges, sauber sortiertes Dokument herunterladen. Für viele Streichungen auf einmal geht es schneller, die [PDF Seiten zu löschen](/de/pdf-seiten-loeschen/).
+
+      ## Was erhalten bleibt
+
+      Jede Seite wird unverändert übernommen: Text, Schriften, Bilder, Kommentare und Weblinks. Das Dokument wird nicht als Bilder neu aufgebaut, es bleibt also schlank und durchsuchbar. Steht die Reihenfolge, kannst du [PDF Seitenzahlen einfügen](/de/pdf-seitenzahlen/).
+    faq:
+      - q: Kann ich mehrere Seiten auf einmal verschieben?
+        a: "Verschieb sie einzeln per Ziehen. Jede Verschiebung dauert eine Sekunde, und Strg/Cmd+Z macht die letzte rückgängig."
+      - q: Kann ich hier PDFs zusammenfügen?
+        a: "Ja. Klick auf „PDF hinzufügen“ (oder zieh mehrere Dateien auf einmal hierher), um sie zu kombinieren, die Seiten zu sortieren und eine einzige Datei herunterzuladen."
+      - q: Passen sich die Lesezeichen der neuen Reihenfolge an?
+        a: "Nein. Die neue Datei wird Seite für Seite aufgebaut und übernimmt weder die ursprünglichen Lesezeichen (Inhaltsverzeichnis) noch Links, die auf eine andere Seite des Dokuments springen. Weblinks auf den Seiten bleiben erhalten."
+      - q: Funktioniert das auf dem Handy?
+        a: "Ja. Halte ein Vorschaubild gedrückt und zieh es dann an seinen neuen Platz."
+
+  grayscale:
+    slug: pdf-schwarz-weiss
+    nav: Schwarz-Weiß
+    card: Ein farbiges PDF in Graustufen umwandeln, Text bleibt scharf und markierbar.
+    title: "PDF schwarz weiß: PDF in Graustufen umwandeln, kostenlos"
+    description: "PDF schwarz weiß machen, direkt im Browser: PDF in Graustufen umwandeln, Text bleibt markierbar, Bilder werden grau, nichts wird hochgeladen."
+    h1: 'PDF in <span class="hl">Schwarz-Weiß</span> umwandeln'
+    h1_plain: PDF schwarz weiß umwandeln
+    lede: "Mach dein PDF schwarz weiß, um Tinte zu sparen, die Vorgaben einer Druckerei zu erfüllen oder ein Dokument für den Schwarz-Weiß-Druck vorzubereiten. Jede Farbe wird zu einem Grauton, und der Text bleibt echter, markierbarer Text."
+    suffix: sw
+    reportCaption: Dieses PDF
+    runLabel: In Schwarz-Weiß umwandeln und herunterladen
+    stepsTitle: So wandelst du ein PDF in Schwarz-Weiß um
+    steps:
+      - h: PDF öffnen
+        p: "Zieh es auf die Seite. Es wird auf deinem Computer verarbeitet."
+      - h: Umwandeln
+        p: "Klick auf den Button. Text, Formen, Bilder, Kommentare und die Darstellung von Formularfeldern werden in Graustufen umgewandelt."
+      - h: Prüfen und herunterladen
+        p: "Die neue Datei wird sofort heruntergeladen, und eine Vorschau der ersten Seite erscheint, damit du das Ergebnis prüfen kannst."
+    body: |
+      ## PDF schwarz weiß, ohne die Seiten in Bilder zu verwandeln
+
+      Wer ein PDF in Graustufen umwandeln will, landet oft bei Tools, die jede Seite als Bild „drucken“ und die Bilder wieder in ein PDF packen. Das funktioniert, aber der Text ist dann kein Text mehr: Du kannst ihn weder markieren noch durchsuchen noch kopieren, und die Datei wird oft deutlich größer. pdfanonym schreibt stattdessen die Farben im Dokument selbst um (wer die Datei vor allem kleiner machen will, kann das [PDF komprimieren](/de/pdf-komprimieren/)). Der Text bleibt bei jedem Zoom scharf, Links funktionieren weiter, und die Datei ist meist kleiner als das Original, weil Farbfotos zu einkanaligen Graustufenbildern werden.
+
+      ## Was umgewandelt wird
+
+      | Element | Ergebnis |
+      |---|---|
+      | Farbiger Text und Formen (RGB und CMYK) | Grautöne mit passender Helligkeit |
+      | Fotos und Grafiken | Graustufenbilder |
+      | Kommentare, Stempel, Darstellung von Formularfeldern | Graustufen |
+      | Text | Weiterhin echter, markierbarer Text |
+
+      Die Helligkeit bleibt dank der Standardformel für die Luminanz erhalten: Helle Farben bleiben hell, dunkle bleiben dunkel. Eine rote Überschrift wird also nicht zum schwarzen Block.
+
+      ## Grenzen
+
+      Ein paar seltene Elemente bleiben unverändert und werden nach der Umwandlung gemeldet: weiche Farbverläufe (Shadings), Schmuckfarben aus professionellen Druckdateien und winzige Bilder, die direkt im Seitencode stecken. Die Vorschau zeigt das Ergebnis, damit du es vor dem Drucken prüfen kannst. Musst du nur wenige Seiten drucken, kannst du sie vorher [aus dem PDF extrahieren](/de/pdf-seiten-extrahieren/).
+
+      ## Schwarz-Weiß oder Graustufen?
+
+      Was die meisten „schwarz weiß“ nennen, sind Graustufen: 256 Abstufungen zwischen Schwarz und Weiß, damit Fotos erkennbar bleiben. Genau das erzeugt dieses Tool. Der Drucker gibt die Grautöne dann nur mit schwarzer Tinte aus.
+    faq:
+      - q: Bleibt der Text markierbar?
+        a: "Ja. Der Text wird nicht in ein Bild umgewandelt: Du kannst ihn genauso markieren, durchsuchen und kopieren wie vorher."
+      - q: Wird die Datei kleiner?
+        a: "Oft ja, weil Farbbilder mit einem statt drei Kanälen gespeichert werden. Dateien, die nur Text enthalten, ändern sich kaum."
+      - q: Kann ich nur einzelne Seiten umwandeln?
+        a: "Nicht mit diesem Tool. Nutz zuerst <a href=\"/de/pdf-seiten-extrahieren/\">Seiten extrahieren</a>, um nur die gewünschten Seiten zu behalten, und wandle dann diese Datei um."
+      - q: Warum ist noch etwas farbig?
+        a: "Weiche Farbverläufe und professionelle Schmuckfarben werden nicht umgewandelt. In Bürodokumenten sind sie selten; der Bericht nach der Umwandlung sagt dir, ob deine Datei welche enthält."
+
+  anonymize:
+    slug: pdf-anonymisieren
+    nav: PDF anonymisieren
+    card: E-Mails, Telefonnummern, IBANs und Namen automatisch erkennen und mit einem Klick schwärzen.
+    title: "PDF anonymisieren: Personendaten automatisch schwärzen"
+    description: "PDF anonymisieren im Browser: E-Mails, Telefonnummern, IBANs, Kartennummern und Namen automatisch finden und endgültig schwärzen. DSGVO-freundlich, ohne Upload."
+    h1: 'PDF anonymisieren: Personendaten werden für dich <span class="redacted">gefunden</span>'
+    h1_plain: PDF anonymisieren
+    lede: "Öffne dein Dokument: pdfanonym durchsucht jede Seite nach E-Mails, Telefonnummern, Bankdaten, Kartennummern und Namen, und du schwärzt alles auf einmal. So kannst du ein PDF anonymisieren, ohne etwas hochzuladen."
+    black: true
+    suffix: anonymisiert
+    stepsTitle: So anonymisierst du ein PDF
+    steps:
+      - h: PDF öffnen
+        p: "Zieh es auf die Seite. Die Suche startet automatisch, auf deinem Rechner."
+      - h: Treffer prüfen
+        p: "Die personenbezogenen Daten werden nach Art gruppiert und mit Beispielen angezeigt. Nimm den Haken bei allem raus, was bleiben soll, und klick auf <b>Auswahl markieren</b>. Alles Weitere markierst du von Hand oder über das Suchfeld."
+      - h: Schwärzen und herunterladen
+        p: "Drück <kbd>Entf</kbd> oder <b>Anwenden</b>: Der Text wird aus der Datei gelöscht. Versteckte Metadaten werden gleich mit entfernt."
+    body: |
+      ## Was die Suche erkennt
+
+      Wenn du ein PDF anonymisieren willst, sucht pdfanonym zuerst automatisch nach diesen Daten:
+
+      | Daten | So wird geprüft |
+      |---|---|
+      | E-Mail-Adressen | Übliches Adressformat |
+      | Telefonnummern | Internationale (+33, +49…) und nationale Formate |
+      | IBANs | Offizielle Prüfsumme (mod 97): Ungültige Nummern werden ignoriert |
+      | Kartennummern | Luhn-Prüfsumme; Firmennummern wie die SIRET werden ausgeschlossen |
+      | Französische Sozialversicherungsnummern | Prüfschlüssel wird kontrolliert |
+      | IP-Adressen | Nur gültige Bereiche |
+      | Namen nach einer Anrede | Mr, Mrs, Dr, Monsieur, Madame, Herr, Frau, Sr., Sra., Sig.… |
+      | Datumsangaben | Erkannt, aber nicht angehakt, weil Dokumente voller Daten sind, die nichts Persönliches verraten |
+
+      Die Prüfsummen sind wichtig: Sie halten die Zahl der Fehltreffer niedrig. Du kannst dich also auf die Liste verlassen, statt Hunderte zufälliger Zahlen durchzugehen.
+
+      ## Was sie nicht erraten kann
+
+      Ein Name ohne Anrede („Jean Dupont unterschrieb…“) sieht aus wie jedes andere Wort und wird deshalb nicht automatisch erkannt. Gib ihn ins Suchfeld ein und drück **Alle markieren**: Jedes Vorkommen wird erfasst, ob großgeschrieben oder nicht, mit oder ohne Akzente. Postanschriften und handschriftliche Angaben werden ebenfalls nicht erkannt. Was die Erkennung übersieht, kannst du von Hand [im PDF schwärzen](/de/pdf-schwaerzen/). Lies das Dokument immer einmal durch, bevor du es weitergibst; welche Prüfungen sich lohnen, zeigt unser Leitfaden [PDF richtig schwärzen](/de/pdf-richtig-schwaerzen/).
+
+      ## Warum lokales Anonymisieren zählt
+
+      Eine Datei voller personenbezogener Daten an einen Online-Dienst zu schicken, um genau diese Daten zu entfernen, ist ein Widerspruch: Nach der DSGVO ziehst du damit einen weiteren Verarbeiter hinzu. pdfanonym läuft komplett in deinem Browser, die Daten verlassen dein Gerät also nie. Hast du Dutzende Dateien, kannst du sie in einem Durchgang [PDF stapelweise anonymisieren](/de/pdf-stapel-anonymisieren/).
+    faq:
+      - q: Werden die erkannten Daten wirklich entfernt?
+        a: "Ja, sobald du die Schwärzung anwendest. Die Zeichen werden aus der Datei gelöscht, nicht unter einem Kasten versteckt, und die Metadaten des Dokuments (Autor, Titel…) werden ebenfalls bereinigt."
+      - q: Funktioniert das auch bei gescannten PDFs?
+        a: "Nein: Ein Scan enthält Bilder, keinen Text, es gibt also nichts zu analysieren. Nutz den Modus „Bereich“, um Passagen von Hand zu schwärzen."
+      - q: Welche Sprachen und Länder werden abgedeckt?
+        a: "E-Mails, internationale Telefonnummern, IBANs, Karten und IP-Adressen funktionieren für jedes Land. Anreden werden auf Englisch, Französisch, Deutsch, Spanisch, Italienisch und Portugiesisch erkannt. Sozialversicherungsnummern werden im französischen Format geprüft."
+      - q: Kann ich einige der erkannten Angaben behalten?
+        a: "Ja. Nimm vor dem Markieren den Haken bei einer Kategorie raus oder entferne einzelne Markierungen aus der Liste rechts."
+
+  merge:
+    slug: pdf-zusammenfuegen
+    nav: PDF zusammenfügen
+    card: Mehrere PDFs zu einer Datei zusammenfügen, in der Reihenfolge, die du willst.
+    title: "PDF zusammenfügen online: kostenlos und ohne Upload"
+    description: "PDF zusammenfügen im Browser: mehrere Dateien hineinziehen, Seiten per Drag & Drop sortieren und als ein Dokument laden. Kostenlos, ohne Upload, ohne Konto."
+    h1: 'PDF zusammenfügen, <span class="hl">ohne etwas hochzuladen</span>'
+    h1_plain: PDF zusammenfügen
+    lede: "Zieh mehrere PDFs auf einmal hinein, bring die Seiten in die richtige Reihenfolge und lade ein einziges Dokument herunter. Deine Dateien werden auf deinem eigenen Rechner zusammengefügt."
+    suffix: zusammengefuegt
+    hint: "Zieh mehrere Dateien auf einmal hinein oder nutz „PDF hinzufügen“. Zieh die Vorschaubilder, um die Reihenfolge zu ändern."
+    stepsTitle: So fügst du PDF-Dateien zusammen
+    steps:
+      - h: PDFs hineinziehen
+        p: "Wähl mehrere Dateien auf einmal aus oder füg sie nacheinander mit <b>PDF hinzufügen</b> hinzu."
+      - h: Seiten anordnen
+        p: "Jede Seite erscheint als Vorschaubild. Zieh sie in die richtige Reihenfolge, dreh oder lösch Seiten bei Bedarf."
+      - h: Herunterladen
+        p: "Klick auf <b>Herunterladen</b> und du bekommst ein einziges PDF."
+    body: |
+      ## Zusammenfügen und aufräumen in einem Rutsch
+
+      Ein PDF zusammenfügen heißt selten nur, Dateien aneinanderzuhängen. Hier erscheint jede Seite jeder Datei in einem gemeinsamen Raster. So setzt du die unterschriebene Seite an die richtige Stelle, wirfst eine leere Seite raus oder drehst einen quer liegenden Scan, bevor du herunterlädst. Für größere Umbauten kannst du die [PDF Seiten sortieren](/de/pdf-seiten-sortieren/), und danach [PDF Seitenzahlen einfügen](/de/pdf-seitenzahlen/), damit die Zählung über das ganze zusammengefügte Dossier läuft.
+
+      ## Qualität und Links
+
+      Die Seiten werden unverändert übernommen: Text bleibt Text, Bilder behalten ihre Auflösung, Kommentare und Weblinks bleiben erhalten. Ressourcen, die mehrere Seiten derselben Datei teilen, werden nur einmal gespeichert, deshalb bleibt das Ergebnis schlank. Ist es für einen E-Mail-Anhang trotzdem zu groß, kannst du das [PDF komprimieren](/de/pdf-komprimieren/).
+
+      ## Privat durch Technik
+
+      Wer Verträge, Gehaltsabrechnungen oder Arztunterlagen auf einer Website mit Upload zusammenfügt, schickt sie alle an einen Server. Hier verlassen sie dein Gerät nie.
+    faq:
+      - q: Wie viele Dateien kann ich zusammenfügen?
+        a: "Es gibt kein festes Limit. Sehr große Mengen hängen vom Arbeitsspeicher deines Rechners ab."
+      - q: Kann ich passwortgeschützte PDFs zusammenfügen?
+        a: "Ja, wenn du die Passwörter kennst: Du wirst beim Hinzufügen nach jedem einzelnen gefragt. Die zusammengefügte Datei hat kein Passwort; bei Bedarf fügst du mit dem Werkzeug „PDF schützen“ eins hinzu."
+      - q: Bleiben die Lesezeichen erhalten?
+        a: "Nein. Die zusammengefügte Datei übernimmt weder die ursprünglichen Lesezeichen (Gliederung) noch Links, die auf eine andere Seite springen. Weblinks bleiben erhalten."
+
+  add_text:
+    slug: text-in-pdf-einfuegen
+    nav: Text einfügen
+    card: Überall auf eine PDF-Seite schreiben, wie in ein Formular ohne Felder.
+    title: "Text in PDF einfügen: PDF beschriften, kostenlos und privat"
+    description: "Text in PDF einfügen im Browser: an die gewünschte Stelle klicken, tippen, Größe und Farbe wählen, herunterladen. Echter Text, ohne Upload, ohne Wasserzeichen."
+    h1: 'Text in PDF einfügen, <span class="hl">überall auf der Seite</span>'
+    h1_plain: Text in PDF einfügen
+    lede: "PDF beschriften leicht gemacht: Füll ein Formular ohne Felder aus, ergänze ein Datum oder eine Notiz, vervollständige ein Dokument vor dem Drucken. Klicken, tippen, herunterladen."
+    suffix: beschriftet
+    hint: "Klick auf eine Seite, um zu schreiben. Zieh einen Text, um ihn zu verschieben, klick darauf, um ihn zu bearbeiten, Entf löscht ihn."
+    stepsTitle: So fügst du Text in ein PDF ein
+    steps:
+      - h: PDF öffnen
+        p: "Zieh es auf die Seite. Es öffnet sich auf deinem Rechner."
+      - h: Klicken und tippen
+        p: "Klick dorthin, wo der Text stehen soll, und tipp los. Größe und Farbe wählst du in der Werkzeugleiste; zieh einen Text, um ihn zu verschieben."
+      - h: Herunterladen
+        p: "Der Text wird als echter, markierbarer Text ins PDF geschrieben."
+    body: |
+      ## Echter Text, kein Bild
+
+      Wenn du Text in ein PDF einfügst, landet er als richtiger Text in einer Standardschrift (Helvetica) auf der Seite. Er bleibt bei jedem Zoom scharf, lässt sich markieren und durchsuchen und wird genau so gedruckt, wie er auf dem Bildschirm aussieht. Soll vorhandener Text verschwinden, bevor du neuen schreibst, kannst du ihn zuerst mit [PDF Text löschen](/de/pdf-text-loeschen/) entfernen.
+
+      ## Typische Einsätze
+
+      - Ein „flaches“ Formular ausfüllen, also eines mit Kästchen auf der Seite, aber ohne ausfüllbare Felder.
+      - Vor dem Unterschreiben ein Datum, ein Aktenzeichen oder „Gelesen und genehmigt“ ergänzen.
+      - Eine Notiz auf einen Plan oder ein Dokument schreiben, bevor du es zurückschickst. Damit niemand deine Einträge verschiebt, kannst du das [PDF flatten](/de/pdf-flatten/).
+
+      Um zusätzlich eine handschriftliche Unterschrift einzufügen, wechsle in der Werkzeugleiste zu **Unterschrift** oder nutz [PDF unterschreiben](/de/pdf-unterschreiben/).
+
+      ## Zeichen
+
+      Der Text wird in Helvetica geschrieben. Die Schrift deckt das lateinische Alphabet samt westeuropäischer Akzente ab (é, ü, ñ, ç, ß…). Zeichen außerhalb davon, etwa Kyrillisch oder Chinesisch, werden durch ein Fragezeichen ersetzt.
+    faq:
+      - q: Kann ich Text bearbeiten, der schon im PDF steht?
+        a: "Nicht mit diesem Werkzeug: Es fügt neuen Text hinzu. Um vorhandenen Text zuerst zu entfernen, nutz PDF Text löschen und füg dann hier deinen neuen Text ein."
+      - q: Kann ich mehrere Zeilen schreiben?
+        a: "Ja. Drück beim Tippen Enter, um eine neue Zeile zu beginnen."
+      - q: Kann ich den eingefügten Text später noch ändern?
+        a: "Nicht in pdfanonym, sobald die Datei heruntergeladen ist: Der Text wird Teil der Seite. Heb dein Original auf, falls du noch etwas ändern musst."
+
+  sign:
+    slug: pdf-unterschreiben
+    nav: PDF unterschreiben
+    card: Unterschrift zeichnen und ins Dokument setzen, ohne Drucken und Scannen.
+    title: "PDF unterschreiben online: kostenlos und privat"
+    description: "PDF unterschreiben im Browser: Unterschrift mit der Maus oder dem Finger zeichnen und ins PDF setzen. Kostenlos, ohne Upload, ohne Konto, ohne Wasserzeichen."
+    h1: 'PDF unterschreiben mit deiner <span class="hl">eigenen Unterschrift</span>'
+    h1_plain: PDF unterschreiben
+    lede: "Schluss mit Ausdrucken, Unterschreiben und Einscannen. Zeichne deine Unterschrift einmal, setz sie an die richtige Stelle und lade das unterschriebene PDF herunter."
+    suffix: unterschrieben
+    hint: "Klick auf eine Seite, um deine Unterschrift zu platzieren. Ziehen zum Verschieben, Ecke für die Größe."
+    stepsTitle: So unterschreibst du ein PDF
+    steps:
+      - h: PDF öffnen
+        p: "Zieh das Dokument, das du unterschreiben willst, auf die Seite. Es bleibt auf deinem Rechner."
+      - h: Unterschrift zeichnen
+        p: "Zeichne sie mit der Maus, dem Trackpad oder dem Finger und klick dann auf <b>Diese Unterschrift verwenden</b>."
+      - h: Platzieren und herunterladen
+        p: "Klick auf die richtige Stelle, pass die Größe an, ergänze bei Bedarf mit dem Werkzeug <b>Text</b> das Datum und lade die Datei herunter."
+    body: |
+      ## Eine saubere, transparente Unterschrift
+
+      Wenn du ein PDF unterschreibst, wird deine Zeichnung automatisch zugeschnitten und mit transparentem Hintergrund eingesetzt. Sie sitzt also auf Unterschriftslinien und in Tabellen, ohne weißen Kasten drumherum. Du kannst sie auf mehreren Seiten platzieren und jede Kopie in der Größe anpassen. Datum oder Ort daneben ergänzt du mit [Text in PDF einfügen](/de/text-in-pdf-einfuegen/).
+
+      ## Was für eine Unterschrift ist das?
+
+      Eine gezeichnete Unterschrift ist das, was die europäische eIDAS-Verordnung eine einfache elektronische Signatur nennt. Sie ist für Alltagsdokumente weit verbreitet: Angebote, Lieferscheine, interne Formulare, Mietverträge zwischen Privatleuten. Manche Dokumente verlangen eine fortgeschrittene oder qualifizierte elektronische Signatur, die auf einem Zertifikat und einer Identitätsprüfung beruht; dafür nutzt du einen spezialisierten Signaturdienst.
+
+      ## Deine Unterschrift bleibt bei dir
+
+      Das Bild deiner Unterschrift entsteht in deinem Browser und wird auf deinem Rechner in dein PDF geschrieben. Es wird weder hochgeladen noch von uns gespeichert. Bevor du den Vertrag verschickst, kannst du das [PDF flatten](/de/pdf-flatten/), damit die Unterschrift fest zur Seite gehört, und es zusätzlich [mit einem Passwort schützen](/de/pdf-passwort-schuetzen/).
+    faq:
+      - q: Kann ich auf dem Handy unterschreiben?
+        a: "Ja. Öffne die Seite auf deinem Handy, zeichne mit dem Finger und tipp dann auf die Stelle, an die die Unterschrift gehört."
+      - q: Kann ich Datum und Namen ergänzen?
+        a: "Ja. Wechsle in der Werkzeugleiste zum Werkzeug „Text“, klick neben die Unterschrift und tipp los."
+      - q: Wird meine Unterschrift für das nächste Mal gespeichert?
+        a: "Nein. Nichts wird gespeichert: Du zeichnest sie für jedes Dokument neu. Das heißt auch, dass niemand sie über diese Website wiederverwenden kann."
+
+  watermark:
+    slug: pdf-wasserzeichen
+    nav: Wasserzeichen
+    card: VERTRAULICH, ENTWURF oder deinen Namen quer über jede Seite stempeln.
+    title: "PDF Wasserzeichen einfügen online: kostenlos und privat"
+    description: "PDF Wasserzeichen aus Text (VERTRAULICH, ENTWURF, KOPIE…) auf jede Seite setzen. Deckkraft, Farbe und Ausrichtung wählen, mit Live-Vorschau. Ohne Upload."
+    h1: 'PDF Wasserzeichen <span class="hl">einfügen</span>'
+    h1_plain: PDF Wasserzeichen einfügen
+    lede: "Kennzeichne ein PDF mit einem Wasserzeichen als vertraulich, als Entwurf oder als Kopie für einen bestimmten Empfänger. Text eingeben, mit Live-Vorschau anpassen, herunterladen."
+    suffix: wasserzeichen
+    runLabel: Wasserzeichen einfügen und herunterladen
+    stepsTitle: So fügst du ein Wasserzeichen in ein PDF ein
+    steps:
+      - h: PDF öffnen
+        p: "Zieh es auf die Seite."
+      - h: Wasserzeichen einstellen
+        p: "Gib den Text ein, wähl Deckkraft, Farbe und Ausrichtung. Die Vorschau der ersten Seite ändert sich dabei laufend."
+      - h: Herunterladen
+        p: "Das Wasserzeichen wird auf jeder Seite eingefügt."
+    body: |
+      ## Ideen für dein PDF Wasserzeichen
+
+      - **VERTRAULICH** oder **INTERN** auf Dokumenten, die nicht weitergegeben werden sollen.
+      - **ENTWURF** auf Fassungen, die noch nicht endgültig sind.
+      - **Kopie für [Empfänger]** auf einem Ausweis oder einer Gehaltsabrechnung, die du an einen Vermieter oder eine Agentur schickst: Taucht sie irgendwo auf, ist klar, woher sie stammt und wofür sie gedacht war.
+
+      ## Was ein Wasserzeichen kann und was nicht
+
+      Ein Wasserzeichen schreckt vor Missbrauch ab und macht die Herkunft einer Kopie offensichtlich. Es hält aber niemanden auf, der mit einem Bearbeitungsprogramm entschlossen ist, es zu entfernen. Für stärkeren Schutz solltest du die Datei zusätzlich [flatten](/de/pdf-flatten/) und [mit einem Passwort schützen](/de/pdf-passwort-schuetzen/).
+
+      ## Zeichen
+
+      Das Wasserzeichen nutzt Helvetica Bold. Die Schrift deckt das lateinische Alphabet samt westeuropäischer Akzente ab. Andere Schriftsysteme werden nicht unterstützt.
+    faq:
+      - q: Ist der Text hinter dem Wasserzeichen noch lesbar?
+        a: "Ja. Das Wasserzeichen ist halbtransparent; stell die Deckkraft zwischen 5 % und 60 % ein."
+      - q: Kann ich nur einige Seiten mit einem Wasserzeichen versehen?
+        a: "Dieses Werkzeug versieht jede Seite damit. Für eine Auswahl extrahierst du zuerst diese Seiten, fügst das Wasserzeichen ein und fügst dann alles wieder zusammen."
+      - q: Kann ich ein Bild als Wasserzeichen nutzen?
+        a: "Noch nicht: Im Moment werden nur Wasserzeichen aus Text unterstützt."
+
+  page_numbers:
+    slug: pdf-seitenzahlen
+    nav: Seitenzahlen
+    card: Die Seiten eines PDFs nummerieren, mit Position und Format nach Wahl.
+    title: "PDF Seitenzahlen einfügen online: kostenlos und privat"
+    description: "PDF Seitenzahlen einfügen: Position, Format (1, Seite 1, Seite 1 von 10), Startnummer, Deckblatt auslassen. Live-Vorschau, direkt im Browser, ohne Upload."
+    h1: 'PDF <span class="hl">Seitenzahlen</span> einfügen'
+    h1_plain: PDF Seitenzahlen einfügen
+    lede: "Nummerier einen Bericht, eine Anlage oder ein Dokumentenpaket in Sekunden. Wähl, wo die Seitenzahlen stehen und wie sie aussehen; die Vorschau ändert sich sofort."
+    suffix: nummeriert
+    runLabel: Seitenzahlen einfügen und herunterladen
+    stepsTitle: So nummerierst du PDF-Seiten
+    steps:
+      - h: PDF öffnen
+        p: "Zieh es auf die Seite."
+      - h: Position und Format wählen
+        p: "Unten oder oben, links, mittig oder rechts; 1, Seite 1 oder Seite 1 von 12; Startnummer; bei Bedarf das Deckblatt auslassen."
+      - h: Herunterladen
+        p: "Die Seitenzahlen werden auf jeder Seite als echter Text eingefügt."
+    body: |
+      ## Formate für jeden Zweck
+
+      Wenn du PDF Seitenzahlen einfügen willst, reichen für die meisten Dokumente einfache Zahlen. „Seite 1 von 12“ ist bei Verträgen und amtlichen Unterlagen üblich, damit eine fehlende Seite sofort auffällt. Setzt ein Dokument ein anderes fort, stellst du die Startnummer ein (zum Beispiel 25) und setzt den Haken bei **Erste Seite auslassen**, damit das Deckblatt ohne Nummer bleibt.
+
+      ## Richtig auf jeder Seite
+
+      Die Zahlen werden nach dem ausgerichtet, was du auf dem Bildschirm siehst, auch auf gedrehten oder beschnittenen Seiten. So stehen sie nie quer oder außerhalb der Seite. Soll jede Seite zusätzlich einen Vermerk wie ENTWURF tragen, kannst du ein [PDF Wasserzeichen](/de/pdf-wasserzeichen/) hinzufügen.
+
+      ## Mit anderen Werkzeugen kombinieren
+
+      Du stellst ein Dokumentenpaket zusammen? [Füg die Dateien zuerst zusammen](/de/pdf-zusammenfuegen/) und nummerier dann das Ergebnis, damit die Zählung über das ganze Paket läuft.
+    faq:
+      - q: Kann ich die Nummerierung bei einer anderen Zahl als 1 beginnen?
+        a: "Ja. Stell bei „Beginnen bei“ eine beliebige Zahl ein."
+      - q: Kann ich das Deckblatt ohne Seitenzahl lassen?
+        a: "Ja. Setz den Haken bei „Erste Seite auslassen“: Die Nummerierung beginnt auf der zweiten Seite."
+      - q: Sind die Seitenzahlen durchsuchbarer Text?
+        a: "Ja. Sie werden als echter Text in Helvetica eingefügt."
+
+  compress:
+    slug: pdf-komprimieren
+    nav: PDF komprimieren
+    card: Ein PDF für E-Mail und Upload verkleinern, indem zu große Bilder geschrumpft werden.
+    title: "PDF komprimieren online: PDF verkleinern, kostenlos und privat"
+    description: "PDF komprimieren im Browser: Zu große Bilder werden verkleinert und neu komprimiert, Schriften gekürzt. Drei Stufen, ohne Upload, ohne Konto."
+    h1: 'PDF komprimieren, <span class="hl">ohne es hochzuladen</span>'
+    h1_plain: PDF komprimieren
+    lede: "Zu schwer für die E-Mail oder für das Upload-Portal? PDF verkleinern geht hier lokal: Zu große Bilder und ungenutzte Daten schrumpfen, der Text bleibt scharf, und du siehst die Größe vorher und nachher."
+    suffix: komprimiert
+    runLabel: Komprimieren und herunterladen
+    stepsTitle: So komprimierst du ein PDF
+    steps:
+      - h: PDF öffnen
+        p: "Zieh es auf die Seite. Die aktuelle Größe wird angezeigt."
+      - h: Stufe wählen
+        p: "Leicht, Empfohlen oder Stark. Empfohlen passt für den Bildschirm und den Bürodruck."
+      - h: Herunterladen
+        p: "Du siehst die neue Größe und die Ersparnis in Prozent. Ist keine Ersparnis möglich, bleibt deine Datei unverändert."
+    body: |
+      ## Was ein PDF schwer macht
+
+      Fast immer: Bilder. Ein Foto direkt vom Handy oder ein Scan mit 600 dpi enthält weit mehr Pixel, als eine Seite braucht. Beim PDF komprimieren verkleinert pdfanonym jedes Bild auf die Auflösung, die die Seite tatsächlich darstellen kann (etwa 220, 150 oder 100 dpi je nach Stufe), und komprimiert es neu. Schriften werden auf die tatsächlich verwendeten Zeichen gekürzt, ungenutzte Objekte werden entfernt. Brauchst du keine Farbe, spart es zusätzlich Platz, das [PDF in Schwarz-Weiß](/de/pdf-schwarz-weiss/) umzuwandeln.
+
+      ## Was du erwarten kannst
+
+      | Dokument | Typisches Ergebnis |
+      |---|---|
+      | Fotos, Farbscans, Präsentationen | Starke Verkleinerung, oft 50 % bis 90 % |
+      | Gemischte Berichte | Mittlere Verkleinerung |
+      | Reine Textdokumente, bereits optimierte Dateien | Kaum oder keine Änderung |
+
+      Text und Vektorgrafiken werden nie in Bilder umgewandelt. Sie bleiben deshalb auf jeder Stufe gestochen scharf. Willst du dagegen eine Seite als kleines Bild verschicken, nimm [PDF in JPG umwandeln](/de/pdf-in-jpg/).
+
+      ## Große Dateien
+
+      Alles läuft auf deinem Rechner, deshalb kann eine gescannte Datei mit 100 Seiten ein paar Sekunden dauern. Dafür gibt es keine Upload-Zeit und kein Größenlimit von einem Server. Fotos vom Handy wandelst du am besten erst mit [JPG in PDF umwandeln](/de/jpg-in-pdf/) um und komprimierst dann das Ergebnis.
+    faq:
+      - q: Leidet die Qualität unter der Komprimierung?
+        a: "Leicht hält die Bilder nah am Original. Empfohlen ist auf dem Bildschirm und im Bürodruck kaum zu unterscheiden. Stark zeigt beim Hineinzoomen sichtbare Verluste bei Fotos. Der Text ist nie betroffen."
+      - q: Warum ist meine Datei kaum kleiner geworden?
+        a: "Sie enthält wenige Bilddaten, oder ihre Bilder waren schon komprimiert. In dem Fall sagt dir das Werkzeug Bescheid und lässt deine Datei, wie sie ist."
+      - q: Gibt es ein Größenlimit?
+        a: "Wir setzen kein Limit; sehr große Dateien hängen vom Arbeitsspeicher deines Rechners ab."
+
+  pdf_to_jpg:
+    slug: pdf-in-jpg
+    nav: PDF in JPG
+    card: Jede Seite eines PDFs in ein JPG- oder PNG-Bild umwandeln.
+    title: "PDF in JPG umwandeln online: kostenlos und privat"
+    description: "PDF in JPG umwandeln: Jede Seite wird zu einem JPG- oder PNG-Bild, in Bildschirm- oder Druckqualität. Mehrere Seiten kommen als ZIP. Ohne Upload, ohne Konto."
+    h1: 'PDF in <span class="hl">JPG-Bilder</span> umwandeln'
+    h1_plain: PDF in JPG umwandeln
+    lede: "Teil eine Seite in sozialen Netzwerken, füg sie in eine Präsentation ein oder schick sie dorthin, wo keine PDFs angenommen werden. Wenn du ein PDF in JPG umwandelst, wird jede Seite zu einem Bild."
+    suffix: bilder
+    runLabel: Umwandeln und herunterladen
+    stepsTitle: So wandelst du ein PDF in JPG um
+    steps:
+      - h: PDF öffnen
+        p: "Zieh es auf die Seite."
+      - h: Format und Qualität wählen
+        p: "JPG für Fotos und kleine Dateien, PNG für scharfen Text und Zeichnungen. 150 dpi passen für den Bildschirm, 300 dpi für den Druck."
+      - h: Herunterladen
+        p: "Eine Seite ergibt ein Bild; mehrere Seiten werden in eine ZIP-Datei gepackt."
+    body: |
+      ## JPG oder PNG?
+
+      **JPG** ergibt kleine Dateien und wird überall akzeptiert; für Seiten mit Fotos ist es die richtige Wahl. **PNG** ist verlustfrei: Text und Linien bleiben gestochen scharf, dafür werden die Dateien größer. Brauchst du nur eine Seite, kannst du sie vorher [aus dem PDF extrahieren](/de/pdf-seiten-extrahieren/).
+
+      ## Welche Qualität?
+
+      | Einstellung | Einsatz |
+      |---|---|
+      | 96 dpi | Bildschirm, Nachrichten, Vorschauen |
+      | 150 dpi | Allgemeiner Gebrauch, Präsentationen |
+      | 300 dpi | Druck, Archivierung |
+
+      ## Auf deinem Rechner umgewandelt
+
+      Die Seiten werden von derselben Engine dargestellt, die viele PDF-Reader nutzen, direkt in deinem Browser. Dein Dokument wird nirgendwohin geschickt. Für den umgekehrten Weg gibt es [JPG in PDF umwandeln](/de/jpg-in-pdf/), und ist dein PDF nur zu groß zum Versenden, reicht es oft, das [PDF zu komprimieren](/de/pdf-komprimieren/).
+    faq:
+      - q: Wie wandle ich nur eine Seite um?
+        a: "Nutz Seiten extrahieren, um nur die gewünschte Seite zu behalten, und wandle dann diese Datei um. Eine einzelne Seite wird als einzelnes Bild heruntergeladen."
+      - q: Kann ich Bilder wieder in ein PDF umwandeln?
+        a: "Ja, mit JPG in PDF."
+      - q: Ist der Text in den Bildern markierbar?
+        a: "Nein. Ein Bild ist eine Aufnahme der Seite; behalte das PDF, wenn du markierbaren Text brauchst."
+
+  jpg_to_pdf:
+    slug: jpg-in-pdf
+    nav: JPG in PDF
+    card: Fotos und Scans zu einem PDF zusammenfassen, in der Reihenfolge, die du willst.
+    title: "JPG in PDF umwandeln online: kostenlos und privat"
+    description: "JPG in PDF umwandeln: JPG, PNG und andere Bilder in ein einziges PDF packen. Per Drag & Drop sortieren, Seitengröße und Rand wählen. Kostenlos, ohne Upload."
+    h1: 'Bilder in <span class="hl">ein PDF</span> umwandeln'
+    h1_plain: JPG in PDF umwandeln
+    lede: "Fotos von Belegen, gescannte Seiten, Screenshots: Zieh sie hinein, bring sie in die richtige Reihenfolge und wandle die JPG in ein PDF um, das du direkt verschicken kannst."
+    suffix: bilder
+    hint: "Zieh die Vorschaubilder, um die Reihenfolge zu ändern. ✕ entfernt ein Bild."
+    runLabel: PDF erstellen
+    stepsTitle: So wandelst du JPG in PDF um
+    steps:
+      - h: Bilder hineinziehen
+        p: "JPG, PNG und andere gängige Formate. Weitere fügst du mit <b>Bilder hinzufügen</b> hinzu."
+      - h: Sortieren und einrichten
+        p: "Zieh die Bilder in die richtige Reihenfolge. Wähl die Seitengröße (wie das Bild, A4 oder Letter) und den Rand."
+      - h: PDF erstellen
+        p: "Ein Bild pro Seite, in deiner Reihenfolge, als eine Datei heruntergeladen."
+    body: |
+      ## Welche Seitengröße wählen?
+
+      **Wie das Bild** erzeugt Seiten, die genau zu jedem Bild passen, ideal für Screenshots und Fotos. **A4** oder **Letter** setzt jedes Bild auf eine Standardseite, zentriert und passend skaliert. Das ist besser für Dokumente, die du druckst oder an eine Behörde schickst. Bilder im Querformat bekommen automatisch Seiten im Querformat. Liegt eine Seite trotzdem falsch, kannst du sie danach [im PDF drehen](/de/pdf-drehen/).
+
+      ## Unterstützte Formate
+
+      JPG und PNG werden unverändert übernommen, ohne neue Komprimierung. Andere Formate, die dein Browser öffnen kann (GIF, BMP, WebP und auf manchen Geräten HEIC), werden zuerst umgewandelt. Handyfotos sind oft groß; um das Ergebnis zu verkleinern, kannst du das [PDF komprimieren](/de/pdf-komprimieren/).
+
+      ## Privat durch Technik
+
+      Belege, Ausweise und Kontoauszüge sind typische Dinge, die Leute in PDFs verwandeln. Hier bleiben die Bilder auf deinem Gerät. Willst du sie an ein bestehendes Dokument anhängen, kannst du danach die Dateien [PDF zusammenfügen](/de/pdf-zusammenfuegen/).
+    faq:
+      - q: Wird die Bildqualität verringert?
+        a: "JPG- und PNG-Bilder werden unverändert eingebettet, ohne neue Komprimierung. Ist die Datei zu schwer, nutz danach PDF komprimieren."
+      - q: Wie viele Bilder kann ich hinzufügen?
+        a: "Es gibt kein festes Limit; sehr große Fotos brauchen mehr Arbeitsspeicher."
+      - q: Kann ich Fotos und ein vorhandenes PDF kombinieren?
+        a: "Erstell hier ein PDF aus den Fotos und nutz dann PDF zusammenfügen, um es mit deinem anderen Dokument zu kombinieren."
+
+  protect:
+    slug: pdf-passwort-schuetzen
+    nav: PDF schützen
+    card: Ein PDF mit Passwort und AES-256-Verschlüsselung sperren.
+    title: "PDF mit Passwort schützen online: AES-256, kostenlos"
+    description: "PDF mit Passwort schützen: AES-256-Verschlüsselung und erlaubte Aktionen wählen (Drucken, Kopieren, Bearbeiten). Im Browser, Datei und Passwort bleiben bei dir."
+    h1: 'PDF mit <span class="hl">Passwort</span> schützen'
+    h1_plain: PDF mit Passwort schützen
+    lede: "Verschlüssel ein Dokument, bevor du es per E-Mail verschickst oder in der Cloud ablegst. Wenn du ein PDF mit Passwort schützt, kann es nur öffnen, wer das Passwort kennt."
+    suffix: geschuetzt
+    runLabel: Schützen und herunterladen
+    stepsTitle: So schützt du ein PDF mit einem Passwort
+    steps:
+      - h: PDF öffnen
+        p: "Zieh es auf die Seite."
+      - h: Passwort wählen
+        p: "Gib es zweimal ein. Leg fest, ob Drucken, Kopieren oder Bearbeiten erlaubt sind, sobald die Datei geöffnet ist."
+      - h: Herunterladen
+        p: "Das PDF wird mit AES-256 verschlüsselt, der stärksten Standardverschlüsselung für PDFs."
+    body: |
+      ## Starke Verschlüsselung, lokal erledigt
+
+      Das PDF wird mit AES-256 verschlüsselt. Ohne das Passwort lässt sich sein Inhalt nicht lesen. Weil die Verschlüsselung in deinem Browser passiert, wird weder das Dokument noch das Passwort jemals an einen Server geschickt. Die Dokumenteigenschaften wie Autor oder Titel kannst du vorher mit [PDF Metadaten entfernen](/de/pdf-metadaten-entfernen/) bereinigen.
+
+      ## Ein gutes Passwort wählen
+
+      Nimm mindestens 12 Zeichen, am besten ein paar Wörter, die nichts miteinander zu tun haben. Schick das Passwort auf einem anderen Weg als die Datei: Wenn du das PDF per E-Mail verschickst, gib das Passwort per Telefon oder SMS weiter.
+
+      ## Berechtigungen
+
+      Du kannst außerdem Drucken, Kopieren und Bearbeiten für alle einschränken, die die Datei öffnen. Gängige Reader halten sich an diese Einschränkungen, für sich allein sind sie aber kein starker Schutz; was den Inhalt wirklich privat hält, ist das Passwort. Damit ausgefüllte Formularfelder nicht mehr änderbar sind, kannst du das [PDF flatten](/de/pdf-flatten/), bevor du es verschlüsselst. Brauchst du den Schutz später nicht mehr, kannst du das [PDF Passwort entfernen](/de/pdf-passwort-entfernen/).
+    faq:
+      - q: Was, wenn ich das Passwort vergesse?
+        a: "Es lässt sich nicht wiederherstellen, weder von uns noch von sonst jemandem: Wir bekommen es nie zu sehen. Bewahr eine Kopie der ungeschützten Datei an einem sicheren Ort auf."
+      - q: Mit welchen Readern lässt sich die geschützte Datei öffnen?
+        a: "Alle aktuellen PDF-Reader (Adobe Acrobat Reader, Browser, Apple Vorschau, mobile Apps) unterstützen AES-256."
+      - q: Kann ich das Passwort später wieder entfernen?
+        a: "Ja, mit PDF entsperren, solange du das Passwort kennst."
+
+  unlock:
+    slug: pdf-passwort-entfernen
+    nav: PDF entsperren
+    card: Das Passwort oder die Druck- und Kopiersperre aus deinem eigenen PDF entfernen.
+    title: "PDF Passwort entfernen online: Sperren aufheben"
+    description: "PDF Passwort entfernen bei einer Datei, die du öffnen kannst, oder Druck- und Kopiersperren aufheben. Im Browser, ohne Upload. Nur für deine eigenen Dokumente."
+    h1: 'PDF Passwort entfernen, <span class="hl">bei deinen eigenen Dateien</span>'
+    h1_plain: PDF Passwort entfernen
+    lede: "Keine Lust mehr, bei deinem eigenen Kontoauszug jedes Mal das Passwort einzutippen? Entferne das PDF Passwort einmal. Sperren für Drucken oder Kopieren lassen sich ebenfalls aufheben."
+    suffix: entsperrt
+    runLabel: Entsperren und herunterladen
+    stepsTitle: So entsperrst du ein PDF
+    steps:
+      - h: PDF öffnen
+        p: "Zieh es auf die Seite. Braucht es zum Öffnen ein Passwort, erscheint ein Eingabefeld."
+      - h: Passwort eingeben
+        p: "Gib das Passwort ein, mit dem du die Datei normalerweise öffnest. Dateien, die sich ohne Passwort öffnen, brauchen nichts."
+      - h: Herunterladen
+        p: "Du bekommst dasselbe Dokument, ohne Passwort und ohne Sperren."
+    body: |
+      ## Zwei Arten von PDF-Schutz
+
+      Manche PDFs verlangen ein Passwort zum **Öffnen**; bei Kontoauszügen, Gehaltsabrechnungen und Steuerunterlagen ist das oft so. Andere öffnen sich frei, **schränken** aber ein, was du tun kannst: Drucken, Text kopieren, Formulare ausfüllen. Dieses Werkzeug kümmert sich um beides, vorausgesetzt, du kannst die Datei normal öffnen. Willst du die Datei danach mit einem eigenen Passwort versehen, kannst du das [PDF mit einem Passwort schützen](/de/pdf-passwort-schuetzen/).
+
+      ## Nur für deine eigenen Dokumente
+
+      Um ein PDF Passwort zu entfernen, brauchst du das Passwort der Datei: Das hier ist kein Passwort-Knacker. Nutz es für Dokumente, die dir gehören oder die du ändern darfst, etwa deine eigenen Auszüge oder Dateien, deren Urheber dir das Passwort gegeben hat.
+
+      ## Bleibt auf deinem Rechner
+
+      Dein PDF und sein Passwort werden in deinem Browser verarbeitet und nirgendwohin geschickt. Entsperrte Kontoauszüge lassen sich danach auch [PDF komprimieren](/de/pdf-komprimieren/), was bei verschlüsselten Dateien nicht geht.
+    faq:
+      - q: Könnt ihr ein PDF entsperren, wenn ich das Passwort vergessen habe?
+        a: "Nein. Das Passwort wird gebraucht, um die Datei zu entschlüsseln; wir versuchen nicht, es zu erraten oder zu knacken."
+      - q: Wird der Inhalt verändert?
+        a: "Nein. Seiten, Text, Bilder und Links bleiben gleich; nur die Verschlüsselung und die Sperren werden entfernt."
+      - q: Kann ich es wieder mit einem anderen Passwort schützen?
+        a: "Ja, mit PDF schützen."
+
+  batch:
+    slug: pdf-stapel-anonymisieren
+    nav: Stapel-Anonymisierung
+    card: "Pro: Dutzende PDFs auf einmal anonymisieren, mit CSV-Bericht."
+    title: "PDFs im Stapel anonymisieren: viele Dokumente auf einmal schwärzen"
+    description: "Mehrere PDFs auf einmal anonymisieren: E-Mails, Telefonnummern, IBANs, Namen, Adressen und deine eigenen Begriffslisten, in jeder Datei geschwärzt. ZIP und CSV-Bericht. Lokal, Pro."
+    h1: '<span class="hl">Viele PDFs</span> auf einmal anonymisieren'
+    h1_plain: PDFs im Stapel anonymisieren
+    lede: "Zieh einen Ordner voller Dokumente hierher, wähl aus, was verschwinden muss, und erhalte alle Dateien geschwärzt in einer ZIP-Datei, mit einem CSV-Bericht für deine Unterlagen. Weiterhin 100 % lokal."
+    suffix: anonymisiert
+    runLabel: Alle anonymisieren
+    stepsTitle: So funktioniert die Stapel-Anonymisierung
+    steps:
+      - h: Zieh deine PDFs hierher
+        p: "Wähl so viele Dateien aus, wie du brauchst. Sie werden nacheinander auf deinem Rechner verarbeitet."
+      - h: Wähl aus, was geschwärzt wird
+        p: "Setz die Haken bei den Kategorien (E-Mails, Telefonnummern, IBANs, Namen, Adressen…) und ergänze deine eigenen Begriffe: Kundennamen, Aktenzeichen, interne Codes."
+      - h: Lade die ZIP-Datei herunter
+        p: "Jede Datei wird geschwärzt und von Metadaten bereinigt. Ein CSV-Bericht listet für jede Datei und Seite auf, wie viele Elemente in jeder Kategorie entfernt wurden."
+    body: |
+      ## Gemacht für wiederkehrende Arbeit
+
+      DSGVO-Auskunftsersuchen beantworten, Akten vorbereiten, Entscheidungen veröffentlichen, Personalunterlagen an einen Prüfer weitergeben: Wenn dieselben Arten von Daten aus vielen Dokumenten verschwinden müssen, erledigt der Stapelmodus in einem Durchgang, was sonst einen ganzen Nachmittag dauern würde.
+
+      ## Was erkannt wird
+
+      Alles, was der [kostenlose Anonymisierer](/de/pdf-anonymisieren/) findet (E-Mails, Telefonnummern, IBANs, Karten, Sozialversicherungsnummern, IP-Adressen, Namen nach einer Anrede), dazu die Pro-Erkennung: Namen ohne Anrede, Postanschriften, Geburtsdaten, Kfz-Kennzeichen und USt-IdNr. Deine Begriffslisten werden auf jede Datei angewendet, unabhängig von Groß- und Kleinschreibung und Akzenten.
+
+      ## Prüfen, bevor du teilst
+
+      Die automatische Erkennung ist nicht vollständig. Der CSV-Bericht hilft dir, Dateien zu finden, in denen nichts oder sehr wenig gefunden wurde und die einen genaueren Blick verdienen. Text in gescannten Seiten wird nicht analysiert. Autor, Titel und Software in den Dokumenteigenschaften kannst du für eine einzelne Datei auch gezielt mit [PDF Metadaten entfernen](/de/pdf-metadaten-entfernen/) bereinigen.
+    faq:
+      - q: Ist der Stapelmodus im Pro-Tarif enthalten?
+        a: "Ja, im 24-Stunden-Pass, im Pro- und im Team-Tarif."
+      - q: Wie viele Dateien kann ich auf einmal verarbeiten?
+        a: "Es gibt kein festes Limit. Die Dateien werden einzeln verarbeitet, die Grenze sind also der Arbeitsspeicher deines Rechners und deine Geduld: Hunderte gewöhnliche Dokumente sind kein Problem."
+      - q: Werden meine Dateien für die Stapelverarbeitung hochgeladen?
+        a: "Nein. Wie jedes pdfanonym-Werkzeug läuft der Stapelmodus komplett in deinem Browser."
+
+  pricing:
+    slug: preise
+    nav: Preise
+    title: "pdfanonym Pro: Preise für Stapel-Anonymisierung und Berichte"
+    description: "Die kostenlosen Werkzeuge bleiben kostenlos. Pro bietet Stapel-Anonymisierung, erweiterte Erkennung (Namen, Adressen), gespeicherte Begriffslisten und Schwärzungsberichte. Ab 3 € für 24 Stunden."
+    h1: 'Mehr können mit <span class="hl">pdfanonym Pro</span>'
+    lede: "Jedes Werkzeug auf der Website bleibt für alle kostenlos. Pro richtet sich an Profis, die beruflich Dokumente anonymisieren: Anwälte, Datenschutzbeauftragte, Personalabteilungen, Kanzleien und Behörden."
+    billing: Abrechnungszeitraum
+    monthly: Monatlich
+    yearly: Jährlich
+    save: −32 %
+    popular: Am beliebtesten
+    per_month: "/ Monat zzgl. MwSt."
+    per_year: "/ Jahr zzgl. MwSt."
+    per_user_month: "/ Nutzer / Monat zzgl. MwSt."
+    free_h: Kostenlos
+    free_p: Für gelegentlichen Bedarf.
+    free_f:
+      - Alle 20 Werkzeuge, ohne Limit
+      - Echtes Schwärzen, Bereinigung der Metadaten
+      - Erkennung von E-Mails, Telefonnummern, IBANs, Karten
+      - Dateien verlassen nie dein Gerät
+    free_cta: Kostenlose Werkzeuge nutzen
+    pass_h: 24-Stunden-Pass
+    pass_unit: "einmalig, zzgl. MwSt."
+    pass_p: Für eine einzelne Datei oder Anfrage.
+    pass_f:
+      - Alle Pro-Funktionen für 24 Stunden
+      - Kein Abo, nichts zu kündigen
+      - Rechnung mit deiner USt-IdNr.
+    pass_cta: 24-Stunden-Pass kaufen
+    pro_h: Pro
+    pro_p: Für Selbstständige und Freiberufler.
+    pro_f:
+      - Stapel-Anonymisierung vieler PDFs
+      - "Erweiterte Erkennung: Namen, Adressen, Geburtsdaten, Kennzeichen, USt-IdNr."
+      - Gespeicherte Begriffslisten
+      - Schwärzungsberichte (PDF und CSV)
+      - Jederzeit kündbar
+    pro_cta: Pro holen
+    team_h: Team
+    team_p: Für Kanzleien und Abteilungen.
+    team_f:
+      - Alles aus Pro, pro Nutzer
+      - Eine Rechnung für das ganze Team
+      - Nutzer jederzeit hinzufügen oder entfernen
+    seats: Nutzer
+    team_cta: Team holen
+    consent: "Ich kaufe für meine berufliche Tätigkeit (Unternehmen, Selbstständigkeit, öffentliche Stelle). Ich akzeptiere die <a href=\"{terms}\">Nutzungs- und Verkaufsbedingungen</a> und verlange sofortigen Zugang zu den Pro-Funktionen."
+    vat_note: "Alle Preise zzgl. MwSt. Die Pro-Tarife sind Unternehmern vorbehalten. Die MwSt. wird je nach deinem Land berechnet; Unternehmen in der EU mit gültiger USt-IdNr. erhalten eine Rechnung ohne MwSt. (Reverse-Charge-Verfahren). Sichere Zahlung über Stripe; deine Kartendaten sehen wir nie."
+    body: |
+      ## So funktioniert die Lizenz
+
+      Nach der Zahlung wird ein Lizenzschlüssel in deinem Browser gespeichert. Er wird auf deinem Gerät geprüft, ohne Kontakt zu unseren Servern. Die Pro-Funktionen funktionieren deshalb offline, und deine Dokumente verlassen deinen Rechner weiterhin nie. Um Pro auf einem anderen Gerät zu nutzen oder eine Team-Lizenz mit einem Kollegen zu teilen, kopier den Schlüssel von deiner [Kontoseite](/de/konto/).
+
+      ## Warum überhaupt kostenpflichtige Funktionen?
+
+      Die kostenlosen Werkzeuge kosten uns im Betrieb sehr wenig, deshalb bleiben sie kostenlos. Pro finanziert die Entwicklung der Funktionen, die Profis sich wünschen, und hält die Website frei von Werbung.
+    faq:
+      - q: "Können Privatpersonen Pro kaufen?"
+        a: "Nein. Die kostenpflichtigen Tarife sind Unternehmern vorbehalten, die für ihre berufliche Tätigkeit kaufen. Alle kostenlosen Werkzeuge bleiben für alle ohne Konto nutzbar."
+      - q: Kann ich mein Abo kündigen?
+        a: "Ja, jederzeit über deine Kontoseite. Pro bleibt dir bis zum Ende des bereits bezahlten Zeitraums erhalten; für diesen Zeitraum gibt es keine automatische Erstattung."
+      - q: Bekomme ich eine Rechnung?
+        a: "Ja. Stripe schickt dir eine Quittung und eine Rechnung per E-Mail. Gib beim Bezahlen deinen Firmennamen und deine USt-IdNr. an, damit sie auf der Rechnung stehen."
+      - q: Was passiert, wenn der 24-Stunden-Pass abläuft?
+        a: "Die Pro-Funktionen werden wieder gesperrt. Bereits bearbeitete Dateien bleiben, wie sie sind. Nichts verlängert sich automatisch."
+      - q: Sind meine Zahlungsdaten sicher?
+        a: "Die Zahlung wird von Stripe auf einer eigenen sicheren Seite abgewickelt. Deine Kartendaten erhalten wir nie."
+
+  account:
+    slug: konto
+    nav: Mein Konto
+    noindex: true
+    title: "Mein Pro-Konto · pdfanonym"
+    description: "Verwalte deine pdfanonym-Pro-Lizenz: Status, Abo, Lizenzschlüssel."
+    h1: Mein Pro-Konto
+    lede: "Deine Lizenz ist nur in diesem Browser gespeichert. Kein Konto, kein Passwort."
+    loading: Deine Lizenz wird geprüft…
+    manage: Abo und Rechnungen verwalten
+    key_h: Lizenzschlüssel
+    key_p: "Kopier diesen Schlüssel, um Pro auf einem anderen Gerät oder Browser zu nutzen (oder gib ihn im Team-Tarif an einen Kollegen weiter). Füg hier einen Schlüssel ein, um ihn zu aktivieren."
+    key_ph: Lizenzschlüssel einfügen
+    copy: Schlüssel kopieren
+    activate: Diesen Schlüssel aktivieren
+    remove: Von diesem Gerät entfernen
+    body: |
+      Fragen zu einer Zahlung oder Rechnung? Schreib an contact@pdfanonym.com, mit der E-Mail-Adresse, die du beim Bezahlen verwendet hast.
+
+  guide:
+    slug: pdf-richtig-schwaerzen
+    nav: PDF richtig schwärzen
+    title: "PDF richtig schwärzen (und prüfen, ob es geklappt hat)"
+    description: "Leitfaden zum PDF schwärzen: warum schwarze Kästen versagen, wie du kostenlos schwärzt, was bei Scans und Metadaten gilt, plus fünf Tests vor dem Versand."
+    h1: PDF richtig schwärzen
+    lede: "Ein PDF zu schwärzen dauert eine Minute. Es falsch zu schwärzen dauert genauso lange, und der Fehler fällt erst auf, wenn jemand anderes den Text findet. So machst du es richtig."
+    cta_tool: redact
+    cta: Kostenloses Schwärzungs-Werkzeug öffnen
+    body: |
+      ## Die Kurzfassung
+
+      Nimm ein Werkzeug, das den Text **entfernt**, nicht eines, das ihn nur abdeckt. Öffne dein PDF im [Schwärzungs-Werkzeug von pdfanonym](/de/pdf-schwaerzen/), markier, was weg muss (oder such danach), drück **Anwenden**, lade die Datei herunter und prüf das Ergebnis: Versuch die geschwärzten Wörter zu kopieren und zu suchen. Kommt nichts zurück, hat die Schwärzung funktioniert.
+
+      Der Rest dieses Leitfadens erklärt, warum dieser Test so wichtig ist und wie du mit den Fällen umgehst, an denen viele scheitern.
+
+      ## Warum schwarze Rechtecke versagen
+
+      Eine PDF-Seite besteht aus Anweisungen: „Schreib diese Zeichen hierhin“, „zeichne diese Form dorthin“. Wenn du ein schwarzes Rechteck über einen Namen legst, kommt einfach eine Anweisung obendrauf. Die Anweisung, die den Namen schreibt, steckt weiterhin in der Datei.
+
+      Auf dem Bildschirm und auf Papier sieht das perfekt aus. Doch markier den Bereich und kopier ihn, und der Name landet in deiner Zwischenablage. Durchsuch das Dokument, und der Reader springt direkt zu ihm. Programme zur Textextraktion, Suchmaschinen und KI-Assistenten lesen die versteckten Wörter genauso leicht wie die sichtbaren.
+
+      Das ist kein theoretisches Risiko. 2019 enthielt ein Schriftsatz der Anwälte von Paul Manafort in den USA „geschwärzte“ Passagen, die Journalisten einfach per Kopieren und Einfügen sichtbar machten. Ähnliche Pannen haben in vielen Ländern Sicherheitshandbücher, Verträge und personenbezogene Daten offengelegt.
+
+      ## Schritt für Schritt: ein Text-PDF schwärzen
+
+      1. **Behalte das Original.** Schwärzen ist absichtlich endgültig. Arbeite mit einer Kopie.
+      2. **Öffne die Datei** in einem echten Schwärzungs-Werkzeug. Bei pdfanonym ziehst du sie auf [die Seite zum Schwärzen](/de/pdf-schwaerzen/), sie wird lokal geöffnet.
+      3. **Finde jedes Vorkommen.** Gib einen Namen, ein Aktenzeichen oder eine Nummer ins Suchfeld ein und drück *Alle markieren*. E-Mails, Telefonnummern und IBANs findet die automatische Erkennung, wenn du dein [PDF anonymisieren](/de/pdf-anonymisieren/) lässt. Die Suche ignoriert Groß- und Kleinschreibung und Akzente, „Müller“ findet also auch „MULLER“. Wiederhole das für jede Angabe.
+      4. **Markier den Rest von Hand.** Zieh über Passagen, klick auf einzelne Wörter, doppelklick auf eine Zeile, um sie ganz zu erfassen. Stehen Angaben in Formularfeldern, solltest du das [PDF vorher flatten](/de/pdf-flatten/).
+      5. **Anwenden.** Der Text unter jeder Markierung wird gelöscht und durch einen schwarzen Balken ersetzt (oder durch eine weiße Fläche, wenn dir das lieber ist).
+      6. **Entferne auch die Metadaten.** Lass die Option angehakt: In den Feldern Autor, Titel und Software stehen oft genau die Namen, die du gerade geschwärzt hast. Für Kommentare und Anhänge gibt es das eigene Werkzeug [PDF Metadaten entfernen](/de/pdf-metadaten-entfernen/).
+      7. **Herunterladen und prüfen** (siehe unten).
+
+      ## Ein gescanntes PDF schwärzen
+
+      Ein Scan ist ein Foto einer Seite. Da gibt es keinen Text zu löschen, nur Pixel. Das hat zwei Folgen:
+
+      - Die Suche nach einem Namen findet nichts, du musst jedes Vorkommen mit dem Auge aufspüren.
+      - Die Schwärzung muss das Bild selbst verändern. In pdfanonym wechselst du in den Modus **Bereich**, setzt in den Optionen den Haken bei **Bilder** und ziehst über jede Passage ein Rechteck: Die Pixel darin werden aus dem Bild gelöscht.
+
+      Manche Scans enthalten außerdem eine unsichtbare OCR-Textebene, die der Scanner hinzufügt, damit das Dokument durchsuchbar ist. Dann muss auch diese versteckte Textebene weg. Der Modus „Bereich“ entfernt unter dem Rechteck sowohl den Text als auch das Bild.
+
+      ## Fünf Tests vor dem Versand
+
+      1. **Kopiertest.** Markier den geschwärzten Bereich, kopier ihn und füg ihn in einen einfachen Texteditor ein. Es darf nichts erscheinen.
+      2. **Suchtest.** Durchsuch das PDF nach jedem geschwärzten Wort. Null Treffer.
+      3. **Eigenschaftentest.** Öffne in deinem Reader Datei, dann Eigenschaften. Autor, Titel und Betreff dürfen nichts verraten.
+      4. **Kommentartest.** Öffne die Kommentarleiste: Anmerkungen aus der Überarbeitung können genau die Passage zitieren, die du entfernt hast.
+      5. **Anhangtest.** Achte auf ein Büroklammer-Symbol oder eine Anhangleiste. Eine eingebettete Datei kann das ungeschwärzte Original enthalten.
+
+      ## Schwärzen und DSGVO
+
+      Gibst du ein Dokument auf ein Auskunftsersuchen nach Art. 15 DSGVO heraus, müssen Daten über andere Personen in der Regel entfernt werden, oder die Herausgabe muss begründet sein. Schwärzen ist der übliche Weg dafür. Machst du das über einen Dienst mit Upload, schickst du die Daten dieser Personen an einen weiteren Auftragsverarbeiter, über den du dann Rechenschaft ablegen musst. Ein Werkzeug, das lokal arbeitet, erspart dir diese Frage ganz. Bei vielen Dokumenten auf einmal kannst du die Dateien [PDF stapelweise anonymisieren](/de/pdf-stapel-anonymisieren/).
+    faq:
+      - q: Lässt sich eine Schwärzung im PDF wieder aufheben?
+        a: "Wenn der Text wirklich entfernt wurde, nein: Es gibt nichts mehr wiederherzustellen. Wurde er nur von einer Form verdeckt, ja, oft schon mit einfachem Kopieren und Einfügen. Deshalb ist der Kopiertest so wichtig."
+      - q: Kann der Adobe Acrobat Reader kostenlos schwärzen?
+        a: "Der kostenlose Reader bietet keine echte Schwärzung, die ist den kostenpflichtigen Acrobat-Versionen vorbehalten. Ein Rechteck mit den Kommentarwerkzeugen zu zeichnen, schwärzt gar nichts."
+      - q: Kann ich auch am Handy schwärzen?
+        a: "pdfanonym funktioniert in mobilen Browsern: Öffne die Seite zum Schwärzen, wähl das PDF aus deinen Dateien und markier den Text mit dem Finger. Für lange Dokumente ist ein Computer bequemer."
+
+  privacy:
+    slug: datenschutz
+    nav: Datenschutz
+    title: "Datenschutz: Deine Dateien verlassen nie dein Gerät · pdfanonym"
+    description: "pdfanonym verarbeitet PDFs in deinem Browser. Wir erhalten, speichern und sehen deine Dateien nicht, und wir setzen weder Cookies noch Tracker ein."
+    h1: Datenschutz
+    lede: "Kurz gesagt: Wir sehen deine Dateien nie, und wir tracken dich nicht."
+    body: |
+      ## Deine Dokumente
+
+      PDFs, die du auf pdfanonym öffnest, werden **in deinem Browser** verarbeitet, auf deinem eigenen Gerät, von einer PDF-Engine, die mit der Seite geladen wird. Sie werden weder auf unsere Server noch auf die von jemand anderem hochgeladen. Wir haben keine Kopie davon, keine Möglichkeit, sie zu lesen, und nichts zu löschen.
+
+      Du kannst das selbst überprüfen: Öffne die Entwicklertools deines Browsers, wähl den Tab „Netzwerk“ und bearbeite eine Datei. Keine Anfrage überträgt dein Dokument. Die Website sendet außerdem einen Content-Security-Policy-Header, der verhindert, dass die Seite eine Verbindung zu einer anderen Domain aufbaut.
+
+      ## Cookies und Tracking
+
+      pdfanonym setzt **keine Cookies**, verwendet **keine Analyse- oder Werbeskripte** und lädt **keine Ressourcen von Dritten** (Schriften und Skripte kommen von unserer eigenen Domain). Dein Browser speichert eventuell kleine Einstellungen lokal, sie verlassen nie dein Gerät.
+
+      ## Käufe
+
+      Wenn du einen Pro-Tarif kaufst, wird die Zahlung von Stripe abgewickelt. Stripe verarbeitet deine Karte, deine E-Mail-Adresse und deine Rechnungsdaten gemäß seiner eigenen Datenschutzerklärung; deine Kartennummer sehen wir nie. Unser Lizenzdienst erhält nur die Kennung deiner Stripe-Checkout-Sitzung und gibt einen signierten Lizenzschlüssel zurück, der in deinem Browser gespeichert wird. Rechnungsdaten (Name, E-Mail-Adresse, Anschrift, USt-IdNr., Rechnungen) werden von Stripe und METIS so lange aufbewahrt, wie es das Buchführungsrecht verlangt. Deine PDF-Dateien sind daran nie beteiligt.
+
+      ## Server-Logs
+
+      Wie bei jeder Website verarbeitet unser Hoster (Cloudflare) technische Daten, die zur Auslieferung der Seiten nötig sind, etwa deine IP-Adresse und deinen Browsertyp, und bewahrt aus Sicherheitsgründen eventuell kurzlebige Logs auf. Diese Logs enthalten nie deine Dokumente.
+
+      ## Kontakt
+
+      Fragen zum Datenschutz: contact@pdfanonym.com.
+
+  terms:
+    slug: nutzungsbedingungen
+    nav: Nutzungsbedingungen
+    title: "Nutzungsbedingungen · pdfanonym"
+    description: "Nutzungsbedingungen von pdfanonym.com: kostenlose Tools ohne Gewähr, lokale Verarbeitung, deine Verantwortung, rechtmäßige Nutzung und Haftungsbeschränkung."
+    h1: Nutzungsbedingungen
+    lede: "Stand: 9. Oktober 2026. Mit der Nutzung von pdfanonym.com akzeptierst du diese Bedingungen."
+    body: |
+      ## 1. Der Dienst
+
+      pdfanonym.com, herausgegeben von METIS (siehe [Impressum](/de/impressum/)), bietet kostenlose Online-Tools zur Bearbeitung von PDF-Dateien an: Schwärzen, Anonymisieren, Entfernen von Text, Bereinigen von Metadaten, Bearbeiten von Seiten, Umwandeln, Komprimieren, Unterschreiben und Schützen mit Passwort. Ein Konto ist nicht erforderlich.
+
+      ## 2. Verarbeitung auf deinem Gerät
+
+      Die Dateien werden in deinem Webbrowser auf deinem eigenen Gerät verarbeitet. Sie werden nicht an unsere Server gesendet, und wir haben keinen Zugriff darauf. Du bleibst der einzige Inhaber deiner Dokumente und ihres Inhalts. Die Seite [Datenschutz](/de/datenschutz/) erklärt das im Detail.
+
+      ## 3. Bereitstellung ohne Gewähr
+
+      Die Tools werden kostenlos und ohne Gewähr bereitgestellt, ohne jede Garantie für Ergebnisse, Verfügbarkeit oder Eignung für einen bestimmten Zweck. Sie können jederzeit geändert, unterbrochen oder eingestellt werden.
+
+      ## 4. Prüf das Ergebnis, bevor du es weitergibst
+
+      Du bist dafür verantwortlich, jedes Dokument zu prüfen, bevor du es verwendest oder weitergibst. Insbesondere gilt:
+
+      - **Die automatische Erkennung personenbezogener Daten ist nicht vollständig.** Namen ohne Anrede, Postanschriften, handschriftlicher Text, gescannte Seiten und ungewöhnliche Formate werden möglicherweise nicht erkannt. Lies das Dokument und vervollständige die Schwärzung selbst.
+      - **Geschwärzt wird nur, was du markierst.** Informationen können auch in Bildern, Anhängen, Kommentaren oder anderen Kopien der Datei vorkommen. Unser [Leitfaden](/de/pdf-richtig-schwaerzen/) listet die durchzuführenden Prüfungen auf.
+      - **Bewahre deine Originaldateien auf.** Änderungen durch die Tools, etwa Schwärzen, Flatten oder Verschlüsseln, sind bewusst dauerhaft.
+
+      ## 5. Rechtmäßige Nutzung
+
+      Du verpflichtest dich, die Tools nur für Dokumente zu verwenden, die dir gehören oder die du ändern darfst, und dabei die Gesetze einzuhalten. Insbesondere darfst du das Tool zum Entsperren nicht verwenden, um Schutzmaßnahmen von Dokumenten zu entfernen, die du nicht ändern darfst, und kein Tool verwenden, um Rechte Dritter zu verletzen, einschließlich Urheberrecht und Privatsphäre.
+
+      ## 6. Elektronische Unterschrift
+
+      Eine mit dem Unterschriften-Tool gezeichnete Unterschrift ist eine einfache elektronische Signatur im Sinne der europäischen eIDAS-Verordnung. Sie ersetzt keine fortgeschrittene oder qualifizierte elektronische Signatur, wo eine solche vorgeschrieben ist.
+
+      ## 7. Haftung
+
+      Soweit gesetzlich zulässig, haftet METIS nicht für Schäden, die aus der Nutzung der Tools oder der Unmöglichkeit ihrer Nutzung entstehen, einschließlich der Offenlegung nicht geschwärzter Informationen, des Verlusts oder der Veränderung von Dateien oder einer Entscheidung, die auf Grundlage eines bearbeiteten Dokuments getroffen wurde. Nichts in diesen Bedingungen beschränkt eine Haftung, die nach geltendem Recht nicht beschränkt werden kann, oder die Rechte, die Verbrauchern nach dem zwingenden Recht ihres Wohnsitzlandes zustehen.
+
+      ## 8. Open-Source-Software
+
+      Der Quellcode der Website ist unter der GNU Affero General Public License v3 veröffentlicht (siehe [Quellcode](/de/quellcode/)). Diese Lizenz regelt deine Rechte am Code. Der Name und das Logo von pdfanonym fallen nicht darunter.
+
+      ## 9. Kostenpflichtige Tarife (nur für Unternehmer)
+
+      Die kostenpflichtigen Tarife (24-Stunden-Pass, Pro, Team) werden von METIS **ausschließlich an Unternehmer** verkauft: Unternehmen, Selbstständige und öffentliche Stellen, die in Ausübung ihrer gewerblichen oder selbstständigen beruflichen Tätigkeit kaufen. Verbrauchern werden sie nicht angeboten. Mit deiner Bestellung bestätigst du, dass du als Unternehmer handelst.
+
+      - **Preise** werden auf der [Preisseite](/de/preise/) zzgl. MwSt. angegeben. Die MwSt. wird nach den für dein Land geltenden Regeln berechnet; Unternehmen in der EU mit gültiger USt-IdNr. erhalten eine Rechnung im Reverse-Charge-Verfahren. Die Zahlung wird von Stripe abgewickelt.
+      - **Der Zugang** beginnt unmittelbar nach der Zahlung.
+      - **Abos** (Pro, Team) verlängern sich automatisch um denselben Zeitraum, bis sie gekündigt werden. Du kannst jederzeit über deine Kontoseite kündigen; die Kündigung wird zum Ende des bereits bezahlten Zeitraums wirksam, der nicht erstattet wird.
+      - **Der 24-Stunden-Pass** gibt ab der Zahlung 24 Stunden lang Zugang zu den Pro-Funktionen und verlängert sich nicht.
+      - **Lizenzen** sind bei Pro persönlich und bei Team pro Nutzer. Der Lizenzschlüssel wird in deinem Browser gespeichert; bewahre eine Kopie auf, um ihn auf einem anderen Gerät zu nutzen.
+      - **Fragen und Beschwerden**: contact@pdfanonym.com.
+
+      ## 10. Änderungen und anwendbares Recht
+
+      Diese Bedingungen können aktualisiert werden; das Datum oben auf der Seite zeigt die aktuelle Fassung. Es gilt französisches Recht. Kontakt: contact@pdfanonym.com.
+
+  source:
+    slug: quellcode
+    nav: Quellcode
+    title: "Quellcode und Lizenz (AGPL) · pdfanonym"
+    description: "pdfanonym ist Open Source unter der GNU AGPL v3. Lade den vollständigen Quellcode der Website und ihrer PDF-Engine herunter."
+    h1: Quellcode
+    lede: "pdfanonym ist Open Source. Du kannst genau nachlesen, was es mit deinen Dateien macht, und deine eigene Kopie betreiben."
+    body: |
+      ## Lizenz
+
+      Die Website steht unter der **GNU Affero General Public License, Version 3** (AGPL-3.0). Sie nutzt [MuPDF](https://mupdf.com) von Artifex Software, unter derselben Lizenz verwendet und zu WebAssembly kompiliert.
+
+      ## Download
+
+      - [Vollständiger Quellcode dieser Website (zip)](/source/pdfanonym-source.zip): Templates, Texte, Skripte, Styles und Build-Skript.
+      - Die PDF-Engine ist das offizielle Paket [mupdf.js](https://www.npmjs.com/package/mupdf), unverändert im Archiv enthalten (Ordner `src/assets/mupdf`). Den Quellcode davon veröffentlicht Artifex unter [github.com/ArtifexSoftware/mupdf.js](https://github.com/ArtifexSoftware/mupdf.js).
+
+      ## Selbst betreiben
+
+      Entpack das Archiv und stell den Ordner `src` mit einem beliebigen statischen Webserver bereit, oder führ `python3 build.py` aus, um die Seiten neu zu erzeugen. Keine Datenbank, kein Backend.
+
+  legal:
+    slug: impressum
+    nav: Impressum
+    title: "Impressum · pdfanonym"
+    description: "Angaben zum Herausgeber und zum Hosting von pdfanonym.com."
+    h1: Impressum
+    body: |
+      ## Herausgeber
+
+      pdfanonym.com wird herausgegeben von **METIS**, einer vereinfachten Aktiengesellschaft mit einem einzigen Gesellschafter (SASU, französisches Recht) mit einem Kapital von 100 €, eingetragen im Handels- und Gesellschaftsregister (RCS) Marseille unter der Nummer 991 555 574.
+
+      - Sitz: 120 Chemin de Ceinture, 13400 Aubagne, Frankreich
+      - SIRET: 991 555 574 00011
+      - USt-IdNr.: FR35991555574
+      - Verantwortlich für die Veröffentlichung: Julien Sikoutris
+      - Kontakt: contact@pdfanonym.com
+
+      ## Hosting
+
+      Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA.
+
+      ## Haftung
+
+      pdfanonym wird kostenlos und ohne Gewähr bereitgestellt. Prüf ein geschwärztes Dokument immer, bevor du es weitergibst, der [Leitfaden](/de/pdf-richtig-schwaerzen/) erklärt, wie das geht. Für die Dokumente, die du bearbeitest und teilst, bist du selbst verantwortlich.

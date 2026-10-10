@@ -1,0 +1,28 @@
+<section class="app notranslate" translate="no" data-tool="batch" data-suffix="{{ P.suffix }}" data-pricing="{{ L.urls.pricing or '#' }}" aria-label="{{ P.nav }}">
+  {% set dropTitle = L.ui.dropTitleMany %}
+  {% include "drop.html" %}
+  <div class="work">
+    <div class="toolbar">
+      <div class="group"><button class="btn" type="button" data-el="close">← {{ L.ui.newFile }}</button><span class="filename" data-el="filename"></span></div>
+      <button class="btn" type="button" data-el="add">+ {{ L.ui.addPdf }}</button><input type="file" accept="application/pdf,.pdf" multiple hidden data-el="addInput">
+      <div class="grow"></div>
+      <button class="btn primary" type="button" data-el="run">{{ P.runLabel }}</button>
+    </div>
+    <div class="process">
+      <div class="opts">
+        <fieldset><legend>{{ L.ui.piiTitle }}</legend>
+          <div class="cats">{% for k in ["email", "phone", "iban", "card", "nir", "ip", "name", "fullname", "address", "birth", "plate", "vat", "date"] %}
+            <label class="opt"><input type="checkbox" data-cat="{{ k }}"{% if k != "date" %} checked{% endif %}> <span>{{ L.js["pii." ~ k] }}</span></label>{% endfor %}
+          </div>
+        </fieldset>
+        <label class="field"><span>{{ L.ui.termsTitle }}</span><textarea data-el="terms" rows="4" placeholder="{{ L.ui.termsPh }}"></textarea></label>
+        <label class="opt"><input type="checkbox" data-el="optBlack" checked> <span>{{ L.ui.optBlack }}</span></label>
+        <label class="opt"><input type="checkbox" data-el="optMeta" checked> <span>{{ L.ui.optMeta }}</span></label>
+        <p class="pii-warn">{{ L.js["pii.warn"] }}</p>
+      </div>
+      <div><ol class="filelist" data-el="list"></ol></div>
+    </div>
+    <div class="status" role="status" aria-live="polite"></div>
+  </div>
+  <div class="status" role="status" aria-live="polite" data-pre></div>
+</section>

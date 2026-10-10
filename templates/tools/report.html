@@ -1,0 +1,39 @@
+<section class="app notranslate" translate="no" data-tool="{{ tool }}" data-suffix="{{ P.suffix }}" aria-label="{{ P.nav }}">
+  {% include "drop.html" %}
+  <div class="work">
+    <div class="toolbar">
+      <div class="group"><button class="btn" type="button" data-el="close">← {{ L.ui.newFile }}</button><span class="filename" data-el="filename"></span></div>
+    </div>
+    <div class="report">
+      <table><caption class="muted" style="text-align:left;padding-bottom:6px">{{ P.reportCaption }}</caption><tbody data-el="rows"></tbody></table>
+      {% if tool == "metadata" %}
+      <label class="opt"><input type="checkbox" checked disabled> <span>{{ L.ui.optInfo }}</span></label>
+      <label class="opt"><input type="checkbox" data-el="optComments" checked> <span>{{ L.ui.optComments }}</span></label>
+      <label class="opt"><input type="checkbox" data-el="optAttachments" checked> <span>{{ L.ui.optAttachments }}</span></label>
+      <label class="opt"><input type="checkbox" data-el="optJs" checked> <span>{{ L.ui.optJs }}</span></label>
+      {% elif tool == "grayscale" %}
+      <p class="muted small">{{ L.ui.grayNote }}</p>
+      <label class="opt"><input type="checkbox" data-el="optMetaToo"> <span>{{ L.ui.optMeta }}</span></label>
+      {% else %}
+      <label class="opt"><input type="checkbox" data-el="optForms" checked> <span>{{ L.ui.optForms }}</span></label>
+      <label class="opt"><input type="checkbox" data-el="optAnnots" checked> <span>{{ L.ui.optAnnots }}</span></label>
+      <label class="opt"><input type="checkbox" data-el="optMetaToo"> <span>{{ L.ui.optMeta }}</span></label>
+      {% endif %}
+      <div class="actions"><button class="btn primary big" type="button" data-el="run" disabled>{{ P.runLabel }}</button></div>
+      <div class="result" data-el="result" hidden><strong>✓</strong> <span data-el="resultText"></span></div>
+      {% if tool == "grayscale" %}<img class="preview" data-el="preview" alt="" hidden>{% endif %}
+      {% if tool == "metadata" %}
+      <details class="edit" data-el="editBox">
+        <summary>{{ L.ui.editTitle }}</summary>
+        <p class="muted small">{{ L.ui.editHint }}</p>
+        <div class="fields">{% for k in ["Title", "Author", "Subject", "Keywords", "Creator", "Producer"] %}
+          <label><span>{{ L.js["meta." ~ k] }}</span><input type="text" data-field="{{ k }}" autocomplete="off"></label>{% endfor %}
+        </div>
+        <button class="btn dark" type="button" data-el="saveEdits">{{ L.ui.saveEdits }}</button>
+      </details>
+      {% endif %}
+    </div>
+    <div class="status" role="status" aria-live="polite"></div>
+  </div>
+  <div class="status" role="status" aria-live="polite" data-pre></div>
+</section>
