@@ -15,6 +15,7 @@ nav:
   anonymize: Anonymiser un PDF
   merge: Fusionner des PDF
   add_text: Ajouter du texte
+  edit_text: "Modifier le texte"
   sign: Signer un PDF
   watermark: Filigrane
   page_numbers: Numéros de page
@@ -278,6 +279,13 @@ js:
   annot.hintSign: "Cliquez sur une page pour placer votre signature. Glissez pour la déplacer, tirez le coin pour la redimensionner."
   annot.sigReady: Signature prête. Cliquez sur la page à l'endroit où elle doit figurer.
   annot.done: "{n} élément(s) ajouté(s). Fichier téléchargé : {name}"
+  tedit.ready: "Cliquez sur un mot pour le remplacer. Glissez sur plusieurs mots d'une même ligne pour les remplacer ensemble."
+  tedit.noText: "Ce PDF ne contient pas de texte modifiable (document scanné ?). Pour écrire dessus, utilisez Ajouter du texte."
+  tedit.inputLabel: "Nouveau texte"
+  tedit.replaced: "« {a} » remplacé par « {b} »."
+  tedit.erased: "« {a} » effacé."
+  tedit.undone: "Dernière modification annulée."
+  tedit.done: "{n} modification(s). Fichier téléchargé : {name}"
   pii.none: "Aucune donnée personnelle détectée. Les noms sans civilité (Monsieur, Madame…) ne sont pas repérés automatiquement : utilisez la recherche."
   pii.found: "{n} donnée(s) personnelle(s) détectée(s). Décochez ce qui doit rester, puis marquez."
   pii.mark: Marquer la sélection
@@ -964,7 +972,7 @@ pages:
     body: |
       ## Du vrai texte, pas une image
 
-      Quand vous écrivez sur un PDF ici, ce que vous tapez est ajouté à la page comme du vrai texte, dans une police standard (Helvetica). Il reste net à tous les niveaux de zoom, se sélectionne, se retrouve par recherche et s'imprime exactement comme il apparaît à l'écran. Pour remplacer un texte existant, commencez par [effacer du texte dans le PDF](/fr/effacer-texte-pdf/), puis écrivez le nouveau au même endroit.
+      Quand vous écrivez sur un PDF ici, ce que vous tapez est ajouté à la page comme du vrai texte, dans une police standard (Helvetica). Il reste net à tous les niveaux de zoom, se sélectionne, se retrouve par recherche et s'imprime exactement comme il apparaît à l'écran. Pour remplacer un texte déjà présent, [modifiez le texte du PDF](/fr/modifier-texte-pdf/) directement : cliquez sur le mot et tapez le nouveau.
 
       ## Usages courants
 
@@ -979,7 +987,7 @@ pages:
       Le texte est écrit en Helvetica, qui couvre l'alphabet latin avec les accents d'Europe de l'Ouest (é, ü, ñ, ç, ß…). Les caractères hors de cet ensemble, comme le cyrillique ou le chinois, sont remplacés par un point d'interrogation.
     faq:
       - q: Puis-je modifier un texte déjà présent dans le PDF ?
-        a: "Pas avec cet outil : il ajoute du nouveau texte. Pour retirer d'abord un texte existant, utilisez Effacer du texte, puis ajoutez votre nouveau texte ici."
+        a: "Pas avec cet outil : il ajoute du nouveau texte. Pour changer un mot déjà présent, utilisez Modifier le texte : cliquez sur le mot et tapez le nouveau."
       - q: Puis-je écrire sur plusieurs lignes ?
         a: "Oui. Appuyez sur Entrée pendant la saisie pour passer à la ligne."
       - q: Le texte ajouté reste-t-il modifiable ensuite ?
@@ -1550,7 +1558,7 @@ pages:
 
       ## 3. Fourni en l'état
 
-      Les outils sont fournis gratuitement et en l'état, sans garantie de résultat, de disponibilité ni d'adéquation à un usage particulier. Ils peuvent évoluer, être interrompus ou supprimés à tout moment.
+      Les outils gratuits sont fournis en l'état (les formules payantes relèvent de l'article 9), sans garantie de résultat, de disponibilité ni d'adéquation à un usage particulier. Ils peuvent évoluer, être interrompus ou supprimés à tout moment.
 
       ## 4. Vérifiez le résultat avant de le diffuser
 
@@ -1606,6 +1614,7 @@ pages:
       ## Téléchargement
 
       - [Code source complet de ce site (zip)](/source/pdfanonym-source.zip) : modèles, textes, scripts, styles et script de génération.
+      - GitHub : [github.com/Julien361/pdfanonym](https://github.com/Julien361/pdfanonym)
       - Le moteur PDF est le paquet officiel [mupdf.js](https://www.npmjs.com/package/mupdf), inclus sans modification dans l'archive (dossier `src/assets/mupdf`). Son propre code source est publié par Artifex sur [github.com/ArtifexSoftware/mupdf.js](https://github.com/ArtifexSoftware/mupdf.js).
 
       ## L'utiliser chez vous
@@ -1631,8 +1640,67 @@ pages:
 
       ## Hébergeur
 
-      Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, États-Unis.
+      Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, États-Unis. Téléphone : +1 650 319 8930.
 
       ## Responsabilité
 
-      pdfanonym est fourni gratuitement et en l'état. Vérifiez toujours un document caviardé avant de le diffuser ; le [guide](/fr/comment-caviarder-un-pdf/) explique comment. Vous restez responsable des documents que vous traitez et partagez.
+      Les outils gratuits de pdfanonym sont fournis en l'état ; les formules Pro sont régies par l'article 9 des [conditions d'utilisation](/fr/conditions-utilisation/). Vérifiez toujours un document caviardé avant de le diffuser ; le [guide](/fr/comment-caviarder-un-pdf/) explique comment. Vous restez responsable des documents que vous traitez et partagez.
+  edit_text:
+    slug: modifier-texte-pdf
+    nav: Modifier le texte
+    card: Cliquez sur n'importe quel mot du PDF et remplacez-le, dans la même police.
+    title: 'Modifier le texte d''un PDF : cliquer sur un mot et le remplacer'
+    description: 'Modifiez le texte d''un PDF dans le navigateur : cliquez sur un mot, tapez le nouveau, téléchargez. Même place, même taille, même couleur. Sans envoi ni filigrane.'
+    h1: Modifier le texte d'un PDF, <span class="hl">mot par mot</span>
+    h1_plain: Modifier le texte d'un PDF
+    lede: 'Une date, un nom, un montant, une faute de frappe : cliquez sur le mot dans le PDF, tapez le bon, c''est fait. L''ancien texte disparaît vraiment du fichier.'
+    suffix: modifie
+    hint: Cliquez sur un mot, tapez le nouveau texte, Entrée pour valider (Échap pour annuler, Tab pour passer au mot suivant). Laissez vide pour effacer le mot.
+    stepsTitle: Comment modifier le texte d'un PDF
+    steps:
+    - h: Ouvrez votre PDF
+      p: Déposez-le sur la page. Il s'ouvre sur votre ordinateur, rien n'est envoyé.
+    - h: Cliquez sur un mot
+      p: Le mot passe en saisie. Tapez le remplacement et appuyez sur Entrée. Pour remplacer plusieurs mots d'un coup, glissez de l'un à l'autre.
+    - h: Téléchargez
+      p: Chaque changement s'affiche aussitôt tel qu'il sera dans le fichier. Annuler revient en arrière, Télécharger enregistre le PDF modifié.
+    body: '## Le mot est remplacé, pas recouvert
+
+
+      Beaucoup d''outils « modifient » un PDF en posant un rectangle blanc sur l''ancien texte et en écrivant par-dessus. L''ancien mot reste alors dans le fichier : il réapparaît au copier-coller ou par une recherche. Ici, le mot d''origine est réellement retiré de la page, puis le nouveau est écrit exactement à sa place, sur la même ligne de base. Le fond (couleur, cadre, image) n''est pas touché.
+
+
+      ## Même police, même taille, même couleur
+
+
+      Quand la police du document contient toutes les lettres que vous tapez, elle est réutilisée : le résultat est identique au reste de la page. Sinon, la police standard la plus proche est choisie (sans empattement, à empattement ou à chasse fixe, en gras ou en italique comme l''original), à la même taille et dans la même couleur. Si le nouveau mot est plus long ou plus court, la suite de la phrase se décale pour garder l''espacement ; une colonne de tableau, séparée par un grand espace, ne bouge pas.
+
+
+      ## Usages courants
+
+
+      - Corriger une date, une référence ou un montant sans refaire tout le document.
+
+      - Rectifier une faute de frappe dans un PDF dont vous n''avez plus le fichier Word.
+
+      - Mettre à jour un nom, une adresse ou un numéro de téléphone.
+
+
+      Pour écrire là où il n''y a pas encore de texte, utilisez plutôt [Ajouter du texte](/fr/ajouter-texte-pdf/). Pour retirer définitivement des informations sensibles sans les remplacer, [caviardez le PDF](/fr/caviarder-pdf/).
+
+
+      ## Limites
+
+
+      Un PDF scanné ne contient qu''une image de la page : il n''y a pas de mots à modifier. Le texte vertical ou incliné n''est pas modifiable. Les caractères hors de l''alphabet latin d''Europe de l''Ouest ne peuvent être écrits que si la police du document les contient déjà.
+
+      '
+    faq:
+    - q: L'ancien texte reste-t-il caché dans le fichier ?
+      a: Non. Le mot d'origine est supprimé du contenu de la page avant que le nouveau soit écrit. Il ne réapparaît ni au copier-coller, ni par une recherche.
+    - q: Puis-je remplacer une phrase entière ?
+      a: 'Oui. Glissez du premier au dernier mot de la ligne : ils sont remplacés ensemble par ce que vous tapez. Une phrase sur plusieurs lignes se modifie ligne par ligne.'
+    - q: Pourquoi la police n'est-elle pas exactement la même ?
+      a: Les PDF n'embarquent souvent que les lettres utilisées dans le document. Si vous tapez une lettre absente, la police standard la plus proche est utilisée pour ce mot, à la même taille et dans la même couleur.
+    - q: Mon fichier est-il envoyé sur un serveur ?
+      a: Non. Tout se passe dans votre navigateur ; le PDF ne quitte pas votre ordinateur.

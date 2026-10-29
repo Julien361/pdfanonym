@@ -318,3 +318,10 @@ html[data-pro="1"] .nav .pro-link::after { content: " ✓"; }
   .toolbar input[type="search"] { width: 100%; }
   .wrap { padding: 0 16px; }
 }
+
+/* Modifier le texte : mots cliquables, champ de saisie posé sur le mot */
+.viewer.textedit .layer { cursor: text; }
+.viewer.textedit .box.hover { background: color-mix(in srgb, var(--hl) 35%, transparent); opacity: 1; outline: 1px solid var(--mark-line); }
+.viewer.textedit .box.pick { background: color-mix(in srgb, var(--hl) 45%, transparent); }
+.wordedit { position: absolute; z-index: 5; margin: 0; padding: 0 2px; border: 1.5px solid var(--mark-line); border-radius: 3px; background: var(--panel); color: var(--ink);
+  font-family: Helvetica, Arial, sans-serif; line-height: 1.15; box-shadow: 0 4px 14px rgba(0,0,0,.18); outline: none; min-width: 3ch; }

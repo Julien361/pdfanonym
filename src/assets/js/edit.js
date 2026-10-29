@@ -23,12 +23,19 @@ const m6 = (m) => m.map(n).join(" ");
 
 // Contexte d'ajout pour un document : police et ressources partagées.
 export function stamper(mupdf, doc) {
-  const fontObj = {};
-  const helv = new mupdf.Font("Helvetica");
-  const helvB = new mupdf.Font("Helvetica-Bold");
-  const fontRef = (bold) => (fontObj[bold ? "b" : "r"] ||= doc.addSimpleFont(bold ? helvB : helv, "Latin"));
-  const width = (text, size, bold) => {
-    const f = bold ? helvB : helv;
+  const fonts = {}, fontObj = {};
+  // Polices standard du PDF (Helvetica, Times, Courier et leurs variantes) : présentes dans tout lecteur, rien à embarquer.
+  // face peut aussi être une police du document lui-même (objet Font), réutilisée telle quelle.
+  const fontName = (bold, face) => face || (bold ? "Helvetica-Bold" : "Helvetica");
+  const font = (name) => (typeof name === "string" ? (fonts[name] ||= new mupdf.Font(name)) : name);
+  const fontRef = (name) => {
+    if (typeof name === "string") return (fontObj[name] ||= doc.addSimpleFont(font(name), "Latin"));
+    let e = fontObj.own?.find((x) => x.f === name);
+    if (!e) (fontObj.own ||= []).push((e = { f: name, ref: doc.addSimpleFont(name, "Latin") }));
+    return e.ref;
+  };
+  const width = (text, size, bold, face) => {
+    const f = font(fontName(bold, face));
     let w = 0;
     for (const ch of text) w += f.advanceGlyph(f.encodeCharacter(ch.codePointAt(0)));
     return w * size;
@@ -76,16 +83,18 @@ export function stamper(mupdf, doc) {
   const gs = (addRes, opacity) => (opacity < 1 ? `/${addRes("ExtGState", "PaGS", doc.addObject({ Type: "ExtGState", ca: opacity, CA: opacity }))} gs ` : "");
 
   // Texte : x, y = point d'ancrage visuel (ligne de base), align left|center|right, angle en degrés (sens horaire à l'écran).
-  function text(pageIndex, { text, x, y, size = 12, color = [0, 0, 0], opacity = 1, angle = 0, align = "left", bold = false }) {
+  // face : nom d'une police standard (« Times-Bold »…) ; hscale : étirement horizontal en % (Tz).
+  function text(pageIndex, { text, x, y, size = 12, color = [0, 0, 0], opacity = 1, angle = 0, align = "left", bold = false, face = null, hscale = 100 }) {
     if (!text) return;
     append(pageIndex, ({ addRes }) => {
-      const f = addRes("Font", "PaF", fontRef(bold));
-      const w = width(text, size, bold);
+      const f = addRes("Font", "PaF", fontRef(fontName(bold, face)));
+      const w = width(text, size, bold, face) * hscale / 100;
       const dx = align === "center" ? -w / 2 : align === "right" ? -w : 0;
       const a = (angle * Math.PI) / 180, c = Math.cos(a), s = Math.sin(a);
       // Repère visuel (y vers le bas) : on retourne l'axe y pour que le texte soit à l'endroit.
       const tm = [c, s, s, -c, x + dx * c, y + dx * s];
-      return `${gs(addRes, opacity)}${color.map(n).join(" ")} rg BT /${f} ${n(size)} Tf ${m6(tm)} Tm ${hex(winAnsi(text))} Tj ET`;
+      const tz = Math.abs(hscale - 100) > 0.5 ? `${n(hscale)} Tz ` : "";
+      return `${gs(addRes, opacity)}${color.map(n).join(" ")} rg BT /${f} ${n(size)} Tf ${tz}${m6(tm)} Tm ${hex(winAnsi(text))} Tj ET`;
     });
   }
 
@@ -100,6 +109,111 @@ export function stamper(mupdf, doc) {
   }
 
   return { text, image, width };
+}
+
+/* ---------- Modifier le texte existant ---------- */
+
+// Police standard la plus proche de la police d'origine (famille, gras, italique).
+export function standardFace(font) {
+  const name = (font.getName?.() || "").replace(/^[A-Z]{6}\+/, "");
+  const bold = font.isBold?.() || /bold|black|heavy|semi|demi|medium|median/i.test(name);
+  const italic = font.isItalic?.() || /italic|oblique/i.test(name);
+  const mono = font.isMono?.() || /courier|mono|consol/i.test(name);
+  // L'indicateur « serif » des polices est peu fiable : le nom prime quand il est parlant.
+  const serif = !mono && !/sans|arial|helvet|inter|roboto|verdana|calibri|segoe|open|lato|montserrat|poppins/i.test(name)
+    && (/times|serif|georgia|garamond|cambria|book|roman|minion/i.test(name) || font.isSerif?.());
+  if (mono) return "Courier" + (bold || italic ? "-" + (bold ? "Bold" : "") + (italic ? "Oblique" : "") : "");
+  if (serif) return bold && italic ? "Times-BoldItalic" : bold ? "Times-Bold" : italic ? "Times-Italic" : "Times-Roman";
+  return "Helvetica" + (bold || italic ? "-" + (bold ? "Bold" : "") + (italic ? "Oblique" : "") : "");
+}
+
+// Mots d'une page (repère visuel) : texte, rectangle, ligne de base, taille, couleur, police standard équivalente.
+// Seules les lignes horizontales sont retenues : un mot vertical ou incliné ne peut pas être réécrit fidèlement.
+export function pageWords(page) {
+  const words = [];
+  let cur = null, line = 0, horiz = true;
+  const end = () => { if (cur) { words.push(cur); cur = null; } };
+  page.toStructuredText("preserve-whitespace").walk({
+    beginLine(bbox, wmode, dir) { end(); line++; horiz = !wmode && Math.abs(dir[1]) < 0.01 && dir[0] > 0; },
+    endLine() { end(); },
+    onChar(c, origin, font, size, quad, color) {
+      if (!horiz) return;
+      if (/\s/.test(c)) return end();
+      const r = [Math.min(quad[0], quad[4]), Math.min(quad[1], quad[3]), Math.max(quad[2], quad[6]), Math.max(quad[5], quad[7])];
+      if (!cur) {
+        cur = { text: "", rect: r, x: origin[0], y: origin[1], size, color: color.slice(0, 3), face: standardFace(font), font, line, quads: [] };
+      }
+      cur.text += c;
+      cur.quads.push(r);
+      cur.rect = [Math.min(cur.rect[0], r[0]), Math.min(cur.rect[1], r[1]), Math.max(cur.rect[2], r[2]), Math.max(cur.rect[3], r[3])];
+    },
+  });
+  end();
+  return words;
+}
+
+// Une police embarquée est souvent réduite aux seuls caractères utilisés : on vérifie qu'elle a tous ceux du nouveau texte.
+export function ownFontCovers(font, text) {
+  try {
+    for (const ch of text) if (ch !== " " && !(font.encodeCharacter(ch.codePointAt(0)) > 0)) return false;
+    return font.advanceGlyph(font.encodeCharacter(0x20)) >= 0;
+  } catch { return false; }
+}
+
+// Remplace des mots d'une page : le texte d'origine est réellement retiré (caviardage sans cadre, le fond reste intact),
+// puis le nouveau texte est écrit sur la même ligne de base, à la même taille et dans la même couleur.
+// edits : [{ word (élément de pageWords), text }] ; text vide = mot simplement effacé.
+// words (tous les mots de la page) : si fourni, la suite de la phrase est décalée quand le mot change de longueur,
+// sans franchir un grand espace (colonne d'un tableau, valeur alignée à droite…).
+export function replaceWords(mupdf, doc, pageIndex, edits, words = null) {
+  if (!edits.length) return;
+  const page = doc.loadPage(pageIndex);
+  const P = mupdf.PDFPage;
+  const st = stamper(mupdf, doc);
+  const plan = new Map(edits.map((e) => [e.word, { text: e.text, dx: 0 }]));
+
+  // Police d'origine si elle contient tous les caractères (rendu identique), sinon la police standard la plus proche,
+  // à la même chasse que l'original (une police étroite reste étroite, écart borné pour rester lisible).
+  // Les largeurs déclarées dans le PDF peuvent différer de celles de la police elle-même : la chasse est toujours recalée.
+  const style = (w, text) => {
+    const fit = (face) => {
+      const natural = st.width(w.text, w.size, false, face);
+      const hscale = natural > 0 ? Math.min(125, Math.max(75, ((w.rect[2] - w.x) / natural) * 100)) : 100;
+      return { face, hscale, width: (st.width(text, w.size, false, face) * hscale) / 100 };
+    };
+    if (w.font && ownFontCovers(w.font, text)) { try { return fit(w.font); } catch { /* repli */ } }
+    return fit(w.face);
+  };
+
+  if (words) {
+    let prev = null, delta = 0;
+    for (const w of words) {
+      const gap = prev && prev.line === w.line ? w.rect[0] - prev.rect[2] : Infinity;
+      if (gap > Math.max(prev?.size || 0, w.size) * 0.9) delta = 0; // nouvelle ligne ou grand espace : rien à décaler
+      prev = w;
+      const e = plan.get(w);
+      if (e) {
+        e.dx = delta;
+        e.style = style(w, e.text);
+        delta += (e.text ? e.style.width : 0) - (w.rect[2] - w.x) + (e.text ? 0 : -Math.min(gap === Infinity ? 0 : gap, w.size * 0.3));
+      } else if (Math.abs(delta) > 0.3) plan.set(w, { text: w.text, dx: delta, style: style(w, w.text) });
+    }
+  }
+
+  for (const w of plan.keys()) {
+    // Rectangle resserré : on ne touche pas aux lignes voisines quand l'interligne est serré.
+    for (const r of w.quads) {
+      const h = r[3] - r[1], cw = r[2] - r[0];
+      page.createAnnotation("Redact").setRect([r[0] + cw * 0.15, r[1] + h * 0.25, r[2] - cw * 0.15, r[3] - h * 0.25]);
+    }
+  }
+  page.applyRedactions(false, P.REDACT_IMAGE_NONE, P.REDACT_LINE_ART_NONE, P.REDACT_TEXT_REMOVE);
+  for (const [w, e] of plan) {
+    if (!e.text) continue;
+    const s = e.style || style(w, e.text);
+    const args = { text: e.text, x: w.x + e.dx, y: w.y, size: w.size, color: w.color, face: s.face, hscale: s.hscale };
+    try { st.text(pageIndex, args); } catch { st.text(pageIndex, { ...args, face: w.face }); } // police d'origine refusée
+  }
 }
 
 /* ---------- Filigrane et numérotation ---------- */

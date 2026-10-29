@@ -15,6 +15,7 @@ nav:
   anonymize: Anonimizar PDF
   merge: Juntar PDF
   add_text: Adicionar texto
+  edit_text: "Editar texto"
   sign: Assinar PDF
   watermark: Marca d’água
   page_numbers: Numerar páginas
@@ -278,6 +279,13 @@ js:
   annot.hintSign: "Clique em uma página para posicionar sua assinatura. Arraste para mover, use o canto para redimensionar."
   annot.sigReady: Assinatura pronta. Clique na página onde ela deve ficar.
   annot.done: "{n} elemento(s) adicionado(s). Baixado: {name}"
+  tedit.ready: "Clique numa palavra para substituí-la. Arraste sobre várias palavras da mesma linha para substituí-las juntas."
+  tedit.noText: "Este PDF não contém texto editável (documento digitalizado?). Para escrever nele, use Adicionar texto."
+  tedit.inputLabel: "Novo texto"
+  tedit.replaced: "“{a}” substituído por “{b}”."
+  tedit.erased: "“{a}” apagado."
+  tedit.undone: "Última alteração desfeita."
+  tedit.done: "{n} alteração(ões). Arquivo baixado: {name}"
   pii.none: "Nenhum dado pessoal detectado. Nomes sem pronome de tratamento (Sr., Sra.…) não são detectados automaticamente; use a caixa de busca."
   pii.found: "{n} dado(s) pessoal(is) detectado(s). Desmarque o que deve ficar e depois marque."
   pii.mark: Marcar selecionados
@@ -961,7 +969,7 @@ pages:
       - Preencher um formulário "plano", que tem caixas desenhadas na página mas nenhum campo preenchível. Se o formulário tem campos, preencha-os e depois [achate o PDF](/pt/achatar-pdf/) para fixar as respostas.
       - Acrescentar uma data, uma referência ou "Lido e aprovado" antes de assinar.
       - Escrever uma observação em uma planta ou documento antes de devolvê-lo.
-      - Corrigir uma palavra: primeiro [apague o texto do PDF](/pt/apagar-texto-pdf/) original e escreva o novo no lugar.
+      - Corrigir uma palavra: [edite o texto do PDF](/pt/editar-texto-pdf/) diretamente, clicando na palavra e digitando a nova.
 
       Para incluir também uma assinatura à mão, mude para **Assinatura** na barra de ferramentas ou use [Assinar PDF](/pt/assinar-pdf/).
 
@@ -970,7 +978,7 @@ pages:
       O texto é escrito em Helvetica, que cobre o alfabeto latino com os acentos da Europa Ocidental (é, ü, ñ, ç, ß…). Caracteres fora desse conjunto, como o cirílico ou o chinês, são substituídos por um ponto de interrogação.
     faq:
       - q: Posso editar um texto que já estava no PDF?
-        a: "Não com esta ferramenta: ela adiciona texto novo. Para tirar antes o texto existente, use Apagar texto e depois adicione o novo texto aqui."
+        a: "Não com esta ferramenta: ela adiciona texto novo. Para mudar uma palavra que já está lá, use Editar texto: clique na palavra e digite a nova."
       - q: Posso escrever várias linhas?
         a: "Sim. Pressione Enter enquanto digita para começar uma nova linha."
       - q: O texto adicionado pode ser editado depois?
@@ -1539,7 +1547,7 @@ pages:
 
       ## 3. Fornecido no estado em que se encontra
 
-      As ferramentas são fornecidas gratuitamente e no estado em que se encontram, sem nenhuma garantia de resultado, disponibilidade ou adequação a uma finalidade específica. Elas podem ser alteradas, interrompidas ou removidas a qualquer momento.
+      As ferramentas gratuitas são fornecidas no estado em que se encontram (os planos pagos são regidos pela seção 9), sem nenhuma garantia de resultado, disponibilidade ou adequação a uma finalidade específica. Elas podem ser alteradas, interrompidas ou removidas a qualquer momento.
 
       ## 4. Confira o resultado antes de compartilhar
 
@@ -1595,6 +1603,7 @@ pages:
       ## Download
 
       - [Código-fonte completo deste site (zip)](/source/pdfanonym-source.zip): templates, textos, scripts, estilos e script de build.
+      - GitHub : [github.com/Julien361/pdfanonym](https://github.com/Julien361/pdfanonym)
       - O motor de PDF é o pacote oficial [mupdf.js](https://www.npmjs.com/package/mupdf), incluído sem modificações no arquivo compactado (pasta `src/assets/mupdf`). O código-fonte dele é publicado pela Artifex em [github.com/ArtifexSoftware/mupdf.js](https://github.com/ArtifexSoftware/mupdf.js).
 
       ## Rode você mesmo
@@ -1620,8 +1629,67 @@ pages:
 
       ## Hospedagem
 
-      Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, Estados Unidos.
+      Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, Estados Unidos. Telefone: +1 650 319 8930.
 
       ## Responsabilidade
 
-      O pdfanonym é oferecido gratuitamente e no estado em que se encontra. Sempre confira um documento tarjado antes de compartilhá-lo; o [guia](/pt/como-tarjar-um-pdf/) explica como. Você continua responsável pelos documentos que processa e compartilha.
+      As ferramentas gratuitas do pdfanonym são oferecidas no estado em que se encontram; os planos Pro são regidos pela seção 9 dos [termos de uso](/pt/termos-de-uso/). Sempre confira um documento tarjado antes de compartilhá-lo; o [guia](/pt/como-tarjar-um-pdf/) explica como. Você continua responsável pelos documentos que processa e compartilha.
+  edit_text:
+    slug: editar-texto-pdf
+    nav: Editar texto
+    card: Clique em qualquer palavra do PDF e substitua-a, na mesma fonte.
+    title: 'Editar texto de PDF: clique numa palavra e substitua, grátis'
+    description: 'Edite o texto de um PDF no navegador: clique numa palavra, digite a nova e baixe. Mesma posição, tamanho e cor. Sem envio, sem marca d''água.'
+    h1: Editar o texto de um PDF, <span class="hl">palavra por palavra</span>
+    h1_plain: Editar o texto de um PDF
+    lede: 'Uma data, um nome, um valor, um erro de digitação: clique na palavra do PDF, digite a certa e pronto. O texto antigo é realmente removido do arquivo.'
+    suffix: editado
+    hint: Clique numa palavra, digite o novo texto e pressione Enter para confirmar (Esc para cancelar, Tab para a próxima palavra). Deixe vazio para apagar a palavra.
+    stepsTitle: Como editar o texto de um PDF
+    steps:
+    - h: Abra o PDF
+      p: Arraste-o para a página. Ele abre no seu computador; nada é enviado.
+    - h: Clique numa palavra
+      p: A palavra fica editável. Digite a substituição e pressione Enter. Para substituir várias palavras de uma vez, arraste de uma à outra.
+    - h: Baixe
+      p: Cada alteração aparece na hora exatamente como ficará no arquivo. Desfazer volta atrás; Baixar salva o PDF editado.
+    body: '## A palavra é substituída, não coberta
+
+
+      Muitas ferramentas “editam” um PDF colocando um retângulo branco sobre o texto antigo e escrevendo por cima. A palavra antiga continua no arquivo e reaparece ao copiar e colar ou numa busca. Aqui, a palavra original é realmente removida da página e a nova é escrita exatamente no lugar dela, na mesma linha de base. O fundo (cor, moldura, imagem) não é alterado.
+
+
+      ## Mesma fonte, mesmo tamanho, mesma cor
+
+
+      Quando a fonte do documento contém todas as letras que você digita, ela é reutilizada e o resultado combina com o resto da página. Caso contrário, é escolhida a fonte padrão mais próxima (sem serifa, com serifa ou monoespaçada, em negrito ou itálico como a original), no mesmo tamanho e na mesma cor. Se a nova palavra for mais longa ou mais curta, o resto da frase se desloca para manter o espaçamento; uma coluna de tabela separada por um espaço largo não se mexe.
+
+
+      ## Usos comuns
+
+
+      - Corrigir uma data, uma referência ou um valor sem refazer o documento inteiro.
+
+      - Consertar um erro de digitação num PDF cujo arquivo Word você não tem mais.
+
+      - Atualizar um nome, um endereço ou um número de telefone.
+
+
+      Para escrever onde ainda não há texto, use [Adicionar texto](/pt/adicionar-texto-pdf/). Para remover de vez informações sensíveis sem substituí-las, [tarje o PDF](/pt/tarjar-pdf/).
+
+
+      ## Limites
+
+
+      Um PDF digitalizado contém apenas uma imagem da página, então não há palavras para editar. Texto vertical ou girado não é editável. Caracteres fora do alfabeto latino da Europa Ocidental só podem ser escritos se a fonte do documento já os contiver.
+
+      '
+    faq:
+    - q: O texto antigo fica escondido no arquivo?
+      a: Não. A palavra original é apagada do conteúdo da página antes de a nova ser escrita. Ela não reaparece ao copiar e colar nem numa busca.
+    - q: Posso substituir uma frase inteira?
+      a: 'Sim. Arraste da primeira à última palavra da linha: elas são substituídas juntas pelo que você digitar. Uma frase em várias linhas é editada linha por linha.'
+    - q: Por que a fonte não é exatamente a mesma?
+      a: Os PDFs costumam incorporar só as letras usadas no documento. Se você digitar uma letra que falta, a fonte padrão mais próxima é usada para essa palavra, no mesmo tamanho e na mesma cor.
+    - q: Meu arquivo é enviado a um servidor?
+      a: Não. Tudo acontece no seu navegador; o PDF não sai do seu computador.

@@ -15,6 +15,7 @@ nav:
   anonymize: Anonymize PDF
   merge: Merge PDF
   add_text: Add text
+  edit_text: "Edit text"
   sign: Sign PDF
   watermark: Watermark
   page_numbers: Page numbers
@@ -278,6 +279,13 @@ js:
   annot.hintSign: "Click on a page to place your signature. Drag to move, corner to resize."
   annot.sigReady: Signature ready. Click on the page where it should go.
   annot.done: "{n} element(s) added. Downloaded: {name}"
+  tedit.ready: "Click a word to replace it. Drag across several words on one line to replace them together."
+  tedit.noText: "This PDF has no editable text (scanned document?). To write on it, use Add text."
+  tedit.inputLabel: "New text"
+  tedit.replaced: "“{a}” replaced with “{b}”."
+  tedit.erased: "“{a}” erased."
+  tedit.undone: "Last change undone."
+  tedit.done: "{n} change(s). File downloaded: {name}"
   pii.none: No personal data detected. Names without a title (Mr, Mrs…) are not detected automatically; use the search box.
   pii.found: "{n} item(s) of personal data detected. Untick what should stay, then mark."
   pii.mark: Mark selected
@@ -962,14 +970,14 @@ pages:
       - Adding a date, a reference or "Read and approved" before signing.
       - Writing a note on a plan or a document before sending it back.
 
-      To replace existing words, first [remove text from the PDF](/remove-text-from-pdf/), then type the new text in the blank space. To add a handwritten signature as well, switch to **Signature** in the toolbar or use [Sign PDF](/sign-pdf/).
+      To replace words that are already in the PDF, [edit the PDF text](/edit-pdf-text/) directly: click a word and type the new one. To add a handwritten signature as well, switch to **Signature** in the toolbar or use [Sign PDF](/sign-pdf/).
 
       ## Characters
 
       Text is written in Helvetica, which covers the Latin alphabet including Western European accents (é, ü, ñ, ç, ß…). Characters outside that set, such as Cyrillic or Chinese, are replaced by a question mark.
     faq:
       - q: Can I edit text that was already in the PDF?
-        a: "Not with this tool: it adds new text. To remove existing text first, use Remove text from PDF, then add your new text here."
+        a: "Not with this tool: it adds new text. To change a word that is already there, use Edit text: click the word and type the new one."
       - q: Can I write several lines?
         a: "Yes. Press Enter while typing to start a new line."
       - q: Is the added text editable later?
@@ -1540,7 +1548,7 @@ pages:
 
       ## 3. Provided as is
 
-      The tools are provided free of charge and as is, without any guarantee of results, availability or fitness for a particular purpose. They may change, be interrupted or be removed at any time.
+      The free tools are provided as is (paid plans are covered by section 9), without any guarantee of results, availability or fitness for a particular purpose. They may change, be interrupted or be removed at any time.
 
       ## 4. Check the result before you share it
 
@@ -1596,6 +1604,7 @@ pages:
       ## Download
 
       - [Complete source code of this site (zip)](/source/pdfanonym-source.zip): templates, texts, scripts, styles and build script.
+      - GitHub : [github.com/Julien361/pdfanonym](https://github.com/Julien361/pdfanonym)
       - The PDF engine is the official [mupdf.js](https://www.npmjs.com/package/mupdf) package, included unmodified in the archive (folder `src/assets/mupdf`). Its own source is published by Artifex at [github.com/ArtifexSoftware/mupdf.js](https://github.com/ArtifexSoftware/mupdf.js).
 
       ## Run it yourself
@@ -1621,8 +1630,67 @@ pages:
 
       ## Hosting
 
-      Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, United States.
+      Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, United States. Phone: +1 650 319 8930.
 
       ## Liability
 
-      pdfanonym is provided free of charge and as is. Always check a redacted document before sharing it; the [guide](/how-to-redact-a-pdf/) explains how. You remain responsible for the documents you process and share.
+      pdfanonym's free tools are provided as is; Pro plans are governed by section 9 of the [terms of use](/terms/). Always check a redacted document before sharing it; the [guide](/how-to-redact-a-pdf/) explains how. You remain responsible for the documents you process and share.
+  edit_text:
+    slug: edit-pdf-text
+    nav: Edit text
+    card: Click any word in a PDF and replace it, in the same font.
+    title: 'Edit PDF Text Online: Click Any Word and Replace It, Free'
+    description: 'Edit the text of a PDF in your browser: click a word, type the new one, download. Same position, size and color. No upload, no watermark.'
+    h1: Edit text in a PDF, <span class="hl">word by word</span>
+    h1_plain: Edit text in a PDF
+    lede: 'A date, a name, an amount, a typo: click the word in the PDF, type the right one, done. The old text is really removed from the file.'
+    suffix: edited
+    hint: Click a word, type the new text, press Enter to confirm (Esc to cancel, Tab for the next word). Leave it empty to erase the word.
+    stepsTitle: How to edit text in a PDF
+    steps:
+    - h: Open your PDF
+      p: Drop it on the page. It opens on your computer; nothing is uploaded.
+    - h: Click a word
+      p: The word becomes editable. Type the replacement and press Enter. To replace several words at once, drag from one to the other.
+    - h: Download
+      p: Each change shows right away exactly as it will be in the file. Undo steps back, Download saves the edited PDF.
+    body: '## The word is replaced, not covered up
+
+
+      Many tools "edit" a PDF by placing a white box over the old text and writing on top. The old word then stays in the file: it comes back with copy and paste or a search. Here, the original word is really removed from the page, then the new one is written exactly in its place, on the same baseline. The background (color, frame, image) is left untouched.
+
+
+      ## Same font, same size, same color
+
+
+      When the document''s own font contains every letter you type, it is reused and the result matches the rest of the page. Otherwise the closest standard font is chosen (sans-serif, serif or monospace, bold or italic like the original) at the same size and in the same color. If the new word is longer or shorter, the rest of the sentence shifts to keep the spacing; a table column separated by a wide gap stays where it is.
+
+
+      ## Common uses
+
+
+      - Fix a date, a reference or an amount without rebuilding the whole document.
+
+      - Correct a typo in a PDF when you no longer have the Word file.
+
+      - Update a name, an address or a phone number.
+
+
+      To write where there is no text yet, use [Add text](/add-text-to-pdf/) instead. To permanently remove sensitive information without replacing it, [redact the PDF](/redact-pdf/).
+
+
+      ## Limits
+
+
+      A scanned PDF only holds a picture of the page, so there are no words to edit. Vertical or rotated text cannot be edited. Characters outside the Western European Latin alphabet can only be written if the document''s font already contains them.
+
+      '
+    faq:
+    - q: Does the old text stay hidden in the file?
+      a: No. The original word is deleted from the page content before the new one is written. It does not come back with copy and paste or a search.
+    - q: Can I replace a whole sentence?
+      a: 'Yes. Drag from the first to the last word on the line: they are replaced together by what you type. A sentence that spans several lines is edited line by line.'
+    - q: Why is the font not exactly the same?
+      a: PDFs often embed only the letters used in the document. If you type a missing letter, the closest standard font is used for that word, at the same size and in the same color.
+    - q: Is my file uploaded to a server?
+      a: No. Everything happens in your browser; the PDF never leaves your computer.

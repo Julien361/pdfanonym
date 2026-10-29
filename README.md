@@ -9,7 +9,7 @@ Live at **[pdfanonym.com](https://pdfanonym.com)**, in English, French, German, 
 - **Anonymization**: detects emails, phone numbers, IBANs (mod 97), card numbers (Luhn), French social security numbers, IP addresses and names after a title, then redacts them.
 - **Metadata**: shows and removes or edits author, title, software, dates, XMP, comments, attachments and JavaScript.
 - **Pages**: merge, delete, extract, rotate, reorder.
-- **Edit**: add text, draw a signature, watermark, page numbers.
+- **Edit**: replace any word in place (click a word, type the new one: the old text is removed, the document font is reused when it has the glyphs), add text, draw a signature, watermark, page numbers.
 - **Convert**: compress (image downsampling), vector grayscale that keeps text selectable, PDF to JPG/PNG, images to PDF.
 - **Security**: AES-256 password protection, unlock (with the password).
 

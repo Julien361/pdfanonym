@@ -1,0 +1,22 @@
+<section class="app notranslate" translate="no" data-tool="textedit" data-suffix="{{ P.suffix }}" aria-label="{{ P.nav }}">
+  {% include "drop.html" %}
+  <div class="work">
+    <div class="toolbar">
+      <div class="group"><button class="btn" type="button" data-el="close">← {{ L.ui.newFile }}</button><span class="filename" data-el="filename"></span></div>
+      <div class="grow"></div>
+      <div class="group">
+        <button class="btn" type="button" data-el="zoomOut" aria-label="{{ L.ui.zoomOut }}">−</button>
+        <span class="zoomval" data-el="zoomVal">100 %</span>
+        <button class="btn" type="button" data-el="zoomIn" aria-label="{{ L.ui.zoomIn }}">+</button>
+      </div>
+      <div class="group">
+        <button class="btn" type="button" data-el="undo" disabled>{{ L.ui.undo }}</button>
+        <button class="btn primary" type="button" data-el="download">{{ L.ui.download }}</button>
+      </div>
+    </div>
+    <p class="pages-hint" data-el="hint">{{ P.hint }}</p>
+    <div class="viewer annot textedit" data-el="viewer"></div>
+    <div class="status" role="status" aria-live="polite"></div>
+  </div>
+  <div class="status" role="status" aria-live="polite" data-pre></div>
+</section>

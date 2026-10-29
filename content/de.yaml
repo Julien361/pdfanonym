@@ -15,6 +15,7 @@ nav:
   anonymize: PDF anonymisieren
   merge: PDF zusammenfügen
   add_text: Text einfügen
+  edit_text: "Text bearbeiten"
   sign: PDF unterschreiben
   watermark: Wasserzeichen
   page_numbers: Seitenzahlen
@@ -278,6 +279,13 @@ js:
   annot.hintSign: "Klick auf eine Seite, um deine Unterschrift zu platzieren. Ziehen zum Verschieben, Ecke für die Größe."
   annot.sigReady: Unterschrift bereit. Klick auf die Stelle der Seite, an die sie gehört.
   annot.done: "{n} Element(e) hinzugefügt. Heruntergeladen: {name}"
+  tedit.ready: "Klick auf ein Wort, um es zu ersetzen. Zieh über mehrere Wörter einer Zeile, um sie gemeinsam zu ersetzen."
+  tedit.noText: "Dieses PDF enthält keinen bearbeitbaren Text (gescanntes Dokument?). Um darauf zu schreiben, nutz Text einfügen."
+  tedit.inputLabel: "Neuer Text"
+  tedit.replaced: "„{a}“ ersetzt durch „{b}“."
+  tedit.erased: "„{a}“ gelöscht."
+  tedit.undone: "Letzte Änderung rückgängig gemacht."
+  tedit.done: "{n} Änderung(en). Datei heruntergeladen: {name}"
   pii.none: Keine personenbezogenen Daten erkannt. Namen ohne Anrede (Herr, Frau…) werden nicht automatisch erkannt, nutz dafür das Suchfeld.
   pii.found: "{n} personenbezogene Angabe(n) erkannt. Nimm den Haken bei allem raus, was bleiben soll, und markiere dann."
   pii.mark: Auswahl markieren
@@ -956,7 +964,7 @@ pages:
     body: |
       ## Echter Text, kein Bild
 
-      Wenn du Text in ein PDF einfügst, landet er als richtiger Text in einer Standardschrift (Helvetica) auf der Seite. Er bleibt bei jedem Zoom scharf, lässt sich markieren und durchsuchen und wird genau so gedruckt, wie er auf dem Bildschirm aussieht. Soll vorhandener Text verschwinden, bevor du neuen schreibst, kannst du ihn zuerst mit [PDF Text löschen](/de/pdf-text-loeschen/) entfernen.
+      Wenn du Text in ein PDF einfügst, landet er als richtiger Text in einer Standardschrift (Helvetica) auf der Seite. Er bleibt bei jedem Zoom scharf, lässt sich markieren und durchsuchen und wird genau so gedruckt, wie er auf dem Bildschirm aussieht. Um vorhandenen Text zu ersetzen, kannst du [den PDF-Text direkt bearbeiten](/de/pdf-text-bearbeiten/): Wort anklicken und das neue eintippen.
 
       ## Typische Einsätze
 
@@ -971,7 +979,7 @@ pages:
       Der Text wird in Helvetica geschrieben. Die Schrift deckt das lateinische Alphabet samt westeuropäischer Akzente ab (é, ü, ñ, ç, ß…). Zeichen außerhalb davon, etwa Kyrillisch oder Chinesisch, werden durch ein Fragezeichen ersetzt.
     faq:
       - q: Kann ich Text bearbeiten, der schon im PDF steht?
-        a: "Nicht mit diesem Werkzeug: Es fügt neuen Text hinzu. Um vorhandenen Text zuerst zu entfernen, nutz PDF Text löschen und füg dann hier deinen neuen Text ein."
+        a: "Nicht mit diesem Werkzeug: Es fügt neuen Text hinzu. Um ein vorhandenes Wort zu ändern, nutz Text bearbeiten: Wort anklicken und das neue eintippen."
       - q: Kann ich mehrere Zeilen schreiben?
         a: "Ja. Drück beim Tippen Enter, um eine neue Zeile zu beginnen."
       - q: Kann ich den eingefügten Text später noch ändern?
@@ -1540,7 +1548,7 @@ pages:
 
       ## 3. Bereitstellung ohne Gewähr
 
-      Die Tools werden kostenlos und ohne Gewähr bereitgestellt, ohne jede Garantie für Ergebnisse, Verfügbarkeit oder Eignung für einen bestimmten Zweck. Sie können jederzeit geändert, unterbrochen oder eingestellt werden.
+      Die kostenlosen Tools werden ohne Gewähr bereitgestellt (für kostenpflichtige Tarife gilt Abschnitt 9), ohne jede Garantie für Ergebnisse, Verfügbarkeit oder Eignung für einen bestimmten Zweck. Sie können jederzeit geändert, unterbrochen oder eingestellt werden.
 
       ## 4. Prüf das Ergebnis, bevor du es weitergibst
 
@@ -1596,6 +1604,7 @@ pages:
       ## Download
 
       - [Vollständiger Quellcode dieser Website (zip)](/source/pdfanonym-source.zip): Templates, Texte, Skripte, Styles und Build-Skript.
+      - GitHub : [github.com/Julien361/pdfanonym](https://github.com/Julien361/pdfanonym)
       - Die PDF-Engine ist das offizielle Paket [mupdf.js](https://www.npmjs.com/package/mupdf), unverändert im Archiv enthalten (Ordner `src/assets/mupdf`). Den Quellcode davon veröffentlicht Artifex unter [github.com/ArtifexSoftware/mupdf.js](https://github.com/ArtifexSoftware/mupdf.js).
 
       ## Selbst betreiben
@@ -1621,8 +1630,67 @@ pages:
 
       ## Hosting
 
-      Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA.
+      Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA. Telefon: +1 650 319 8930.
 
       ## Haftung
 
-      pdfanonym wird kostenlos und ohne Gewähr bereitgestellt. Prüf ein geschwärztes Dokument immer, bevor du es weitergibst, der [Leitfaden](/de/pdf-richtig-schwaerzen/) erklärt, wie das geht. Für die Dokumente, die du bearbeitest und teilst, bist du selbst verantwortlich.
+      Die kostenlosen Tools von pdfanonym werden ohne Gewähr bereitgestellt; für die Pro-Tarife gilt Abschnitt 9 der [Nutzungsbedingungen](/de/nutzungsbedingungen/). Prüf ein geschwärztes Dokument immer, bevor du es weitergibst, der [Leitfaden](/de/pdf-richtig-schwaerzen/) erklärt, wie das geht. Für die Dokumente, die du bearbeitest und teilst, bist du selbst verantwortlich.
+  edit_text:
+    slug: pdf-text-bearbeiten
+    nav: Text bearbeiten
+    card: Klick auf ein beliebiges Wort im PDF und ersetz es, in derselben Schrift.
+    title: 'PDF-Text bearbeiten: Wort anklicken und ersetzen, kostenlos'
+    description: 'Text in einem PDF im Browser bearbeiten: Wort anklicken, neues eintippen, herunterladen. Gleiche Stelle, Größe und Farbe. Ohne Upload, ohne Wasserzeichen.'
+    h1: Text im PDF bearbeiten, <span class="hl">Wort für Wort</span>
+    h1_plain: Text im PDF bearbeiten
+    lede: 'Ein Datum, ein Name, ein Betrag, ein Tippfehler: Wort im PDF anklicken, richtiges eintippen, fertig. Der alte Text wird wirklich aus der Datei entfernt.'
+    suffix: bearbeitet
+    hint: Wort anklicken, neuen Text eintippen, mit Enter bestätigen (Esc bricht ab, Tab springt zum nächsten Wort). Leer lassen, um das Wort zu löschen.
+    stepsTitle: So bearbeitest du Text in einem PDF
+    steps:
+    - h: PDF öffnen
+      p: Zieh es auf die Seite. Es öffnet sich auf deinem Computer, nichts wird hochgeladen.
+    - h: Wort anklicken
+      p: Das Wort wird bearbeitbar. Ersatz eintippen und Enter drücken. Um mehrere Wörter auf einmal zu ersetzen, zieh vom einen zum anderen.
+    - h: Herunterladen
+      p: Jede Änderung erscheint sofort so, wie sie in der Datei sein wird. Rückgängig geht einen Schritt zurück, Herunterladen speichert das bearbeitete PDF.
+    body: '## Das Wort wird ersetzt, nicht überdeckt
+
+
+      Viele Werkzeuge „bearbeiten“ ein PDF, indem sie ein weißes Rechteck über den alten Text legen und darüber schreiben. Das alte Wort bleibt dann in der Datei und taucht beim Kopieren oder bei einer Suche wieder auf. Hier wird das ursprüngliche Wort wirklich von der Seite entfernt und das neue genau an seiner Stelle auf derselben Grundlinie geschrieben. Der Hintergrund (Farbe, Rahmen, Bild) bleibt unverändert.
+
+
+      ## Gleiche Schrift, Größe und Farbe
+
+
+      Enthält die Schrift des Dokuments alle Buchstaben, die du eintippst, wird sie wiederverwendet und das Ergebnis passt zum Rest der Seite. Andernfalls wird die nächstliegende Standardschrift gewählt (serifenlos, mit Serifen oder dicktengleich, fett oder kursiv wie das Original), in gleicher Größe und Farbe. Ist das neue Wort länger oder kürzer, rückt der Rest des Satzes nach; eine Tabellenspalte mit großem Abstand bleibt an ihrem Platz.
+
+
+      ## Typische Anwendungen
+
+
+      - Ein Datum, eine Referenz oder einen Betrag korrigieren, ohne das ganze Dokument neu zu erstellen.
+
+      - Einen Tippfehler in einem PDF berichtigen, dessen Word-Datei nicht mehr vorliegt.
+
+      - Einen Namen, eine Adresse oder eine Telefonnummer aktualisieren.
+
+
+      Um dort zu schreiben, wo noch kein Text steht, nutz [Text einfügen](/de/text-in-pdf-einfuegen/). Um vertrauliche Angaben dauerhaft zu entfernen, ohne sie zu ersetzen, [schwärz das PDF](/de/pdf-schwaerzen/).
+
+
+      ## Grenzen
+
+
+      Ein gescanntes PDF enthält nur ein Bild der Seite, es gibt also keine Wörter zu bearbeiten. Senkrechter oder gedrehter Text ist nicht bearbeitbar. Zeichen außerhalb des westeuropäischen lateinischen Alphabets können nur geschrieben werden, wenn die Schrift des Dokuments sie bereits enthält.
+
+      '
+    faq:
+    - q: Bleibt der alte Text versteckt in der Datei?
+      a: Nein. Das ursprüngliche Wort wird aus dem Seiteninhalt gelöscht, bevor das neue geschrieben wird. Es taucht weder beim Kopieren noch bei einer Suche wieder auf.
+    - q: Kann ich einen ganzen Satz ersetzen?
+      a: 'Ja. Zieh vom ersten zum letzten Wort der Zeile: Sie werden gemeinsam durch deine Eingabe ersetzt. Ein Satz über mehrere Zeilen wird Zeile für Zeile bearbeitet.'
+    - q: Warum ist die Schrift nicht genau dieselbe?
+      a: PDFs betten oft nur die im Dokument verwendeten Buchstaben ein. Tippst du einen fehlenden Buchstaben, wird für dieses Wort die nächstliegende Standardschrift verwendet, in gleicher Größe und Farbe.
+    - q: Wird meine Datei auf einen Server hochgeladen?
+      a: Nein. Alles geschieht in deinem Browser; das PDF verlässt deinen Computer nicht.

@@ -16,7 +16,7 @@ TOOLS = {
     "metadata": ("metadata", "report"), "flatten": ("flatten", "report"), "grayscale": ("grayscale", "report"),
     "merge": ("pages", "pages"), "delete_pages": ("pages", "pages"), "extract_pages": ("pages", "pages"),
     "rotate": ("pages", "pages"), "reorder": ("pages", "pages"),
-    "add_text": ("annotate", "annotate"), "sign": ("annotate", "annotate"),
+    "edit_text": ("textedit", "textedit"), "add_text": ("annotate", "annotate"), "sign": ("annotate", "annotate"),
     "watermark": ("watermark", "process"), "page_numbers": ("page_numbers", "process"),
     "compress": ("compress", "process"), "pdf_to_jpg": ("pdf_to_jpg", "process"), "jpg_to_pdf": ("jpg_to_pdf", "images"),
     "protect": ("protect", "process"), "unlock": ("unlock", "process"),
@@ -24,23 +24,23 @@ TOOLS = {
 GROUPS = [
     ("privacy", ["redact", "anonymize", "batch", "remove", "metadata", "flatten"]),
     ("pages", ["merge", "delete_pages", "extract_pages", "rotate", "reorder"]),
-    ("edit", ["add_text", "sign", "watermark", "page_numbers"]),
+    ("edit", ["edit_text", "add_text", "sign", "watermark", "page_numbers"]),
     ("convert", ["compress", "grayscale", "pdf_to_jpg", "jpg_to_pdf"]),
     ("security", ["protect", "unlock"]),
 ]
 # Parcours logiques : depuis chaque outil, les 3 outils qu'on utilise souvent ensuite (maillage contextuel).
 NEXT = {
     "redact": ["metadata", "flatten", "protect"], "anonymize": ["batch", "metadata", "protect"], "batch": ["anonymize", "metadata", "compress"],
-    "remove": ["add_text", "redact", "metadata"], "metadata": ["redact", "flatten", "protect"], "flatten": ["redact", "protect", "compress"],
+    "remove": ["edit_text", "add_text", "redact"], "metadata": ["redact", "flatten", "protect"], "flatten": ["redact", "protect", "compress"],
     "merge": ["page_numbers", "compress", "delete_pages"], "delete_pages": ["merge", "reorder", "compress"], "extract_pages": ["merge", "redact", "pdf_to_jpg"],
     "rotate": ["reorder", "merge", "compress"], "reorder": ["merge", "page_numbers", "delete_pages"],
-    "add_text": ["sign", "flatten", "protect"], "sign": ["add_text", "flatten", "protect"], "watermark": ["flatten", "protect", "page_numbers"],
+    "edit_text": ["add_text", "flatten", "protect"], "add_text": ["edit_text", "sign", "flatten"], "sign": ["add_text", "flatten", "protect"], "watermark": ["flatten", "protect", "page_numbers"],
     "page_numbers": ["merge", "watermark", "compress"], "compress": ["grayscale", "pdf_to_jpg", "metadata"], "grayscale": ["compress", "pdf_to_jpg", "page_numbers"],
     "pdf_to_jpg": ["jpg_to_pdf", "extract_pages", "compress"], "jpg_to_pdf": ["compress", "merge", "pdf_to_jpg"],
     "protect": ["unlock", "flatten", "metadata"], "unlock": ["protect", "compress", "merge"],
 }
-SCRIPT_OF = {"batch": "batch", "redact": "redact", "pages": "pages", "report": "clean", "process": "process", "images": "images", "annotate": "annotate"}
-TOOL_KEYS = ["redact", "anonymize"]  # accès direct dans l'en-tête
+SCRIPT_OF = {"batch": "batch", "redact": "redact", "pages": "pages", "report": "clean", "process": "process", "images": "images", "annotate": "annotate", "textedit": "textedit"}
+TOOL_KEYS = ["redact", "anonymize", "edit_text"]  # accès direct dans l'en-tête
 PAGE_KEYS = GROUPS[1][1]
 ALL_TOOLS = list(TOOLS)
 LEARN_KEYS = ["guide", "privacy", "terms", "source", "legal"]
@@ -57,6 +57,7 @@ ICONS = {
     "reorder": '<rect x="3" y="9" width="10" height="14" rx="2" stroke="currentColor" stroke-width="2"/><rect x="21" y="9" width="10" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 5c4-3 14-3 18 0M26 29c-4 3-14 3-18 0" stroke="currentColor" stroke-width="2"/>',
     "anonymize": '<rect x="5" y="3" width="24" height="28" rx="3" stroke="currentColor" stroke-width="2"/><circle cx="14" cy="13" r="4" stroke="currentColor" stroke-width="2"/><path d="M17 16l5 5" stroke="currentColor" stroke-width="2.4"/><rect x="9" y="23" width="16" height="4" rx="1" fill="currentColor"/>',
     "merge": '<rect x="3" y="4" width="11" height="15" rx="2" stroke="currentColor" stroke-width="2"/><rect x="20" y="4" width="11" height="15" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8.5 21v4h17v-4M17 25v6M13 28l4 3 4-3" stroke="currentColor" stroke-width="2"/>',
+    "edit_text": '<rect x="5" y="3" width="24" height="28" rx="3" stroke="currentColor" stroke-width="2"/><path d="M10 12h14" stroke="currentColor" stroke-width="2" opacity=".35"/><rect x="9" y="17" width="11" height="6" rx="1" fill="currentColor" opacity=".25"/><path d="M22 15v10M20 15h4M20 25h4" stroke="currentColor" stroke-width="1.8"/>',
     "add_text": '<rect x="5" y="3" width="24" height="28" rx="3" stroke="currentColor" stroke-width="2"/><path d="M11 11h12M17 11v13" stroke="currentColor" stroke-width="2.4"/>',
     "sign": '<path d="M4 25c4-1 6-9 9-9s1 8 4 8 3-5 5-5 2 3 4 3" stroke="currentColor" stroke-width="2" fill="none"/><path d="M4 30h26" stroke="currentColor" stroke-width="2" opacity=".4"/><path d="M22 4l6 6-11 11h-6v-6z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>',
     "watermark": '<rect x="5" y="3" width="24" height="28" rx="3" stroke="currentColor" stroke-width="2"/><path d="M9 25L25 9" stroke="currentColor" stroke-width="4" opacity=".3"/>',
