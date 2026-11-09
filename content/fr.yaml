@@ -22,6 +22,7 @@ nav:
   compress: Compresser un PDF
   pdf_to_jpg: PDF en JPG
   jpg_to_pdf: JPG en PDF
+  word_to_pdf: "Word en PDF"
   protect: Protéger un PDF
   unlock: Déverrouiller un PDF
   batch: Anonymiser par lots
@@ -99,6 +100,7 @@ ui:
   g_security: Sécurité
   dropTitleImg: Déposez vos images ici
   addImages: Ajouter des images
+  dropTitleWord: "Déposez votre fichier Word ici"
   pageSize: Format de page
   sizeFit: Identique à l'image
   margin: Marge
@@ -271,6 +273,12 @@ js:
   images.remove: Retirer cette image
   images.count: "{n} image(s)"
   images.done: "PDF de {n} page(s) téléchargé : {name}"
+  word.working: "Conversion en cours…"
+  word.ready: "PDF de {n} page(s) prêt. Vérifiez l'aperçu, puis téléchargez-le."
+  word.count: "{n} page(s)"
+  word.done: "PDF téléchargé : {name}"
+  word.bad: "« {name} » n'a pas pu être converti. Le fichier est peut-être endommagé ou protégé par un mot de passe."
+  word.old: "« {name} » n'est pas au format .docx. Ouvrez-le dans Word ou LibreOffice, enregistrez-le en .docx, puis déposez-le ici."
   annot.readyText: Cliquez n'importe où sur une page pour ajouter du texte.
   annot.readySign: Dessinez votre signature, puis cliquez sur la page à l'endroit voulu.
   annot.placed: Signature placée. Faites-la glisser pour la déplacer, tirez le coin pour la redimensionner.
@@ -336,6 +344,8 @@ js:
   pro.locked: Trouvé. Caviardez ces éléments avec Pro.
   pro.unlock: Débloquer avec Pro
   pro.reportLocked: Le rapport de caviardage est une fonction Pro.
+  pro.batchTip: "Plusieurs PDF à anonymiser ?"
+  pro.batchLink: "Le mode par lots les traite tous d'un coup (Pro)."
   pro.needConsent: Cochez d'abord la case située sous les formules.
   pro.redirecting: Redirection vers le paiement sécurisé…
   pro.checkoutError: La page de paiement n'a pas pu s'ouvrir. Réessayez dans un instant.
@@ -1242,6 +1252,52 @@ pages:
       - q: Puis-je mélanger des photos et un PDF existant ?
         a: "Créez ici un PDF à partir des photos, puis utilisez Fusionner des PDF pour le combiner avec votre autre document."
 
+  word_to_pdf:
+    slug: word-en-pdf
+    nav: Word en PDF
+    card: Transformez un document Word (.docx) en PDF, sans l'envoyer sur un serveur.
+    title: "Word en PDF : convertir un DOCX en PDF, gratuit et sans envoi"
+    description: "Convertir Word en PDF dans votre navigateur : mise en forme, tableaux, images, en-têtes et numéros de page conservés. Gratuit, sans inscription, aucun fichier envoyé."
+    h1: 'Convertir un document Word <span class="hl">en PDF</span>'
+    h1_plain: Word en PDF
+    lede: "Contrat, devis, CV, courrier : convertissez votre fichier Word en PDF directement sur votre appareil. Le document n'est jamais envoyé sur un serveur."
+    suffix: pdf
+    hint: Aperçu des pages du PDF obtenu.
+    runLabel: Télécharger le PDF
+    stepsTitle: Comment convertir un Word en PDF
+    steps:
+      - h: Déposez votre fichier Word
+        p: "Un document au format <b>.docx</b> (Word 2007 et versions suivantes, LibreOffice, Google Docs exporté en .docx)."
+      - h: Vérifiez l'aperçu
+        p: "La conversion se fait en quelques secondes dans votre navigateur. Chaque page du PDF s'affiche en miniature."
+      - h: Téléchargez le PDF
+        p: "Le PDF garde la mise en page, le texte reste sélectionnable et les liens restent cliquables."
+    body: |
+      ## Ce qui est conservé
+
+      La conversion de Word en PDF reprend la taille et les marges de page du document, les styles de titres, le gras, l'italique et les couleurs, les tableaux avec leurs bordures et leurs fonds, les images, les listes à puces et numérotées, les en-têtes et pieds de page avec les numéros de page recalculés, les notes de bas de page et les liens web, qui restent cliquables. Le texte est écrit en vectoriel : il reste net à l'impression et peut être sélectionné ou recherché dans le PDF.
+
+      ## Les limites à connaître
+
+      Les polices sont remplacées par des polices standard proches (Calibri ou Arial deviennent une police sans empattement, Times ou Cambria une police à empattements). Les retours à la ligne peuvent donc tomber un peu différemment, et le nombre de pages varier d'une unité sur un long document. Les zones de texte, formes dessinées, graphiques et SmartArt ne sont pas reproduits, et les images positionnées librement sont replacées dans le fil du texte. Les écritures arabe et hébraïque ne sont pas prises en charge. Les anciens fichiers **.doc** doivent d'abord être enregistrés en .docx. Vérifiez l'aperçu avant d'envoyer un document important.
+
+      ## Pourquoi convertir sans envoyer le fichier
+
+      Les convertisseurs en ligne habituels téléversent votre document sur leurs serveurs. Pour un contrat, une fiche de paie ou un dossier médical, ce n'est pas anodin. Ici, le fichier est lu et converti par votre navigateur : rien ne quitte votre appareil, et la conversion fonctionne même hors connexion une fois la page chargée. Le PDF produit ne contient pas non plus les propriétés du fichier Word (auteur, société, dernier modificateur).
+
+      Une fois le PDF obtenu, vous pouvez [le protéger par un mot de passe](/fr/proteger-pdf/), [le signer](/fr/signer-pdf/) ou [le fusionner avec d'autres PDF](/fr/fusionner-pdf/). S'il contient des données à masquer avant diffusion, [caviardez-le](/fr/caviarder-pdf/).
+    faq:
+      - q: Mon fichier Word est-il envoyé sur un serveur ?
+        a: "Non. Le document est lu et converti dans votre navigateur ; aucun fichier n'est transmis. Vous pouvez le vérifier en coupant votre connexion après le chargement de la page."
+      - q: Les fichiers .doc et .odt sont-ils acceptés ?
+        a: "Seul le format .docx est pris en charge. Ouvrez un .doc ou un .odt dans Word ou LibreOffice et enregistrez-le en .docx avant de le déposer."
+      - q: Pourquoi la police n'est-elle pas exactement la même ?
+        a: "Les polices de Word ne sont pas fournies dans le fichier. La conversion utilise des polices standard proches : la mise en forme est conservée, mais la largeur des lignes peut légèrement changer."
+      - q: Les numéros de page sont-ils corrects ?
+        a: "Oui. Les champs « Page » et « Nombre de pages » des en-têtes et pieds de page sont recalculés pour chaque page du PDF."
+      - q: Le PDF est-il modifiable ?
+        a: "Le texte reste du vrai texte, sélectionnable. Pour corriger un mot après coup, utilisez <a href='/fr/modifier-texte-pdf/'>Modifier le texte</a>."
+
   protect:
     slug: proteger-pdf
     nav: Protéger un PDF
@@ -1407,7 +1463,7 @@ pages:
       - Ajout ou retrait d'utilisateurs à tout moment
     seats: Utilisateurs
     team_cta: Choisir Équipe
-    consent: "J'achète pour les besoins de mon activité professionnelle (société, indépendant, organisme public). J'accepte les <a href=\"{terms}\">conditions d'utilisation et de vente</a> et je demande l'accès immédiat aux fonctions Pro."
+    consent: "J'achète pour les besoins de mon activité professionnelle (société, indépendant, organisme public), et non en tant que particulier. J'accepte les <a href=\"{terms}\">conditions d'utilisation et de vente</a> et je demande l'accès immédiat aux fonctions Pro."
     vat_note: "Prix hors taxes. Les formules Pro sont réservées aux professionnels. La TVA est ajoutée selon votre pays ; les entreprises de l'Union européenne qui indiquent un numéro de TVA valide sont facturées sans TVA (autoliquidation). Paiement sécurisé par Stripe ; nous ne voyons jamais les données de votre carte."
     body: |
       ## Comment fonctionne la licence
@@ -1530,7 +1586,7 @@ pages:
 
       ## Achats
 
-      Si vous achetez une formule Pro, le paiement est géré par Stripe, qui traite votre carte, votre e-mail et vos données de facturation selon sa propre politique de confidentialité ; nous ne voyons jamais votre numéro de carte. Notre service de licence reçoit uniquement l'identifiant de votre session de paiement Stripe et renvoie une clé de licence signée, enregistrée dans votre navigateur. Les données de facturation (nom, e-mail, adresse, numéro de TVA, factures) sont conservées par Stripe et METIS aussi longtemps que l'exige le droit comptable. Vos fichiers PDF ne sont jamais concernés.
+      Si vous achetez une formule Pro, le paiement est géré par Stripe, qui traite votre carte, votre e-mail et vos données de facturation selon sa propre politique de confidentialité ; nous ne voyons jamais votre numéro de carte. Notre service de licence reçoit uniquement l'identifiant de votre session de paiement Stripe et renvoie une clé de licence signée, enregistrée dans votre navigateur. Les données de facturation (nom, e-mail, adresse, numéro de TVA, factures) sont conservées par Stripe et METIS aussi longtemps que l'exige le droit comptable. Vos fichiers PDF ne sont jamais concernés. Pour savoir quels sites nous amènent des clients, votre navigateur garde aussi en mémoire le site d'où vous venez et la première page consultée sur pdfanonym (sans cookie ni identifiant) ; cette information n'est transmise à Stripe avec votre commande que si vous achetez.
 
       ## Journaux du serveur
 

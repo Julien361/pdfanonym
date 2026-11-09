@@ -22,6 +22,7 @@ nav:
   compress: Comprimere PDF
   pdf_to_jpg: PDF in JPG
   jpg_to_pdf: JPG in PDF
+  word_to_pdf: "Word in PDF"
   protect: Proteggere PDF
   unlock: Sbloccare PDF
   batch: Anonimizzare in blocco
@@ -99,6 +100,7 @@ ui:
   g_security: Sicurezza
   dropTitleImg: Trascina qui le tue immagini
   addImages: Aggiungi immagini
+  dropTitleWord: "Trascina qui il tuo file Word"
   pageSize: Formato pagina
   sizeFit: Come l'immagine
   margin: Margine
@@ -271,6 +273,12 @@ js:
   images.remove: Rimuovi questa immagine
   images.count: "{n} immagine/i"
   images.done: "PDF di {n} pagina/e scaricato: {name}"
+  word.working: "Conversione in corso…"
+  word.ready: "PDF di {n} pagina/e pronto. Controlla l'anteprima, poi scaricalo."
+  word.count: "{n} pagina/e"
+  word.done: "PDF scaricato: {name}"
+  word.bad: "Impossibile convertire «{name}». Il file potrebbe essere danneggiato o protetto da password."
+  word.old: "«{name}» non è un file .docx. Aprilo in Word o LibreOffice, salvalo come .docx e trascinalo qui."
   annot.readyText: Fai clic in un punto qualsiasi di una pagina per aggiungere testo.
   annot.readySign: Disegna la tua firma, poi fai clic sulla pagina nel punto in cui va.
   annot.placed: "Firma inserita. Trascinala per spostarla, usa l'angolo per ridimensionarla."
@@ -336,6 +344,8 @@ js:
   pro.locked: Trovati. Oscurali con Pro.
   pro.unlock: Sblocca con Pro
   pro.reportLocked: Il rapporto di oscuramento è una funzione Pro.
+  pro.batchTip: "Più PDF da anonimizzare?"
+  pro.batchLink: "La modalità batch li elabora tutti in una volta (Pro)."
   pro.needConsent: Spunta prima la casella sotto le formule.
   pro.redirecting: Reindirizzamento al pagamento sicuro…
   pro.checkoutError: Impossibile aprire la pagina di pagamento. Riprova tra un momento.
@@ -489,7 +499,17 @@ pages:
 
       Un PDF non è un file di videoscrittura: ogni parola sta in una posizione fissa sulla pagina. Quando elimini una parola a metà riga, quelle successive **non** scorrono a sinistra per riempire il vuoto; resta uno spazio bianco. È esattamente ciò che serve per la riservatezza, e l'impaginazione rimane intatta.
 
-      Se devi **sostituire** un testo con un altro, cancellalo prima qui, poi aggiungi il nuovo testo con un qualsiasi editor PDF o strumento di annotazione, oppure con il nostro strumento per [aggiungere testo a un PDF](/it/aggiungere-testo-pdf/).
+      Se devi **sostituire** un testo con un altro, usa [Modificare testo PDF](/it/modificare-testo-pdf/): fai clic su una parola, scrivi quella nuova e compare nello stesso punto, se possibile con il font originale. Per aggiungere testo in uno spazio libero c'è lo strumento per [aggiungere testo a un PDF](/it/aggiungere-testo-pdf/).
+
+      ## Cancellare su un PDF: cosa sparisce esattamente
+
+      | Cosa selezioni | Cosa viene cancellato |
+      |---|---|
+      | Una parola o una riga (modalità testo) | Solo i caratteri; immagini e linee sotto restano |
+      | Un rettangolo (modalità “Area”) | Il testo nel rettangolo; spuntando “immagini” anche i pixel sotto |
+      | Una ricerca con “Segna tutto” | Ogni occorrenza in tutto il documento, maiuscole o minuscole |
+
+      Devi togliere pagine intere e non solo delle scritte? Fai prima con [Eliminare pagine PDF](/it/eliminare-pagine-pdf/).
 
       ## Usi frequenti
 
@@ -499,6 +519,8 @@ pages:
 
       Ti serve invece una barra nera ben visibile? Usa [Oscurare PDF](/it/oscurare-pdf/).
     faq:
+      - q: "Come cancello una scritta su un PDF senza Acrobat?"
+        a: "Apri il file in questa pagina, seleziona la scritta e premi <kbd>Canc</kbd>, poi scarica il PDF. Funziona nel browser, su Windows, Mac e anche da telefono, senza installare nulla."
       - q: "Il testo rimanente si sposta?"
         a: "No. Ogni altro carattere mantiene la sua posizione esatta. Dove c'era il testo rimosso resta uno spazio bianco."
       - q: "Posso cancellare testo da un PDF scansionato?"
@@ -1230,6 +1252,52 @@ pages:
       - q: Posso mescolare foto e un PDF esistente?
         a: "Crea qui un PDF dalle foto, poi usa Unire PDF per combinarlo con l'altro documento."
 
+  word_to_pdf:
+    slug: word-in-pdf
+    nav: Word in PDF
+    card: Trasforma un documento Word (.docx) in PDF senza caricarlo su un server.
+    title: "Word in PDF: convertire DOCX in PDF gratis e senza upload"
+    description: "Converti Word in PDF nel browser: formattazione, tabelle, immagini, intestazioni e numeri di pagina conservati. Gratis, senza registrazione, il file non viene mai caricato."
+    h1: 'Convertire un documento Word <span class="hl">in PDF</span>'
+    h1_plain: Word in PDF
+    lede: "Contratto, preventivo, curriculum, lettera: converti il tuo file Word in PDF direttamente sul tuo dispositivo. Il documento non viene mai inviato a un server."
+    suffix: pdf
+    hint: Anteprima delle pagine del PDF ottenuto.
+    runLabel: Scarica il PDF
+    stepsTitle: Come convertire Word in PDF
+    steps:
+      - h: Trascina il tuo file Word
+        p: "Un documento <b>.docx</b> (Word 2007 e successivi, LibreOffice, Google Docs esportato in .docx)."
+      - h: Controlla l'anteprima
+        p: "La conversione richiede pochi secondi nel browser. Ogni pagina del PDF appare in miniatura."
+      - h: Scarica il PDF
+        p: "Il PDF mantiene l'impaginazione, il testo resta selezionabile e i link restano cliccabili."
+    body: |
+      ## Cosa viene conservato
+
+      La conversione da Word a PDF mantiene formato e margini della pagina, stili dei titoli, grassetto, corsivo e colori, tabelle con bordi e sfondi, immagini, elenchi puntati e numerati, intestazioni e piè di pagina con i numeri di pagina ricalcolati, note a piè di pagina e link web, che restano cliccabili. Il testo è scritto in forma vettoriale: resta nitido in stampa e si può selezionare o cercare nel PDF.
+
+      ## Limiti da conoscere
+
+      I font vengono sostituiti da font standard simili (Calibri o Arial diventano un font senza grazie, Times o Cambria un font con grazie). Gli a capo possono quindi cadere in modo un po' diverso e, in un documento lungo, il numero di pagine può variare di una. Caselle di testo, forme disegnate, grafici e SmartArt non vengono riprodotti, e le immagini posizionate liberamente tornano nel flusso del testo. La scrittura araba ed ebraica non è supportata. I vecchi file **.doc** vanno prima salvati in .docx. Controlla l'anteprima prima di inviare un documento importante.
+
+      ## Perché convertire senza caricare il file
+
+      I convertitori online abituali caricano il documento sui loro server. Per un contratto, una busta paga o un referto medico non è un dettaglio. Qui il file viene letto e convertito dal tuo browser: niente lascia il dispositivo e, una volta caricata la pagina, la conversione funziona anche offline. Il PDF ottenuto non riporta nemmeno le proprietà del file Word (autore, azienda, ultima modifica di).
+
+      Ottenuto il PDF, puoi [proteggerlo con una password](/it/proteggere-pdf/), [firmarlo](/it/firmare-pdf/) o [unirlo ad altri PDF](/it/unire-pdf/). Se contiene dati da nascondere prima di condividerlo, [oscuralo](/it/oscurare-pdf/).
+    faq:
+      - q: Il mio file Word viene caricato su un server?
+        a: "No. Il documento viene letto e convertito nel browser; nessun file viene trasmesso. Puoi verificarlo scollegandoti da internet dopo il caricamento della pagina."
+      - q: Sono supportati i file .doc e .odt?
+        a: "È supportato solo il formato .docx. Apri il .doc o l'.odt in Word o LibreOffice e salvalo in .docx prima di trascinarlo qui."
+      - q: Perché il font non è esattamente lo stesso?
+        a: "I font di Word non sono inclusi nel file. La conversione usa font standard simili: la formattazione resta, ma la larghezza delle righe può cambiare leggermente."
+      - q: I numeri di pagina sono corretti?
+        a: "Sì. I campi Pagina e Numero di pagine di intestazioni e piè di pagina vengono ricalcolati per ogni pagina del PDF."
+      - q: Posso modificare il PDF?
+        a: "Il testo resta testo vero e selezionabile. Per correggere una parola in seguito, usa <a href='/it/modificare-testo-pdf/'>Modifica testo</a>."
+
   protect:
     slug: proteggere-pdf
     nav: Proteggere PDF
@@ -1395,7 +1463,7 @@ pages:
       - Aggiungi o rimuovi utenti quando vuoi
     seats: Utenti
     team_cta: Passa a Team
-    consent: "Acquisto per la mia attività professionale (società, lavoratore autonomo, ente pubblico). Accetto le <a href=\"{terms}\">condizioni d'uso e di vendita</a> e chiedo l'accesso immediato alle funzioni Pro."
+    consent: "Acquisto per la mia attività professionale (società, lavoratore autonomo, ente pubblico) e non come privato. Accetto le <a href=\"{terms}\">condizioni d'uso e di vendita</a> e chiedo l'accesso immediato alle funzioni Pro."
     vat_note: "Prezzi IVA esclusa. Le formule Pro sono riservate ai professionisti. L'IVA viene aggiunta in base al tuo paese; le aziende dell'UE con una partita IVA valida ricevono la fattura senza IVA (inversione contabile, reverse charge). Pagamento sicuro tramite Stripe: non vediamo mai i dati della tua carta."
     body: |
       ## Come funziona la licenza
@@ -1518,7 +1586,7 @@ pages:
 
       ## Acquisti
 
-      Se acquisti una formula Pro, il pagamento è gestito da Stripe, che tratta la tua carta, la tua email e i tuoi dati di fatturazione secondo la propria informativa sulla privacy; non vediamo mai il numero della tua carta. Il nostro servizio di licenze riceve solo l'identificativo della tua sessione di pagamento Stripe e restituisce una chiave di licenza firmata, che viene salvata nel tuo browser. I dati di fatturazione (nome, email, indirizzo, partita IVA, fatture) sono conservati da Stripe e da METIS per il tempo richiesto dalla normativa contabile. I tuoi file PDF non sono mai coinvolti.
+      Se acquisti una formula Pro, il pagamento è gestito da Stripe, che tratta la tua carta, la tua email e i tuoi dati di fatturazione secondo la propria informativa sulla privacy; non vediamo mai il numero della tua carta. Il nostro servizio di licenze riceve solo l'identificativo della tua sessione di pagamento Stripe e restituisce una chiave di licenza firmata, che viene salvata nel tuo browser. I dati di fatturazione (nome, email, indirizzo, partita IVA, fatture) sono conservati da Stripe e da METIS per il tempo richiesto dalla normativa contabile. I tuoi file PDF non sono mai coinvolti. Per sapere quali siti ci portano clienti, il tuo browser memorizza anche il sito da cui provieni e la prima pagina visitata su pdfanonym (senza cookie né identificativi); questa informazione viene inviata a Stripe con il tuo ordine solo se acquisti.
 
       ## Log del server
 

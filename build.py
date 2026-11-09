@@ -19,13 +19,14 @@ TOOLS = {
     "edit_text": ("textedit", "textedit"), "add_text": ("annotate", "annotate"), "sign": ("annotate", "annotate"),
     "watermark": ("watermark", "process"), "page_numbers": ("page_numbers", "process"),
     "compress": ("compress", "process"), "pdf_to_jpg": ("pdf_to_jpg", "process"), "jpg_to_pdf": ("jpg_to_pdf", "images"),
+    "word_to_pdf": ("word_to_pdf", "word"),
     "protect": ("protect", "process"), "unlock": ("unlock", "process"),
 }
 GROUPS = [
     ("privacy", ["redact", "anonymize", "batch", "remove", "metadata", "flatten"]),
     ("pages", ["merge", "delete_pages", "extract_pages", "rotate", "reorder"]),
     ("edit", ["edit_text", "add_text", "sign", "watermark", "page_numbers"]),
-    ("convert", ["compress", "grayscale", "pdf_to_jpg", "jpg_to_pdf"]),
+    ("convert", ["word_to_pdf", "compress", "grayscale", "pdf_to_jpg", "jpg_to_pdf"]),
     ("security", ["protect", "unlock"]),
 ]
 # Parcours logiques : depuis chaque outil, les 3 outils qu'on utilise souvent ensuite (maillage contextuel).
@@ -37,13 +38,14 @@ NEXT = {
     "edit_text": ["add_text", "flatten", "protect"], "add_text": ["edit_text", "sign", "flatten"], "sign": ["add_text", "flatten", "protect"], "watermark": ["flatten", "protect", "page_numbers"],
     "page_numbers": ["merge", "watermark", "compress"], "compress": ["grayscale", "pdf_to_jpg", "metadata"], "grayscale": ["compress", "pdf_to_jpg", "page_numbers"],
     "pdf_to_jpg": ["jpg_to_pdf", "extract_pages", "compress"], "jpg_to_pdf": ["compress", "merge", "pdf_to_jpg"],
+    "word_to_pdf": ["merge", "protect", "sign"],
     "protect": ["unlock", "flatten", "metadata"], "unlock": ["protect", "compress", "merge"],
 }
-SCRIPT_OF = {"batch": "batch", "redact": "redact", "pages": "pages", "report": "clean", "process": "process", "images": "images", "annotate": "annotate", "textedit": "textedit"}
+SCRIPT_OF = {"batch": "batch", "redact": "redact", "pages": "pages", "report": "clean", "process": "process", "images": "images", "annotate": "annotate", "textedit": "textedit", "word": "word"}
 TOOL_KEYS = ["redact", "anonymize", "edit_text"]  # accès direct dans l'en-tête
 PAGE_KEYS = GROUPS[1][1]
 ALL_TOOLS = list(TOOLS)
-LEARN_KEYS = ["guide", "privacy", "terms", "source", "legal"]
+LEARN_KEYS = ["guide", "anon_guide", "privacy", "terms", "source", "legal"]  # anon_guide : DE seulement pour l'instant
 PRO_PAGES = ["pricing", "account"]  # pages avec script dédié (pro.js)
 TOOL_OF = {k: v[0] for k, v in TOOLS.items()}
 UI_OF = {k: v[1] for k, v in TOOLS.items()}
@@ -65,6 +67,7 @@ ICONS = {
     "compress": '<rect x="5" y="3" width="24" height="28" rx="3" stroke="currentColor" stroke-width="2"/><path d="M17 7v8M13 11l4 4 4-4M17 27v-8M13 23l4-4 4 4" stroke="currentColor" stroke-width="2"/>',
     "pdf_to_jpg": '<rect x="3" y="5" width="12" height="16" rx="2" stroke="currentColor" stroke-width="2"/><rect x="18" y="12" width="13" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M20 25l3-4 2 2 2-3 3 5" stroke="currentColor" stroke-width="1.6"/><path d="M15 26h-3M9 24l3 2-3 2" stroke="currentColor" stroke-width="1.6"/>',
     "jpg_to_pdf": '<rect x="3" y="5" width="13" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M5 18l3-4 2 2 2-3 3 5" stroke="currentColor" stroke-width="1.6"/><rect x="19" y="12" width="12" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M22 18h6M22 22h6" stroke="currentColor" stroke-width="1.6" opacity=".5"/>',
+    "word_to_pdf": '<rect x="3" y="5" width="13" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M6 10l1.5 6 2-4.5 2 4.5L13 10" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><rect x="19" y="12" width="12" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M22 18h6M22 22h6" stroke="currentColor" stroke-width="1.6" opacity=".5"/>',
     "protect": '<rect x="7" y="15" width="20" height="15" rx="3" stroke="currentColor" stroke-width="2"/><path d="M11 15v-4a6 6 0 0 1 12 0v4" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="22" r="2" fill="currentColor"/>',
     "unlock": '<rect x="7" y="15" width="20" height="15" rx="3" stroke="currentColor" stroke-width="2"/><path d="M11 15v-4a6 6 0 0 1 11.5-2.4" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="22" r="2" fill="currentColor"/>',
     "grayscale": '<rect x="5" y="3" width="24" height="28" rx="3" stroke="currentColor" stroke-width="2"/><path d="M17 9a8 8 0 0 0 0 16z" fill="currentColor"/><circle cx="17" cy="17" r="8" stroke="currentColor" stroke-width="2"/>',
@@ -110,11 +113,11 @@ def jsonld_for(L, key, P, url):
             {"@type": "Question", "name": f["q"], "acceptedAnswer": {"@type": "Answer", "text": f["a"]}} for f in P["faq"]]})
     if key == "home":
         out.append({"@context": "https://schema.org", "@type": "WebSite", "name": "pdfanonym", "url": SITE + url, "inLanguage": L["lang"]})
-    elif key == "guide":
+    elif key in ("guide", "anon_guide"):
         out.append({"@context": "https://schema.org", "@type": "Article", "headline": P["title"], "inLanguage": L["lang"],
                     "author": {"@type": "Organization", "name": "pdfanonym"}, "publisher": {"@type": "Organization", "name": "METIS"},
                     "dateModified": datetime.date.today().isoformat(), "mainEntityOfPage": SITE + url})
-    else:
+    elif key not in ALL_TOOLS:
         home = L["home_url"]
         out.append({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "pdfanonym", "item": SITE + home},

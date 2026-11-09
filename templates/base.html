@@ -22,7 +22,7 @@
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <link rel="preload" href="/assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/site.css?v={{ v }}">
-{% for ld in jsonld %}<script type="application/ld+json">{{ ld }}</script>
+{% for ld in jsonld %}<script type="application/ld+json">{{ ld|safe }}</script>
 {% endfor %}</head>
 <body>
 <a class="skip" href="#main">{{ L.ui.skip }}</a>
@@ -60,9 +60,10 @@
         <p class="muted" style="margin-top:10px">{{ L.ui.foot_tagline }}</p>
       </div>
       {% for g, keys in groups %}<div><h4>{{ L.ui["g_" ~ g] }}</h4><ul>{% for k in keys if L.urls[k] %}<li><a href="{{ L.urls[k] }}">{{ L.nav[k] }}</a></li>{% endfor %}</ul></div>
-      {% endfor %}      <div><h4>{{ L.ui.learn }}</h4><ul>{% for k in learn_keys %}<li><a href="{{ L.urls[k] }}">{{ L.pages[k].nav }}</a></li>{% endfor %}</ul></div>
+      {% endfor %}      <div><h4>{{ L.ui.learn }}</h4><ul>{% for k in learn_keys if L.urls[k] %}<li><a href="{{ L.urls[k] }}">{{ L.pages[k].nav }}</a></li>{% endfor %}</ul></div>
       <div><h4>{{ L.ui.language }}</h4><ul>{% for alt in lang_menu %}<li><a href="{{ alt.url }}" hreflang="{{ alt.lang }}" lang="{{ alt.lang }}">{{ alt.name }}</a></li>{% endfor %}</ul></div>
     </div>
+    <p class="badges"><a href="https://www.saashub.com/pdfanonym" target="_blank" rel="noopener"><img src="/assets/img/saashub-approved.png" alt="pdfanonym badge" width="150" height="50" loading="lazy"></a> <a href="https://nicklaunches.com/products/pdfanonym/" target="_blank" rel="noopener"><img src="/assets/img/nicklaunches-featured.png" alt="pdfanonym sur Nick Launches" width="244" height="56" loading="lazy"></a></p>
     <p class="legal">© {{ year }} METIS · {{ L.ui.foot_legal }}</p>
   </div>
 </footer>

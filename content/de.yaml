@@ -22,6 +22,7 @@ nav:
   compress: PDF komprimieren
   pdf_to_jpg: PDF in JPG
   jpg_to_pdf: JPG in PDF
+  word_to_pdf: "Word in PDF"
   protect: PDF schützen
   unlock: PDF entsperren
   batch: Stapel-Anonymisierung
@@ -99,6 +100,7 @@ ui:
   g_security: Sicherheit
   dropTitleImg: Zieh deine Bilder hierher
   addImages: Bilder hinzufügen
+  dropTitleWord: "Zieh deine Word-Datei hierher"
   pageSize: Seitengröße
   sizeFit: Wie das Bild
   margin: Rand
@@ -271,6 +273,12 @@ js:
   images.remove: Dieses Bild entfernen
   images.count: "{n} Bild(er)"
   images.done: "PDF mit {n} Seite(n) heruntergeladen: {name}"
+  word.working: "Wird umgewandelt…"
+  word.ready: "PDF mit {n} Seite(n) fertig. Prüf die Vorschau und lade es dann herunter."
+  word.count: "{n} Seite(n)"
+  word.done: "PDF heruntergeladen: {name}"
+  word.bad: "„{name}“ konnte nicht umgewandelt werden. Die Datei ist vielleicht beschädigt oder mit einem Passwort geschützt."
+  word.old: "„{name}“ ist keine .docx-Datei. Öffne sie in Word oder LibreOffice, speichere sie als .docx und zieh sie dann hierher."
   annot.readyText: Klick irgendwo auf eine Seite, um Text einzufügen.
   annot.readySign: Zeichne deine Unterschrift und klick dann auf die Stelle der Seite, an die sie gehört.
   annot.placed: Unterschrift platziert. Zieh sie, um sie zu verschieben, und nutz die Ecke, um ihre Größe zu ändern.
@@ -336,6 +344,8 @@ js:
   pro.locked: Gefunden. Schwärze sie mit Pro.
   pro.unlock: Mit Pro freischalten
   pro.reportLocked: Der Schwärzungsbericht ist eine Pro-Funktion.
+  pro.batchTip: "Mehrere PDFs zu anonymisieren?"
+  pro.batchLink: "Der Stapelmodus erledigt alle auf einmal (Pro)."
   pro.needConsent: Bitte setz zuerst den Haken unter den Tarifen.
   pro.redirecting: Weiterleitung zur sicheren Zahlung…
   pro.checkoutError: Die Zahlungsseite konnte nicht geöffnet werden. Bitte versuch es gleich noch einmal.
@@ -489,7 +499,17 @@ pages:
 
       PDFs sind keine Textverarbeitungsdateien: Jedes Wort sitzt an einer festen Stelle auf der Seite. Wenn du mitten in einer Zeile ein Wort löschst, rücken die folgenden Wörter **nicht** nach links, um die Lücke zu füllen. Es bleibt eine Leerstelle. Für die Vertraulichkeit ist das genau richtig, und das Layout bleibt intakt.
 
-      Willst du Text durch etwas anderes **ersetzen**, lösch ihn zuerst hier und füg den neuen Wortlaut dann mit [Text in PDF einfügen](/de/text-in-pdf-einfuegen/) an derselben Stelle ein.
+      Willst du Text durch etwas anderes **ersetzen**, nimm [PDF Text bearbeiten](/de/pdf-text-bearbeiten/): Klick auf ein Wort, tipp den neuen Wortlaut, und er erscheint an derselben Stelle, wenn möglich in der Originalschrift. Neuen Text an einer freien Stelle ergänzt du mit [Text in PDF einfügen](/de/text-in-pdf-einfuegen/).
+
+      ## Text im PDF löschen: was genau verschwindet
+
+      | Was du auswählst | Was gelöscht wird |
+      |---|---|
+      | Ein Wort oder eine Zeile (Text-Modus) | Nur die Zeichen, Bilder und Linien darunter bleiben |
+      | Ein Rechteck (Modus „Bereich“) | Der Text im Rechteck; mit dem Haken bei „Bilder“ auch die Bildpunkte darunter |
+      | Ein Suchbegriff mit „Alle markieren“ | Jedes Vorkommen im ganzen Dokument, unabhängig von Groß- und Kleinschreibung |
+
+      Sollen ganze Seiten weg und nicht nur Text, geht das schneller mit [PDF Seiten löschen](/de/pdf-seiten-loeschen/).
 
       ## Typische Anwendungen
 
@@ -888,7 +908,7 @@ pages:
 
       ## Was sie nicht erraten kann
 
-      Ein Name ohne Anrede („Jean Dupont unterschrieb…“) sieht aus wie jedes andere Wort und wird deshalb nicht automatisch erkannt. Gib ihn ins Suchfeld ein und drück **Alle markieren**: Jedes Vorkommen wird erfasst, ob großgeschrieben oder nicht, mit oder ohne Akzente. Postanschriften und handschriftliche Angaben werden ebenfalls nicht erkannt. Was die Erkennung übersieht, kannst du von Hand [im PDF schwärzen](/de/pdf-schwaerzen/). Lies das Dokument immer einmal durch, bevor du es weitergibst; welche Prüfungen sich lohnen, zeigt unser Leitfaden [PDF richtig schwärzen](/de/pdf-richtig-schwaerzen/).
+      Ein Name ohne Anrede („Jean Dupont unterschrieb…“) sieht aus wie jedes andere Wort und wird deshalb nicht automatisch erkannt. Gib ihn ins Suchfeld ein und drück **Alle markieren**: Jedes Vorkommen wird erfasst, ob großgeschrieben oder nicht, mit oder ohne Akzente. Postanschriften und handschriftliche Angaben werden ebenfalls nicht erkannt. Was die Erkennung übersieht, kannst du von Hand [im PDF schwärzen](/de/pdf-schwaerzen/). Lies das Dokument immer einmal durch, bevor du es weitergibst; welche Prüfungen sich lohnen, zeigt unser Leitfaden [PDF richtig schwärzen](/de/pdf-richtig-schwaerzen/). Warum ein Dokument ohne Namen noch lange nicht anonym ist, erklärt [Dokumente anonymisieren](/de/dokumente-anonymisieren/).
 
       ## Warum lokales Anonymisieren zählt
 
@@ -1232,6 +1252,52 @@ pages:
       - q: Kann ich Fotos und ein vorhandenes PDF kombinieren?
         a: "Erstell hier ein PDF aus den Fotos und nutz dann PDF zusammenfügen, um es mit deinem anderen Dokument zu kombinieren."
 
+  word_to_pdf:
+    slug: word-in-pdf
+    nav: Word in PDF
+    card: Wandle ein Word-Dokument (.docx) in ein PDF um, ohne es hochzuladen.
+    title: "Word in PDF umwandeln: DOCX zu PDF, kostenlos und ohne Upload"
+    description: "Word in PDF umwandeln, direkt im Browser: Formatierung, Tabellen, Bilder, Kopfzeilen und Seitenzahlen bleiben erhalten. Kostenlos, ohne Anmeldung, ohne Upload."
+    h1: 'Word-Dokument <span class="hl">in PDF umwandeln</span>'
+    h1_plain: Word in PDF
+    lede: "Vertrag, Angebot, Lebenslauf, Brief: Wandle deine Word-Datei direkt auf deinem Gerät in ein PDF um. Das Dokument wird nie an einen Server geschickt."
+    suffix: pdf
+    hint: Vorschau der Seiten des fertigen PDFs.
+    runLabel: PDF herunterladen
+    stepsTitle: So wandelst du Word in PDF um
+    steps:
+      - h: Zieh deine Word-Datei hierher
+        p: "Ein Dokument im Format <b>.docx</b> (Word ab 2007, LibreOffice, Google Docs als .docx exportiert)."
+      - h: Prüf die Vorschau
+        p: "Die Umwandlung dauert in deinem Browser nur wenige Sekunden. Jede Seite des PDFs wird als Miniatur angezeigt."
+      - h: Lade das PDF herunter
+        p: "Das PDF behält das Layout, der Text bleibt markierbar und Links bleiben klickbar."
+    body: |
+      ## Was erhalten bleibt
+
+      Beim Umwandeln von Word in PDF bleiben Seitenformat und Ränder, Überschriften, Fett, Kursiv und Farben, Tabellen mit Rahmen und Schattierung, Bilder, Aufzählungen und nummerierte Listen, Kopf- und Fußzeilen mit neu berechneten Seitenzahlen, Fußnoten sowie Weblinks erhalten, die klickbar bleiben. Der Text wird als Vektortext geschrieben: Er bleibt im Druck scharf und lässt sich im PDF markieren und durchsuchen.
+
+      ## Grenzen, die du kennen solltest
+
+      Schriften werden durch ähnliche Standardschriften ersetzt (Calibri oder Arial durch eine serifenlose, Times oder Cambria durch eine Serifenschrift). Zeilenumbrüche können daher etwas anders fallen, und bei einem langen Dokument kann die Seitenzahl um eins abweichen. Textfelder, gezeichnete Formen, Diagramme und SmartArt werden nicht übernommen, frei positionierte Bilder werden in den Textfluss gesetzt. Arabische und hebräische Schrift werden nicht unterstützt. Alte **.doc**-Dateien musst du zuerst als .docx speichern. Prüf die Vorschau, bevor du ein wichtiges Dokument verschickst.
+
+      ## Warum ohne Upload umwandeln
+
+      Übliche Online-Konverter laden dein Dokument auf ihre Server. Bei einem Vertrag, einer Gehaltsabrechnung oder einem Arztbericht ist das nicht egal. Hier liest und wandelt dein Browser die Datei um: Nichts verlässt dein Gerät, und nach dem Laden der Seite funktioniert es sogar offline. Das fertige PDF übernimmt auch nicht die Eigenschaften der Word-Datei (Autor, Firma, zuletzt geändert von).
+
+      Danach kannst du das PDF [mit einem Passwort schützen](/de/pdf-passwort-schuetzen/), [unterschreiben](/de/pdf-unterschreiben/) oder [mit anderen PDFs zusammenfügen](/de/pdf-zusammenfuegen/). Enthält es Daten, die vor der Weitergabe weg müssen, [schwärze es](/de/pdf-schwaerzen/).
+    faq:
+      - q: Wird meine Word-Datei auf einen Server hochgeladen?
+        a: "Nein. Das Dokument wird in deinem Browser gelesen und umgewandelt, es wird keine Datei übertragen. Du kannst das prüfen, indem du nach dem Laden der Seite die Internetverbindung trennst."
+      - q: Werden .doc- und .odt-Dateien unterstützt?
+        a: "Nur .docx wird unterstützt. Öffne eine .doc- oder .odt-Datei in Word oder LibreOffice und speichere sie als .docx."
+      - q: Warum ist die Schrift nicht genau dieselbe?
+        a: "Word-Schriften sind nicht in der Datei enthalten. Die Umwandlung nutzt ähnliche Standardschriften: Die Formatierung bleibt, die Zeilenbreite kann sich leicht ändern."
+      - q: Stimmen die Seitenzahlen?
+        a: "Ja. Die Felder Seite und Anzahl der Seiten in Kopf- und Fußzeilen werden für jede Seite des PDFs neu berechnet."
+      - q: Kann ich das PDF bearbeiten?
+        a: "Der Text bleibt echter, markierbarer Text. Um nachträglich ein Wort zu korrigieren, nutz <a href='/de/pdf-text-bearbeiten/'>Text bearbeiten</a>."
+
   protect:
     slug: pdf-passwort-schuetzen
     nav: PDF schützen
@@ -1397,7 +1463,7 @@ pages:
       - Nutzer jederzeit hinzufügen oder entfernen
     seats: Nutzer
     team_cta: Team holen
-    consent: "Ich kaufe für meine berufliche Tätigkeit (Unternehmen, Selbstständigkeit, öffentliche Stelle). Ich akzeptiere die <a href=\"{terms}\">Nutzungs- und Verkaufsbedingungen</a> und verlange sofortigen Zugang zu den Pro-Funktionen."
+    consent: "Ich kaufe für meine berufliche Tätigkeit (Unternehmen, Selbstständigkeit, öffentliche Stelle) und nicht als Privatperson. Ich akzeptiere die <a href=\"{terms}\">Nutzungs- und Verkaufsbedingungen</a> und verlange sofortigen Zugang zu den Pro-Funktionen."
     vat_note: "Alle Preise zzgl. MwSt. Die Pro-Tarife sind Unternehmern vorbehalten. Die MwSt. wird je nach deinem Land berechnet; Unternehmen in der EU mit gültiger USt-IdNr. erhalten eine Rechnung ohne MwSt. (Reverse-Charge-Verfahren). Sichere Zahlung über Stripe; deine Kartendaten sehen wir nie."
     body: |
       ## So funktioniert die Lizenz
@@ -1491,7 +1557,7 @@ pages:
 
       ## Schwärzen und DSGVO
 
-      Gibst du ein Dokument auf ein Auskunftsersuchen nach Art. 15 DSGVO heraus, müssen Daten über andere Personen in der Regel entfernt werden, oder die Herausgabe muss begründet sein. Schwärzen ist der übliche Weg dafür. Machst du das über einen Dienst mit Upload, schickst du die Daten dieser Personen an einen weiteren Auftragsverarbeiter, über den du dann Rechenschaft ablegen musst. Ein Werkzeug, das lokal arbeitet, erspart dir diese Frage ganz. Bei vielen Dokumenten auf einmal kannst du die Dateien [PDF stapelweise anonymisieren](/de/pdf-stapel-anonymisieren/).
+      Gibst du ein Dokument auf ein Auskunftsersuchen nach Art. 15 DSGVO heraus, müssen Daten über andere Personen in der Regel entfernt werden, oder die Herausgabe muss begründet sein. Schwärzen ist der übliche Weg dafür. Machst du das über einen Dienst mit Upload, schickst du die Daten dieser Personen an einen weiteren Auftragsverarbeiter, über den du dann Rechenschaft ablegen musst. Ein Werkzeug, das lokal arbeitet, erspart dir diese Frage ganz. Soll das Dokument nicht nur geschwärzt, sondern wirklich anonym sein, hilft die Anleitung [Dokumente anonymisieren](/de/dokumente-anonymisieren/). Bei vielen Dokumenten auf einmal kannst du die Dateien [PDF stapelweise anonymisieren](/de/pdf-stapel-anonymisieren/).
     faq:
       - q: Lässt sich eine Schwärzung im PDF wieder aufheben?
         a: "Wenn der Text wirklich entfernt wurde, nein: Es gibt nichts mehr wiederherzustellen. Wurde er nur von einer Form verdeckt, ja, oft schon mit einfachem Kopieren und Einfügen. Deshalb ist der Kopiertest so wichtig."
@@ -1499,6 +1565,77 @@ pages:
         a: "Der kostenlose Reader bietet keine echte Schwärzung, die ist den kostenpflichtigen Acrobat-Versionen vorbehalten. Ein Rechteck mit den Kommentarwerkzeugen zu zeichnen, schwärzt gar nichts."
       - q: Kann ich auch am Handy schwärzen?
         a: "pdfanonym funktioniert in mobilen Browsern: Öffne die Seite zum Schwärzen, wähl das PDF aus deinen Dateien und markier den Text mit dem Finger. Für lange Dokumente ist ein Computer bequemer."
+
+  anon_guide:
+    slug: dokumente-anonymisieren
+    nav: Dokumente anonymisieren
+    title: "Dokumente anonymisieren nach DSGVO: Anleitung und Checkliste"
+    description: "Dokumente anonymisieren statt nur schwärzen: was die DSGVO unter anonym versteht, welche Angaben eine Person verraten und wie du ein PDF Schritt für Schritt anonymisierst."
+    h1: Dokumente anonymisieren
+    lede: "Ein Name mit schwarzem Balken macht ein Dokument noch nicht anonym. Entscheidend ist, ob man die Person danach noch erkennen kann, über das Geburtsdatum, die Adresse, die Funktion oder einen Dateinamen. So gehst du vor."
+    cta_tool: anonymize
+    cta: PDF jetzt anonymisieren
+    body: |
+      ## Anonym oder nur pseudonym?
+
+      Die DSGVO kennt zwei Stufen, und sie haben sehr unterschiedliche Folgen.
+
+      **Pseudonymisiert** ist ein Dokument, wenn sich die Daten nur noch mit zusätzlichen Informationen einer Person zuordnen lassen, die getrennt aufbewahrt werden (Art. 4 Nr. 5 DSGVO). Typisch: „Herr Weber“ wird zu „Mitarbeiter 17“, und irgendwo gibt es eine Liste, wer Nummer 17 ist. Solche Daten bleiben personenbezogen, die DSGVO gilt weiter.
+
+      **Anonym** ist ein Dokument erst, wenn die Person „nicht oder nicht mehr identifiziert werden kann“, auch nicht indirekt. So steht es in Erwägungsgrund 26 der DSGVO, und für solche Informationen gelten die Grundsätze des Datenschutzes nicht mehr. Gemessen wird das an allen Mitteln, die jemand nach allgemeinem Ermessen wahrscheinlich nutzen würde, um die Person doch zu identifizieren, unter Berücksichtigung von Kosten, Zeitaufwand und verfügbarer Technik.
+
+      Für die Praxis heißt das: Den Namen zu entfernen reicht selten. Du musst alles entfernen, womit sich die Person zusammen mit dem Kontext wiederfinden lässt.
+
+      ## Was eine Person verrät
+
+      | Art | Beispiele |
+      |---|---|
+      | Direkte Merkmale | Name, Unterschrift, Foto, E-Mail-Adresse, Telefonnummer |
+      | Kennnummern | IBAN, Personal-, Kunden- oder Aktennummer, Steuer-ID, Sozialversicherungsnummer, Kfz-Kennzeichen |
+      | Indirekte Merkmale | Geburtsdatum, genaue Adresse, Arbeitgeber, seltene Funktion („die Leiterin der Rechtsabteilung“), Krankheitsverlauf |
+      | Versteckte Stellen | Dateiname, Autor in den Dokumenteigenschaften, Kommentare, Kopf- und Fußzeilen, eingebettete Anhänge |
+
+      Die dritte Zeile ist die tückischste. In einem Betrieb mit 40 Leuten genügt oft schon „Teamleiterin, seit 2019 im Haus, Elternzeit im Frühjahr“, und jeder weiß, wer gemeint ist. Hier hilft kein Werkzeug, nur Lesen mit den Augen eines Kollegen.
+
+      ## Ein PDF anonymisieren, Schritt für Schritt
+
+      1. **Arbeite mit einer Kopie.** Die Schwärzung ist absichtlich endgültig.
+      2. **Lass die Daten automatisch suchen.** Öffne die Datei in [PDF anonymisieren](/de/pdf-anonymisieren/). E-Mails, Telefonnummern, IBANs, Kartennummern und Namen nach einer Anrede werden erkannt und nach Art gruppiert. Die Datei bleibt dabei auf deinem Rechner.
+      3. **Ergänze, was die Suche nicht erraten kann.** Namen ohne Anrede, Aktenzeichen, Orte: Gib jeden Begriff ins Suchfeld ein und markier alle Vorkommen auf einmal.
+      4. **Geh die indirekten Merkmale durch.** Lies das Dokument einmal ganz und markier Geburtsdaten, Funktionen und Details, die zusammen auf eine Person zeigen.
+      5. **Anwenden und herunterladen.** Der Text wird aus der Datei gelöscht, nicht nur abgedeckt. Die Metadaten (Autor, Titel) werden standardmäßig mit entfernt.
+      6. **Benenn die Datei um.** „Abmahnung_Weber_2026.pdf“ verrät mehr als der ganze Inhalt.
+      7. **Prüf das Ergebnis.** Versuch, eine geschwärzte Stelle zu kopieren, und such nach jedem entfernten Wort. Die fünf Tests aus [PDF richtig schwärzen](/de/pdf-richtig-schwaerzen/) dauern zwei Minuten.
+
+      ## Und Word-Dokumente?
+
+      Speichere das Dokument zuerst als PDF und anonymisiere dann das PDF. Vorher nimmst du in Word alle nachverfolgten Änderungen an und löschst die Kommentare: Je nach Einstellung exportiert Word sie sonst sichtbar ins PDF. Prüf danach im PDF, ob noch Randbemerkungen oder Sprechblasen zu sehen sind.
+
+      ## Gescannte Dokumente
+
+      Ein Scan enthält ein Bild, keinen Text. Die automatische Suche findet darin nichts. Wechsle in [PDF schwärzen](/de/pdf-schwaerzen/) in den Modus **Bereich**, setz den Haken bei **Bilder** und zieh über jede Stelle ein Rechteck. Die Pixel darunter werden aus dem Bild gelöscht.
+
+      ## Viele Dokumente auf einmal
+
+      Musst du einen ganzen Ordner herausgeben, etwa bei einem Auskunftsersuchen, kannst du die Dateien [PDF stapelweise anonymisieren](/de/pdf-stapel-anonymisieren/) (Pro-Funktion). Die Pro-Erkennung findet zusätzlich Namen ohne Anrede, Postanschriften, Geburtsdaten und Kfz-Kennzeichen und erstellt einen Bericht über die entfernten Stellen, ohne die Werte selbst zu wiederholen.
+
+      ## Checkliste vor der Weitergabe
+
+      - Namen, Kennnummern und Kontaktdaten entfernt
+      - Indirekte Merkmale geprüft: Würde ein Kollege die Person erkennen?
+      - Dateiname neutral
+      - Metadaten, Kommentare und Anhänge leer
+      - Kopiertest und Suchtest ohne Treffer
+      - Original sicher aufbewahrt, Kopie weitergegeben
+    faq:
+      - q: Ist ein geschwärztes Dokument automatisch anonym?
+        a: "Nein. Geschwärzt heißt nur, dass bestimmte Stellen entfernt wurden. Anonym ist das Dokument erst, wenn sich die Person auch über den restlichen Inhalt nicht mehr identifizieren lässt."
+      - q: Reicht es, Namen durch Initialen zu ersetzen?
+        a: "Meist nicht. Initialen zusammen mit Funktion, Ort oder Datum lassen oft eindeutig auf eine Person schließen. Das ist dann höchstens eine Pseudonymisierung, und die Daten bleiben personenbezogen."
+      - q: Muss ich bei einer Auskunft nach Art. 15 DSGVO Daten Dritter schwärzen?
+        a: "Das Recht auf eine Kopie darf nach Art. 15 Abs. 4 DSGVO die Rechte und Freiheiten anderer Personen nicht beeinträchtigen. In der Praxis werden Angaben über Dritte deshalb meist geschwärzt, bevor die Kopie herausgeht."
+      - q: Werden meine Dokumente dabei hochgeladen?
+        a: "Nein. pdfanonym läuft vollständig in deinem Browser. Du ziehst also keinen weiteren Dienstleister hinzu, um personenbezogene Daten zu entfernen."
 
   privacy:
     slug: datenschutz
@@ -1520,7 +1657,7 @@ pages:
 
       ## Käufe
 
-      Wenn du einen Pro-Tarif kaufst, wird die Zahlung von Stripe abgewickelt. Stripe verarbeitet deine Karte, deine E-Mail-Adresse und deine Rechnungsdaten gemäß seiner eigenen Datenschutzerklärung; deine Kartennummer sehen wir nie. Unser Lizenzdienst erhält nur die Kennung deiner Stripe-Checkout-Sitzung und gibt einen signierten Lizenzschlüssel zurück, der in deinem Browser gespeichert wird. Rechnungsdaten (Name, E-Mail-Adresse, Anschrift, USt-IdNr., Rechnungen) werden von Stripe und METIS so lange aufbewahrt, wie es das Buchführungsrecht verlangt. Deine PDF-Dateien sind daran nie beteiligt.
+      Wenn du einen Pro-Tarif kaufst, wird die Zahlung von Stripe abgewickelt. Stripe verarbeitet deine Karte, deine E-Mail-Adresse und deine Rechnungsdaten gemäß seiner eigenen Datenschutzerklärung; deine Kartennummer sehen wir nie. Unser Lizenzdienst erhält nur die Kennung deiner Stripe-Checkout-Sitzung und gibt einen signierten Lizenzschlüssel zurück, der in deinem Browser gespeichert wird. Rechnungsdaten (Name, E-Mail-Adresse, Anschrift, USt-IdNr., Rechnungen) werden von Stripe und METIS so lange aufbewahrt, wie es das Buchführungsrecht verlangt. Deine PDF-Dateien sind daran nie beteiligt. Damit wir wissen, welche Websites uns Kunden bringen, merkt sich dein Browser außerdem, von welcher Website du kommst und welche Seite du zuerst auf pdfanonym aufgerufen hast (ohne Cookie und ohne Kennung); diese Angabe wird nur bei einem Kauf mit deiner Bestellung an Stripe übermittelt.
 
       ## Server-Logs
 

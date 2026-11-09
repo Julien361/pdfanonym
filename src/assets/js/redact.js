@@ -482,12 +482,25 @@ el("download").onclick = async () => {
   const name = suffixName(state.fileName, app.dataset.suffix || "redacted");
   download(bytes, name);
   status((n ? t("status.applied", { n }) + " " : "") + t("status.downloaded", { name }), "ok");
+  batchTip();
   if (el("optReport").checked && state.log.length) {
     if (!(await licenseStatus()).active) { status(t("pro.reportLocked"), "err"); return; }
     const rep = await buildReport(state.mupdf, { file: name, bytes, pages: state.pages.length, log: state.log, t });
     setTimeout(() => dl(rep, name.replace(/\.pdf$/i, "") + "-" + t("report.suffix") + ".pdf"), 400);
   }
 };
+
+// Après un fichier traité : proposer le traitement par lots (Pro), une seule fois par page.
+async function batchTip() {
+  if (!app.dataset.batch || app.querySelector(".batch-tip") || (await licenseStatus()).active) return;
+  const p = document.createElement("p");
+  p.className = "batch-tip";
+  const a = document.createElement("a");
+  a.href = app.dataset.batch;
+  a.textContent = t("pro.batchLink");
+  p.append(t("pro.batchTip") + " ", a);
+  app.querySelector(".work .status")?.after(p);
+}
 
 /* ---------- Modes et clavier ---------- */
 

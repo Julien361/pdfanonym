@@ -11,6 +11,24 @@ export function t(key, vars = {}) {
   return s;
 }
 
+// Provenance du premier contact (30 jours) : site d'origine et page d'arrivée, gardés dans le navigateur
+// et transmis à Stripe seulement en cas d'achat. Ni cookie ni identifiant.
+const SRC_KEY = "pa_src";
+try {
+  const old = JSON.parse(localStorage.getItem(SRC_KEY) || "null");
+  if (!old || Date.now() - old.t > 30 * 864e5) {
+    let from = "direct";
+    try { from = new URL(document.referrer).hostname || "direct"; } catch {}
+    const q = new URLSearchParams(location.search);
+    if (from !== location.hostname || !old) {
+      localStorage.setItem(SRC_KEY, JSON.stringify({ r: (q.get("utm_source") || q.get("ref") || from).slice(0, 80), l: location.pathname.slice(0, 120), t: Date.now() }));
+    }
+  }
+} catch {}
+export function firstSource() {
+  try { return JSON.parse(localStorage.getItem(SRC_KEY) || "null"); } catch { return null; }
+}
+
 let mupdfPromise = null;
 export function loadEngine() {
   if (!mupdfPromise) mupdfPromise = import("../mupdf/mupdf.js");

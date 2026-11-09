@@ -1,0 +1,15 @@
+<section class="app notranslate" translate="no" data-tool="word_to_pdf" data-suffix="{{ P.suffix }}" aria-label="{{ P.nav }}">
+  {% set accept = ".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document" %}{% set dropTitle = L.ui.dropTitleWord %}
+  {% include "drop.html" %}
+  <div class="work">
+    <div class="toolbar">
+      <div class="group"><button class="btn" type="button" data-el="close">← {{ L.ui.newFile }}</button><span class="filename" data-el="filename"></span></div>
+      <div class="grow"></div>
+      <button class="btn primary" type="button" data-el="run" disabled>{{ P.runLabel }}</button>
+    </div>
+    <p class="pages-hint"><span data-el="count"></span> · {{ P.hint }}</p>
+    <ol class="grid" data-el="grid"></ol>
+    <div class="status" role="status" aria-live="polite"></div>
+  </div>
+  <div class="status" role="status" aria-live="polite" data-pre></div>
+</section>

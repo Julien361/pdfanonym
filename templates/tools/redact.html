@@ -1,4 +1,4 @@
-<section class="app notranslate" translate="no" data-tool="redact" data-focus="{{ page_key }}" data-pricing="{{ L.urls.pricing or '#' }}" data-black="{{ 1 if P.black else 0 }}" data-suffix="{{ P.suffix }}" aria-label="{{ P.nav }}">
+<section class="app notranslate" translate="no" data-tool="redact" data-focus="{{ page_key }}" data-pricing="{{ L.urls.pricing or '#' }}" data-batch="{{ L.urls.batch if page_key in ('anonymize', 'redact') and L.urls.batch else '' }}" data-black="{{ 1 if P.black else 0 }}" data-suffix="{{ P.suffix }}" aria-label="{{ P.nav }}">
   {% include "drop.html" %}
   <div class="work">
     <div class="toolbar">

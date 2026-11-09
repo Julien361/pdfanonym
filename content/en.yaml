@@ -22,6 +22,7 @@ nav:
   compress: Compress PDF
   pdf_to_jpg: PDF to JPG
   jpg_to_pdf: JPG to PDF
+  word_to_pdf: "Word to PDF"
   protect: Protect PDF
   unlock: Unlock PDF
   batch: Batch anonymize
@@ -99,6 +100,7 @@ ui:
   g_security: Security
   dropTitleImg: Drop your images here
   addImages: Add images
+  dropTitleWord: "Drop your Word file here"
   pageSize: Page size
   sizeFit: Same as image
   margin: Margin
@@ -271,6 +273,12 @@ js:
   images.remove: Remove this image
   images.count: "{n} image(s)"
   images.done: "PDF with {n} page(s) downloaded: {name}"
+  word.working: "Converting…"
+  word.ready: "PDF with {n} page(s) ready. Check the preview, then download it."
+  word.count: "{n} page(s)"
+  word.done: "PDF downloaded: {name}"
+  word.bad: "“{name}” could not be converted. The file may be damaged or password-protected."
+  word.old: "“{name}” is not a .docx file. Open it in Word or LibreOffice, save it as .docx, then drop it here."
   annot.readyText: Click anywhere on a page to add text.
   annot.readySign: Draw your signature, then click on the page where it goes.
   annot.placed: Signature placed. Drag to move it, use the corner to resize it.
@@ -336,6 +344,8 @@ js:
   pro.locked: Found. Redact these with Pro.
   pro.unlock: Unlock with Pro
   pro.reportLocked: The redaction report is a Pro feature.
+  pro.batchTip: "Several PDFs to anonymize?"
+  pro.batchLink: "Batch mode does them all in one go (Pro)."
   pro.needConsent: Please tick the box below the plans first.
   pro.redirecting: Redirecting to secure payment…
   pro.checkoutError: The payment page could not be opened. Please try again in a moment.
@@ -401,7 +411,7 @@ pages:
     slug: redact-pdf
     nav: Redact PDF
     card: Black out names, numbers and sensitive passages. The text under the box is deleted.
-    title: "Redact PDF online, free and private (text really deleted)"
+    title: "Free PDF redaction tool: redact PDF online, text really deleted"
     description: "Black out text in a PDF and delete it for good. Real redaction in your browser: no upload, no account, no watermark. Search and redact every occurrence at once."
     h1: 'Redact a PDF: <span class="redacted">black out</span> text for good'
     h1_plain: Redact PDF
@@ -437,10 +447,24 @@ pages:
       - **Anyone answering a GDPR or freedom-of-information request**, where third-party data must be removed before disclosure.
       - **Landlords, tenants and freelancers** sending bank statements or ID documents that only need part of the information.
 
+      ## What to look for in a PDF redaction tool
+
+      Many tools call themselves redaction tools. Five questions separate the real ones from the rest:
+
+      1. **Is the text deleted or only covered?** Redact a word, download the file, then copy the black box and paste it into a text editor. If the word comes back, the tool only drew a rectangle.
+      2. **Can it find every occurrence?** A name appears on page 3 and again on page 147. Search-and-redact across all pages matters more than a nice drawing tool.
+      3. **Does it handle scans?** A scanned page has no text layer, so the tool must be able to erase pixels inside an area, not just text.
+      4. **Does it clean the metadata?** The author and title fields often hold the very name you just blacked out.
+      5. **Where does your file go?** Uploading a document full of personal data to remove that data adds one more company that holds it. pdfanonym runs in your browser: the file never leaves your device.
+
+      The free Adobe Acrobat Reader has no redaction feature; true redaction in Acrobat is part of the paid versions. pdfanonym covers all five points for free, with no account and no watermark.
+
       ## Check your redaction before sending
 
       After downloading, open the file, select the redacted area and try to copy it, then search for one of the words you removed. Nothing should come back. Our guide on [how to redact a PDF properly](/how-to-redact-a-pdf/) lists all the checks. Keep in mind that redacting the page does not touch the author or title hidden in the file properties unless the metadata option stays ticked; to review every field, [remove PDF metadata](/remove-pdf-metadata/) with the dedicated tool.
     faq:
+      - q: Is there a free PDF redaction tool that really deletes the text?
+        a: "Yes, this one. pdfanonym is free, needs no account and adds no watermark. The text under each box is removed from the file, which you can check by copying the redacted area: nothing comes back."
       - q: Is the text really deleted, or just covered?
         a: "Deleted. pdfanonym applies the redaction to the page content, so the characters no longer exist in the file. Copy, search and text extraction return nothing."
       - q: Can I redact a scanned PDF?
@@ -1232,6 +1256,52 @@ pages:
       - q: Can I mix photos and an existing PDF?
         a: "Create a PDF from the photos here, then use Merge PDF to combine it with your other document."
 
+  word_to_pdf:
+    slug: word-to-pdf
+    nav: Word to PDF
+    card: Turn a Word document (.docx) into a PDF without uploading it anywhere.
+    title: "Word to PDF: convert DOCX to PDF free, with no upload"
+    description: "Convert Word to PDF in your browser: formatting, tables, images, headers and page numbers kept. Free, no sign-up, your file is never uploaded."
+    h1: 'Convert a Word document <span class="hl">to PDF</span>'
+    h1_plain: Word to PDF
+    lede: "Contract, quote, resume, letter: convert your Word file to PDF right on your device. The document is never sent to a server."
+    suffix: pdf
+    hint: Preview of the pages in the resulting PDF.
+    runLabel: Download PDF
+    stepsTitle: How to convert Word to PDF
+    steps:
+      - h: Drop your Word file
+        p: "A <b>.docx</b> document (Word 2007 and later, LibreOffice, Google Docs exported as .docx)."
+      - h: Check the preview
+        p: "The conversion takes a few seconds in your browser. Every page of the PDF is shown as a thumbnail."
+      - h: Download the PDF
+        p: "The PDF keeps the layout, the text stays selectable and links stay clickable."
+    body: |
+      ## What is preserved
+
+      The Word to PDF conversion keeps the document's page size and margins, heading styles, bold, italics and colors, tables with their borders and shading, images, bulleted and numbered lists, headers and footers with page numbers recalculated, footnotes, and web links, which stay clickable. Text is written as vector text: it stays sharp in print and can be selected or searched in the PDF.
+
+      ## Limits to know about
+
+      Fonts are replaced with close standard fonts (Calibri or Arial become a sans-serif font, Times or Cambria a serif one). Line breaks can therefore fall slightly differently, and the page count of a long document may differ by one. Text boxes, drawn shapes, charts and SmartArt are not reproduced, and freely positioned images are placed back in the flow of text. Arabic and Hebrew scripts are not supported. Old **.doc** files must first be saved as .docx. Check the preview before sending an important document.
+
+      ## Why convert without uploading the file
+
+      Typical online converters upload your document to their servers. For a contract, a payslip or a medical file, that matters. Here the file is read and converted by your browser: nothing leaves your device, and the conversion even works offline once the page has loaded. The resulting PDF does not carry over the Word file's properties either (author, company, last modified by).
+
+      Once you have the PDF, you can [password-protect it](/password-protect-pdf/), [sign it](/sign-pdf/) or [merge it with other PDFs](/merge-pdf/). If it contains data to hide before sharing, [redact it](/redact-pdf/).
+    faq:
+      - q: Is my Word file uploaded to a server?
+        a: "No. The document is read and converted in your browser; no file is transmitted. You can check by going offline after the page has loaded."
+      - q: Are .doc and .odt files supported?
+        a: "Only .docx is supported. Open a .doc or .odt file in Word or LibreOffice and save it as .docx before dropping it here."
+      - q: Why isn't the font exactly the same?
+        a: "Word fonts are not included in the file. The conversion uses close standard fonts: formatting is kept, but line widths may change slightly."
+      - q: Are page numbers correct?
+        a: "Yes. The Page and Number of pages fields in headers and footers are recalculated for each page of the PDF."
+      - q: Can I edit the PDF?
+        a: "The text stays real, selectable text. To fix a word afterwards, use <a href='/edit-pdf-text/'>Edit text</a>."
+
   protect:
     slug: password-protect-pdf
     nav: Protect PDF
@@ -1397,7 +1467,7 @@ pages:
       - Add or remove users anytime
     seats: Users
     team_cta: Get Team
-    consent: "I am buying for my professional activity (company, self-employed, public body). I accept the <a href=\"{terms}\">terms of use and sale</a> and ask for immediate access to the Pro features."
+    consent: "I am buying for my professional activity (company, self-employed, public body), not as a private individual. I accept the <a href=\"{terms}\">terms of use and sale</a> and ask for immediate access to the Pro features."
     vat_note: "Prices exclude VAT. Pro plans are reserved for professionals. VAT is added according to your country; EU businesses with a valid VAT number are invoiced without VAT (reverse charge). Secure payment by Stripe; we never see your card details."
     body: |
       ## How the licence works
@@ -1520,7 +1590,7 @@ pages:
 
       ## Purchases
 
-      If you buy a Pro plan, payment is handled by Stripe, which processes your card, email and billing details under its own privacy policy; we never see your card number. Our licence service only receives the identifier of your Stripe checkout session and returns a signed licence key, which is stored in your browser. Billing records (name, email, address, VAT number, invoices) are kept by Stripe and METIS for as long as accounting law requires. Your PDF files are never involved.
+      If you buy a Pro plan, payment is handled by Stripe, which processes your card, email and billing details under its own privacy policy; we never see your card number. Our licence service only receives the identifier of your Stripe checkout session and returns a signed licence key, which is stored in your browser. Billing records (name, email, address, VAT number, invoices) are kept by Stripe and METIS for as long as accounting law requires. Your PDF files are never involved. To know which websites bring us customers, your browser also remembers the site you came from and the first page you visited on pdfanonym (no cookie, no identifier); this information is sent to Stripe with your order only if you buy.
 
       ## Server logs
 

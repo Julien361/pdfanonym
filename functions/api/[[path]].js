@@ -82,7 +82,7 @@ async function licenseFromSubscription(env, sub, base = {}) {
 /* ---------- Routes ---------- */
 
 async function checkout(env, req) {
-  const { plan, lang = "en", seats = 1, consent, business } = await req.json();
+  const { plan, lang = "en", seats = 1, consent, business, src, landing } = await req.json();
   const p = PRICES[plan];
   if (!p) return json({ error: "plan" }, 400);
   if (!consent || !business) return json({ error: "consent" }, 400); // ventes réservées aux professionnels
@@ -92,6 +92,9 @@ async function checkout(env, req) {
   if (!price) return json({ error: "price" }, 500);
   const origin = new URL(req.url).origin;
   const meta = { product: "pdfanonym", plan, lang: l, consent: new Date().toISOString(), customer_type: "business" };
+  const tidy = (v, n) => String(v || "").replace(/[^\w.\-\/]/g, "").slice(0, n); // provenance déclarée par le navigateur
+  if (tidy(src, 80)) meta.src = tidy(src, 80);
+  if (tidy(landing, 120)) meta.landing = tidy(landing, 120);
   const qty = p.seats ? Math.max(2, Math.min(100, Math.floor(+seats) || 2)) : 1;
   const body = {
     mode: p.mode,

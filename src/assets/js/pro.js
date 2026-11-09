@@ -1,5 +1,5 @@
 // Pages Tarifs et Mon compte : paiement (Stripe Checkout), récupération et gestion de la licence.
-import { t } from "./common.js";
+import { t, firstSource } from "./common.js";
 import { decode, stored, store, status as licStatus } from "./license.js";
 
 const $ = (s, r = document) => r.querySelector(s);
@@ -23,7 +23,7 @@ if (pricing) {
     b.disabled = true;
     say(t("pro.redirecting"));
     try {
-      const r = await fetch("/api/checkout", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ plan, lang, seats: +$("[data-el=seats]", pricing).value || 2, consent: true, business: true }) });
+      const r = await fetch("/api/checkout", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ plan, lang, seats: +$("[data-el=seats]", pricing).value || 2, consent: true, business: true, src: firstSource()?.r, landing: firstSource()?.l }) });
       const d = await r.json();
       if (!d.url) throw new Error(d.error || "checkout");
       location.href = d.url;
