@@ -23,6 +23,7 @@ nav:
   pdf_to_jpg: PDF en JPG
   jpg_to_pdf: JPG en PDF
   word_to_pdf: "Word en PDF"
+  pdf_to_word: "PDF en Word"
   protect: Protéger un PDF
   unlock: Déverrouiller un PDF
   batch: Anonymiser par lots
@@ -101,6 +102,9 @@ ui:
   dropTitleImg: Déposez vos images ici
   addImages: Ajouter des images
   dropTitleWord: "Déposez votre fichier Word ici"
+  p2wMode: "Mise en page"
+  p2wExact: "Fidèle à l'original"
+  p2wFlow: "Texte fluide"
   pageSize: Format de page
   sizeFit: Identique à l'image
   margin: Marge
@@ -279,6 +283,10 @@ js:
   word.done: "PDF téléchargé : {name}"
   word.bad: "« {name} » n'a pas pu être converti. Le fichier est peut-être endommagé ou protégé par un mot de passe."
   word.old: "« {name} » n'est pas au format .docx. Ouvrez-le dans Word ou LibreOffice, enregistrez-le en .docx, puis déposez-le ici."
+  pdf2word.working: "Conversion en cours… page {i} sur {n}"
+  pdf2word.ready: "Document Word prêt : {n} page(s). Téléchargez-le."
+  pdf2word.scan: "Ce PDF ne contient pas de texte (document scanné) : le fichier Word contiendra les {n} page(s) en images, sans texte modifiable."
+  pdf2word.done: "Document Word téléchargé : {name}"
   annot.readyText: Cliquez n'importe où sur une page pour ajouter du texte.
   annot.readySign: Dessinez votre signature, puis cliquez sur la page à l'endroit voulu.
   annot.placed: Signature placée. Faites-la glisser pour la déplacer, tirez le coin pour la redimensionner.
@@ -1297,6 +1305,54 @@ pages:
         a: "Oui. Les champs « Page » et « Nombre de pages » des en-têtes et pieds de page sont recalculés pour chaque page du PDF."
       - q: Le PDF est-il modifiable ?
         a: "Le texte reste du vrai texte, sélectionnable. Pour corriger un mot après coup, utilisez <a href='/fr/modifier-texte-pdf/'>Modifier le texte</a>."
+
+  pdf_to_word:
+    slug: pdf-en-word
+    nav: PDF en Word
+    card: Transformez un PDF en document Word (.docx) modifiable, sans l'envoyer sur un serveur.
+    title: "PDF en Word : convertir un PDF en DOCX modifiable, gratuit et sans envoi"
+    description: "Convertir un PDF en Word dans votre navigateur : mise en page identique (tableaux, cadres, logos) et texte modifiable. Gratuit, sans inscription, aucun fichier envoyé."
+    h1: 'Convertir un PDF <span class="hl">en Word</span>'
+    h1_plain: PDF en Word
+    lede: "Récupérez un contrat, un devis ou un rapport en document Word pour le modifier. La conversion se fait sur votre appareil : le PDF n'est jamais envoyé sur un serveur."
+    suffix: word
+    hint: "Le document Word reprend chaque page du PDF avec son format et ses marges."
+    runLabel: Télécharger le fichier Word
+    stepsTitle: Comment convertir un PDF en Word
+    steps:
+      - h: Déposez votre PDF
+        p: "Un PDF contenant du texte (créé depuis Word, un logiciel de facturation, un site…). Un PDF protégé demande son mot de passe."
+      - h: Laissez la conversion se faire
+        p: "Le texte, les polices, les images et les liens sont lus page par page dans votre navigateur."
+      - h: Téléchargez le fichier Word
+        p: "Un fichier <b>.docx</b> à ouvrir dans Word, LibreOffice, Pages ou Google Docs."
+    body: |
+      ## Deux façons de convertir
+
+      **Fidèle à l'original** (par défaut) : chaque page Word est identique à la page du PDF. Le graphisme de la page (bordures de tableau, cadres, traits, fonds colorés, logos, images) est repris tel quel en arrière-plan, et le texte est posé par-dessus au point près, dans des zones de texte modifiables, avec les mêmes retours à la ligne. C'est le bon choix pour corriger un montant, une date ou un nom sans rien décaler.
+
+      **Texte fluide** : le texte est recomposé en vrais paragraphes que Word remet en forme quand vous écrivez, avec les polices, les couleurs, les listes, les alignements, les fonds colorés, les images et les liens. C'est le bon choix pour reprendre et réécrire un document en profondeur.
+
+      ## Les limites à connaître
+
+      En mise en page fidèle, le graphisme de la page est une image : vous modifiez le texte, pas les traits ni les cases d'un tableau, et une phrase allongée ne passe pas d'elle-même à la ligne suivante. En texte fluide, les tableaux deviennent des colonnes alignées par des tabulations, sans bordures, et une page peut déborder sur la suivante. Dans les deux cas, une police du PDF absente de votre ordinateur est remplacée par une police proche ; un PDF scanné ne contient que des images, sans texte modifiable (l'outil ne fait pas de reconnaissance de caractères) ; certains logiciels de facturation enregistrent leur texte dans des polices sans nom, dont le gras ne peut pas être retrouvé.
+
+      ## Pourquoi convertir sans envoyer le fichier
+
+      Les convertisseurs PDF en Word en ligne téléversent votre document sur leurs serveurs. Pour un contrat, un bulletin de paie ou un dossier médical, ce n'est pas anodin. Ici, tout se passe dans votre navigateur : rien ne quitte votre appareil, et le fichier Word produit ne contient aucune propriété d'auteur.
+
+      Besoin de seulement corriger quelques mots ? [Modifiez le texte directement dans le PDF](/fr/modifier-texte-pdf/). Et pour revenir au PDF après vos modifications, [convertissez le Word en PDF](/fr/word-en-pdf/). Avant de partager le document, pensez à [caviarder les données sensibles](/fr/caviarder-pdf/).
+    faq:
+      - q: "Mon PDF est-il envoyé sur un serveur ?"
+        a: "Non. Le PDF est lu et le fichier Word est créé dans votre navigateur ; aucun fichier n'est transmis. Vous pouvez le vérifier en coupant votre connexion après le chargement de la page."
+      - q: "Quel mode choisir ?"
+        a: "Fidèle à l'original pour retoucher un document qui doit garder son aspect : devis, facture, attestation, formulaire. Texte fluide pour reprendre le contenu et le réécrire."
+      - q: "Le texte sera-t-il modifiable ?"
+        a: "Oui, si le PDF contient du texte. En mise en page fidèle, il est placé dans des zones de texte à l'endroit exact où il se trouvait ; en texte fluide, il forme des paragraphes que Word remet en forme. Un PDF scanné ne contient que des images, sans texte modifiable."
+      - q: "Les tableaux sont-ils conservés ?"
+        a: "En mise en page fidèle, oui, à l'identique : bordures, fonds et contenu. En texte fluide, le contenu est aligné en colonnes par des tabulations, sans bordures."
+      - q: "Fonctionne-t-il avec un PDF protégé par mot de passe ?"
+        a: "Oui. Le mot de passe vous est demandé à l'ouverture ; il n'est utilisé que dans votre navigateur."
 
   protect:
     slug: proteger-pdf

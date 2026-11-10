@@ -1,0 +1,14 @@
+<section class="app notranslate" translate="no" data-tool="pdf_to_word" data-suffix="{{ P.suffix }}" aria-label="{{ P.nav }}">
+  {% include "drop.html" %}
+  <div class="work">
+    <div class="toolbar">
+      <div class="group"><button class="btn" type="button" data-el="close">← {{ L.ui.newFile }}</button><span class="filename" data-el="filename"></span></div>
+      <label class="field inline"><span>{{ L.ui.p2wMode }}</span><select data-el="mode"><option value="exact" selected>{{ L.ui.p2wExact }}</option><option value="flow">{{ L.ui.p2wFlow }}</option></select></label>
+      <div class="grow"></div>
+      <button class="btn primary" type="button" data-el="run" disabled>{{ P.runLabel }}</button>
+    </div>
+    <p class="pages-hint">{{ P.hint }}</p>
+    <div class="status" role="status" aria-live="polite"></div>
+  </div>
+  <div class="status" role="status" aria-live="polite" data-pre></div>
+</section>

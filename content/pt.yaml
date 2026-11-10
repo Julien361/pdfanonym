@@ -23,6 +23,7 @@ nav:
   pdf_to_jpg: PDF para JPG
   jpg_to_pdf: JPG para PDF
   word_to_pdf: "Word para PDF"
+  pdf_to_word: "PDF para Word"
   protect: Proteger PDF
   unlock: Desbloquear PDF
   batch: Anonimizar em lote
@@ -101,6 +102,9 @@ ui:
   dropTitleImg: Solte suas imagens aqui
   addImages: Adicionar imagens
   dropTitleWord: "Solte aqui seu arquivo Word"
+  p2wMode: "Layout"
+  p2wExact: "Igual ao original"
+  p2wFlow: "Texto corrido"
   pageSize: Tamanho da página
   sizeFit: Igual à imagem
   margin: Margem
@@ -279,6 +283,10 @@ js:
   word.done: "PDF baixado: {name}"
   word.bad: "Não foi possível converter “{name}”. O arquivo pode estar danificado ou protegido por senha."
   word.old: "“{name}” não é um arquivo .docx. Abra-o no Word ou no LibreOffice, salve como .docx e solte-o aqui."
+  pdf2word.working: "Convertendo… página {i} de {n}"
+  pdf2word.ready: "Documento Word pronto: {n} página(s). Baixe-o."
+  pdf2word.scan: "Este PDF não contém texto (documento digitalizado): o arquivo Word terá as {n} página(s) como imagens, sem texto editável."
+  pdf2word.done: "Documento Word baixado: {name}"
   annot.readyText: Clique em qualquer lugar de uma página para adicionar texto.
   annot.readySign: Desenhe sua assinatura e depois clique na página onde ela deve ficar.
   annot.placed: Assinatura posicionada. Arraste para movê-la e use o canto para redimensionar.
@@ -1286,6 +1294,54 @@ pages:
         a: "Sim. Os campos Página e Número de páginas dos cabeçalhos e rodapés são recalculados para cada página do PDF."
       - q: Posso editar o PDF?
         a: "O texto continua sendo texto de verdade, selecionável. Para corrigir uma palavra depois, use <a href='/pt/editar-texto-pdf/'>Editar texto</a>."
+
+  pdf_to_word:
+    slug: pdf-para-word
+    nav: PDF para Word
+    card: Transforme um PDF em documento Word (.docx) editável sem enviá-lo para um servidor.
+    title: "PDF para Word: converter PDF em DOCX editável grátis e sem upload"
+    description: "Converta PDF para Word no navegador: layout idêntico (tabelas, quadros, logotipos) e texto editável. Grátis, sem cadastro, seu arquivo nunca é enviado."
+    h1: 'Converter um PDF <span class="hl">para Word</span>'
+    h1_plain: PDF para Word
+    lede: "Recupere um contrato, um orçamento ou um relatório como documento Word para editar. A conversão acontece no seu dispositivo: o PDF nunca é enviado a um servidor."
+    suffix: word
+    hint: "O documento Word mantém cada página do PDF com seu formato e suas margens."
+    runLabel: Baixar o arquivo Word
+    stepsTitle: Como converter PDF para Word
+    steps:
+      - h: Solte seu PDF
+        p: "Um PDF que contenha texto (criado no Word, num programa de faturamento, num site…). Um PDF protegido pede a senha."
+      - h: Deixe a conversão acontecer
+        p: "Texto, fontes, imagens e links são lidos página por página no navegador."
+      - h: Baixe o arquivo Word
+        p: "Um arquivo <b>.docx</b> para abrir no Word, LibreOffice, Pages ou Google Docs."
+    body: |
+      ## Duas formas de converter
+
+      **Igual ao original** (padrão): cada página do Word fica idêntica à página do PDF. O grafismo da página (bordas de tabela, quadros, linhas, fundos coloridos, logotipos, imagens) é mantido como está no fundo, e o texto é colocado por cima exatamente no mesmo ponto, em caixas de texto editáveis e com as mesmas quebras de linha. É a escolha certa para corrigir um valor, uma data ou um nome sem desalinhar nada.
+
+      **Texto corrido**: o texto é reconstruído em parágrafos de verdade que o Word reorganiza enquanto você digita, com fontes, cores, listas, alinhamentos, fundos coloridos, imagens e links. É a escolha certa para retomar e reescrever um documento a fundo.
+
+      ## Limites que você deve conhecer
+
+      No layout igual ao original, o grafismo da página é uma imagem: você edita o texto, não as linhas nem as células de uma tabela, e uma frase que você aumenta não passa sozinha para a linha seguinte. No texto corrido, as tabelas viram colunas alinhadas por tabulações, sem bordas, e uma página pode transbordar para a seguinte. Nos dois modos, uma fonte do PDF que não está instalada no seu computador é substituída por uma parecida; um PDF digitalizado só contém imagens, sem texto editável (a ferramenta não faz reconhecimento de caracteres); alguns programas de faturamento gravam o texto em fontes sem nome, cujo negrito não pode ser recuperado.
+
+      ## Por que converter sem enviar o arquivo
+
+      Os conversores de PDF para Word online enviam seu documento para os servidores deles. Para um contrato, um holerite ou um laudo médico, isso faz diferença. Aqui tudo acontece no seu navegador: nada sai do seu dispositivo e o arquivo Word gerado não contém dados do autor.
+
+      Só precisa corrigir algumas palavras? [Edite o texto direto no PDF](/pt/editar-texto-pdf/). Para voltar ao PDF depois das mudanças, [converta o Word para PDF](/pt/word-para-pdf/). Antes de compartilhar o documento, lembre-se de [tarjar os dados sensíveis](/pt/tarjar-pdf/).
+    faq:
+      - q: "Meu PDF é enviado para um servidor?"
+        a: "Não. O PDF é lido e o arquivo Word é criado no seu navegador; nenhum arquivo é transmitido. Você pode conferir desligando a internet depois que a página carregar."
+      - q: "Qual modo escolher?"
+        a: "Igual ao original para retocar um documento que precisa manter a aparência: orçamento, fatura, certificado, formulário. Texto corrido para retomar o conteúdo e reescrevê-lo."
+      - q: "O texto será editável?"
+        a: "Sim, se o PDF contiver texto. No layout igual ao original ele fica em caixas de texto exatamente no lugar; no texto corrido forma parágrafos que o Word reorganiza. Um PDF digitalizado só contém imagens, sem texto editável."
+      - q: "As tabelas são preservadas?"
+        a: "No layout igual ao original, sim, idênticas: bordas, sombreamento e conteúdo. No texto corrido, o conteúdo é alinhado em colunas com tabulações, sem bordas."
+      - q: "Funciona com PDF protegido por senha?"
+        a: "Sim. A senha é pedida ao abrir o arquivo e usada só no seu navegador."
 
   protect:
     slug: proteger-pdf

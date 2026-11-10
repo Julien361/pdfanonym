@@ -19,14 +19,14 @@ TOOLS = {
     "edit_text": ("textedit", "textedit"), "add_text": ("annotate", "annotate"), "sign": ("annotate", "annotate"),
     "watermark": ("watermark", "process"), "page_numbers": ("page_numbers", "process"),
     "compress": ("compress", "process"), "pdf_to_jpg": ("pdf_to_jpg", "process"), "jpg_to_pdf": ("jpg_to_pdf", "images"),
-    "word_to_pdf": ("word_to_pdf", "word"),
+    "word_to_pdf": ("word_to_pdf", "word"), "pdf_to_word": ("pdf_to_word", "pdf2word"),
     "protect": ("protect", "process"), "unlock": ("unlock", "process"),
 }
 GROUPS = [
     ("privacy", ["redact", "anonymize", "batch", "remove", "metadata", "flatten"]),
     ("pages", ["merge", "delete_pages", "extract_pages", "rotate", "reorder"]),
     ("edit", ["edit_text", "add_text", "sign", "watermark", "page_numbers"]),
-    ("convert", ["word_to_pdf", "compress", "grayscale", "pdf_to_jpg", "jpg_to_pdf"]),
+    ("convert", ["word_to_pdf", "pdf_to_word", "compress", "grayscale", "pdf_to_jpg", "jpg_to_pdf"]),
     ("security", ["protect", "unlock"]),
 ]
 # Parcours logiques : depuis chaque outil, les 3 outils qu'on utilise souvent ensuite (maillage contextuel).
@@ -38,10 +38,10 @@ NEXT = {
     "edit_text": ["add_text", "flatten", "protect"], "add_text": ["edit_text", "sign", "flatten"], "sign": ["add_text", "flatten", "protect"], "watermark": ["flatten", "protect", "page_numbers"],
     "page_numbers": ["merge", "watermark", "compress"], "compress": ["grayscale", "pdf_to_jpg", "metadata"], "grayscale": ["compress", "pdf_to_jpg", "page_numbers"],
     "pdf_to_jpg": ["jpg_to_pdf", "extract_pages", "compress"], "jpg_to_pdf": ["compress", "merge", "pdf_to_jpg"],
-    "word_to_pdf": ["merge", "protect", "sign"],
+    "word_to_pdf": ["merge", "protect", "sign"], "pdf_to_word": ["word_to_pdf", "redact", "edit_text"],
     "protect": ["unlock", "flatten", "metadata"], "unlock": ["protect", "compress", "merge"],
 }
-SCRIPT_OF = {"batch": "batch", "redact": "redact", "pages": "pages", "report": "clean", "process": "process", "images": "images", "annotate": "annotate", "textedit": "textedit", "word": "word"}
+SCRIPT_OF = {"batch": "batch", "redact": "redact", "pages": "pages", "report": "clean", "process": "process", "images": "images", "annotate": "annotate", "textedit": "textedit", "word": "word", "pdf2word": "pdf2word"}
 TOOL_KEYS = ["redact", "anonymize", "edit_text"]  # accès direct dans l'en-tête
 PAGE_KEYS = GROUPS[1][1]
 ALL_TOOLS = list(TOOLS)
@@ -68,6 +68,7 @@ ICONS = {
     "pdf_to_jpg": '<rect x="3" y="5" width="12" height="16" rx="2" stroke="currentColor" stroke-width="2"/><rect x="18" y="12" width="13" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M20 25l3-4 2 2 2-3 3 5" stroke="currentColor" stroke-width="1.6"/><path d="M15 26h-3M9 24l3 2-3 2" stroke="currentColor" stroke-width="1.6"/>',
     "jpg_to_pdf": '<rect x="3" y="5" width="13" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M5 18l3-4 2 2 2-3 3 5" stroke="currentColor" stroke-width="1.6"/><rect x="19" y="12" width="12" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M22 18h6M22 22h6" stroke="currentColor" stroke-width="1.6" opacity=".5"/>',
     "word_to_pdf": '<rect x="3" y="5" width="13" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M6 10l1.5 6 2-4.5 2 4.5L13 10" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><rect x="19" y="12" width="12" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M22 18h6M22 22h6" stroke="currentColor" stroke-width="1.6" opacity=".5"/>',
+    "pdf_to_word": '<rect x="3" y="5" width="12" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M6 11h6M6 15h4" stroke="currentColor" stroke-width="1.6" opacity=".5"/><rect x="18" y="12" width="13" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M20.5 16.5l1.5 6 2-4.5 2 4.5 1.5-6" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>',
     "protect": '<rect x="7" y="15" width="20" height="15" rx="3" stroke="currentColor" stroke-width="2"/><path d="M11 15v-4a6 6 0 0 1 12 0v4" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="22" r="2" fill="currentColor"/>',
     "unlock": '<rect x="7" y="15" width="20" height="15" rx="3" stroke="currentColor" stroke-width="2"/><path d="M11 15v-4a6 6 0 0 1 11.5-2.4" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="22" r="2" fill="currentColor"/>',
     "grayscale": '<rect x="5" y="3" width="24" height="28" rx="3" stroke="currentColor" stroke-width="2"/><path d="M17 9a8 8 0 0 0 0 16z" fill="currentColor"/><circle cx="17" cy="17" r="8" stroke="currentColor" stroke-width="2"/>',

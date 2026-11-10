@@ -23,6 +23,7 @@ nav:
   pdf_to_jpg: PDF to JPG
   jpg_to_pdf: JPG to PDF
   word_to_pdf: "Word to PDF"
+  pdf_to_word: "PDF to Word"
   protect: Protect PDF
   unlock: Unlock PDF
   batch: Batch anonymize
@@ -101,6 +102,9 @@ ui:
   dropTitleImg: Drop your images here
   addImages: Add images
   dropTitleWord: "Drop your Word file here"
+  p2wMode: "Layout"
+  p2wExact: "Same as original"
+  p2wFlow: "Flowing text"
   pageSize: Page size
   sizeFit: Same as image
   margin: Margin
@@ -279,6 +283,10 @@ js:
   word.done: "PDF downloaded: {name}"
   word.bad: "“{name}” could not be converted. The file may be damaged or password-protected."
   word.old: "“{name}” is not a .docx file. Open it in Word or LibreOffice, save it as .docx, then drop it here."
+  pdf2word.working: "Converting… page {i} of {n}"
+  pdf2word.ready: "Word document ready: {n} page(s). Download it."
+  pdf2word.scan: "This PDF contains no text (scanned document): the Word file will contain the {n} page(s) as images, with no editable text."
+  pdf2word.done: "Word document downloaded: {name}"
   annot.readyText: Click anywhere on a page to add text.
   annot.readySign: Draw your signature, then click on the page where it goes.
   annot.placed: Signature placed. Drag to move it, use the corner to resize it.
@@ -1301,6 +1309,54 @@ pages:
         a: "Yes. The Page and Number of pages fields in headers and footers are recalculated for each page of the PDF."
       - q: Can I edit the PDF?
         a: "The text stays real, selectable text. To fix a word afterwards, use <a href='/edit-pdf-text/'>Edit text</a>."
+
+  pdf_to_word:
+    slug: pdf-to-word
+    nav: PDF to Word
+    card: Turn a PDF into an editable Word document (.docx) without uploading it anywhere.
+    title: "PDF to Word: convert PDF to editable DOCX free, with no upload"
+    description: "Convert PDF to Word in your browser: identical layout (tables, boxes, logos) and editable text. Free, no sign-up, your file is never uploaded."
+    h1: 'Convert a PDF <span class="hl">to Word</span>'
+    h1_plain: PDF to Word
+    lede: "Get a contract, quote or report back as a Word document you can edit. The conversion happens on your device: the PDF is never sent to a server."
+    suffix: word
+    hint: "The Word document keeps each PDF page with its size and margins."
+    runLabel: Download Word file
+    stepsTitle: How to convert PDF to Word
+    steps:
+      - h: Drop your PDF
+        p: "A PDF that contains text (made from Word, invoicing software, a website…). A protected PDF asks for its password."
+      - h: Let the conversion run
+        p: "Text, fonts, images and links are read page by page in your browser."
+      - h: Download the Word file
+        p: "A <b>.docx</b> file to open in Word, LibreOffice, Pages or Google Docs."
+    body: |
+      ## Two ways to convert
+
+      **Same as original** (default): each Word page looks exactly like the PDF page. The page graphics (table borders, boxes, lines, colored backgrounds, logos, images) are kept as they are in the background, and the text is placed on top at the exact same spot, in editable text boxes, with the same line breaks. It is the right choice to fix an amount, a date or a name without shifting anything.
+
+      **Flowing text**: the text is rebuilt into real paragraphs that Word reflows as you type, with fonts, colors, lists, alignment, colored backgrounds, images and links. It is the right choice to rework and rewrite a document in depth.
+
+      ## Limits to know about
+
+      With the same-as-original layout, the page graphics are an image: you edit the text, not the lines or cells of a table, and a sentence you lengthen does not wrap to the next line on its own. With flowing text, tables become columns aligned with tabs, without borders, and a page can spill onto the next. In both modes, a PDF font that is not installed on your computer is replaced with a close one; a scanned PDF only contains images, with no editable text (the tool does not do character recognition); some invoicing software stores text in unnamed fonts whose bold cannot be recovered.
+
+      ## Why convert without uploading the file
+
+      Online PDF to Word converters upload your document to their servers. For a contract, a payslip or a medical file, that matters. Here everything happens in your browser: nothing leaves your device, and the Word file produced contains no author properties.
+
+      Only need to fix a few words? [Edit the text directly in the PDF](/edit-pdf-text/). To go back to PDF after your changes, [convert the Word file to PDF](/word-to-pdf/). Before sharing the document, remember to [redact sensitive data](/redact-pdf/).
+    faq:
+      - q: "Is my PDF uploaded to a server?"
+        a: "No. The PDF is read and the Word file is created in your browser; no file is transmitted. You can check by going offline after the page has loaded."
+      - q: "Which mode should I choose?"
+        a: "Same as original to touch up a document that must keep its look: quote, invoice, certificate, form. Flowing text to take the content and rewrite it."
+      - q: "Will the text be editable?"
+        a: "Yes, if the PDF contains text. With the same-as-original layout it sits in text boxes exactly where it was; with flowing text it forms paragraphs that Word reflows. A scanned PDF only contains images, with no editable text."
+      - q: "Are tables preserved?"
+        a: "With the same-as-original layout, yes, identically: borders, shading and content. With flowing text, the content is aligned in columns with tabs, without borders."
+      - q: "Does it work with a password-protected PDF?"
+        a: "Yes. You are asked for the password when the file opens; it is only used in your browser."
 
   protect:
     slug: password-protect-pdf

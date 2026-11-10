@@ -23,6 +23,7 @@ nav:
   pdf_to_jpg: PDF a JPG
   jpg_to_pdf: JPG a PDF
   word_to_pdf: "Word a PDF"
+  pdf_to_word: "PDF a Word"
   protect: Proteger PDF
   unlock: Desbloquear PDF
   batch: Anonimizar por lotes
@@ -101,6 +102,9 @@ ui:
   dropTitleImg: Suelta tus imágenes aquí
   addImages: Añadir imágenes
   dropTitleWord: "Suelta aquí tu archivo Word"
+  p2wMode: "Diseño"
+  p2wExact: "Igual que el original"
+  p2wFlow: "Texto fluido"
   pageSize: Tamaño de página
   sizeFit: Igual que la imagen
   margin: Margen
@@ -279,6 +283,10 @@ js:
   word.done: "PDF descargado: {name}"
   word.bad: "No se ha podido convertir «{name}». Puede que el archivo esté dañado o protegido con contraseña."
   word.old: "«{name}» no es un archivo .docx. Ábrelo en Word o LibreOffice, guárdalo como .docx y suéltalo aquí."
+  pdf2word.working: "Convirtiendo… página {i} de {n}"
+  pdf2word.ready: "Documento Word listo: {n} página(s). Descárgalo."
+  pdf2word.scan: "Este PDF no contiene texto (documento escaneado): el archivo Word contendrá las {n} página(s) como imágenes, sin texto editable."
+  pdf2word.done: "Documento Word descargado: {name}"
   annot.readyText: Haz clic en cualquier punto de una página para añadir texto.
   annot.readySign: Dibuja tu firma y luego haz clic en la página donde va.
   annot.placed: Firma colocada. Arrástrala para moverla y usa la esquina para cambiar su tamaño.
@@ -1285,6 +1293,54 @@ pages:
         a: "Sí. Los campos Página y Número de páginas de encabezados y pies de página se recalculan para cada página del PDF."
       - q: ¿Puedo editar el PDF?
         a: "El texto sigue siendo texto real y seleccionable. Para corregir una palabra después, usa <a href='/es/editar-texto-pdf/'>Editar texto</a>."
+
+  pdf_to_word:
+    slug: pdf-a-word
+    nav: PDF a Word
+    card: Convierte un PDF en un documento Word (.docx) editable sin subirlo a ningún servidor.
+    title: "PDF a Word: convertir PDF a DOCX editable gratis y sin subir archivos"
+    description: "Convierte PDF a Word en tu navegador: diseño idéntico (tablas, recuadros, logotipos) y texto editable. Gratis, sin registro, tu archivo nunca se sube."
+    h1: 'Convertir un PDF <span class="hl">a Word</span>'
+    h1_plain: PDF a Word
+    lede: "Recupera un contrato, un presupuesto o un informe como documento Word para editarlo. La conversión se hace en tu dispositivo: el PDF nunca se envía a un servidor."
+    suffix: word
+    hint: "El documento Word conserva cada página del PDF con su formato y sus márgenes."
+    runLabel: Descargar el archivo Word
+    stepsTitle: Cómo convertir PDF a Word
+    steps:
+      - h: Suelta tu PDF
+        p: "Un PDF que contenga texto (creado desde Word, un programa de facturación, una web…). Un PDF protegido pide su contraseña."
+      - h: Deja que se haga la conversión
+        p: "El texto, las fuentes, las imágenes y los enlaces se leen página a página en tu navegador."
+      - h: Descarga el archivo Word
+        p: "Un archivo <b>.docx</b> para abrir en Word, LibreOffice, Pages o Google Docs."
+    body: |
+      ## Dos formas de convertir
+
+      **Igual que el original** (por defecto): cada página de Word es idéntica a la página del PDF. El grafismo de la página (bordes de tabla, recuadros, líneas, fondos de color, logotipos, imágenes) se conserva tal cual de fondo, y el texto se coloca encima en el mismo punto exacto, en cuadros de texto editables y con los mismos saltos de línea. Es la opción adecuada para corregir un importe, una fecha o un nombre sin descolocar nada.
+
+      **Texto fluido**: el texto se reconstruye en párrafos reales que Word recoloca mientras escribes, con fuentes, colores, listas, alineaciones, fondos de color, imágenes y enlaces. Es la opción adecuada para retomar y reescribir un documento a fondo.
+
+      ## Límites que debes conocer
+
+      Con el diseño igual que el original, el grafismo de la página es una imagen: editas el texto, no las líneas ni las celdas de una tabla, y una frase que alargas no pasa sola a la línea siguiente. Con el texto fluido, las tablas se convierten en columnas alineadas con tabulaciones, sin bordes, y una página puede desbordar a la siguiente. En ambos modos, una fuente del PDF que no está instalada en tu ordenador se sustituye por otra parecida; un PDF escaneado solo contiene imágenes, sin texto editable (la herramienta no hace reconocimiento de caracteres); algunos programas de facturación guardan su texto en fuentes sin nombre, cuya negrita no se puede recuperar.
+
+      ## Por qué convertir sin subir el archivo
+
+      Los conversores de PDF a Word en línea suben tu documento a sus servidores. Con un contrato, una nómina o un informe médico, no es un detalle. Aquí todo ocurre en tu navegador: nada sale de tu dispositivo y el archivo Word generado no contiene datos del autor.
+
+      ¿Solo necesitas corregir unas palabras? [Edita el texto directamente en el PDF](/es/editar-texto-pdf/). Para volver al PDF después de tus cambios, [convierte el Word a PDF](/es/word-a-pdf/). Antes de compartir el documento, recuerda [censurar los datos sensibles](/es/censurar-pdf/).
+    faq:
+      - q: "¿Se sube mi PDF a un servidor?"
+        a: "No. El PDF se lee y el archivo Word se crea en tu navegador; no se transmite ningún archivo. Puedes comprobarlo desconectándote después de cargar la página."
+      - q: "¿Qué modo elijo?"
+        a: "Igual que el original para retocar un documento que debe conservar su aspecto: presupuesto, factura, certificado, formulario. Texto fluido para retomar el contenido y reescribirlo."
+      - q: "¿El texto será editable?"
+        a: "Sí, si el PDF contiene texto. Con el diseño igual que el original queda en cuadros de texto en su sitio exacto; con el texto fluido forma párrafos que Word recoloca. Un PDF escaneado solo contiene imágenes, sin texto editable."
+      - q: "¿Se conservan las tablas?"
+        a: "Con el diseño igual que el original, sí, idénticas: bordes, sombreados y contenido. Con el texto fluido, el contenido se alinea en columnas con tabulaciones, sin bordes."
+      - q: "¿Funciona con un PDF protegido con contraseña?"
+        a: "Sí. La contraseña se pide al abrir el archivo y solo se usa en tu navegador."
 
   protect:
     slug: proteger-pdf

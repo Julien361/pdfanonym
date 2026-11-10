@@ -23,6 +23,7 @@ nav:
   pdf_to_jpg: PDF in JPG
   jpg_to_pdf: JPG in PDF
   word_to_pdf: "Word in PDF"
+  pdf_to_word: "PDF in Word"
   protect: Proteggere PDF
   unlock: Sbloccare PDF
   batch: Anonimizzare in blocco
@@ -101,6 +102,9 @@ ui:
   dropTitleImg: Trascina qui le tue immagini
   addImages: Aggiungi immagini
   dropTitleWord: "Trascina qui il tuo file Word"
+  p2wMode: "Impaginazione"
+  p2wExact: "Come l'originale"
+  p2wFlow: "Testo continuo"
   pageSize: Formato pagina
   sizeFit: Come l'immagine
   margin: Margine
@@ -279,6 +283,10 @@ js:
   word.done: "PDF scaricato: {name}"
   word.bad: "Impossibile convertire «{name}». Il file potrebbe essere danneggiato o protetto da password."
   word.old: "«{name}» non è un file .docx. Aprilo in Word o LibreOffice, salvalo come .docx e trascinalo qui."
+  pdf2word.working: "Conversione in corso… pagina {i} di {n}"
+  pdf2word.ready: "Documento Word pronto: {n} pagina/e. Scaricalo."
+  pdf2word.scan: "Questo PDF non contiene testo (documento scansionato): il file Word conterrà le {n} pagina/e come immagini, senza testo modificabile."
+  pdf2word.done: "Documento Word scaricato: {name}"
   annot.readyText: Fai clic in un punto qualsiasi di una pagina per aggiungere testo.
   annot.readySign: Disegna la tua firma, poi fai clic sulla pagina nel punto in cui va.
   annot.placed: "Firma inserita. Trascinala per spostarla, usa l'angolo per ridimensionarla."
@@ -1297,6 +1305,54 @@ pages:
         a: "Sì. I campi Pagina e Numero di pagine di intestazioni e piè di pagina vengono ricalcolati per ogni pagina del PDF."
       - q: Posso modificare il PDF?
         a: "Il testo resta testo vero e selezionabile. Per correggere una parola in seguito, usa <a href='/it/modificare-testo-pdf/'>Modifica testo</a>."
+
+  pdf_to_word:
+    slug: pdf-in-word
+    nav: PDF in Word
+    card: Trasforma un PDF in un documento Word (.docx) modificabile senza caricarlo su un server.
+    title: "PDF in Word: convertire PDF in DOCX modificabile gratis e senza upload"
+    description: "Converti PDF in Word nel browser: impaginazione identica (tabelle, riquadri, loghi) e testo modificabile. Gratis, senza registrazione, il file non viene mai caricato."
+    h1: 'Convertire un PDF <span class="hl">in Word</span>'
+    h1_plain: PDF in Word
+    lede: "Recupera un contratto, un preventivo o una relazione come documento Word da modificare. La conversione avviene sul tuo dispositivo: il PDF non viene mai inviato a un server."
+    suffix: word
+    hint: "Il documento Word riprende ogni pagina del PDF con formato e margini."
+    runLabel: Scarica il file Word
+    stepsTitle: Come convertire PDF in Word
+    steps:
+      - h: Trascina il tuo PDF
+        p: "Un PDF che contiene testo (creato da Word, da un software di fatturazione, da un sito…). Un PDF protetto chiede la sua password."
+      - h: Lascia fare la conversione
+        p: "Testo, font, immagini e link vengono letti pagina per pagina nel browser."
+      - h: Scarica il file Word
+        p: "Un file <b>.docx</b> da aprire in Word, LibreOffice, Pages o Google Docs."
+    body: |
+      ## Due modi per convertire
+
+      **Come l'originale** (predefinito): ogni pagina Word è identica alla pagina del PDF. La grafica della pagina (bordi delle tabelle, riquadri, linee, sfondi colorati, loghi, immagini) resta così com'è sullo sfondo, e il testo viene posato sopra esattamente nello stesso punto, in caselle di testo modificabili e con gli stessi a capo. È la scelta giusta per correggere un importo, una data o un nome senza spostare nulla.
+
+      **Testo continuo**: il testo viene ricomposto in veri paragrafi che Word ridispone mentre scrivi, con font, colori, elenchi, allineamenti, sfondi colorati, immagini e link. È la scelta giusta per riprendere e riscrivere un documento a fondo.
+
+      ## Limiti da conoscere
+
+      Con l'impaginazione come l'originale, la grafica della pagina è un'immagine: modifichi il testo, non le linee né le celle di una tabella, e una frase che allunghi non va a capo da sola. Con il testo continuo, le tabelle diventano colonne allineate con tabulazioni, senza bordi, e una pagina può sconfinare nella successiva. In entrambi i casi, un font del PDF non installato sul tuo computer viene sostituito da uno simile; un PDF scansionato contiene solo immagini, senza testo modificabile (lo strumento non fa riconoscimento dei caratteri); alcuni software di fatturazione salvano il testo in font senza nome, il cui grassetto non si può recuperare.
+
+      ## Perché convertire senza caricare il file
+
+      I convertitori da PDF a Word online caricano il documento sui loro server. Per un contratto, una busta paga o un referto medico non è un dettaglio. Qui tutto avviene nel browser: niente lascia il dispositivo e il file Word prodotto non contiene dati sull'autore.
+
+      Devi solo correggere qualche parola? [Modifica il testo direttamente nel PDF](/it/modificare-testo-pdf/). Per tornare al PDF dopo le modifiche, [converti il Word in PDF](/it/word-in-pdf/). Prima di condividere il documento, ricordati di [oscurare i dati sensibili](/it/oscurare-pdf/).
+    faq:
+      - q: "Il mio PDF viene caricato su un server?"
+        a: "No. Il PDF viene letto e il file Word viene creato nel browser; nessun file viene trasmesso. Puoi verificarlo scollegandoti da internet dopo il caricamento della pagina."
+      - q: "Quale modalità scegliere?"
+        a: "Come l'originale per ritoccare un documento che deve mantenere il suo aspetto: preventivo, fattura, attestato, modulo. Testo continuo per riprendere il contenuto e riscriverlo."
+      - q: "Il testo sarà modificabile?"
+        a: "Sì, se il PDF contiene testo. Con l'impaginazione come l'originale si trova in caselle di testo esattamente al suo posto; con il testo continuo forma paragrafi che Word ridispone. Un PDF scansionato contiene solo immagini, senza testo modificabile."
+      - q: "Le tabelle vengono conservate?"
+        a: "Con l'impaginazione come l'originale sì, identiche: bordi, sfondi e contenuto. Con il testo continuo il contenuto viene allineato in colonne con tabulazioni, senza bordi."
+      - q: "Funziona con un PDF protetto da password?"
+        a: "Sì. La password viene chiesta all'apertura e usata solo nel browser."
 
   protect:
     slug: proteggere-pdf

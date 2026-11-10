@@ -23,6 +23,7 @@ nav:
   pdf_to_jpg: PDF in JPG
   jpg_to_pdf: JPG in PDF
   word_to_pdf: "Word in PDF"
+  pdf_to_word: "PDF in Word"
   protect: PDF schützen
   unlock: PDF entsperren
   batch: Stapel-Anonymisierung
@@ -101,6 +102,9 @@ ui:
   dropTitleImg: Zieh deine Bilder hierher
   addImages: Bilder hinzufügen
   dropTitleWord: "Zieh deine Word-Datei hierher"
+  p2wMode: "Layout"
+  p2wExact: "Wie das Original"
+  p2wFlow: "Fließtext"
   pageSize: Seitengröße
   sizeFit: Wie das Bild
   margin: Rand
@@ -279,6 +283,10 @@ js:
   word.done: "PDF heruntergeladen: {name}"
   word.bad: "„{name}“ konnte nicht umgewandelt werden. Die Datei ist vielleicht beschädigt oder mit einem Passwort geschützt."
   word.old: "„{name}“ ist keine .docx-Datei. Öffne sie in Word oder LibreOffice, speichere sie als .docx und zieh sie dann hierher."
+  pdf2word.working: "Wird umgewandelt… Seite {i} von {n}"
+  pdf2word.ready: "Word-Dokument fertig: {n} Seite(n). Lade es herunter."
+  pdf2word.scan: "Dieses PDF enthält keinen Text (gescanntes Dokument): Die Word-Datei enthält die {n} Seite(n) als Bilder, ohne bearbeitbaren Text."
+  pdf2word.done: "Word-Dokument heruntergeladen: {name}"
   annot.readyText: Klick irgendwo auf eine Seite, um Text einzufügen.
   annot.readySign: Zeichne deine Unterschrift und klick dann auf die Stelle der Seite, an die sie gehört.
   annot.placed: Unterschrift platziert. Zieh sie, um sie zu verschieben, und nutz die Ecke, um ihre Größe zu ändern.
@@ -1297,6 +1305,54 @@ pages:
         a: "Ja. Die Felder Seite und Anzahl der Seiten in Kopf- und Fußzeilen werden für jede Seite des PDFs neu berechnet."
       - q: Kann ich das PDF bearbeiten?
         a: "Der Text bleibt echter, markierbarer Text. Um nachträglich ein Wort zu korrigieren, nutz <a href='/de/pdf-text-bearbeiten/'>Text bearbeiten</a>."
+
+  pdf_to_word:
+    slug: pdf-in-word
+    nav: PDF in Word
+    card: Wandle ein PDF in ein bearbeitbares Word-Dokument (.docx) um, ohne es hochzuladen.
+    title: "PDF in Word umwandeln: bearbeitbares DOCX, kostenlos und ohne Upload"
+    description: "PDF in Word umwandeln, direkt im Browser: identisches Layout (Tabellen, Rahmen, Logos) und bearbeitbarer Text. Kostenlos, ohne Anmeldung, ohne Upload."
+    h1: 'PDF <span class="hl">in Word umwandeln</span>'
+    h1_plain: PDF in Word
+    lede: "Hol dir einen Vertrag, ein Angebot oder einen Bericht als Word-Dokument zurück, das du bearbeiten kannst. Die Umwandlung läuft auf deinem Gerät: Das PDF wird nie an einen Server geschickt."
+    suffix: word
+    hint: "Das Word-Dokument übernimmt jede PDF-Seite mit Format und Rändern."
+    runLabel: Word-Datei herunterladen
+    stepsTitle: So wandelst du PDF in Word um
+    steps:
+      - h: Zieh dein PDF hierher
+        p: "Ein PDF mit Text (aus Word, einer Rechnungssoftware, einer Website…). Ein geschütztes PDF fragt nach seinem Passwort."
+      - h: Lass die Umwandlung laufen
+        p: "Text, Schriften, Bilder und Links werden Seite für Seite in deinem Browser gelesen."
+      - h: Lade die Word-Datei herunter
+        p: "Eine <b>.docx</b>-Datei für Word, LibreOffice, Pages oder Google Docs."
+    body: |
+      ## Zwei Arten der Umwandlung
+
+      **Wie das Original** (Standard): Jede Word-Seite sieht genau aus wie die PDF-Seite. Die Grafik der Seite (Tabellenrahmen, Kästen, Linien, farbige Hintergründe, Logos, Bilder) bleibt unverändert im Hintergrund, und der Text liegt punktgenau darüber, in bearbeitbaren Textfeldern und mit denselben Zeilenumbrüchen. Die richtige Wahl, um einen Betrag, ein Datum oder einen Namen zu ändern, ohne dass sich etwas verschiebt.
+
+      **Fließtext**: Der Text wird zu echten Absätzen zusammengesetzt, die Word beim Schreiben neu umbricht, mit Schriften, Farben, Listen, Ausrichtung, farbigen Hintergründen, Bildern und Links. Die richtige Wahl, um ein Dokument gründlich zu überarbeiten.
+
+      ## Grenzen, die du kennen solltest
+
+      Im Layout wie das Original ist die Grafik der Seite ein Bild: Du bearbeitest den Text, nicht die Linien oder Zellen einer Tabelle, und ein verlängerter Satz springt nicht von selbst in die nächste Zeile. Im Fließtext werden Tabellen zu mit Tabulatoren ausgerichteten Spalten ohne Rahmen, und eine Seite kann auf die nächste überlaufen. In beiden Fällen wird eine Schrift aus dem PDF, die auf deinem Computer fehlt, durch eine ähnliche ersetzt; ein gescanntes PDF enthält nur Bilder, ohne bearbeitbaren Text (das Tool macht keine Texterkennung); manche Rechnungsprogramme speichern ihren Text in Schriften ohne Namen, deren Fettdruck sich nicht wiederherstellen lässt.
+
+      ## Warum ohne Upload umwandeln
+
+      Online-Konverter von PDF in Word laden dein Dokument auf ihre Server. Bei einem Vertrag, einer Gehaltsabrechnung oder einem Arztbericht ist das nicht egal. Hier passiert alles in deinem Browser: Nichts verlässt dein Gerät, und die erzeugte Word-Datei enthält keine Autorenangaben.
+
+      Willst du nur ein paar Wörter korrigieren? [Bearbeite den Text direkt im PDF](/de/pdf-text-bearbeiten/). Um nach deinen Änderungen wieder ein PDF zu erhalten, [wandle das Word-Dokument in PDF um](/de/word-in-pdf/). Denk vor dem Weitergeben daran, [sensible Daten zu schwärzen](/de/pdf-schwaerzen/).
+    faq:
+      - q: "Wird mein PDF auf einen Server hochgeladen?"
+        a: "Nein. Das PDF wird in deinem Browser gelesen und die Word-Datei dort erstellt, es wird keine Datei übertragen. Du kannst das prüfen, indem du nach dem Laden der Seite die Internetverbindung trennst."
+      - q: "Welchen Modus soll ich wählen?"
+        a: "Wie das Original, um ein Dokument zu korrigieren, das sein Aussehen behalten muss: Angebot, Rechnung, Bescheinigung, Formular. Fließtext, um den Inhalt zu übernehmen und neu zu schreiben."
+      - q: "Ist der Text bearbeitbar?"
+        a: "Ja, wenn das PDF Text enthält. Im Layout wie das Original steht er in Textfeldern genau an seiner Stelle; im Fließtext bildet er Absätze, die Word neu umbricht. Ein gescanntes PDF enthält nur Bilder, ohne bearbeitbaren Text."
+      - q: "Bleiben Tabellen erhalten?"
+        a: "Im Layout wie das Original ja, identisch: Rahmen, Schattierung und Inhalt. Im Fließtext wird der Inhalt in Spalten mit Tabulatoren ausgerichtet, ohne Rahmen."
+      - q: "Funktioniert es mit einem passwortgeschützten PDF?"
+        a: "Ja. Das Passwort wird beim Öffnen abgefragt und nur in deinem Browser verwendet."
 
   protect:
     slug: pdf-passwort-schuetzen
