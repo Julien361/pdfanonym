@@ -32,14 +32,14 @@ GROUPS = [
 # Parcours logiques : depuis chaque outil, les 3 outils qu'on utilise souvent ensuite (maillage contextuel).
 NEXT = {
     "redact": ["metadata", "flatten", "protect"], "anonymize": ["batch", "metadata", "protect"], "batch": ["anonymize", "metadata", "compress"],
-    "remove": ["edit_text", "add_text", "redact"], "metadata": ["redact", "flatten", "protect"], "flatten": ["redact", "protect", "compress"],
-    "merge": ["page_numbers", "compress", "delete_pages"], "delete_pages": ["merge", "reorder", "compress"], "extract_pages": ["merge", "redact", "pdf_to_jpg"],
+    "remove": ["edit_text", "pdf_to_word", "redact"], "metadata": ["redact", "flatten", "protect"], "flatten": ["redact", "protect", "compress"],
+    "merge": ["word_to_pdf", "page_numbers", "compress"], "delete_pages": ["merge", "reorder", "compress"], "extract_pages": ["merge", "redact", "pdf_to_jpg"],
     "rotate": ["reorder", "merge", "compress"], "reorder": ["merge", "page_numbers", "delete_pages"],
-    "edit_text": ["add_text", "flatten", "protect"], "add_text": ["edit_text", "sign", "flatten"], "sign": ["add_text", "flatten", "protect"], "watermark": ["flatten", "protect", "page_numbers"],
+    "edit_text": ["pdf_to_word", "add_text", "flatten"], "add_text": ["edit_text", "sign", "flatten"], "sign": ["add_text", "flatten", "protect"], "watermark": ["flatten", "protect", "page_numbers"],
     "page_numbers": ["merge", "watermark", "compress"], "compress": ["grayscale", "pdf_to_jpg", "metadata"], "grayscale": ["compress", "pdf_to_jpg", "page_numbers"],
-    "pdf_to_jpg": ["jpg_to_pdf", "extract_pages", "compress"], "jpg_to_pdf": ["compress", "merge", "pdf_to_jpg"],
+    "pdf_to_jpg": ["jpg_to_pdf", "pdf_to_word", "extract_pages"], "jpg_to_pdf": ["compress", "merge", "word_to_pdf"],
     "word_to_pdf": ["merge", "protect", "sign"], "pdf_to_word": ["word_to_pdf", "redact", "edit_text"],
-    "protect": ["unlock", "flatten", "metadata"], "unlock": ["protect", "compress", "merge"],
+    "protect": ["unlock", "flatten", "metadata"], "unlock": ["pdf_to_word", "protect", "compress"],
 }
 SCRIPT_OF = {"batch": "batch", "redact": "redact", "pages": "pages", "report": "clean", "process": "process", "images": "images", "annotate": "annotate", "textedit": "textedit", "word": "word", "pdf2word": "pdf2word"}
 TOOL_KEYS = ["redact", "anonymize", "edit_text"]  # accès direct dans l'en-tête

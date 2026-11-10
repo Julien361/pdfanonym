@@ -1802,6 +1802,8 @@ pages:
       - Update a name, an address or a phone number.
 
 
+      To rewrite whole paragraphs, [convert the PDF to Word](/pdf-to-word/): the layout is kept and all the text becomes editable in Word.
+
       To write where there is no text yet, use [Add text](/add-text-to-pdf/) instead. To permanently remove sensitive information without replacing it, [redact the PDF](/redact-pdf/).
 
 
