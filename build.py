@@ -45,6 +45,8 @@ SCRIPT_OF = {"batch": "batch", "redact": "redact", "pages": "pages", "report": "
 TOOL_KEYS = ["redact", "anonymize", "edit_text"]  # accès direct dans l'en-tête
 PAGE_KEYS = GROUPS[1][1]
 ALL_TOOLS = list(TOOLS)
+PRO_ONLY = {"batch"}  # outils réservés au Pro (exclus du compte des outils gratuits)
+FREE_TOOLS = len([k for k in TOOLS if k not in PRO_ONLY])  # remplace {free_tools} dans content/*.yaml
 LEARN_KEYS = ["guide", "anon_guide", "privacy", "terms", "source", "legal"]  # anon_guide : DE seulement pour l'instant
 PRO_PAGES = ["pricing", "account"]  # pages avec script dédié (pro.js)
 TOOL_OF = {k: v[0] for k, v in TOOLS.items()}
@@ -78,7 +80,7 @@ ICONS = {
 
 def load(lang):
     with open(ROOT / "content" / f"{lang}.yaml", encoding="utf-8") as f:
-        L = yaml.safe_load(f)
+        L = yaml.safe_load(f.read().replace("{free_tools}", str(FREE_TOOLS)))
     L["lang"] = lang
     prefix = "" if lang == "en" else f"/{lang}"
     L["home_url"] = prefix + "/"

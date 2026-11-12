@@ -397,7 +397,7 @@ pages:
     toolsTitle: Scegli uno strumento
     faq:
       - q: "pdfanonym è davvero gratis?"
-        a: "Sì. Tutti i 20 strumenti sono gratuiti, senza account, senza limiti giornalieri e senza filigrana. Una <a href=\"/it/prezzi/\">formula Pro</a> facoltativa aggiunge l'anonimizzazione in blocco, il rilevamento esteso e i rapporti per i professionisti."
+        a: "Sì. Tutti i {free_tools} strumenti sono gratuiti, senza account, senza limiti giornalieri e senza filigrana. Una <a href=\"/it/prezzi/\">formula Pro</a> facoltativa aggiunge l'anonimizzazione in blocco, il rilevamento esteso e i rapporti per i professionisti."
       - q: "Come posso verificare che il mio file non venga caricato?"
         a: "Apri gli strumenti per sviluppatori del browser, vai nella scheda Rete ed elabora un file: non vedrai nessuna richiesta che lo trasporta. La pagina include anche una policy di sicurezza che le vieta di inviare dati a qualsiasi altro sito. E il codice sorgente completo è lì da leggere."
       - q: "Funziona offline?"
@@ -1489,7 +1489,7 @@ pages:
     free_h: Gratis
     free_p: Per le esigenze occasionali.
     free_f:
-      - Tutti i 20 strumenti, senza limiti
+      - Tutti i {free_tools} strumenti, senza limiti
       - Oscuramento reale, pulizia dei metadati
       - Rilevamento di email, telefoni, IBAN, carte
       - I file non lasciano mai il tuo dispositivo

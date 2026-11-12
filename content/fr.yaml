@@ -397,7 +397,7 @@ pages:
     toolsTitle: Choisissez un outil
     faq:
       - q: pdfanonym est-il vraiment gratuit ?
-        a: "Oui. Les 20 outils sont gratuits, sans compte, sans limite quotidienne et sans filigrane. Une <a href=\"/fr/tarifs/\">formule Pro</a> facultative ajoute l'anonymisation par lots, une détection étendue et des rapports pour les professionnels."
+        a: "Oui. Les {free_tools} outils sont gratuits, sans compte, sans limite quotidienne et sans filigrane. Une <a href=\"/fr/tarifs/\">formule Pro</a> facultative ajoute l'anonymisation par lots, une détection étendue et des rapports pour les professionnels."
       - q: Comment vérifier que mon fichier n'est pas envoyé ?
         a: "Ouvrez les outils de développement de votre navigateur, onglet Réseau, puis traitez un fichier : aucune requête ne le transporte. La page applique aussi une politique de sécurité qui lui interdit d'envoyer des données vers un autre site. Et tout le code source est consultable."
       - q: Est-ce que ça marche hors connexion ?
@@ -1489,7 +1489,7 @@ pages:
     free_h: Gratuit
     free_p: Pour les besoins ponctuels.
     free_f:
-      - Les 20 outils, sans limite
+      - Les {free_tools} outils, sans limite
       - Vrai caviardage, nettoyage des métadonnées
       - Détection des e-mails, téléphones, IBAN, cartes
       - Vos fichiers ne quittent jamais votre appareil

@@ -397,7 +397,7 @@ pages:
     toolsTitle: Pick a tool
     faq:
       - q: Is pdfanonym really free?
-        a: "Yes. All 20 tools are free, with no account, no daily limit and no watermark. An optional <a href=\"/pricing/\">Pro plan</a> adds batch anonymization, extended detection and reports for professionals."
+        a: "Yes. All {free_tools} tools are free, with no account, no daily limit and no watermark. An optional <a href=\"/pricing/\">Pro plan</a> adds batch anonymization, extended detection and reports for professionals."
       - q: How can I check that my file is not uploaded?
         a: "Open your browser's developer tools, go to the Network tab and process a file: you will see no request carrying it. The page also ships a security policy that forbids it from sending data to any other site. And the full source code is available to read."
       - q: Does it work offline?
@@ -1493,7 +1493,7 @@ pages:
     free_h: Free
     free_p: For occasional needs.
     free_f:
-      - All 20 tools, no limit
+      - All {free_tools} tools, no limit
       - Real redaction, metadata cleaning
       - Detection of emails, phones, IBANs, cards
       - Files never leave your device

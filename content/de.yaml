@@ -397,7 +397,7 @@ pages:
     toolsTitle: Wähl ein Werkzeug
     faq:
       - q: Ist pdfanonym wirklich kostenlos?
-        a: "Ja. Alle 20 Werkzeuge sind kostenlos, ohne Konto, ohne Tageslimit und ohne Wasserzeichen. Ein optionaler <a href=\"/de/preise/\">Pro-Tarif</a> bietet Profis zusätzlich Stapel-Anonymisierung, erweiterte Erkennung und Berichte."
+        a: "Ja. Alle {free_tools} Werkzeuge sind kostenlos, ohne Konto, ohne Tageslimit und ohne Wasserzeichen. Ein optionaler <a href=\"/de/preise/\">Pro-Tarif</a> bietet Profis zusätzlich Stapel-Anonymisierung, erweiterte Erkennung und Berichte."
       - q: Wie kann ich prüfen, dass meine Datei nicht hochgeladen wird?
         a: "Öffne die Entwicklertools deines Browsers, geh auf den Tab „Netzwerk“ und bearbeite eine Datei: Du wirst keine Anfrage sehen, die sie überträgt. Die Seite liefert außerdem eine Sicherheitsrichtlinie mit, die ihr verbietet, Daten an andere Websites zu senden. Und der komplette Quellcode ist öffentlich einsehbar."
       - q: Funktioniert es auch offline?
@@ -1489,7 +1489,7 @@ pages:
     free_h: Kostenlos
     free_p: Für gelegentlichen Bedarf.
     free_f:
-      - Alle 20 Werkzeuge, ohne Limit
+      - Alle {free_tools} Werkzeuge, ohne Limit
       - Echtes Schwärzen, Bereinigung der Metadaten
       - Erkennung von E-Mails, Telefonnummern, IBANs, Karten
       - Dateien verlassen nie dein Gerät

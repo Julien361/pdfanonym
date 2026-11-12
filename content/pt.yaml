@@ -397,7 +397,7 @@ pages:
     toolsTitle: Escolha uma ferramenta
     faq:
       - q: O pdfanonym é gratuito mesmo?
-        a: "Sim. As 20 ferramentas são gratuitas, sem cadastro, sem limite diário e sem marca d'água. Um <a href=\"/pt/precos/\">plano Pro</a> opcional adiciona anonimização em lote, detecção ampliada e relatórios para profissionais."
+        a: "Sim. As {free_tools} ferramentas são gratuitas, sem cadastro, sem limite diário e sem marca d'água. Um <a href=\"/pt/precos/\">plano Pro</a> opcional adiciona anonimização em lote, detecção ampliada e relatórios para profissionais."
       - q: Como posso conferir que meu arquivo não é enviado?
         a: "Abra as ferramentas de desenvolvedor do navegador, vá até a aba Rede (Network) e processe um arquivo: nenhuma requisição vai carregar o documento. A página também traz uma política de segurança que a impede de enviar dados para qualquer outro site. E o código-fonte completo está disponível para leitura."
       - q: Funciona offline?
@@ -1478,7 +1478,7 @@ pages:
     free_h: Grátis
     free_p: Para necessidades ocasionais.
     free_f:
-      - As 20 ferramentas, sem limite
+      - As {free_tools} ferramentas, sem limite
       - Tarja de verdade, limpeza de metadados
       - Detecção de e-mails, telefones, IBANs, cartões
       - Os arquivos nunca saem do seu dispositivo

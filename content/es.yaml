@@ -397,7 +397,7 @@ pages:
     toolsTitle: Elige una herramienta
     faq:
       - q: "¿pdfanonym es gratis de verdad?"
-        a: "Sí. Las 20 herramientas son gratuitas, sin cuenta, sin límite diario y sin marca de agua. Un <a href=\"/es/precios/\">plan Pro</a> opcional añade la anonimización por lotes, la detección ampliada y los informes para profesionales."
+        a: "Sí. Las {free_tools} herramientas son gratuitas, sin cuenta, sin límite diario y sin marca de agua. Un <a href=\"/es/precios/\">plan Pro</a> opcional añade la anonimización por lotes, la detección ampliada y los informes para profesionales."
       - q: "¿Cómo puedo comprobar que mi archivo no se sube?"
         a: "Abre las herramientas para desarrolladores de tu navegador, ve a la pestaña Red y procesa un archivo: no verás ninguna solicitud que lo transporte. La página incluye además una política de seguridad que le prohíbe enviar datos a cualquier otro sitio. Y el código fuente completo está disponible para que lo leas."
       - q: "¿Funciona sin conexión?"
@@ -1477,7 +1477,7 @@ pages:
     free_h: Gratis
     free_p: Para necesidades puntuales.
     free_f:
-      - Las 20 herramientas, sin límite
+      - Las {free_tools} herramientas, sin límite
       - Censura real, limpieza de metadatos
       - Detección de correos, teléfonos, IBAN, tarjetas
       - Los archivos nunca salen de tu dispositivo
